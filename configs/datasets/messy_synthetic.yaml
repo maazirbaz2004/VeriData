@@ -1,0 +1,29 @@
+# Per-dataset configuration for the Messy Synthetic Benchmark (Section 5.2, Section 12)
+name: messy_synthetic
+file: data/synthetic/messy_dataset.csv
+target: churned
+id_columns:
+  - customer_id
+profiling:
+  treat_unknown_as_missing: true
+validity_rules:
+  age:
+    min: 0
+    max: 120
+  tenure_months:
+    min: 0
+truth_types:
+  customer_id: id
+  age: numeric
+  gender: binary
+  income: numeric
+  region: categorical
+  membership: categorical
+  tenure_months: numeric
+  monthly_spend: numeric
+  signup_date: datetime
+  satisfaction: numeric
+  churned: binary
+  notes: text
+  constant_flag: constant
+

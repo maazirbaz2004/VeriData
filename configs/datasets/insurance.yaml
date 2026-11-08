@@ -1,0 +1,25 @@
+# Per-dataset configuration for Medical Cost Personal Datasets (Insurance) (Section 5.1, 5.4)
+name: insurance
+file: data/raw/insurance/insurance.csv
+target: charges
+validity_rules:
+  age:
+    min: 0
+    max: 120
+  bmi:
+    min: 10.0
+    max: 100.0
+  children:
+    min: 0
+    max: 25
+  charges:
+    min: 0.0
+truth_types:
+  age: numeric
+  sex: binary
+  bmi: numeric
+  children: numeric
+  smoker: binary
+  region: categorical
+  charges: numeric
+

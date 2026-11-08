@@ -1,0 +1,39 @@
+# Per-dataset configuration for Telco Customer Churn (Section 5.1, 5.4)
+name: telco_churn
+file: data/raw/telco_churn/WA_Fn-UseC_-Telco-Customer-Churn.csv
+target: Churn
+id_columns:
+  - customerID
+forced_types:
+  # Stored as 0/1 integer in CSV, but semantically a categorical/binary demographic flag
+  SeniorCitizen: categorical_nominal
+validity_rules:
+  tenure:
+    min: 0
+  MonthlyCharges:
+    min: 0.0
+  TotalCharges:
+    min: 0.0
+truth_types:
+  customerID: id
+  gender: binary
+  SeniorCitizen: categorical
+  Partner: binary
+  Dependents: binary
+  tenure: numeric
+  PhoneService: binary
+  MultipleLines: categorical
+  InternetService: categorical
+  OnlineSecurity: categorical
+  OnlineBackup: categorical
+  DeviceProtection: categorical
+  TechSupport: categorical
+  StreamingTV: categorical
+  StreamingMovies: categorical
+  Contract: categorical
+  PaperlessBilling: binary
+  PaymentMethod: categorical
+  MonthlyCharges: numeric
+  TotalCharges: numeric
+  Churn: binary
+

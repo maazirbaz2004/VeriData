@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Secrets & Environment
+.env
+
+# Raw and generated data (keep READMEs and gitkeeps)
+data/raw/*
+!data/raw/README.md
+data/interim/*
+!data/interim/.gitkeep
+data/cleaned/*
+!data/cleaned/.gitkeep
+data/synthetic/*
+!data/synthetic/.gitkeep
+
+# Outputs (ignore generated outputs except final_report/)
+outputs/*
+!outputs/.gitkeep
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+

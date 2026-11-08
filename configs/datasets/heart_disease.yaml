@@ -1,0 +1,43 @@
+# Per-dataset configuration for Heart Disease UCI/Kaggle (Section 5.1, 5.4)
+name: heart_disease
+file: data/raw/heart_disease/heart.csv
+target: target
+forced_types:
+  # Encoded categorical integer codes in UCI Heart Disease dataset
+  cp: categorical_nominal
+  restecg: categorical_nominal
+  slope: categorical_nominal
+  thal: categorical_nominal
+missing_tokens_extra:
+  - "?"
+validity_rules:
+  age:
+    min: 0
+    max: 120
+  trestbps:
+    min: 40
+    max: 300
+  chol:
+    min: 50
+    max: 1000
+  thalach:
+    min: 40
+    max: 250
+  oldpeak:
+    min: 0.0
+truth_types:
+  age: numeric
+  sex: binary
+  cp: categorical
+  trestbps: numeric
+  chol: numeric
+  fbs: binary
+  restecg: categorical
+  thalach: numeric
+  exang: binary
+  oldpeak: numeric
+  slope: categorical
+  ca: numeric
+  thal: categorical
+  target: binary
+

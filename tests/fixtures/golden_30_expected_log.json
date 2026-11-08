@@ -1,0 +1,1055 @@
+[
+  {
+    "action": "normalized_headers",
+    "after_examples": [
+      "age"
+    ],
+    "before_examples": [
+      " age "
+    ],
+    "column": null,
+    "n_cells_affected": 1,
+    "n_rows_affected": 0,
+    "parameters": {
+      "name_map": {
+        " age ": "age"
+      },
+      "snake_case": false
+    },
+    "reason": "Normalized 1 column name(s) (stripped whitespace/BOM).",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "normalize_column_names"
+  },
+  {
+    "action": "stripped_and_normalized_ws",
+    "after_examples": [
+      "'male'"
+    ],
+    "before_examples": [
+      "' male '"
+    ],
+    "column": "gender",
+    "n_cells_affected": 1,
+    "n_rows_affected": 1,
+    "parameters": {},
+    "reason": "Stripped leading/trailing whitespace, collapsed internal spaces, and cleaned unicode chars.",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "clean_whitespace_unicode"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN"
+    ],
+    "before_examples": [
+      "N/A"
+    ],
+    "column": "age",
+    "n_cells_affected": 1,
+    "n_rows_affected": 1,
+    "parameters": {
+      "ratio": 0.0333,
+      "token_counts": {
+        "N/A": 1
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('N/A': 1) with NaN.",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN"
+    ],
+    "before_examples": [
+      "?"
+    ],
+    "column": "income",
+    "n_cells_affected": 1,
+    "n_rows_affected": 1,
+    "parameters": {
+      "ratio": 0.0333,
+      "token_counts": {
+        "?": 1
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('?': 1) with NaN.",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "merged_case_variants",
+    "after_examples": [
+      "Male",
+      "Female"
+    ],
+    "before_examples": [
+      "male",
+      "FEMALE"
+    ],
+    "column": "gender",
+    "n_cells_affected": 2,
+    "n_rows_affected": 2,
+    "parameters": {
+      "mapping": {
+        "FEMALE": "Female",
+        "male": "Male"
+      }
+    },
+    "reason": "Merged 2 case-only variant spelling(s) into dominant form.",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "flagged_fuzzy_variants",
+    "after_examples": [
+      "07/03/2023"
+    ],
+    "before_examples": [
+      "07/03/2023"
+    ],
+    "column": "signup_date",
+    "n_cells_affected": 0,
+    "n_rows_affected": 1,
+    "parameters": {
+      "candidates": [
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "07/03/2023",
+          "variant_count": 1
+        }
+      ]
+    },
+    "reason": "Flagged near-duplicate/abbreviation label candidate(s) for human review (not auto-merged): '07/03/2023' (1) -> '01/03/2023' (1) [fuzzy, sim=0.90].",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "warning",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "flagged_fuzzy_variants",
+    "after_examples": [
+      "03/03/2023",
+      "05/03/2023",
+      "11/03/2023",
+      "13/03/2023",
+      "15/03/2023"
+    ],
+    "before_examples": [
+      "03/03/2023",
+      "05/03/2023",
+      "11/03/2023",
+      "13/03/2023",
+      "15/03/2023"
+    ],
+    "column": "churn",
+    "n_cells_affected": 0,
+    "n_rows_affected": 84,
+    "parameters": {
+      "candidates": [
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "03/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "05/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "11/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "13/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "15/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "17/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "19/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "01/03/2023",
+          "target_count": 1,
+          "variant": "21/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "03/03/2023",
+          "target_count": 1,
+          "variant": "05/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "03/03/2023",
+          "target_count": 1,
+          "variant": "13/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "03/03/2023",
+          "target_count": 1,
+          "variant": "23/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "05/03/2023",
+          "target_count": 1,
+          "variant": "15/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "05/03/2023",
+          "target_count": 1,
+          "variant": "25/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "11/03/2023",
+          "target_count": 1,
+          "variant": "13/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "11/03/2023",
+          "target_count": 1,
+          "variant": "15/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "11/03/2023",
+          "target_count": 1,
+          "variant": "17/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "11/03/2023",
+          "target_count": 1,
+          "variant": "19/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "11/03/2023",
+          "target_count": 1,
+          "variant": "21/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "13/03/2023",
+          "target_count": 1,
+          "variant": "15/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "13/03/2023",
+          "target_count": 1,
+          "variant": "17/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "13/03/2023",
+          "target_count": 1,
+          "variant": "19/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "13/03/2023",
+          "target_count": 1,
+          "variant": "21/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "13/03/2023",
+          "target_count": 1,
+          "variant": "23/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "15/03/2023",
+          "target_count": 1,
+          "variant": "17/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "15/03/2023",
+          "target_count": 1,
+          "variant": "19/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "15/03/2023",
+          "target_count": 1,
+          "variant": "21/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "15/03/2023",
+          "target_count": 1,
+          "variant": "25/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "17/03/2023",
+          "target_count": 1,
+          "variant": "19/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "17/03/2023",
+          "target_count": 1,
+          "variant": "21/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "17/03/2023",
+          "target_count": 1,
+          "variant": "27/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "19/03/2023",
+          "target_count": 1,
+          "variant": "21/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-04",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-06",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-10",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-12",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-20",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-22",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-24",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-26",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-02",
+          "target_count": 1,
+          "variant": "2023-03-28",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-04",
+          "target_count": 1,
+          "variant": "2023-03-06",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-04",
+          "target_count": 1,
+          "variant": "2023-03-10",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-04",
+          "target_count": 1,
+          "variant": "2023-03-14",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-04",
+          "target_count": 1,
+          "variant": "2023-03-20",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-04",
+          "target_count": 1,
+          "variant": "2023-03-24",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-06",
+          "target_count": 1,
+          "variant": "2023-03-10",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-06",
+          "target_count": 1,
+          "variant": "2023-03-16",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-06",
+          "target_count": 1,
+          "variant": "2023-03-20",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-06",
+          "target_count": 1,
+          "variant": "2023-03-26",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-10",
+          "target_count": 1,
+          "variant": "2023-03-12",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-10",
+          "target_count": 1,
+          "variant": "2023-03-14",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-10",
+          "target_count": 1,
+          "variant": "2023-03-16",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-10",
+          "target_count": 1,
+          "variant": "2023-03-18",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-10",
+          "target_count": 1,
+          "variant": "2023-03-20",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-12",
+          "target_count": 1,
+          "variant": "2023-03-14",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-12",
+          "target_count": 1,
+          "variant": "2023-03-16",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-12",
+          "target_count": 1,
+          "variant": "2023-03-18",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-12",
+          "target_count": 1,
+          "variant": "2023-03-20",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-12",
+          "target_count": 1,
+          "variant": "2023-03-22",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-12",
+          "target_count": 1,
+          "variant": "2023-03-24",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-12",
+          "target_count": 1,
+          "variant": "2023-03-26",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-12",
+          "target_count": 1,
+          "variant": "2023-03-28",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-14",
+          "target_count": 1,
+          "variant": "2023-03-16",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-14",
+          "target_count": 1,
+          "variant": "2023-03-18",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-14",
+          "target_count": 1,
+          "variant": "2023-03-24",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-16",
+          "target_count": 1,
+          "variant": "2023-03-18",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-16",
+          "target_count": 1,
+          "variant": "2023-03-26",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-18",
+          "target_count": 1,
+          "variant": "2023-03-28",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-20",
+          "target_count": 1,
+          "variant": "2023-03-22",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-20",
+          "target_count": 1,
+          "variant": "2023-03-24",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-20",
+          "target_count": 1,
+          "variant": "2023-03-26",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-20",
+          "target_count": 1,
+          "variant": "2023-03-28",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-22",
+          "target_count": 1,
+          "variant": "2023-03-24",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-22",
+          "target_count": 1,
+          "variant": "2023-03-26",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-22",
+          "target_count": 1,
+          "variant": "2023-03-28",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-24",
+          "target_count": 1,
+          "variant": "2023-03-26",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-24",
+          "target_count": 1,
+          "variant": "2023-03-28",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "2023-03-26",
+          "target_count": 1,
+          "variant": "2023-03-28",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "21/03/2023",
+          "target_count": 1,
+          "variant": "23/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "21/03/2023",
+          "target_count": 1,
+          "variant": "25/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "21/03/2023",
+          "target_count": 1,
+          "variant": "27/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "23/03/2023",
+          "target_count": 1,
+          "variant": "25/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "23/03/2023",
+          "target_count": 1,
+          "variant": "27/03/2023",
+          "variant_count": 1
+        },
+        {
+          "kind": "fuzzy",
+          "similarity": 0.9,
+          "target": "25/03/2023",
+          "target_count": 1,
+          "variant": "27/03/2023",
+          "variant_count": 1
+        }
+      ]
+    },
+    "reason": "Flagged near-duplicate/abbreviation label candidate(s) for human review (not auto-merged): '03/03/2023' (1) -> '01/03/2023' (1) [fuzzy, sim=0.90]; '05/03/2023' (1) -> '01/03/2023' (1) [fuzzy, sim=0.90]; '11/03/2023' (1) -> '01/03/2023' (1) [fuzzy, sim=0.90]; '13/03/2023' (1) -> '01/03/2023' (1) [fuzzy, sim=0.90].",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "warning",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "merged_case_variants",
+    "after_examples": [
+      "Yes"
+    ],
+    "before_examples": [
+      "yes"
+    ],
+    "column": "const_col",
+    "n_cells_affected": 1,
+    "n_rows_affected": 1,
+    "parameters": {
+      "mapping": {
+        "yes": "Yes"
+      }
+    },
+    "reason": "Merged 1 case-only variant spelling(s) into dominant form.",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "cast_dtype",
+    "after_examples": [
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "before_examples": [
+      "$41",
+      "$42",
+      "$43",
+      "$44",
+      "$45"
+    ],
+    "column": "income",
+    "n_cells_affected": 27,
+    "n_rows_affected": 27,
+    "parameters": {
+      "has_percent": false,
+      "target_dtype": "float64"
+    },
+    "reason": "Converted 'income' to float64, stripping numeric formatting on 27 cell(s).",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "convert_types"
+  },
+  {
+    "action": "invalid_to_NaN",
+    "after_examples": [
+      "NaN"
+    ],
+    "before_examples": [
+      "-3.0"
+    ],
+    "column": "age",
+    "n_cells_affected": 1,
+    "n_rows_affected": 1,
+    "parameters": {
+      "max": 120.0,
+      "min": 0.0
+    },
+    "reason": "Set 1 out-of-range cell(s) in 'age' to NaN (rule: min=0.0, max=120.0, allowed=None).",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "warning",
+    "step": "apply_validity_rules"
+  },
+  {
+    "action": "dropped_index_column",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "Unnamed: 0",
+    "n_cells_affected": 30,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Dropped redundant exported index column 'Unnamed: 0'.",
+    "rows_after": 30,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "dropped_empty_rows",
+    "after_examples": [],
+    "before_examples": [],
+    "column": null,
+    "n_cells_affected": 8,
+    "n_rows_affected": 1,
+    "parameters": {
+      "dropped_row_indices_sample": [
+        29
+      ]
+    },
+    "reason": "Dropped 1 fully empty row(s).",
+    "rows_after": 29,
+    "rows_before": 30,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "marked_excluded",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "id",
+    "n_cells_affected": 0,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Kept column 'id' in data but marked role as id (id_like).",
+    "rows_after": 29,
+    "rows_before": 29,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "marked_excluded",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "empty_col",
+    "n_cells_affected": 0,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Kept column 'empty_col' in data but marked role as excluded (constant).",
+    "rows_after": 29,
+    "rows_before": 29,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "imputed_median",
+    "after_examples": [
+      "37.0",
+      "37.0"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN"
+    ],
+    "column": "age",
+    "n_cells_affected": 2,
+    "n_rows_affected": 2,
+    "parameters": {
+      "fill_value": 37.0,
+      "pct_missing": 0.069,
+      "strategy": "median"
+    },
+    "reason": "Imputed 2 missing cell(s) (6.9%) in 'age' with median=37.0 (imputed output only).",
+    "rows_after": 29,
+    "rows_before": 29,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_median",
+    "after_examples": [
+      "56.5"
+    ],
+    "before_examples": [
+      "NaN"
+    ],
+    "column": "income",
+    "n_cells_affected": 1,
+    "n_rows_affected": 1,
+    "parameters": {
+      "fill_value": 56.5,
+      "pct_missing": 0.0345,
+      "strategy": "median"
+    },
+    "reason": "Imputed 1 missing cell(s) (3.4%) in 'income' with median=56.5 (imputed output only).",
+    "rows_after": 29,
+    "rows_before": 29,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "5e+06",
+      "41000"
+    ],
+    "before_examples": [
+      "5e+06",
+      "41000"
+    ],
+    "column": "income",
+    "n_cells_affected": 0,
+    "n_rows_affected": 2,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        29.5,
+        83.5
+      ],
+      "iqr_3_0_bounds": [
+        9.25,
+        103.75
+      ],
+      "sample_indices": [
+        7,
+        28
+      ]
+    },
+    "reason": "Flagged 2 outlier(s) (7.1%) and 2 extreme outlier(s) in 'income' (action=flag; values untouched).",
+    "rows_after": 29,
+    "rows_before": 29,
+    "severity": "info",
+    "step": "handle_outliers"
+  }
+]
