@@ -1,0 +1,92 @@
+# Per-dataset configuration for Student Performance — Math course (UCI id 320) (Section 5.1, 5.4)
+# Source: https://archive.ics.uci.edu/dataset/320/student+performance  (file: student-mat.csv, ';'-delimited)
+name: student_performance
+file: data/raw/student_performance/student-mat.csv
+target: G3
+# No forced_types: the ordinal integer scales (Medu, Fedu, traveltime, studytime, famrel, freetime,
+# goout, Dalc, Walc, health) are ordered, equally spaced codes. They are labelled `numeric` in
+# truth_types, the same way heart_disease labels `ca`. Change both places together if the
+# reviewer decides they should be categorical instead.
+validity_rules:
+  age:
+    min: 15
+    max: 22
+  Medu:
+    min: 0
+    max: 4
+  Fedu:
+    min: 0
+    max: 4
+  traveltime:
+    min: 1
+    max: 4
+  studytime:
+    min: 1
+    max: 4
+  failures:
+    min: 0
+    max: 4
+  famrel:
+    min: 1
+    max: 5
+  freetime:
+    min: 1
+    max: 5
+  goout:
+    min: 1
+    max: 5
+  Dalc:
+    min: 1
+    max: 5
+  Walc:
+    min: 1
+    max: 5
+  health:
+    min: 1
+    max: 5
+  absences:
+    min: 0
+    max: 93
+  G1:
+    min: 0
+    max: 20
+  G2:
+    min: 0
+    max: 20
+  G3:
+    min: 0
+    max: 20
+truth_types:
+  school: binary
+  sex: binary
+  age: numeric
+  address: binary
+  famsize: binary
+  Pstatus: binary
+  Medu: numeric
+  Fedu: numeric
+  Mjob: categorical
+  Fjob: categorical
+  reason: categorical
+  guardian: categorical
+  traveltime: numeric
+  studytime: numeric
+  failures: numeric
+  schoolsup: binary
+  famsup: binary
+  paid: binary
+  activities: binary
+  nursery: binary
+  higher: binary
+  internet: binary
+  romantic: binary
+  famrel: numeric
+  freetime: numeric
+  goout: numeric
+  Dalc: numeric
+  Walc: numeric
+  health: numeric
+  absences: numeric
+  G1: numeric
+  G2: numeric
+  G3: numeric
