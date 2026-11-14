@@ -1,0 +1,13 @@
+{
+  "completed_at_utc": "2026-11-14T12:46:01.876764+00:00",
+  "dataset_name": "messy_synthetic",
+  "elapsed_seconds": 31.7443,
+  "n_cols_cleaned_conservative": 13,
+  "n_cols_cleaned_imputed": 16,
+  "n_cols_raw": 15,
+  "n_rows_cleaned_conservative": 2000,
+  "n_rows_cleaned_imputed": 2000,
+  "n_rows_raw": 2090,
+  "sha256": "c2124c6ccb1547fabb41a927466ec703571ac1eaaafa1d086bd6b27c2c224a92",
+  "source_file": "data\\synthetic\\messy_dataset.csv"
+}

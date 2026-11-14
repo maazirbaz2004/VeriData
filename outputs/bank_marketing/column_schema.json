@@ -1,0 +1,185 @@
+{
+  "age": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 78,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "campaign": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 42,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "cons.conf.idx": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 26,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "cons.price.idx": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 26,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "contact": {
+    "binary_labels": [
+      "cellular",
+      "telephone"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "day_of_week": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "default": {
+    "binary_labels": [
+      "no",
+      "yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.208762,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "duration": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 1544,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "education": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 7,
+    "pct_missing": 0.042015,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "emp.var.rate": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 10,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "euribor3m": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 316,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "housing": {
+    "binary_labels": [
+      "yes",
+      "no"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.024043,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "job": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 11,
+    "pct_missing": 0.008014,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "loan": {
+    "binary_labels": [
+      "no",
+      "yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.024043,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "marital": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.001943,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "month": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 10,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "nr.employed": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 11,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "pdays": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 27,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "poutcome": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "previous": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 8,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "y": {
+    "binary_labels": [
+      "no",
+      "yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "target_candidate",
+    "semantic_type": "binary"
+  }
+}

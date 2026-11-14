@@ -1,0 +1,13 @@
+{
+  "completed_at_utc": "2026-11-14T12:45:10.784640+00:00",
+  "dataset_name": "heart_disease",
+  "elapsed_seconds": 25.3457,
+  "n_cols_cleaned_conservative": 14,
+  "n_cols_cleaned_imputed": 14,
+  "n_cols_raw": 14,
+  "n_rows_cleaned_conservative": 302,
+  "n_rows_cleaned_imputed": 302,
+  "n_rows_raw": 303,
+  "sha256": "7c3014365675306819510a49ff289efbec1d1a6a666a2dc7652f1547b383d859",
+  "source_file": "data\\raw\\heart_disease\\heart.csv"
+}

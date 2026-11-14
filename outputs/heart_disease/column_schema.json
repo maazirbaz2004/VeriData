@@ -1,0 +1,126 @@
+{
+  "age": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 41,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "ca": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "chol": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 152,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "cp": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 4,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "exang": {
+    "binary_labels": [
+      "0",
+      "1"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "fbs": {
+    "binary_labels": [
+      "0",
+      "1"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "oldpeak": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 40,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "restecg": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "sex": {
+    "binary_labels": [
+      "1",
+      "0"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "slope": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "target": {
+    "binary_labels": [
+      "1",
+      "0"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "target_candidate",
+    "semantic_type": "binary"
+  },
+  "thal": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 4,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "thalach": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 91,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "trestbps": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 49,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  }
+}

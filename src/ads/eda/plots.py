@@ -18,7 +18,175 @@ import matplotlib
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt  # noqa: E402
-import seaborn as sns  # noqa: E402
+import numpy as np  # noqa: E402
+
+try:
+    import seaborn as sns  # type: ignore[import-not-found]  # noqa: E402
+except ImportError:
+    from scipy.stats import gaussian_kde
+
+    class _SeabornFallback:
+        """Pure Matplotlib + SciPy fallback when seaborn is not installed in the environment."""
+
+        @staticmethod
+        def set_theme(style: str = "whitegrid", context: str = "notebook", font_scale: float = 0.9) -> None:
+            plt.rcParams.update(
+                {
+                    "axes.grid": True,
+                    "grid.color": "#E4E7EB",
+                    "grid.linestyle": "-",
+                    "grid.linewidth": 0.6,
+                    "axes.edgecolor": "#CBD2D9",
+                    "axes.linewidth": 0.8,
+                    "axes.axisbelow": True,
+                }
+            )
+
+        @staticmethod
+        def histplot(
+            *,
+            x: Any,
+            ax: Any,
+            color: str = "#3B6EA8",
+            kde: bool = False,
+            discrete: bool = False,
+            bins: Any = "auto",
+            edgecolor: str = "white",
+            linewidth: float = 0.4,
+            alpha: float = 0.85,
+        ) -> None:
+            vals = np.asarray(x, dtype=float)
+            vals = vals[np.isfinite(vals)]
+            if len(vals) == 0:
+                return
+            if discrete:
+                uniq = np.sort(np.unique(vals))
+                bin_edges = np.concatenate([uniq - 0.5, [uniq[-1] + 0.5]]) if len(uniq) > 0 else "auto"
+            else:
+                bin_edges = bins
+            counts, edges, _ = ax.hist(
+                vals,
+                bins=bin_edges,
+                color=color,
+                edgecolor=edgecolor,
+                linewidth=linewidth,
+                alpha=alpha,
+            )
+            if kde and len(vals) > 3 and float(np.std(vals)) > 0:
+                try:
+                    kde_fn = gaussian_kde(vals)
+                    xs = np.linspace(float(vals.min()), float(vals.max()), 200)
+                    bin_w = float(edges[1] - edges[0]) if len(edges) > 1 else 1.0
+                    ax.plot(xs, kde_fn(xs) * len(vals) * bin_w, color=color, lw=1.5)
+                except Exception:
+                    pass
+
+        @staticmethod
+        def heatmap(
+            data: Any,
+            *,
+            mask: Any = None,
+            cmap: str = "Blues",
+            vmin: float | None = None,
+            vmax: float | None = None,
+            center: float | None = None,
+            annot: bool = False,
+            fmt: str = ".2f",
+            annot_kws: dict[str, Any] | None = None,
+            square: bool = False,
+            linewidths: float = 0.0,
+            cbar_kws: dict[str, Any] | None = None,
+            xticklabels: Sequence[str] | bool = True,
+            yticklabels: Sequence[str] | bool = True,
+            ax: Any = None,
+        ) -> None:
+            if ax is None:
+                ax = plt.gca()
+            arr = np.asarray(data, dtype=float)
+            if mask is not None:
+                masked = np.ma.masked_where(np.asarray(mask, dtype=bool), arr)
+            else:
+                masked = np.ma.masked_invalid(arr)
+            ax.grid(False)
+            im = ax.imshow(
+                masked,
+                cmap=cmap,
+                vmin=vmin,
+                vmax=vmax,
+                aspect="equal" if square else "auto",
+            )
+            ckws = dict(cbar_kws or {})
+            label = ckws.pop("label", None)
+            cbar = ax.figure.colorbar(im, ax=ax, **ckws)
+            if label:
+                cbar.set_label(label, fontsize=8)
+            n_rows, n_cols = arr.shape
+            ax.set_xticks(np.arange(n_cols))
+            ax.set_yticks(np.arange(n_rows))
+            if isinstance(xticklabels, Sequence) and not isinstance(xticklabels, str):
+                ax.set_xticklabels(xticklabels, rotation=45, ha="right")
+            if isinstance(yticklabels, Sequence) and not isinstance(yticklabels, str):
+                ax.set_yticklabels(yticklabels, rotation=0)
+            if annot:
+                akws = dict(annot_kws or {})
+                fsize = akws.get("fontsize", 7)
+                v_lo = float(vmin if vmin is not None else np.nanmin(arr))
+                v_hi = float(vmax if vmax is not None else np.nanmax(arr))
+                span = max(1e-9, v_hi - v_lo)
+                for i in range(n_rows):
+                    for j in range(n_cols):
+                        if mask is not None and bool(np.asarray(mask)[i, j]):
+                            continue
+                        val = arr[i, j]
+                        if not np.isfinite(val):
+                            continue
+                        norm_v = (val - v_lo) / span
+                        txt_color = "white" if (norm_v > 0.72 or (center is not None and norm_v < 0.22)) else "#1f2933"
+                        ax.text(
+                            j,
+                            i,
+                            format(val, fmt),
+                            ha="center",
+                            va="center",
+                            fontsize=fsize,
+                            color=txt_color,
+                        )
+
+        @staticmethod
+        def boxplot(
+            *,
+            data: Any,
+            x: str,
+            y: str,
+            order: Sequence[Any],
+            ax: Any,
+            color: str = "#D6E2F0",
+            linecolor: str = "#3B6EA8",
+            fliersize: float = 2,
+            flierprops: dict[str, Any] | None = None,
+            medianprops: dict[str, Any] | None = None,
+        ) -> None:
+            groups = [data.loc[data[y] == lvl, x].dropna().to_numpy(dtype=float) for lvl in order]
+            groups = [g if len(g) > 0 else np.array([np.nan]) for g in groups]
+            fprops = {**(flierprops or {}), "markersize": fliersize, "marker": "o"}
+            bp = ax.boxplot(
+                groups,
+                vert=False,
+                positions=list(range(len(order))),
+                widths=0.55,
+                patch_artist=True,
+                flierprops=fprops,
+                medianprops=medianprops or {},
+            )
+            for patch in bp["boxes"]:
+                patch.set_facecolor(color)
+                patch.set_edgecolor(linecolor)
+                patch.set_linewidth(1.0)
+            for key in ("whiskers", "caps"):
+                for item in bp[key]:
+                    item.set_color(linecolor)
+
+    sns = _SeabornFallback()
 
 # One palette for the whole report.
 PRIMARY = "#3B6EA8"

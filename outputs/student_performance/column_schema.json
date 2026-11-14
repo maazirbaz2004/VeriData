@@ -1,0 +1,305 @@
+{
+  "Dalc": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "Fedu": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "Fjob": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "G1": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 17,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "G2": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 17,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "G3": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 18,
+    "pct_missing": 0.0,
+    "role": "target_candidate",
+    "semantic_type": "numeric_discrete"
+  },
+  "Medu": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "Mjob": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "Pstatus": {
+    "binary_labels": [
+      "T",
+      "A"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "Walc": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "absences": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 34,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "activities": {
+    "binary_labels": [
+      "yes",
+      "no"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "address": {
+    "binary_labels": [
+      "U",
+      "R"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "age": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 8,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "failures": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 4,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "famrel": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "famsize": {
+    "binary_labels": [
+      "GT3",
+      "LE3"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "famsup": {
+    "binary_labels": [
+      "yes",
+      "no"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "freetime": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "goout": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "guardian": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "health": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "higher": {
+    "binary_labels": [
+      "yes",
+      "no"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "internet": {
+    "binary_labels": [
+      "yes",
+      "no"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "nursery": {
+    "binary_labels": [
+      "yes",
+      "no"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "paid": {
+    "binary_labels": [
+      "no",
+      "yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "reason": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 4,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "romantic": {
+    "binary_labels": [
+      "no",
+      "yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "school": {
+    "binary_labels": [
+      "GP",
+      "MS"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "schoolsup": {
+    "binary_labels": [
+      "no",
+      "yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "sex": {
+    "binary_labels": [
+      "F",
+      "M"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "studytime": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 4,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "traveltime": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 4,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  }
+}

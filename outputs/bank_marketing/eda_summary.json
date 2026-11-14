@@ -1,0 +1,1050 @@
+{
+  "categorical": {
+    "batches": [
+      "figures/categorical_distributions_1.png",
+      "figures/categorical_distributions_2.png"
+    ],
+    "columns": {
+      "contact": {
+        "count": 41176,
+        "entropy_norm": 0.947,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "cellular",
+        "mode_count": 26135,
+        "mode_pct": 63.47,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 15041,
+        "rarest_level": "telephone",
+        "rarest_pct": 36.53,
+        "smallest_group_n": 15041
+      },
+      "day_of_week": {
+        "count": 41176,
+        "entropy_norm": 1.0,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "thu",
+        "mode_count": 8618,
+        "mode_pct": 20.93,
+        "n_rare_levels": 0,
+        "n_unique": 5,
+        "rare_levels": [],
+        "rarest_count": 7826,
+        "rarest_level": "fri",
+        "rarest_pct": 19.01,
+        "smallest_group_n": 7826
+      },
+      "default": {
+        "count": 32580,
+        "entropy_norm": 0.001,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "no",
+        "mode_count": 32577,
+        "mode_pct": 99.99,
+        "n_rare_levels": 1,
+        "n_unique": 2,
+        "rare_levels": [
+          {
+            "count": 3,
+            "level": "yes",
+            "pct_of_rows": 0.01
+          }
+        ],
+        "rarest_count": 3,
+        "rarest_level": "yes",
+        "rarest_pct": 0.01,
+        "smallest_group_n": 3
+      },
+      "education": {
+        "count": 39446,
+        "entropy_norm": 0.857,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "university.degree",
+        "mode_count": 12164,
+        "mode_pct": 30.84,
+        "n_rare_levels": 1,
+        "n_unique": 7,
+        "rare_levels": [
+          {
+            "count": 18,
+            "level": "illiterate",
+            "pct_of_rows": 0.04
+          }
+        ],
+        "rarest_count": 18,
+        "rarest_level": "illiterate",
+        "rarest_pct": 0.05,
+        "smallest_group_n": 18
+      },
+      "housing": {
+        "count": 40186,
+        "entropy_norm": 0.996,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "yes",
+        "mode_count": 21571,
+        "mode_pct": 53.68,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 18615,
+        "rarest_level": "no",
+        "rarest_pct": 46.32,
+        "smallest_group_n": 18615
+      },
+      "job": {
+        "count": 40846,
+        "entropy_norm": 0.849,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "admin.",
+        "mode_count": 10419,
+        "mode_pct": 25.51,
+        "n_rare_levels": 0,
+        "n_unique": 11,
+        "rare_levels": [],
+        "rarest_count": 875,
+        "rarest_level": "student",
+        "rarest_pct": 2.14,
+        "smallest_group_n": 875
+      },
+      "loan": {
+        "count": 40186,
+        "entropy_norm": 0.623,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "no",
+        "mode_count": 33938,
+        "mode_pct": 84.45,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 6248,
+        "rarest_level": "yes",
+        "rarest_pct": 15.55,
+        "smallest_group_n": 6248
+      },
+      "marital": {
+        "count": 41096,
+        "entropy_norm": 0.824,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "married",
+        "mode_count": 24921,
+        "mode_pct": 60.64,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 4611,
+        "rarest_level": "divorced",
+        "rarest_pct": 11.22,
+        "smallest_group_n": 4611
+      },
+      "month": {
+        "count": 41176,
+        "entropy_norm": 0.797,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "may",
+        "mode_count": 13767,
+        "mode_pct": 33.43,
+        "n_rare_levels": 1,
+        "n_unique": 10,
+        "rare_levels": [
+          {
+            "count": 182,
+            "level": "dec",
+            "pct_of_rows": 0.44
+          }
+        ],
+        "rarest_count": 182,
+        "rarest_level": "dec",
+        "rarest_pct": 0.44,
+        "smallest_group_n": 182
+      },
+      "poutcome": {
+        "count": 41176,
+        "entropy_norm": 0.432,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "nonexistent",
+        "mode_count": 35551,
+        "mode_pct": 86.34,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1373,
+        "rarest_level": "success",
+        "rarest_pct": 3.33,
+        "smallest_group_n": 1373
+      },
+      "y": {
+        "count": 41176,
+        "entropy_norm": 0.508,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "no",
+        "mode_count": 36537,
+        "mode_pct": 88.73,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 4639,
+        "rarest_level": "yes",
+        "rarest_pct": 11.27,
+        "smallest_group_n": 4639
+      }
+    },
+    "figures": {
+      "cardinality_bar": "figures/cardinality_bar.png"
+    }
+  },
+  "categorical_categorical": {
+    "figures": {
+      "categorical_pairs": "figures/categorical_pairs.png",
+      "cramers_v_heatmap": "figures/cramers_v_heatmap.png"
+    },
+    "top_pairs": [
+      {
+        "a": "contact",
+        "b": "month",
+        "cramers_v": 0.609
+      },
+      {
+        "a": "job",
+        "b": "education",
+        "cramers_v": 0.388
+      },
+      {
+        "a": "poutcome",
+        "b": "y",
+        "cramers_v": 0.32
+      },
+      {
+        "a": "month",
+        "b": "y",
+        "cramers_v": 0.274
+      },
+      {
+        "a": "contact",
+        "b": "poutcome",
+        "cramers_v": 0.242
+      },
+      {
+        "a": "month",
+        "b": "poutcome",
+        "cramers_v": 0.242
+      },
+      {
+        "a": "job",
+        "b": "marital",
+        "cramers_v": 0.222
+      },
+      {
+        "a": "job",
+        "b": "y",
+        "cramers_v": 0.153
+      },
+      {
+        "a": "contact",
+        "b": "y",
+        "cramers_v": 0.145
+      },
+      {
+        "a": "marital",
+        "b": "education",
+        "cramers_v": 0.145
+      }
+    ]
+  },
+  "column_groups": {
+    "categorical": [
+      "job",
+      "marital",
+      "education",
+      "default",
+      "housing",
+      "loan",
+      "contact",
+      "month",
+      "day_of_week",
+      "poutcome",
+      "y"
+    ],
+    "datetime": [],
+    "numeric": [
+      "age",
+      "duration",
+      "campaign",
+      "pdays",
+      "previous",
+      "emp.var.rate",
+      "cons.price.idx",
+      "cons.conf.idx",
+      "euribor3m",
+      "nr.employed"
+    ],
+    "skipped": []
+  },
+  "column_roles": {
+    "age": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "campaign": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "cons.conf.idx": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "cons.price.idx": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "contact": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "day_of_week": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "default": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "duration": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "education": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "emp.var.rate": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "euribor3m": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "housing": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "job": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "loan": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "marital": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "month": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "nr.employed": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "pdays": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "poutcome": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "previous": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "y": {
+      "role": "target_candidate",
+      "semantic_type": "binary"
+    }
+  },
+  "eda_errors": [],
+  "missingness": {
+    "columns": {
+      "age": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "campaign": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "cons.conf.idx": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "cons.price.idx": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "contact": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "day_of_week": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "default": {
+        "n_missing": 8596,
+        "pct_missing": 20.88
+      },
+      "duration": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "education": {
+        "n_missing": 1730,
+        "pct_missing": 4.2
+      },
+      "emp.var.rate": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "euribor3m": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "housing": {
+        "n_missing": 990,
+        "pct_missing": 2.4
+      },
+      "job": {
+        "n_missing": 330,
+        "pct_missing": 0.8
+      },
+      "loan": {
+        "n_missing": 990,
+        "pct_missing": 2.4
+      },
+      "marital": {
+        "n_missing": 80,
+        "pct_missing": 0.19
+      },
+      "month": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "nr.employed": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "pdays": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "poutcome": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "previous": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "y": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      }
+    },
+    "concentration": "spread",
+    "concentration_note": "Missing values are spread out: the 10% of rows with the most gaps hold 48.25% of all missing cells.",
+    "figures": {
+      "missing_bar": "figures/missing_bar.png",
+      "missing_correlation": "figures/missing_correlation.png",
+      "missing_heatmap": "figures/missing_heatmap.png"
+    },
+    "missing_cells": 12716,
+    "n_columns_with_missing": 6,
+    "pct_missing_cells": 1.47,
+    "pct_rows_with_any_missing": 25.98,
+    "rows_with_any_missing": 10698,
+    "top10pct_rows_share_of_missing": 48.25,
+    "top_missing_correlation": {
+      "a": "housing",
+      "b": "loan",
+      "r": 1.0
+    },
+    "total_cells": 864696
+  },
+  "notes": [],
+  "numeric": {
+    "batches": [
+      "figures/numeric_distributions_1.png",
+      "figures/numeric_distributions_2.png"
+    ],
+    "columns": {
+      "age": {
+        "count": 41176,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 0.791,
+        "max": 98.0,
+        "mean": 40.0238,
+        "median": 38.0,
+        "min": 17.0,
+        "n_outliers_iqr": 468,
+        "n_peaks_heuristic": 1,
+        "n_unique": 78,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 1.14,
+        "pct_zeros": 0.0,
+        "q1": 32.0,
+        "q3": 47.0,
+        "skew": 0.785,
+        "std": 10.4207
+      },
+      "campaign": {
+        "count": 41176,
+        "detail_figure": "figures/numeric_detail_campaign.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 36.972,
+        "log1p_skew": 1.35,
+        "max": 56.0,
+        "mean": 2.5679,
+        "median": 2.0,
+        "min": 1.0,
+        "n_outliers_iqr": 2406,
+        "n_peaks_heuristic": 1,
+        "n_unique": 42,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 5.84,
+        "pct_zeros": 0.0,
+        "q1": 1.0,
+        "q3": 3.0,
+        "skew": 4.762,
+        "std": 2.7703
+      },
+      "cons.conf.idx": {
+        "count": 41176,
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": -0.359,
+        "max": -26.9,
+        "mean": -40.5029,
+        "median": -41.8,
+        "min": -50.8,
+        "n_outliers_iqr": 446,
+        "n_peaks_heuristic": 3,
+        "n_unique": 26,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 1.08,
+        "pct_zeros": 0.0,
+        "q1": -42.7,
+        "q3": -36.4,
+        "skew": 0.303,
+        "std": 4.6279
+      },
+      "cons.price.idx": {
+        "count": 41176,
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": -0.83,
+        "max": 94.767,
+        "mean": 93.5757,
+        "median": 93.749,
+        "min": 92.201,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 5,
+        "n_unique": 26,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 93.075,
+        "q3": 93.994,
+        "skew": -0.231,
+        "std": 0.5788
+      },
+      "duration": {
+        "count": 41176,
+        "detail_figure": "figures/numeric_detail_duration.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 20.244,
+        "log1p_skew": -0.42,
+        "max": 4918.0,
+        "mean": 258.3158,
+        "median": 180.0,
+        "min": 0.0,
+        "n_outliers_iqr": 2963,
+        "n_peaks_heuristic": 1,
+        "n_unique": 1544,
+        "n_zeros": 4,
+        "pct_outliers_iqr": 7.2,
+        "pct_zeros": 0.01,
+        "q1": 102.0,
+        "q3": 319.0,
+        "skew": 3.263,
+        "std": 259.3053
+      },
+      "emp.var.rate": {
+        "count": 41176,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -1.063,
+        "max": 1.4,
+        "mean": 0.0819,
+        "median": 1.1,
+        "min": -3.4,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 2,
+        "n_unique": 10,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": -1.8,
+        "q3": 1.4,
+        "skew": -0.724,
+        "std": 1.5709
+      },
+      "euribor3m": {
+        "count": 41176,
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": -1.407,
+        "max": 5.045,
+        "mean": 3.6213,
+        "median": 4.857,
+        "min": 0.634,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 2,
+        "n_unique": 316,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 1.344,
+        "q3": 4.961,
+        "skew": -0.709,
+        "std": 1.7344
+      },
+      "nr.employed": {
+        "count": 41176,
+        "detail_figure": "figures/numeric_detail_nr_employed.png",
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": -0.004,
+        "max": 5228.1,
+        "mean": 5167.0349,
+        "median": 5191.0,
+        "min": 4963.6,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 2,
+        "n_unique": 11,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 5099.1,
+        "q3": 5228.1,
+        "skew": -1.044,
+        "std": 72.2514
+      },
+      "pdays": {
+        "count": 41176,
+        "detail_figure": "figures/numeric_detail_pdays.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 22.222,
+        "max": 999.0,
+        "mean": 962.4648,
+        "median": 999.0,
+        "min": 0.0,
+        "n_outliers_iqr": 1515,
+        "n_peaks_heuristic": 1,
+        "n_unique": 27,
+        "n_zeros": 15,
+        "pct_outliers_iqr": 3.68,
+        "pct_zeros": 0.04,
+        "q1": 999.0,
+        "q3": 999.0,
+        "skew": -4.921,
+        "std": 186.9371
+      },
+      "previous": {
+        "count": 41176,
+        "detail_figure": "figures/numeric_detail_previous.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 20.102,
+        "log1p_skew": 2.59,
+        "max": 7.0,
+        "mean": 0.173,
+        "median": 0.0,
+        "min": 0.0,
+        "n_outliers_iqr": 5625,
+        "n_peaks_heuristic": null,
+        "n_unique": 8,
+        "n_zeros": 35551,
+        "pct_outliers_iqr": 13.66,
+        "pct_zeros": 86.34,
+        "q1": 0.0,
+        "q3": 0.0,
+        "skew": 3.831,
+        "std": 0.495
+      }
+    },
+    "figures": {
+      "outlier_summary": "figures/outlier_summary.png"
+    },
+    "n_detail_flagged": 5
+  },
+  "numeric_categorical": {
+    "figures": {
+      "numeric_by_category": "figures/numeric_by_category.png"
+    },
+    "top_pairs": [
+      {
+        "categorical": "poutcome",
+        "eta_squared": 0.907,
+        "numeric": "pdays"
+      },
+      {
+        "categorical": "poutcome",
+        "eta_squared": 0.789,
+        "numeric": "previous"
+      },
+      {
+        "categorical": "contact",
+        "eta_squared": 0.35,
+        "numeric": "cons.price.idx"
+      },
+      {
+        "categorical": "poutcome",
+        "eta_squared": 0.262,
+        "numeric": "nr.employed"
+      },
+      {
+        "categorical": "poutcome",
+        "eta_squared": 0.242,
+        "numeric": "euribor3m"
+      },
+      {
+        "categorical": "poutcome",
+        "eta_squared": 0.225,
+        "numeric": "emp.var.rate"
+      },
+      {
+        "categorical": "marital",
+        "eta_squared": 0.176,
+        "numeric": "age"
+      },
+      {
+        "categorical": "y",
+        "eta_squared": 0.164,
+        "numeric": "duration"
+      },
+      {
+        "categorical": "contact",
+        "eta_squared": 0.16,
+        "numeric": "euribor3m"
+      },
+      {
+        "categorical": "contact",
+        "eta_squared": 0.155,
+        "numeric": "emp.var.rate"
+      }
+    ]
+  },
+  "numeric_numeric": {
+    "collinear_pairs": [
+      {
+        "a": "emp.var.rate",
+        "b": "nr.employed",
+        "n": 41176,
+        "pearson": 0.907,
+        "spearman": 0.945
+      },
+      {
+        "a": "emp.var.rate",
+        "b": "euribor3m",
+        "n": 41176,
+        "pearson": 0.972,
+        "spearman": 0.94
+      },
+      {
+        "a": "euribor3m",
+        "b": "nr.employed",
+        "n": 41176,
+        "pearson": 0.945,
+        "spearman": 0.929
+      }
+    ],
+    "figures": {
+      "correlation_heatmap": "figures/correlation_heatmap.png",
+      "top_scatter_pairs": "figures/top_scatter_pairs.png"
+    },
+    "n_pairs": 45,
+    "top_pairs": [
+      {
+        "a": "emp.var.rate",
+        "b": "nr.employed",
+        "n": 41176,
+        "pearson": 0.907,
+        "spearman": 0.945
+      },
+      {
+        "a": "emp.var.rate",
+        "b": "euribor3m",
+        "n": 41176,
+        "pearson": 0.972,
+        "spearman": 0.94
+      },
+      {
+        "a": "euribor3m",
+        "b": "nr.employed",
+        "n": 41176,
+        "pearson": 0.945,
+        "spearman": 0.929
+      },
+      {
+        "a": "emp.var.rate",
+        "b": "cons.price.idx",
+        "n": 41176,
+        "pearson": 0.775,
+        "spearman": 0.665
+      },
+      {
+        "a": "pdays",
+        "b": "previous",
+        "n": 41176,
+        "pearson": -0.588,
+        "spearman": -0.51
+      },
+      {
+        "a": "cons.price.idx",
+        "b": "euribor3m",
+        "n": 41176,
+        "pearson": 0.688,
+        "spearman": 0.491
+      },
+      {
+        "a": "cons.price.idx",
+        "b": "nr.employed",
+        "n": 41176,
+        "pearson": 0.522,
+        "spearman": 0.465
+      },
+      {
+        "a": "previous",
+        "b": "euribor3m",
+        "n": 41176,
+        "pearson": -0.455,
+        "spearman": -0.455
+      },
+      {
+        "a": "previous",
+        "b": "nr.employed",
+        "n": 41176,
+        "pearson": -0.501,
+        "spearman": -0.439
+      },
+      {
+        "a": "previous",
+        "b": "emp.var.rate",
+        "n": 41176,
+        "pearson": -0.421,
+        "spearman": -0.435
+      }
+    ]
+  },
+  "overview": {
+    "dataset_name": "bank_marketing",
+    "excluded_columns": [],
+    "figures": {
+      "dtype_breakdown": "figures/dtype_breakdown.png"
+    },
+    "memory_mb": 15.013,
+    "missing_cells": 12716,
+    "n_cols": 21,
+    "n_cols_raw": 21,
+    "n_duplicate_rows_detected": 12,
+    "n_rows": 41176,
+    "n_rows_raw": 41188,
+    "pct_missing_cells": 1.47,
+    "semantic_type_counts": {
+      "binary": 5,
+      "categorical_nominal": 6,
+      "numeric_continuous": 9,
+      "numeric_discrete": 1
+    }
+  },
+  "target": {
+    "balance_label": "mildly imbalanced",
+    "classes": [
+      {
+        "count": 36537,
+        "label": "no",
+        "pct": 88.73
+      },
+      {
+        "count": 4639,
+        "label": "yes",
+        "pct": 11.27
+      }
+    ],
+    "figures": {
+      "target": "figures/target_balance.png",
+      "target_by_categorical": "figures/target_by_categorical.png"
+    },
+    "imbalance_ratio": 7.88,
+    "kind": "categorical",
+    "majority_class": "no",
+    "majority_pct": 88.73,
+    "minority_class": "yes",
+    "minority_pct": 11.27,
+    "n_classes": 2,
+    "n_missing": 0,
+    "name": "y",
+    "top_categorical_by_cramers_v": [
+      {
+        "cramers_v": 0.32,
+        "feature": "poutcome"
+      },
+      {
+        "cramers_v": 0.274,
+        "feature": "month"
+      },
+      {
+        "cramers_v": 0.153,
+        "feature": "job"
+      },
+      {
+        "cramers_v": 0.145,
+        "feature": "contact"
+      },
+      {
+        "cramers_v": 0.066,
+        "feature": "education"
+      },
+      {
+        "cramers_v": 0.054,
+        "feature": "marital"
+      }
+    ]
+  },
+  "target_relationships": {
+    "features": [
+      {
+        "feature": "poutcome",
+        "measure": "Cramér's V",
+        "strength": 0.32,
+        "value": 0.32
+      },
+      {
+        "feature": "month",
+        "measure": "Cramér's V",
+        "strength": 0.274,
+        "value": 0.274
+      },
+      {
+        "feature": "duration",
+        "measure": "eta²",
+        "strength": 0.164,
+        "value": 0.164
+      },
+      {
+        "feature": "job",
+        "measure": "Cramér's V",
+        "strength": 0.153,
+        "value": 0.153
+      },
+      {
+        "feature": "contact",
+        "measure": "Cramér's V",
+        "strength": 0.145,
+        "value": 0.145
+      },
+      {
+        "feature": "nr.employed",
+        "measure": "eta²",
+        "strength": 0.126,
+        "value": 0.126
+      },
+      {
+        "feature": "pdays",
+        "measure": "eta²",
+        "strength": 0.106,
+        "value": 0.106
+      },
+      {
+        "feature": "euribor3m",
+        "measure": "eta²",
+        "strength": 0.095,
+        "value": 0.095
+      },
+      {
+        "feature": "emp.var.rate",
+        "measure": "eta²",
+        "strength": 0.089,
+        "value": 0.089
+      },
+      {
+        "feature": "education",
+        "measure": "Cramér's V",
+        "strength": 0.066,
+        "value": 0.066
+      },
+      {
+        "feature": "marital",
+        "measure": "Cramér's V",
+        "strength": 0.054,
+        "value": 0.054
+      },
+      {
+        "feature": "previous",
+        "measure": "eta²",
+        "strength": 0.053,
+        "value": 0.053
+      },
+      {
+        "feature": "day_of_week",
+        "measure": "Cramér's V",
+        "strength": 0.023,
+        "value": 0.023
+      },
+      {
+        "feature": "cons.price.idx",
+        "measure": "eta²",
+        "strength": 0.019,
+        "value": 0.019
+      },
+      {
+        "feature": "housing",
+        "measure": "Cramér's V",
+        "strength": 0.011,
+        "value": 0.011
+      },
+      {
+        "feature": "campaign",
+        "measure": "eta²",
+        "strength": 0.004,
+        "value": 0.004
+      },
+      {
+        "feature": "cons.conf.idx",
+        "measure": "eta²",
+        "strength": 0.003,
+        "value": 0.003
+      },
+      {
+        "feature": "age",
+        "measure": "eta²",
+        "strength": 0.001,
+        "value": 0.001
+      },
+      {
+        "feature": "default",
+        "measure": "Cramér's V",
+        "strength": 0.0,
+        "value": 0.0
+      },
+      {
+        "feature": "loan",
+        "measure": "Cramér's V",
+        "strength": 0.0,
+        "value": 0.0
+      }
+    ],
+    "figures": {
+      "target_relationships": "figures/target_relationships.png"
+    },
+    "target": "y"
+  }
+}

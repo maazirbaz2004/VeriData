@@ -1,0 +1,152 @@
+name: bank_marketing
+file: data\raw\bank_marketing\bank-additional-full.csv
+target: y
+id_columns: []
+forced_types: {}
+ordinal_orders: {}
+missing_tokens_extra: []
+validity_rules:
+  age:
+    min: 0.0
+    max: 120.0
+    allowed_values: null
+  duration:
+    min: 0.0
+    max: null
+    allowed_values: null
+  campaign:
+    min: 1.0
+    max: null
+    allowed_values: null
+  pdays:
+    min: 0.0
+    max: null
+    allowed_values: null
+  previous:
+    min: 0.0
+    max: null
+    allowed_values: null
+truth_types:
+  age: numeric
+  job: categorical
+  marital: categorical
+  education: categorical
+  default: binary
+  housing: binary
+  loan: binary
+  contact: binary
+  month: categorical
+  day_of_week: categorical
+  duration: numeric
+  campaign: numeric
+  pdays: numeric
+  previous: numeric
+  poutcome: categorical
+  emp.var.rate: numeric
+  cons.price.idx: numeric
+  cons.conf.idx: numeric
+  euribor3m: numeric
+  nr.employed: numeric
+  y: binary
+ingestion:
+  max_file_size_mb: 200.0
+  encodings_to_try:
+  - utf-8
+  - utf-8-sig
+  - latin-1
+  - cp1252
+  delimiters_to_try:
+  - ','
+  - ;
+  - "\t"
+  - '|'
+type_inference:
+  numeric_parse_threshold: 0.95
+  discrete_max_unique: 20
+  discrete_max_ratio: 0.05
+  datetime_parse_threshold: 0.9
+  month_first_default: false
+  id_unique_ratio: 0.98
+  id_min_nonnull: 50
+  text_mean_len: 40.0
+  text_mean_words: 6.0
+  text_unique_ratio: 0.5
+  max_categorical_unique: 50
+  categorical_max_ratio: 0.05
+profiling:
+  missing_tokens:
+  - ''
+  - ' '
+  - NA
+  - N/A
+  - n/a
+  - NaN
+  - nan
+  - 'NULL'
+  - 'null'
+  - None
+  - none
+  - '?'
+  - '-'
+  - --
+  - missing
+  - '#N/A'
+  candidate_missing_tokens:
+  - unknown
+  - Unknown
+  - UNKNOWN
+  treat_unknown_as_missing: true
+  label_similarity_threshold: 0.9
+  high_missing_warning_threshold: 0.4
+  extreme_skew_warning_threshold: 2.0
+  minority_imbalance_threshold: 0.1
+  outlier_iqr_mild: 1.5
+  outlier_iqr_extreme: 3.0
+  outlier_modz_threshold: 3.5
+cleaning:
+  snake_case_columns: false
+  auto_merge_fuzzy: false
+  missing_token_warning_ratio: 0.1
+  drop_duplicates: auto
+  duplicate_auto_max_cols: 4
+  duplicate_auto_max_rate: 0.2
+  column_drop_threshold: 0.8
+  row_drop_threshold: 0.5
+  categorical_missing_as_level_threshold: 0.05
+  missing_indicator_threshold: 0.05
+  target_missing: drop
+  outlier_action: flag
+  outlier_remove_max_row_fraction: 0.05
+  steps_enabled:
+    normalize_column_names: true
+    clean_whitespace_unicode: true
+    normalize_missing_tokens: true
+    standardize_categories: true
+    convert_types: true
+    apply_validity_rules: true
+    handle_duplicates: true
+    structural_drops: true
+    handle_missing_values: true
+    handle_outliers: true
+    validate_invariants: true
+eda:
+  dpi: 150
+  max_numeric_plots: 30
+  max_categorical_plots: 30
+  batch_panel_size: 6
+  top_categories_shown: 15
+  missing_heatmap_max_rows: 500
+  scatter_max_points: 5000
+  top_bivariate_pairs: 6
+  max_group_levels_box: 8
+  collinearity_threshold: 0.9
+scaling:
+  skew_threshold: 1.0
+  scale_disparity_ratio_threshold: 10.0
+  generate_scaled_csv: true
+insights:
+  zero_inflation_threshold: 0.3
+  outlier_pct_threshold: 0.05
+  rare_level_threshold: 0.01
+  small_n_dataset_threshold: 200
+  small_n_group_threshold: 20

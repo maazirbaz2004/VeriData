@@ -1,0 +1,188 @@
+{
+  "Churn": {
+    "binary_labels": [
+      "No",
+      "Yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "target_candidate",
+    "semantic_type": "binary"
+  },
+  "Contract": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "Dependents": {
+    "binary_labels": [
+      "No",
+      "Yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "DeviceProtection": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "InternetService": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "MonthlyCharges": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 1585,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "MultipleLines": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "OnlineBackup": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "OnlineSecurity": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "PaperlessBilling": {
+    "binary_labels": [
+      "Yes",
+      "No"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "Partner": {
+    "binary_labels": [
+      "No",
+      "Yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "PaymentMethod": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 4,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "PhoneService": {
+    "binary_labels": [
+      "Yes",
+      "No"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "SeniorCitizen": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "StreamingMovies": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "StreamingTV": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "TechSupport": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "TotalCharges": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 6530,
+    "pct_missing": 0.001562,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "customerID": {
+    "binary_labels": null,
+    "exclude_reason": "id_like",
+    "n_unique": 7043,
+    "pct_missing": 0.0,
+    "role": "id",
+    "semantic_type": "id_like"
+  },
+  "gender": {
+    "binary_labels": [
+      "Male",
+      "Female"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "tenure": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 73,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  }
+}

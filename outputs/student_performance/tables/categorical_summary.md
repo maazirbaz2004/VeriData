@@ -1,0 +1,19 @@
+| Column | Levels | Mode | Mode % | Entropy (0-1) | Rarest level | Rarest % | Levels under 1% of rows |
+| :--- | ---: | :--- | ---: | ---: | :--- | ---: | ---: |
+| school | 2 | GP | 88.35 | 0.519 | MS | 11.65 | 0 |
+| sex | 2 | F | 52.66 | 0.998 | M | 47.34 | 0 |
+| address | 2 | U | 77.72 | 0.765 | R | 22.28 | 0 |
+| famsize | 2 | GT3 | 71.14 | 0.867 | LE3 | 28.86 | 0 |
+| Pstatus | 2 | T | 89.62 | 0.481 | A | 10.38 | 0 |
+| Mjob | 5 | other | 35.7 | 0.929 | health | 8.61 | 0 |
+| Fjob | 5 | other | 54.94 | 0.727 | health | 4.56 | 0 |
+| reason | 4 | course | 36.71 | 0.933 | other | 9.11 | 0 |
+| guardian | 3 | mother | 69.11 | 0.724 | other | 8.1 | 0 |
+| schoolsup | 2 | no | 87.09 | 0.555 | yes | 12.91 | 0 |
+| famsup | 2 | yes | 61.27 | 0.963 | no | 38.73 | 0 |
+| paid | 2 | no | 54.18 | 0.995 | yes | 45.82 | 0 |
+| activities | 2 | yes | 50.89 | 1 | no | 49.11 | 0 |
+| nursery | 2 | yes | 79.49 | 0.732 | no | 20.51 | 0 |
+| higher | 2 | yes | 94.94 | 0.289 | no | 5.06 | 0 |
+| internet | 2 | yes | 83.29 | 0.651 | no | 16.71 | 0 |
+| romantic | 2 | no | 66.58 | 0.919 | yes | 33.42 | 0 |

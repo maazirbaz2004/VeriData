@@ -14,7 +14,6 @@ from typing import Any
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
 
 from .plots import (
     ACCENT,
@@ -29,6 +28,7 @@ from .plots import (
     FigureSink,
     df_to_markdown,
     short_label,
+    sns,
     wrap_title,
 )
 from .stats import as_float, as_labels, cramers_v, eta_squared, safe_round, upper_pairs

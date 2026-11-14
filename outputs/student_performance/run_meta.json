@@ -1,0 +1,13 @@
+{
+  "completed_at_utc": "2026-11-14T12:46:39.973526+00:00",
+  "dataset_name": "student_performance",
+  "elapsed_seconds": 38.0625,
+  "n_cols_cleaned_conservative": 33,
+  "n_cols_cleaned_imputed": 33,
+  "n_cols_raw": 33,
+  "n_rows_cleaned_conservative": 395,
+  "n_rows_cleaned_imputed": 395,
+  "n_rows_raw": 395,
+  "sha256": "659f3984643c2def53ba5e49f551c6ce3657039f9c25306cacb8f43b818a5190",
+  "source_file": "data\\raw\\student_performance\\student-mat.csv"
+}

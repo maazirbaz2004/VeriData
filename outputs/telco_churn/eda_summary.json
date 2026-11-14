@@ -1,0 +1,901 @@
+{
+  "categorical": {
+    "batches": [
+      "figures/categorical_distributions_1.png",
+      "figures/categorical_distributions_2.png",
+      "figures/categorical_distributions_3.png"
+    ],
+    "columns": {
+      "Churn": {
+        "count": 7043,
+        "entropy_norm": 0.835,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "No",
+        "mode_count": 5174,
+        "mode_pct": 73.46,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 1869,
+        "rarest_level": "Yes",
+        "rarest_pct": 26.54,
+        "smallest_group_n": 1869
+      },
+      "Contract": {
+        "count": 7043,
+        "entropy_norm": 0.909,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "Month-to-month",
+        "mode_count": 3875,
+        "mode_pct": 55.02,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1473,
+        "rarest_level": "One year",
+        "rarest_pct": 20.91,
+        "smallest_group_n": 1473
+      },
+      "Dependents": {
+        "count": 7043,
+        "entropy_norm": 0.881,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "No",
+        "mode_count": 4933,
+        "mode_pct": 70.04,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 2110,
+        "rarest_level": "Yes",
+        "rarest_pct": 29.96,
+        "smallest_group_n": 2110
+      },
+      "DeviceProtection": {
+        "count": 7043,
+        "entropy_norm": 0.965,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "No",
+        "mode_count": 3095,
+        "mode_pct": 43.94,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1526,
+        "rarest_level": "No internet service",
+        "rarest_pct": 21.67,
+        "smallest_group_n": 1526
+      },
+      "InternetService": {
+        "count": 7043,
+        "entropy_norm": 0.965,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "Fiber optic",
+        "mode_count": 3096,
+        "mode_pct": 43.96,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1526,
+        "rarest_level": "No",
+        "rarest_pct": 21.67,
+        "smallest_group_n": 1526
+      },
+      "MultipleLines": {
+        "count": 7043,
+        "entropy_norm": 0.858,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "No",
+        "mode_count": 3390,
+        "mode_pct": 48.13,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 682,
+        "rarest_level": "No phone service",
+        "rarest_pct": 9.68,
+        "smallest_group_n": 682
+      },
+      "OnlineBackup": {
+        "count": 7043,
+        "entropy_norm": 0.965,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "No",
+        "mode_count": 3088,
+        "mode_pct": 43.84,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1526,
+        "rarest_level": "No internet service",
+        "rarest_pct": 21.67,
+        "smallest_group_n": 1526
+      },
+      "OnlineSecurity": {
+        "count": 7043,
+        "entropy_norm": 0.944,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "No",
+        "mode_count": 3498,
+        "mode_pct": 49.67,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1526,
+        "rarest_level": "No internet service",
+        "rarest_pct": 21.67,
+        "smallest_group_n": 1526
+      },
+      "PaperlessBilling": {
+        "count": 7043,
+        "entropy_norm": 0.975,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "Yes",
+        "mode_count": 4171,
+        "mode_pct": 59.22,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 2872,
+        "rarest_level": "No",
+        "rarest_pct": 40.78,
+        "smallest_group_n": 2872
+      },
+      "Partner": {
+        "count": 7043,
+        "entropy_norm": 0.999,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "No",
+        "mode_count": 3641,
+        "mode_pct": 51.7,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 3402,
+        "rarest_level": "Yes",
+        "rarest_pct": 48.3,
+        "smallest_group_n": 3402
+      },
+      "PaymentMethod": {
+        "count": 7043,
+        "entropy_norm": 0.987,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "Electronic check",
+        "mode_count": 2365,
+        "mode_pct": 33.58,
+        "n_rare_levels": 0,
+        "n_unique": 4,
+        "rare_levels": [],
+        "rarest_count": 1522,
+        "rarest_level": "Credit card (automatic)",
+        "rarest_pct": 21.61,
+        "smallest_group_n": 1522
+      },
+      "PhoneService": {
+        "count": 7043,
+        "entropy_norm": 0.459,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "Yes",
+        "mode_count": 6361,
+        "mode_pct": 90.32,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 682,
+        "rarest_level": "No",
+        "rarest_pct": 9.68,
+        "smallest_group_n": 682
+      },
+      "SeniorCitizen": {
+        "count": 7043,
+        "entropy_norm": 0.639,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "0",
+        "mode_count": 5901,
+        "mode_pct": 83.79,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 1142,
+        "rarest_level": "1",
+        "rarest_pct": 16.21,
+        "smallest_group_n": 1142
+      },
+      "StreamingMovies": {
+        "count": 7043,
+        "entropy_norm": 0.97,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "No",
+        "mode_count": 2785,
+        "mode_pct": 39.54,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1526,
+        "rarest_level": "No internet service",
+        "rarest_pct": 21.67,
+        "smallest_group_n": 1526
+      },
+      "StreamingTV": {
+        "count": 7043,
+        "entropy_norm": 0.97,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "No",
+        "mode_count": 2810,
+        "mode_pct": 39.9,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1526,
+        "rarest_level": "No internet service",
+        "rarest_pct": 21.67,
+        "smallest_group_n": 1526
+      },
+      "TechSupport": {
+        "count": 7043,
+        "entropy_norm": 0.946,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "No",
+        "mode_count": 3473,
+        "mode_pct": 49.31,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 1526,
+        "rarest_level": "No internet service",
+        "rarest_pct": 21.67,
+        "smallest_group_n": 1526
+      },
+      "gender": {
+        "count": 7043,
+        "entropy_norm": 1.0,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "Male",
+        "mode_count": 3555,
+        "mode_pct": 50.48,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 3488,
+        "rarest_level": "Female",
+        "rarest_pct": 49.52,
+        "smallest_group_n": 3488
+      }
+    },
+    "figures": {
+      "cardinality_bar": "figures/cardinality_bar.png"
+    }
+  },
+  "categorical_categorical": {
+    "figures": {
+      "categorical_pairs": "figures/categorical_pairs.png",
+      "cramers_v_heatmap": "figures/cramers_v_heatmap.png"
+    },
+    "top_pairs": [
+      {
+        "a": "PhoneService",
+        "b": "MultipleLines",
+        "cramers_v": 1.0
+      },
+      {
+        "a": "StreamingTV",
+        "b": "StreamingMovies",
+        "cramers_v": 0.771
+      },
+      {
+        "a": "DeviceProtection",
+        "b": "StreamingMovies",
+        "cramers_v": 0.736
+      },
+      {
+        "a": "DeviceProtection",
+        "b": "StreamingTV",
+        "cramers_v": 0.734
+      },
+      {
+        "a": "OnlineSecurity",
+        "b": "TechSupport",
+        "cramers_v": 0.733
+      },
+      {
+        "a": "DeviceProtection",
+        "b": "TechSupport",
+        "cramers_v": 0.726
+      },
+      {
+        "a": "InternetService",
+        "b": "OnlineSecurity",
+        "cramers_v": 0.724
+      },
+      {
+        "a": "InternetService",
+        "b": "TechSupport",
+        "cramers_v": 0.723
+      },
+      {
+        "a": "OnlineBackup",
+        "b": "TechSupport",
+        "cramers_v": 0.72
+      },
+      {
+        "a": "OnlineBackup",
+        "b": "DeviceProtection",
+        "cramers_v": 0.719
+      }
+    ]
+  },
+  "column_groups": {
+    "categorical": [
+      "gender",
+      "SeniorCitizen",
+      "Partner",
+      "Dependents",
+      "PhoneService",
+      "MultipleLines",
+      "InternetService",
+      "OnlineSecurity",
+      "OnlineBackup",
+      "DeviceProtection",
+      "TechSupport",
+      "StreamingTV",
+      "StreamingMovies",
+      "Contract",
+      "PaperlessBilling",
+      "PaymentMethod",
+      "Churn"
+    ],
+    "datetime": [],
+    "numeric": [
+      "tenure",
+      "MonthlyCharges",
+      "TotalCharges"
+    ],
+    "skipped": [
+      "customerID"
+    ]
+  },
+  "column_roles": {
+    "Churn": {
+      "role": "target_candidate",
+      "semantic_type": "binary"
+    },
+    "Contract": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "Dependents": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "DeviceProtection": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "InternetService": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "MonthlyCharges": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "MultipleLines": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "OnlineBackup": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "OnlineSecurity": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "PaperlessBilling": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "Partner": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "PaymentMethod": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "PhoneService": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "SeniorCitizen": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "StreamingMovies": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "StreamingTV": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "TechSupport": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "TotalCharges": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "customerID": {
+      "role": "id",
+      "semantic_type": "id_like"
+    },
+    "gender": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "tenure": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    }
+  },
+  "eda_errors": [],
+  "missingness": {
+    "columns": {
+      "Churn": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Contract": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Dependents": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "DeviceProtection": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "InternetService": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "MonthlyCharges": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "MultipleLines": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "OnlineBackup": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "OnlineSecurity": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "PaperlessBilling": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Partner": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "PaymentMethod": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "PhoneService": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "SeniorCitizen": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "StreamingMovies": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "StreamingTV": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "TechSupport": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "TotalCharges": {
+        "n_missing": 11,
+        "pct_missing": 0.16
+      },
+      "customerID": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "gender": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "tenure": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      }
+    },
+    "concentration": "concentrated",
+    "concentration_note": "Missing values are concentrated: the 10% of rows with the most gaps hold 100.0% of all missing cells.",
+    "figures": {
+      "missing_bar": "figures/missing_bar.png",
+      "missing_heatmap": "figures/missing_heatmap.png"
+    },
+    "missing_cells": 11,
+    "n_columns_with_missing": 1,
+    "pct_missing_cells": 0.01,
+    "pct_rows_with_any_missing": 0.16,
+    "rows_with_any_missing": 11,
+    "top10pct_rows_share_of_missing": 100.0,
+    "total_cells": 147903
+  },
+  "notes": [],
+  "numeric": {
+    "batches": [
+      "figures/numeric_distributions_1.png"
+    ],
+    "columns": {
+      "MonthlyCharges": {
+        "count": 7043,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -1.257,
+        "max": 118.75,
+        "mean": 64.7617,
+        "median": 70.35,
+        "min": 18.25,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 2,
+        "n_unique": 1585,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 35.5,
+        "q3": 89.85,
+        "skew": -0.221,
+        "std": 30.09
+      },
+      "TotalCharges": {
+        "count": 7032,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -0.232,
+        "max": 8684.8,
+        "mean": 2283.3004,
+        "median": 1397.475,
+        "min": 18.8,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 1,
+        "n_unique": 6530,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 401.45,
+        "q3": 3794.7375,
+        "skew": 0.962,
+        "std": 2266.7714
+      },
+      "tenure": {
+        "count": 7043,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -1.387,
+        "max": 72.0,
+        "mean": 32.3711,
+        "median": 29.0,
+        "min": 0.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 2,
+        "n_unique": 73,
+        "n_zeros": 11,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.16,
+        "q1": 9.0,
+        "q3": 55.0,
+        "skew": 0.24,
+        "std": 24.5595
+      }
+    },
+    "figures": {
+      "outlier_summary": null
+    },
+    "n_detail_flagged": 0
+  },
+  "numeric_categorical": {
+    "figures": {
+      "numeric_by_category": "figures/numeric_by_category.png"
+    },
+    "top_pairs": [
+      {
+        "categorical": "InternetService",
+        "eta_squared": 0.821,
+        "numeric": "MonthlyCharges"
+      },
+      {
+        "categorical": "StreamingTV",
+        "eta_squared": 0.701,
+        "numeric": "MonthlyCharges"
+      },
+      {
+        "categorical": "StreamingMovies",
+        "eta_squared": 0.698,
+        "numeric": "MonthlyCharges"
+      },
+      {
+        "categorical": "DeviceProtection",
+        "eta_squared": 0.626,
+        "numeric": "MonthlyCharges"
+      },
+      {
+        "categorical": "OnlineBackup",
+        "eta_squared": 0.609,
+        "numeric": "MonthlyCharges"
+      },
+      {
+        "categorical": "TechSupport",
+        "eta_squared": 0.591,
+        "numeric": "MonthlyCharges"
+      },
+      {
+        "categorical": "OnlineSecurity",
+        "eta_squared": 0.585,
+        "numeric": "MonthlyCharges"
+      },
+      {
+        "categorical": "Contract",
+        "eta_squared": 0.457,
+        "numeric": "tenure"
+      },
+      {
+        "categorical": "DeviceProtection",
+        "eta_squared": 0.31,
+        "numeric": "TotalCharges"
+      },
+      {
+        "categorical": "StreamingMovies",
+        "eta_squared": 0.3,
+        "numeric": "TotalCharges"
+      }
+    ]
+  },
+  "numeric_numeric": {
+    "collinear_pairs": [],
+    "figures": {
+      "correlation_heatmap": "figures/correlation_heatmap.png",
+      "top_scatter_pairs": "figures/top_scatter_pairs.png"
+    },
+    "n_pairs": 3,
+    "top_pairs": [
+      {
+        "a": "tenure",
+        "b": "TotalCharges",
+        "n": 7032,
+        "pearson": 0.826,
+        "spearman": 0.889
+      },
+      {
+        "a": "MonthlyCharges",
+        "b": "TotalCharges",
+        "n": 7032,
+        "pearson": 0.651,
+        "spearman": 0.638
+      },
+      {
+        "a": "tenure",
+        "b": "MonthlyCharges",
+        "n": 7043,
+        "pearson": 0.248,
+        "spearman": 0.276
+      }
+    ]
+  },
+  "overview": {
+    "dataset_name": "telco_churn",
+    "excluded_columns": [
+      "customerID"
+    ],
+    "figures": {
+      "dtype_breakdown": "figures/dtype_breakdown.png"
+    },
+    "memory_mb": 3.103,
+    "missing_cells": 11,
+    "n_cols": 21,
+    "n_cols_raw": 21,
+    "n_duplicate_rows_detected": 0,
+    "n_rows": 7043,
+    "n_rows_raw": 7043,
+    "pct_missing_cells": 0.01,
+    "semantic_type_counts": {
+      "binary": 6,
+      "categorical_nominal": 11,
+      "id_like": 1,
+      "numeric_continuous": 3
+    }
+  },
+  "target": {
+    "balance_label": "mildly imbalanced",
+    "classes": [
+      {
+        "count": 5174,
+        "label": "No",
+        "pct": 73.46
+      },
+      {
+        "count": 1869,
+        "label": "Yes",
+        "pct": 26.54
+      }
+    ],
+    "figures": {
+      "target": "figures/target_balance.png",
+      "target_by_categorical": "figures/target_by_categorical.png"
+    },
+    "imbalance_ratio": 2.77,
+    "kind": "categorical",
+    "majority_class": "No",
+    "majority_pct": 73.46,
+    "minority_class": "Yes",
+    "minority_pct": 26.54,
+    "n_classes": 2,
+    "n_missing": 0,
+    "name": "Churn",
+    "top_categorical_by_cramers_v": [
+      {
+        "cramers_v": 0.41,
+        "feature": "Contract"
+      },
+      {
+        "cramers_v": 0.347,
+        "feature": "OnlineSecurity"
+      },
+      {
+        "cramers_v": 0.343,
+        "feature": "TechSupport"
+      },
+      {
+        "cramers_v": 0.322,
+        "feature": "InternetService"
+      },
+      {
+        "cramers_v": 0.303,
+        "feature": "PaymentMethod"
+      },
+      {
+        "cramers_v": 0.292,
+        "feature": "OnlineBackup"
+      }
+    ]
+  },
+  "target_relationships": {
+    "features": [
+      {
+        "feature": "Contract",
+        "measure": "Cramér's V",
+        "strength": 0.41,
+        "value": 0.41
+      },
+      {
+        "feature": "OnlineSecurity",
+        "measure": "Cramér's V",
+        "strength": 0.347,
+        "value": 0.347
+      },
+      {
+        "feature": "TechSupport",
+        "measure": "Cramér's V",
+        "strength": 0.343,
+        "value": 0.343
+      },
+      {
+        "feature": "InternetService",
+        "measure": "Cramér's V",
+        "strength": 0.322,
+        "value": 0.322
+      },
+      {
+        "feature": "PaymentMethod",
+        "measure": "Cramér's V",
+        "strength": 0.303,
+        "value": 0.303
+      },
+      {
+        "feature": "OnlineBackup",
+        "measure": "Cramér's V",
+        "strength": 0.292,
+        "value": 0.292
+      },
+      {
+        "feature": "DeviceProtection",
+        "measure": "Cramér's V",
+        "strength": 0.281,
+        "value": 0.281
+      },
+      {
+        "feature": "StreamingMovies",
+        "measure": "Cramér's V",
+        "strength": 0.23,
+        "value": 0.23
+      },
+      {
+        "feature": "StreamingTV",
+        "measure": "Cramér's V",
+        "strength": 0.23,
+        "value": 0.23
+      },
+      {
+        "feature": "PaperlessBilling",
+        "measure": "Cramér's V",
+        "strength": 0.191,
+        "value": 0.191
+      },
+      {
+        "feature": "Dependents",
+        "measure": "Cramér's V",
+        "strength": 0.164,
+        "value": 0.164
+      },
+      {
+        "feature": "Partner",
+        "measure": "Cramér's V",
+        "strength": 0.15,
+        "value": 0.15
+      },
+      {
+        "feature": "SeniorCitizen",
+        "measure": "Cramér's V",
+        "strength": 0.15,
+        "value": 0.15
+      },
+      {
+        "feature": "tenure",
+        "measure": "eta²",
+        "strength": 0.124,
+        "value": 0.124
+      },
+      {
+        "feature": "TotalCharges",
+        "measure": "eta²",
+        "strength": 0.04,
+        "value": 0.04
+      },
+      {
+        "feature": "MonthlyCharges",
+        "measure": "eta²",
+        "strength": 0.037,
+        "value": 0.037
+      },
+      {
+        "feature": "MultipleLines",
+        "measure": "Cramér's V",
+        "strength": 0.036,
+        "value": 0.036
+      },
+      {
+        "feature": "PhoneService",
+        "measure": "Cramér's V",
+        "strength": 0.001,
+        "value": 0.001
+      },
+      {
+        "feature": "gender",
+        "measure": "Cramér's V",
+        "strength": 0.0,
+        "value": 0.0
+      }
+    ],
+    "figures": {
+      "target_relationships": "figures/target_relationships.png"
+    },
+    "target": "Churn"
+  }
+}

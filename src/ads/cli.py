@@ -168,6 +168,20 @@ def main(argv: Sequence[str] | None = None) -> int:
         finally:
             close_logging(logger)
 
+    if args.command == "report":
+        logger = setup_logging()
+        try:
+            import subprocess
+
+            script_path = Path("scripts/build_report.py")
+            if script_path.exists():
+                res = subprocess.run([sys.executable, str(script_path)], check=False)
+                return res.returncode
+            logger.info("Command 'report' registered.")
+            return 0
+        finally:
+            close_logging(logger)
+
     logger = setup_logging()
     try:
         logger.info("Command '%s' registered (Partner 2 comparison/report module).", args.command)

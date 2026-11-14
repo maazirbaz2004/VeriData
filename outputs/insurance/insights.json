@@ -1,0 +1,161 @@
+[
+  {
+    "category": "data_quality",
+    "evidence": {
+      "n_duplicate_rows_removed": 1
+    },
+    "figure_ref": null,
+    "id": "dq_duplicates_removed",
+    "severity": "medium",
+    "statement": "1 exact duplicate rows were removed (the first copy of each was kept)."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "charges",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 139,
+      "pct_outliers_iqr": 10.4
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_charges",
+    "severity": "medium",
+    "statement": "'charges' has many outliers: 10.4% of its values (n = 139) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "charges",
+      "mean": 13279.12,
+      "median": 9386.16,
+      "skew": 1.51
+    },
+    "figure_ref": "figures/numeric_detail_charges.png",
+    "id": "dist_right_skew_charges",
+    "severity": "medium",
+    "statement": "'charges' is right-skewed (skew = 1.51): its median (9,386.16) is below its mean (13,279.12), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "children",
+      "n_zeros": 573,
+      "pct_zeros": 42.86
+    },
+    "figure_ref": "figures/numeric_distributions_1.png",
+    "id": "dist_zero_inflated_children",
+    "severity": "medium",
+    "statement": "'children' is zero-inflated: 42.86% of its values are exactly zero."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "age",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_distributions_1.png",
+    "id": "dist_multimodal_age",
+    "severity": "low",
+    "statement": "'age' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "charges",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_detail_charges.png",
+    "id": "dist_multimodal_charges",
+    "severity": "low",
+    "statement": "'charges' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "class_balance",
+    "evidence": {
+      "max": 63770.43,
+      "mean": 13279.12,
+      "median": 9386.16,
+      "min": 1121.87,
+      "target": "charges"
+    },
+    "figure_ref": "figures/target_distribution.png",
+    "id": "balance_target_numeric_charges",
+    "severity": "info",
+    "statement": "Target 'charges' is numeric, from 1,121.87 to 63,770.43 (median 9,386.16, mean 13,279.12)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "smoker",
+      "measure": "eta²",
+      "target": "charges",
+      "value": 0.62
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_categorical_smoker",
+    "severity": "medium",
+    "statement": "The categorical feature most associated with target 'charges' is 'smoker' (eta² = 0.62; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "age",
+      "measure": "Spearman rho",
+      "target": "charges",
+      "value": 0.53
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_numeric_age",
+    "severity": "medium",
+    "statement": "The numeric feature most associated with target 'charges' is 'age' (Spearman rho = +0.53; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "age",
+      "b": "charges",
+      "n": 1337,
+      "pearson": 0.3,
+      "spearman": 0.53
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_age_charges",
+    "severity": "low",
+    "statement": "'age' and 'charges' rise together (Spearman rho = +0.53, Pearson r = +0.3; descriptive)."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "scale_disparity_ratio": 10045.33
+    },
+    "figure_ref": null,
+    "id": "scale_disparity",
+    "severity": "info",
+    "statement": "Numeric columns differ a lot in spread (largest std is 10,045.33 times the smallest); z-scores are advised only for scale-sensitive methods such as regularized regression, distance-based methods or PCA."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "charges",
+      "skew": 1.52,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_charges",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'charges' (skew = 1.52) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "columns": [
+        "charges"
+      ],
+      "n_columns": 1
+    },
+    "figure_ref": null,
+    "id": "impl_rank_based",
+    "severity": "medium",
+    "statement": "Rank-based methods (Spearman, Mann-Whitney, Kruskal-Wallis) are recommended for 1 skewed or outlier-heavy column(s): 'charges'."
+  }
+]

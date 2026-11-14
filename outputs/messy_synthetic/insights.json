@@ -1,0 +1,465 @@
+[
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "notes",
+      "n_missing": 1406,
+      "n_rows": 2000,
+      "pct_missing": 70.3
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_notes",
+    "severity": "high",
+    "statement": "Column 'notes' has 70.3% missing values (n = 1,406 of 2,000 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "Unnamed: 0",
+      "output": "both",
+      "reason": "exported_unnamed_index_column"
+    },
+    "figure_ref": null,
+    "id": "dq_dropped_column_unnamed_0",
+    "severity": "medium",
+    "statement": "Column 'Unnamed: 0' was dropped (exported_unnamed_index_column)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "unused",
+      "output": "both",
+      "reason": "fully_empty_column"
+    },
+    "figure_ref": null,
+    "id": "dq_dropped_column_unused",
+    "severity": "medium",
+    "statement": "Column 'unused' was dropped (fully_empty_column)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "n_duplicate_rows_removed": 80
+    },
+    "figure_ref": null,
+    "id": "dq_duplicates_removed",
+    "severity": "medium",
+    "statement": "80 exact duplicate rows were removed (the first copy of each was kept)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "age",
+      "n_cells_invalid": 21,
+      "rule": {
+        "max": 120.0,
+        "min": 0.0
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_invalid_values_age",
+    "severity": "medium",
+    "statement": "Column 'age' had 21 values outside its allowed range; they were set to missing."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "tenure_months",
+      "n_cells_invalid": 11,
+      "rule": {
+        "min": 0.0
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_invalid_values_tenure_months",
+    "severity": "medium",
+    "statement": "Column 'tenure_months' had 11 values outside its allowed range; they were set to missing."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "age",
+      "n_missing": 140,
+      "n_rows": 2000,
+      "pct_missing": 7.0
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_age",
+    "severity": "medium",
+    "statement": "Column 'age' has 7% missing values (n = 140 of 2,000 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "income",
+      "n_missing": 160,
+      "n_rows": 2000,
+      "pct_missing": 8.0
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_income",
+    "severity": "medium",
+    "statement": "Column 'income' has 8% missing values (n = 160 of 2,000 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "income",
+      "n_cells_converted": 1914
+    },
+    "figure_ref": null,
+    "id": "dq_numeric_as_text_income",
+    "severity": "medium",
+    "statement": "Column 'income' was stored as text with number formatting; 1,914 cells were converted to numbers."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "monthly_spend",
+      "n_cells_converted": 2080
+    },
+    "figure_ref": null,
+    "id": "dq_numeric_as_text_monthly_spend",
+    "severity": "medium",
+    "statement": "Column 'monthly_spend' was stored as text with number formatting; 2,080 cells were converted to numbers."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "income",
+      "n_cells": 126,
+      "tokens": {
+        "-": 39,
+        "?": 36,
+        "N/A": 26,
+        "null": 25
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_placeholder_tokens_income",
+    "severity": "medium",
+    "statement": "Column 'income' used placeholder text for missing values: '-' (39), '?' (36), 'N/A' (26), 'null' (25); 126 cells were turned into real missing values."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "signup_date",
+      "n_cells_coerced": 21
+    },
+    "figure_ref": null,
+    "id": "dq_unparseable_signup_date",
+    "severity": "medium",
+    "statement": "Column 'signup_date' had 21 values that could not be read as its type; they were set to missing."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "tenure_months",
+      "n_cells_coerced": 20
+    },
+    "figure_ref": null,
+    "id": "dq_unparseable_tenure_months",
+    "severity": "medium",
+    "statement": "Column 'tenure_months' had 20 values that could not be read as its type; they were set to missing."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "churned",
+      "n_cells_merged": 47
+    },
+    "figure_ref": null,
+    "id": "dq_case_variants_churned",
+    "severity": "low",
+    "statement": "Column 'churned' had labels that differed only by capitals or spaces; 47 cells were merged into one spelling."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "gender",
+      "n_cells_merged": 226
+    },
+    "figure_ref": null,
+    "id": "dq_case_variants_gender",
+    "severity": "low",
+    "statement": "Column 'gender' had labels that differed only by capitals or spaces; 226 cells were merged into one spelling."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "membership",
+      "n_cells_merged": 20
+    },
+    "figure_ref": null,
+    "id": "dq_case_variants_membership",
+    "severity": "low",
+    "statement": "Column 'membership' had labels that differed only by capitals or spaces; 20 cells were merged into one spelling."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "region",
+      "n_missing": 80,
+      "n_rows": 2000,
+      "pct_missing": 4.0
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_region",
+    "severity": "low",
+    "statement": "Column 'region' has 4% missing values (n = 80 of 2,000 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "satisfaction",
+      "n_missing": 60,
+      "n_rows": 2000,
+      "pct_missing": 3.0
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_satisfaction",
+    "severity": "low",
+    "statement": "Column 'satisfaction' has 3% missing values (n = 60 of 2,000 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "signup_date",
+      "n_missing": 20,
+      "n_rows": 2000,
+      "pct_missing": 1.0
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_signup_date",
+    "severity": "low",
+    "statement": "Column 'signup_date' has 1% missing values (n = 20 of 2,000 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "tenure_months",
+      "n_missing": 30,
+      "n_rows": 2000,
+      "pct_missing": 1.5
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_tenure_months",
+    "severity": "low",
+    "statement": "Column 'tenure_months' has 1.5% missing values (n = 30 of 2,000 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "region",
+      "n_cells": 83,
+      "tokens": {
+        "Unknown": 83
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_placeholder_tokens_region",
+    "severity": "low",
+    "statement": "Column 'region' used placeholder text for missing values: 'Unknown' (83); 83 cells were turned into real missing values."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "constant_flag",
+      "role": "excluded",
+      "semantic_type": "constant"
+    },
+    "figure_ref": null,
+    "id": "dq_excluded_constant_flag",
+    "severity": "info",
+    "statement": "Column 'constant_flag' is constant and is left out of the analysis (kept in the cleaned file)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "customer_id",
+      "role": "id",
+      "semantic_type": "id_like"
+    },
+    "figure_ref": null,
+    "id": "dq_excluded_customer_id",
+    "severity": "info",
+    "statement": "Column 'customer_id' is ID-like and is left out of the analysis (kept in the cleaned file)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "notes",
+      "role": "excluded",
+      "semantic_type": "free_text"
+    },
+    "figure_ref": null,
+    "id": "dq_excluded_notes",
+    "severity": "info",
+    "statement": "Column 'notes' is free text and is left out of the analysis (kept in the cleaned file)."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "income",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 97,
+      "pct_outliers_iqr": 5.27
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_income",
+    "severity": "medium",
+    "statement": "'income' has many outliers: 5.27% of its values (n = 97) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "income",
+      "mean": 66086.82,
+      "median": 52125.75,
+      "skew": 13.04
+    },
+    "figure_ref": "figures/numeric_detail_income.png",
+    "id": "dist_right_skew_income",
+    "severity": "medium",
+    "statement": "'income' is right-skewed (skew = 13.04): its median (52,125.75) is below its mean (66,086.82), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "monthly_spend",
+      "mean": 170.8,
+      "median": 137.18,
+      "skew": 17.99
+    },
+    "figure_ref": "figures/numeric_detail_monthly_spend.png",
+    "id": "dist_right_skew_monthly_spend",
+    "severity": "medium",
+    "statement": "'monthly_spend' is right-skewed (skew = 17.99): its median (137.18) is below its mean (170.8), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "age",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_distributions_1.png",
+    "id": "dist_multimodal_age",
+    "severity": "low",
+    "statement": "'age' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "class_balance",
+    "evidence": {
+      "imbalance_ratio": 1.93,
+      "majority_class": "No",
+      "majority_pct": 65.85,
+      "minority_class": "Yes",
+      "minority_pct": 34.15,
+      "n_classes": 2,
+      "target": "churned"
+    },
+    "figure_ref": "figures/target_balance.png",
+    "id": "balance_target_churned",
+    "severity": "medium",
+    "statement": "Target 'churned' is mildly imbalanced: the smallest class 'Yes' is 34.15% of rows and the largest 'No' is 65.85% (the largest class is 1.93 times the smallest)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "income",
+      "b": "monthly_spend",
+      "n": 1840,
+      "pearson": 0.09,
+      "spearman": 0.89
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_income_monthly_spend",
+    "severity": "low",
+    "statement": "'income' and 'monthly_spend' rise together (Spearman rho = +0.89, Pearson r = +0.09; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "membership",
+      "measure": "Cramér's V",
+      "target": "churned",
+      "value": 0.01
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_categorical_membership",
+    "severity": "low",
+    "statement": "The categorical feature most associated with target 'churned' is 'membership' (Cramér's V = 0.01; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "tenure_months",
+      "measure": "eta²",
+      "target": "churned",
+      "value": 0.1
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_numeric_tenure_months",
+    "severity": "low",
+    "statement": "The numeric feature most associated with target 'churned' is 'tenure_months' (eta² = 0.1; descriptive)."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "scale_disparity_ratio": 78059.53
+    },
+    "figure_ref": null,
+    "id": "scale_disparity",
+    "severity": "info",
+    "statement": "Numeric columns differ a lot in spread (largest std is 78,059.53 times the smallest); z-scores are advised only for scale-sensitive methods such as regularized regression, distance-based methods or PCA."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "income",
+      "skew": 13.04,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_income",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'income' (skew = 13.04) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "monthly_spend",
+      "skew": 17.99,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_monthly_spend",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'monthly_spend' (skew = 17.99) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "columns": [
+        "income",
+        "monthly_spend"
+      ],
+      "n_columns": 2
+    },
+    "figure_ref": null,
+    "id": "impl_rank_based",
+    "severity": "medium",
+    "statement": "Rank-based methods (Spearman, Mann-Whitney, Kruskal-Wallis) are recommended for 2 skewed or outlier-heavy column(s): 'income', 'monthly_spend'."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "balance_label": "mildly imbalanced",
+      "target": "churned"
+    },
+    "figure_ref": "figures/target_balance.png",
+    "id": "impl_target_imbalance_churned",
+    "severity": "medium",
+    "statement": "Because target 'churned' is mildly imbalanced, compare groups using rates (% per class) rather than raw counts, and use stratified splits for any later modeling."
+  }
+]

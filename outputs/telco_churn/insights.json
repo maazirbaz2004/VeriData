@@ -1,0 +1,214 @@
+[
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "TotalCharges",
+      "n_missing": 11,
+      "n_rows": 7043,
+      "pct_missing": 0.16
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_totalcharges",
+    "severity": "low",
+    "statement": "Column 'TotalCharges' has 0.16% missing values (n = 11 of 7,043 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "customerID",
+      "role": "id",
+      "semantic_type": "id_like"
+    },
+    "figure_ref": null,
+    "id": "dq_excluded_customerid",
+    "severity": "info",
+    "statement": "Column 'customerID' is ID-like and is left out of the analysis (kept in the cleaned file)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "n_duplicate_rows_removed": 0
+    },
+    "figure_ref": null,
+    "id": "dq_no_duplicates",
+    "severity": "info",
+    "statement": "No exact duplicate rows were found."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "MonthlyCharges",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_distributions_1.png",
+    "id": "dist_multimodal_monthlycharges",
+    "severity": "low",
+    "statement": "'MonthlyCharges' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "tenure",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_distributions_1.png",
+    "id": "dist_multimodal_tenure",
+    "severity": "low",
+    "statement": "'tenure' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "class_balance",
+    "evidence": {
+      "imbalance_ratio": 2.77,
+      "majority_class": "No",
+      "majority_pct": 73.46,
+      "minority_class": "Yes",
+      "minority_pct": 26.54,
+      "n_classes": 2,
+      "target": "Churn"
+    },
+    "figure_ref": "figures/target_balance.png",
+    "id": "balance_target_churn",
+    "severity": "medium",
+    "statement": "Target 'Churn' is mildly imbalanced: the smallest class 'Yes' is 26.54% of rows and the largest 'No' is 73.46% (the largest class is 2.77 times the smallest)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "Contract",
+      "measure": "Cramér's V",
+      "target": "Churn",
+      "value": 0.41
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_categorical_contract",
+    "severity": "medium",
+    "statement": "The categorical feature most associated with target 'Churn' is 'Contract' (Cramér's V = 0.41; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "PhoneService",
+      "b": "MultipleLines",
+      "cramers_v": 1.0
+    },
+    "figure_ref": "figures/cramers_v_heatmap.png",
+    "id": "rel_categorical_pair_phoneservice_multiplelines",
+    "severity": "low",
+    "statement": "'PhoneService' and 'MultipleLines' are associated (bias-corrected Cramér's V = 1; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "StreamingTV",
+      "b": "StreamingMovies",
+      "cramers_v": 0.77
+    },
+    "figure_ref": "figures/cramers_v_heatmap.png",
+    "id": "rel_categorical_pair_streamingtv_streamingmovies",
+    "severity": "low",
+    "statement": "'StreamingTV' and 'StreamingMovies' are associated (bias-corrected Cramér's V = 0.77; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "categorical": "InternetService",
+      "eta_squared": 0.82,
+      "numeric": "MonthlyCharges",
+      "pct_variance_explained": 82.0
+    },
+    "figure_ref": "figures/numeric_by_category.png",
+    "id": "rel_numeric_by_group_monthlycharges_internetservice",
+    "severity": "low",
+    "statement": "Groups of 'InternetService' differ in 'MonthlyCharges': the groups explain 82% of its variance (eta² = 0.82; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "categorical": "StreamingTV",
+      "eta_squared": 0.7,
+      "numeric": "MonthlyCharges",
+      "pct_variance_explained": 70.0
+    },
+    "figure_ref": "figures/numeric_by_category.png",
+    "id": "rel_numeric_by_group_monthlycharges_streamingtv",
+    "severity": "low",
+    "statement": "Groups of 'StreamingTV' differ in 'MonthlyCharges': the groups explain 70% of its variance (eta² = 0.7; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "MonthlyCharges",
+      "b": "TotalCharges",
+      "n": 7032,
+      "pearson": 0.65,
+      "spearman": 0.64
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_monthlycharges_totalcharges",
+    "severity": "low",
+    "statement": "'MonthlyCharges' and 'TotalCharges' rise together (Spearman rho = +0.64, Pearson r = +0.65; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "tenure",
+      "b": "TotalCharges",
+      "n": 7032,
+      "pearson": 0.83,
+      "spearman": 0.89
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_tenure_totalcharges",
+    "severity": "low",
+    "statement": "'tenure' and 'TotalCharges' rise together (Spearman rho = +0.89, Pearson r = +0.83; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "tenure",
+      "measure": "eta²",
+      "target": "Churn",
+      "value": 0.12
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_numeric_tenure",
+    "severity": "low",
+    "statement": "The numeric feature most associated with target 'Churn' is 'tenure' (eta² = 0.12; descriptive)."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "scale_disparity_ratio": 92.3
+    },
+    "figure_ref": null,
+    "id": "scale_disparity",
+    "severity": "info",
+    "statement": "Numeric columns differ a lot in spread (largest std is 92.3 times the smallest); z-scores are advised only for scale-sensitive methods such as regularized regression, distance-based methods or PCA."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "balance_label": "mildly imbalanced",
+      "target": "Churn"
+    },
+    "figure_ref": "figures/target_balance.png",
+    "id": "impl_target_imbalance_churn",
+    "severity": "medium",
+    "statement": "Because target 'Churn' is mildly imbalanced, compare groups using rates (% per class) rather than raw counts, and use stratified splits for any later modeling."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "column": "PhoneService",
+      "mode": "Yes",
+      "mode_pct": 90.32,
+      "rarest_count": 682,
+      "rarest_level": "No"
+    },
+    "figure_ref": "figures/categorical_distributions_1.png",
+    "id": "impl_unbalanced_groups_phoneservice",
+    "severity": "low",
+    "statement": "Group sizes are very unbalanced for 'PhoneService': 'Yes' covers 90.32% of rows and 'No' only 682 rows, so comparisons across its levels will rest on few cases."
+  }
+]

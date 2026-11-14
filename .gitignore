@@ -17,19 +17,14 @@ dist/
 # Secrets & Environment
 .env
 
-# Raw and generated data (keep READMEs and gitkeeps)
+# Raw data is gitignored (download links & scripts/download_datasets.py provided)
 data/raw/*
 !data/raw/README.md
 data/interim/*
 !data/interim/.gitkeep
-data/cleaned/*
-!data/cleaned/.gitkeep
-data/synthetic/*
-!data/synthetic/.gitkeep
 
-# Outputs (ignore generated outputs except final_report/)
-outputs/*
-!outputs/.gitkeep
+# Keep cleaned datasets, synthetic benchmarks, and generated EDA outputs/reports for TA review
+outputs/*/run.log
 
 # Testing & coverage
 .pytest_cache/
@@ -40,4 +35,3 @@ htmlcov/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
-

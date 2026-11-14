@@ -1,0 +1,13 @@
+{
+  "completed_at_utc": "2026-11-14T12:44:45.315977+00:00",
+  "dataset_name": "bank_marketing",
+  "elapsed_seconds": 163.1223,
+  "n_cols_cleaned_conservative": 21,
+  "n_cols_cleaned_imputed": 22,
+  "n_cols_raw": 21,
+  "n_rows_cleaned_conservative": 41176,
+  "n_rows_cleaned_imputed": 41176,
+  "n_rows_raw": 41188,
+  "sha256": "74adfc578bf77a7ff4bb1ba4a9f8709d9e3c6907342959c2c8416847e0afb4d8",
+  "source_file": "data\\raw\\bank_marketing\\bank-additional-full.csv"
+}

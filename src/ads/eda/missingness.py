@@ -7,7 +7,6 @@ from typing import Any
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
 from matplotlib.colors import ListedColormap
 
 from .plots import (
@@ -18,6 +17,7 @@ from .plots import (
     FigureSink,
     df_to_markdown,
     short_label,
+    sns,
     wrap_title,
 )
 from .stats import pct, safe_round

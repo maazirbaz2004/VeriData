@@ -1,17 +1,125 @@
 # Dataset Cards (`docs/datasets.md`)
 
-One card per dataset used in Phase 1 (plan Section 5.3). Raw files live in `data/raw/<name>/`, are never modified, and are git-ignored; download steps are in [`scripts/download_datasets.md`](../scripts/download_datasets.md).
+One card per dataset used in Phase 1 (plan Section 5.3). Raw files live in `data/raw/<name>/`, are never modified, and are git-ignored; download steps are in [`scripts/download_datasets.md`](../scripts/download_datasets.md) and automated via [`scripts/download_datasets.py`](../scripts/download_datasets.py).
 
 | # | Dataset | File | Rows × cols | Target | Owner | SHA-256 recorded |
 | :-- | :--- | :--- | :--- | :--- | :--- | :---: |
-| 1 | Medical Cost / Insurance | `insurance/insurance.csv` | ~1,338 × 7 | `charges` (numeric) | Partner 1 (Maaz) | ☐ |
-| 2 | Telco Customer Churn | `telco_churn/WA_Fn-UseC_-Telco-Customer-Churn.csv` | ~7,043 × 21 | `Churn` (binary) | Partner 1 (Maaz) | ☐ |
-| 3 | Heart Disease | `heart_disease/heart.csv` | ~300–1,000 × 14 | `target` (binary) | Partner 1 (Maaz) | ☐ |
-| 4 | Student Performance (Math) | `student_performance/student-mat.csv` | 395 × 33 | `G3` (numeric) | Partner 2 (Ghazanfar) | ✔ |
-| 5 | Bank Marketing (additional, full) | `bank_marketing/bank-additional-full.csv` | 41,188 × 21 | `y` (binary) | Partner 2 (Ghazanfar) | ✔ |
-| 6 | Messy Synthetic | `data/synthetic/messy_dataset.csv` (generated) | 2,000 base rows + injected problems | `churned` (binary) | Partner 1 generator / Partner 2 analysis | generated |
+| 1 | Medical Cost / Insurance | `insurance/insurance.csv` | 1,338 × 7 | `charges` (numeric) | Partner 1 (Maaz) | ✔ |
+| 2 | Telco Customer Churn | `telco_churn/WA_Fn-UseC_-Telco-Customer-Churn.csv` | 7,043 × 21 | `Churn` (binary) | Partner 1 (Maaz) | ✔ |
+| 3 | Heart Disease | `heart_disease/heart.csv` | 303 × 14 | `target` (binary) | Partner 1 (Maaz) | ✔ |
+| 4 | Student Performance (Math) | `student_performance/student-mat.csv` | 395 × 33 | `G3` (numeric) | Partner 2 (Tahreem) | ✔ |
+| 5 | Bank Marketing (additional, full) | `bank_marketing/bank-additional-full.csv` | 41,188 × 21 | `y` (binary) | Partner 2 (Tahreem) | ✔ |
+| 6 | Messy Synthetic | `data/synthetic/messy_dataset.csv` (generated) | 2,040 × 17 (2,000 base rows + injected defects) | `churned` (binary) | Partner 1 generator / Partner 2 analysis | ✔ |
 
 > **LLM contamination note (plan Section 20, risk 7):** datasets 1–5 are public and an LLM may have seen them during training. The messy synthetic dataset is the contamination-free test for the LLM comparison.
+
+---
+
+## 1. Medical Cost / Insurance (`insurance`)
+
+| Field | Value |
+| :--- | :--- |
+| Source | Kaggle (`mirichoi0218/insurance`) / Brett Lantz, *Machine Learning with R* — <https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv> |
+| License | Open Database License (ODbL) / Educational Public Dataset |
+| Downloaded | 2026-11-08 |
+| SHA-256 | `505c1cbc2e63d0363bac59501563df2530aadf4cdb9cfee226f4ef32f5468281` |
+| Shape | 1,338 raw rows × 7 columns (1,337 cleaned rows × 7 columns after removing 1 exact duplicate row), `,`-delimited, 0 missing cells |
+| Target | `charges` — individual medical costs billed by health insurance (USD) |
+| Config | [`configs/datasets/insurance.yaml`](../configs/datasets/insurance.yaml) |
+
+**Columns:**
+
+| Column | Description |
+| :--- | :--- |
+| `age` | Age of primary beneficiary (18–64 years) |
+| `sex` | Insurance contractor gender (`female`, `male`) |
+| `bmi` | Body mass index ($\text{kg/m}^2$, ideally 18.5 to 24.9; range 15.96–53.13) |
+| `children` | Number of children covered by health insurance / number of dependents (0–5) |
+| `smoker` | Smoking status (`yes`, `no`) |
+| `region` | Beneficiary's residential area in the US (`northeast`, `northwest`, `southeast`, `southwest`) |
+| `charges` | Individual medical costs billed by health insurance (`$1,121.87`–`$63,770.43`, target) |
+
+**Quirks noticed while loading**
+- Contains 1 exact duplicate row (`age=19, sex=male, bmi=30.59, children=0, smoker=no, region=northwest, charges=1639.5631`), which is detected and removed in Step 7.
+- `charges` is strongly right-skewed (`skew = +1.52`) with a pronounced upper tail driven by smokers with high BMI (`bmi >= 30`), where 139 values (~10.4%) exceed the $1.5 \times \text{IQR}$ fence (`$34,524.78`). Kept in conservative output and recommended for `log1p` scaling in parametric models.
+
+---
+
+## 2. Telco Customer Churn (`telco_churn`)
+
+| Field | Value |
+| :--- | :--- |
+| Source | IBM Cognos Analytics Sample Data / Kaggle (`blastchar/telco-customer-churn`) — <https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv> |
+| License | IBM Sample Data License / Apache-2.0 mirror |
+| Downloaded | 2026-11-08 |
+| SHA-256 | `16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91` |
+| Shape | 7,043 rows × 21 columns, `,`-delimited, 0 exact duplicate rows |
+| Target | `Churn` — whether the customer left within the last month (`No` 5,174 / `Yes` 1,869; 26.54% churn) |
+| Config | [`configs/datasets/telco_churn.yaml`](../configs/datasets/telco_churn.yaml) |
+
+**Columns:**
+
+| Column | Description |
+| :--- | :--- |
+| `customerID` | Unique alphanumeric customer identifier (e.g. `7590-VHVEG`, inferred as `id_like`) |
+| `gender` | Customer gender (`Female`, `Male`) |
+| `SeniorCitizen` | Whether the customer is a senior citizen (`0`, `1`; forced to `categorical_nominal` in config) |
+| `Partner`, `Dependents` | Whether the customer has a partner or dependents (`Yes`, `No`) |
+| `tenure` | Number of months the customer has stayed with the company (`0`–`72`) |
+| `PhoneService` | Whether the customer has phone service (`Yes`, `No`) |
+| `MultipleLines` | Whether the customer has multiple lines (`Yes`, `No`, `No phone service`) |
+| `InternetService` | Customer's internet service provider (`DSL`, `Fiber optic`, `No`) |
+| `OnlineSecurity`, `OnlineBackup`, `DeviceProtection`, `TechSupport`, `StreamingTV`, `StreamingMovies` | Internet add-on services (`Yes`, `No`, `No internet service`) |
+| `Contract` | Contract term (`Month-to-month`, `One year`, `Two year`) |
+| `PaperlessBilling` | Whether the customer has paperless billing (`Yes`, `No`) |
+| `PaymentMethod` | Payment method (`Electronic check`, `Mailed check`, `Bank transfer (automatic)`, `Credit card (automatic)`) |
+| `MonthlyCharges` | Amount charged to the customer monthly (`$18.25`–`$118.75`) |
+| `TotalCharges` | Total amount charged to the customer (`$18.80`–`$8,684.80`, stored as string with 11 blank spaces `" "`) |
+| `Churn` | Whether the customer churned (`Yes`, `No`, target) |
+
+**Quirks noticed while loading**
+- `TotalCharges` is stored as an `object` string column because 11 rows contain a single whitespace character (`" "`). All 11 rows correspond to new subscribers with `tenure == 0`. String-first ingestion strips the whitespace to `""` -> `NaN` and converts the remaining 7,032 rows cleanly to `float64`.
+- `SeniorCitizen` is stored as `0`/`1` integers rather than `Yes`/`No` strings.
+- Six add-on columns share the level `"No internet service"` (1,526 rows, 21.67%), creating structural Cramér's $V$ associations among internet service columns.
+
+---
+
+## 3. Heart Disease (`heart_disease`)
+
+| Field | Value |
+| :--- | :--- |
+| Source | UCI Machine Learning Repository (Cleveland Heart Disease, id 45) / Kaggle (`johnsmith88/heart-disease-dataset`) — <https://raw.githubusercontent.com/sharmaroshan/Heart-UCI-Dataset/master/heart.csv> |
+| License | Creative Commons Attribution 4.0 International (CC BY 4.0) |
+| Downloaded | 2026-11-08 |
+| SHA-256 | `7c3014365675306819510a49ff289efbec1d1a6a666a2dc7652f1547b383d859` |
+| Shape | 303 raw rows × 14 columns (302 cleaned rows × 14 columns after removing 1 exact duplicate row), `,`-delimited, 0 missing cells |
+| Target | `target` — heart disease diagnosis (`1` = 165 rows, `0` = 138 rows in raw) |
+| Config | [`configs/datasets/heart_disease.yaml`](../configs/datasets/heart_disease.yaml) |
+
+**Columns:**
+
+| Column | Description |
+| :--- | :--- |
+| `age` | Patient age in years (29–77) |
+| `sex` | Patient sex (`1` = male, `0` = female) |
+| `cp` | Chest pain type (`0`: typical angina, `1`: atypical angina, `2`: non-anginal pain, `3`: asymptomatic) |
+| `trestbps` | Resting blood pressure in mm Hg on admission (94–200) |
+| `chol` | Serum cholesterol in mg/dL (126–564) |
+| `fbs` | Fasting blood sugar $> 120\text{ mg/dL}$ (`1` = true, `0` = false) |
+| `restecg` | Resting electrocardiographic results (`0`: normal, `1`: ST-T wave abnormality, `2`: left ventricular hypertrophy) |
+| `thalach` | Maximum heart rate achieved during exercise testing (71–202 bpm) |
+| `exang` | Exercise-induced angina (`1` = yes, `0` = no) |
+| `oldpeak` | ST depression induced by exercise relative to rest (`0.0`–`6.2`) |
+| `slope` | Slope of the peak exercise ST segment (`0`: upsloping, `1`: flat, `2`: downsloping) |
+| `ca` | Number of major vessels (0–4) colored by fluoroscopy |
+| `thal` | Thalassemia status (`0`–`3`) |
+| `target` | Diagnosis of heart disease (`0` or `1`, target) |
+
+**Quirks noticed while loading**
+- Raw CSV rows are ordered by `chol` across substantial segments; type inference requires contiguous 0/1-based step-1 indices before labeling an unnamed integer column as `id_like`, avoiding false ID classification on `chol`.
+- Categorical medical codes (`cp`, `restecg`, `slope`, `thal`) are encoded as small integers (`0–3`) and configured via `forced_types: categorical_nominal`.
+- Contains 1 exact duplicate row (`age=38, sex=1, cp=2, trestbps=138, chol=175, ...`), which is removed during deduplication (303 → 302 rows).
+- `oldpeak` is zero-inflated (32.8% zeros) and right-skewed (`skew = +1.27`).
 
 ---
 
@@ -113,39 +221,6 @@ One card per dataset used in Phase 1 (plan Section 5.3). Raw files live in `data
 - Target is imbalanced: `yes` is 11.27% of rows.
 
 ---
-
-## 1. Medical Cost / Insurance *(Partner 1 — to be completed by Maaz)*
-
-| Field | Value |
-| :--- | :--- |
-| Source | Kaggle `mirichoi0218/insurance` (mirror used in `scripts/download_datasets.md`: `stedy/Machine-Learning-with-R-datasets`) |
-| License | *to fill: check the Kaggle page* |
-| Downloaded / SHA-256 | *to fill from `outputs/insurance/profile.json` after the first run* |
-| Target | `charges` |
-| Columns | `age`, `sex`, `bmi`, `children` (number of dependants), `smoker`, `region` (4 US regions), `charges` (medical costs billed) |
-| Quirks | *to fill* |
-
-## 2. Telco Customer Churn *(Partner 1 — to be completed by Maaz)*
-
-| Field | Value |
-| :--- | :--- |
-| Source | IBM sample data, Kaggle `blastchar/telco-customer-churn` |
-| License | *to fill* |
-| Downloaded / SHA-256 | *to fill* |
-| Target | `Churn` |
-| Columns | `customerID`; demographics (`gender`, `SeniorCitizen`, `Partner`, `Dependents`); `tenure`; services (`PhoneService`, `MultipleLines`, `InternetService`, `OnlineSecurity`, `OnlineBackup`, `DeviceProtection`, `TechSupport`, `StreamingTV`, `StreamingMovies`); account (`Contract`, `PaperlessBilling`, `PaymentMethod`, `MonthlyCharges`, `TotalCharges`); `Churn` |
-| Quirks | `TotalCharges` is stored as text with blank strings for new customers (plan acceptance criterion); `SeniorCitizen` is 0/1 but categorical. |
-
-## 3. Heart Disease *(Partner 1 — to be completed by Maaz)*
-
-| Field | Value |
-| :--- | :--- |
-| Source | UCI Heart Disease (Kaggle version) |
-| License | *to fill* |
-| Downloaded / SHA-256 | *to fill* |
-| Target | `target` (disease yes/no) |
-| Columns | `age`, `sex`, `cp` (chest pain type), `trestbps` (resting blood pressure), `chol`, `fbs` (fasting blood sugar > 120), `restecg`, `thalach` (max heart rate), `exang` (exercise angina), `oldpeak`, `slope`, `ca` (major vessels 0–3), `thal`, `target` |
-| Quirks | Categorical codes stored as integers (`cp`, `restecg`, `slope`, `thal` forced to categorical in the config); `?` placeholders in some versions. |
 
 ## 6. Messy Synthetic Benchmark
 

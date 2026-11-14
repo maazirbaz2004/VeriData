@@ -1,0 +1,114 @@
+[
+  {
+    "action": "stripped_and_normalized_ws",
+    "after_examples": [
+      "''",
+      "''",
+      "''",
+      "''",
+      "''"
+    ],
+    "before_examples": [
+      "' '",
+      "' '",
+      "' '",
+      "' '",
+      "' '"
+    ],
+    "column": "TotalCharges",
+    "n_cells_affected": 11,
+    "n_rows_affected": 11,
+    "parameters": {},
+    "reason": "Stripped leading/trailing whitespace, collapsed internal spaces, and cleaned unicode chars.",
+    "rows_after": 7043,
+    "rows_before": 7043,
+    "severity": "info",
+    "step": "clean_whitespace_unicode"
+  },
+  {
+    "action": "marked_excluded",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "customerID",
+    "n_cells_affected": 0,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Kept column 'customerID' in data but marked role as id (id_like).",
+    "rows_after": 7043,
+    "rows_before": 7043,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "imputed_median",
+    "after_examples": [
+      "1397.475",
+      "1397.475",
+      "1397.475",
+      "1397.475",
+      "1397.475"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "TotalCharges",
+    "n_cells_affected": 11,
+    "n_rows_affected": 11,
+    "parameters": {
+      "fill_value": 1397.475,
+      "pct_missing": 0.0016,
+      "strategy": "median"
+    },
+    "reason": "Imputed 11 missing cell(s) (0.2%) in 'TotalCharges' with median=1397.475 (imputed output only).",
+    "rows_after": 7043,
+    "rows_before": 7043,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "7895.15",
+      "7853.7",
+      "7930.55",
+      "8129.3",
+      "8041.65"
+    ],
+    "before_examples": [
+      "7895.15",
+      "7853.7",
+      "7930.55",
+      "8129.3",
+      "8041.65"
+    ],
+    "column": "TotalCharges",
+    "n_cells_affected": 0,
+    "n_rows_affected": 136,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -4688.48125,
+        8884.66875
+      ],
+      "iqr_3_0_bounds": [
+        -9778.4125,
+        13974.6
+      ],
+      "sample_indices": [
+        15,
+        59,
+        152,
+        193,
+        198
+      ]
+    },
+    "reason": "Flagged 136 outlier(s) (1.9%) and 0 extreme outlier(s) in 'TotalCharges' (action=flag; values untouched).",
+    "rows_after": 7043,
+    "rows_before": 7043,
+    "severity": "info",
+    "step": "handle_outliers"
+  }
+]

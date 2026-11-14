@@ -1,0 +1,340 @@
+[
+  {
+    "category": "data_quality",
+    "evidence": {
+      "n_duplicate_rows_removed": 0
+    },
+    "figure_ref": null,
+    "id": "dq_no_duplicates",
+    "severity": "info",
+    "statement": "No exact duplicate rows were found."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "failures",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 83,
+      "pct_outliers_iqr": 21.01
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_failures",
+    "severity": "medium",
+    "statement": "'failures' has many outliers: 21.01% of its values (n = 83) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "famrel",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 26,
+      "pct_outliers_iqr": 6.58
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_famrel",
+    "severity": "medium",
+    "statement": "'famrel' has many outliers: 6.58% of its values (n = 26) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "studytime",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 27,
+      "pct_outliers_iqr": 6.84
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_studytime",
+    "severity": "medium",
+    "statement": "'studytime' has many outliers: 6.84% of its values (n = 27) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "absences",
+      "mean": 5.71,
+      "median": 4.0,
+      "skew": 3.67
+    },
+    "figure_ref": "figures/numeric_detail_absences.png",
+    "id": "dist_right_skew_absences",
+    "severity": "medium",
+    "statement": "'absences' is right-skewed (skew = 3.67): its median (4) is below its mean (5.71), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "Dalc",
+      "mean": 1.48,
+      "median": 1.0,
+      "skew": 2.19
+    },
+    "figure_ref": "figures/numeric_detail_dalc.png",
+    "id": "dist_right_skew_dalc",
+    "severity": "medium",
+    "statement": "'Dalc' is right-skewed (skew = 2.19): its median (1) is below its mean (1.48), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "failures",
+      "mean": 0.33,
+      "median": 0.0,
+      "skew": 2.39
+    },
+    "figure_ref": "figures/numeric_detail_failures.png",
+    "id": "dist_right_skew_failures",
+    "severity": "medium",
+    "statement": "'failures' is right-skewed (skew = 2.39): its median (0) is below its mean (0.33), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "traveltime",
+      "mean": 1.45,
+      "median": 1.0,
+      "skew": 1.61
+    },
+    "figure_ref": "figures/numeric_detail_traveltime.png",
+    "id": "dist_right_skew_traveltime",
+    "severity": "medium",
+    "statement": "'traveltime' is right-skewed (skew = 1.61): its median (1) is below its mean (1.45), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "failures",
+      "n_zeros": 312,
+      "pct_zeros": 78.99
+    },
+    "figure_ref": "figures/numeric_detail_failures.png",
+    "id": "dist_zero_inflated_failures",
+    "severity": "medium",
+    "statement": "'failures' is zero-inflated: 78.99% of its values are exactly zero."
+  },
+  {
+    "category": "class_balance",
+    "evidence": {
+      "max": 20.0,
+      "mean": 10.42,
+      "median": 11.0,
+      "min": 0.0,
+      "n_zeros": 38,
+      "pct_zeros": 9.62,
+      "target": "G3"
+    },
+    "figure_ref": "figures/target_distribution.png",
+    "id": "balance_target_numeric_g3",
+    "severity": "info",
+    "statement": "Target 'G3' is numeric, from 0 to 20 (median 11, mean 10.42). 9.62% of values (n = 38) are exactly zero, which may be a separate group."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "G2",
+      "b": "G3",
+      "pearson": 0.91
+    },
+    "figure_ref": "figures/correlation_heatmap.png",
+    "id": "rel_collinear_g2_g3",
+    "severity": "medium",
+    "statement": "'G2' and 'G3' are nearly collinear (Pearson r = +0.91); models should not use both as if they were separate information."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "G2",
+      "measure": "Spearman rho",
+      "target": "G3",
+      "value": 0.96
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_numeric_g2",
+    "severity": "medium",
+    "statement": "The numeric feature most associated with target 'G3' is 'G2' (Spearman rho = +0.96; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "categorical": "Fjob",
+      "eta_squared": 0.17,
+      "numeric": "Fedu",
+      "pct_variance_explained": 17.0
+    },
+    "figure_ref": "figures/numeric_by_category.png",
+    "id": "rel_numeric_by_group_fedu_fjob",
+    "severity": "low",
+    "statement": "Groups of 'Fjob' differ in 'Fedu': the groups explain 17% of its variance (eta² = 0.17; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "categorical": "Mjob",
+      "eta_squared": 0.41,
+      "numeric": "Medu",
+      "pct_variance_explained": 41.0
+    },
+    "figure_ref": "figures/numeric_by_category.png",
+    "id": "rel_numeric_by_group_medu_mjob",
+    "severity": "low",
+    "statement": "Groups of 'Mjob' differ in 'Medu': the groups explain 41% of its variance (eta² = 0.41; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "G1",
+      "b": "G2",
+      "n": 395,
+      "pearson": 0.85,
+      "spearman": 0.9
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_g1_g2",
+    "severity": "low",
+    "statement": "'G1' and 'G2' rise together (Spearman rho = +0.9, Pearson r = +0.85; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "G1",
+      "b": "G3",
+      "n": 395,
+      "pearson": 0.8,
+      "spearman": 0.88
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_g1_g3",
+    "severity": "low",
+    "statement": "'G1' and 'G3' rise together (Spearman rho = +0.88, Pearson r = +0.8; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "G2",
+      "b": "G3",
+      "n": 395,
+      "pearson": 0.91,
+      "spearman": 0.96
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_g2_g3",
+    "severity": "low",
+    "statement": "'G2' and 'G3' rise together (Spearman rho = +0.96, Pearson r = +0.91; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "Mjob",
+      "measure": "eta²",
+      "target": "G3",
+      "value": 0.04
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_categorical_mjob",
+    "severity": "low",
+    "statement": "The categorical feature most associated with target 'G3' is 'Mjob' (eta² = 0.04; descriptive)."
+  },
+  {
+    "category": "cardinality_structure",
+    "evidence": {
+      "column": "Fjob",
+      "level": "health",
+      "smallest_group_n": 18,
+      "threshold": 20
+    },
+    "figure_ref": "figures/categorical_distributions_2.png",
+    "id": "struct_small_group_fjob",
+    "severity": "low",
+    "statement": "'Fjob' has a level with only 18 rows ('health'), under the 20-row guide for group comparisons."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "scale_disparity_ratio": 11.47
+    },
+    "figure_ref": null,
+    "id": "scale_disparity",
+    "severity": "info",
+    "statement": "Numeric columns differ a lot in spread (largest std is 11.47 times the smallest); z-scores are advised only for scale-sensitive methods such as regularized regression, distance-based methods or PCA."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "absences",
+      "skew": 3.67,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_absences",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'absences' (skew = 3.67) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "Dalc",
+      "skew": 2.19,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_dalc",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'Dalc' (skew = 2.19) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "failures",
+      "skew": 2.39,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_failures",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'failures' (skew = 2.39) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "traveltime",
+      "skew": 1.61,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_traveltime",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'traveltime' (skew = 1.61) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "columns": [
+        "Dalc",
+        "absences",
+        "failures",
+        "famrel",
+        "studytime",
+        "traveltime"
+      ],
+      "n_columns": 6
+    },
+    "figure_ref": null,
+    "id": "impl_rank_based",
+    "severity": "medium",
+    "statement": "Rank-based methods (Spearman, Mann-Whitney, Kruskal-Wallis) are recommended for 6 skewed or outlier-heavy column(s): 'Dalc', 'absences', 'failures', 'famrel', 'studytime', 'traveltime'."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "column": "higher",
+      "mode": "yes",
+      "mode_pct": 94.94,
+      "rarest_count": 20,
+      "rarest_level": "no"
+    },
+    "figure_ref": "figures/categorical_distributions_3.png",
+    "id": "impl_unbalanced_groups_higher",
+    "severity": "low",
+    "statement": "Group sizes are very unbalanced for 'higher': 'yes' covers 94.94% of rows and 'no' only 20 rows, so comparisons across its levels will rest on few cases."
+  }
+]

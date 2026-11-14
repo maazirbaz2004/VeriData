@@ -1,0 +1,775 @@
+[
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    "column": "job",
+    "n_cells_affected": 330,
+    "n_rows_affected": 330,
+    "parameters": {
+      "ratio": 0.008,
+      "token_counts": {
+        "unknown": 330
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('unknown': 330) with NaN.",
+    "rows_after": 41188,
+    "rows_before": 41188,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    "column": "marital",
+    "n_cells_affected": 80,
+    "n_rows_affected": 80,
+    "parameters": {
+      "ratio": 0.0019,
+      "token_counts": {
+        "unknown": 80
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('unknown': 80) with NaN.",
+    "rows_after": 41188,
+    "rows_before": 41188,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    "column": "education",
+    "n_cells_affected": 1731,
+    "n_rows_affected": 1731,
+    "parameters": {
+      "ratio": 0.042,
+      "token_counts": {
+        "unknown": 1731
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('unknown': 1731) with NaN.",
+    "rows_after": 41188,
+    "rows_before": 41188,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    "column": "default",
+    "n_cells_affected": 8597,
+    "n_rows_affected": 8597,
+    "parameters": {
+      "ratio": 0.2087,
+      "token_counts": {
+        "unknown": 8597
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('unknown': 8597) with NaN.",
+    "rows_after": 41188,
+    "rows_before": 41188,
+    "severity": "warning",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    "column": "housing",
+    "n_cells_affected": 990,
+    "n_rows_affected": 990,
+    "parameters": {
+      "ratio": 0.024,
+      "token_counts": {
+        "unknown": 990
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('unknown': 990) with NaN.",
+    "rows_after": 41188,
+    "rows_before": 41188,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    "column": "loan",
+    "n_cells_affected": 990,
+    "n_rows_affected": 990,
+    "parameters": {
+      "ratio": 0.024,
+      "token_counts": {
+        "unknown": 990
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('unknown': 990) with NaN.",
+    "rows_after": 41188,
+    "rows_before": 41188,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "dropped_duplicate_rows",
+    "after_examples": [],
+    "before_examples": [],
+    "column": null,
+    "n_cells_affected": 252,
+    "n_rows_affected": 12,
+    "parameters": {
+      "dropped_row_indices_sample": [
+        1266,
+        12261,
+        14234,
+        16956,
+        18465,
+        20216,
+        20534,
+        25217,
+        28477,
+        32516,
+        36951,
+        38281
+      ]
+    },
+    "reason": "Dropped 12 exact duplicate row(s) (kept first occurrence).",
+    "rows_after": 41176,
+    "rows_before": 41188,
+    "severity": "info",
+    "step": "handle_duplicates"
+  },
+  {
+    "action": "imputed_mode",
+    "after_examples": [
+      "admin.",
+      "admin.",
+      "admin.",
+      "admin.",
+      "admin."
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "job",
+    "n_cells_affected": 330,
+    "n_rows_affected": 330,
+    "parameters": {
+      "fill_value": "admin.",
+      "pct_missing": 0.008,
+      "strategy": "mode"
+    },
+    "reason": "Imputed 330 missing cell(s) (0.8%) in 'job' with mode='admin.' (imputed output only).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_mode",
+    "after_examples": [
+      "married",
+      "married",
+      "married",
+      "married",
+      "married"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "marital",
+    "n_cells_affected": 80,
+    "n_rows_affected": 80,
+    "parameters": {
+      "fill_value": "married",
+      "pct_missing": 0.0019,
+      "strategy": "mode"
+    },
+    "reason": "Imputed 80 missing cell(s) (0.2%) in 'marital' with mode='married' (imputed output only).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_mode",
+    "after_examples": [
+      "university.degree",
+      "university.degree",
+      "university.degree",
+      "university.degree",
+      "university.degree"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "education",
+    "n_cells_affected": 1730,
+    "n_rows_affected": 1730,
+    "parameters": {
+      "fill_value": "university.degree",
+      "pct_missing": 0.042,
+      "strategy": "mode"
+    },
+    "reason": "Imputed 1730 missing cell(s) (4.2%) in 'education' with mode='university.degree' (imputed output only).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_missing_level",
+    "after_examples": [
+      "Missing",
+      "Missing",
+      "Missing",
+      "Missing",
+      "Missing"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "default",
+    "n_cells_affected": 8596,
+    "n_rows_affected": 8596,
+    "parameters": {
+      "fill_value": "Missing",
+      "pct_missing": 0.2088,
+      "strategy": "missing_level"
+    },
+    "reason": "Imputed 8596 missing cell(s) (20.9%) in 'default' with missing_level='Missing' (imputed output only).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_mode",
+    "after_examples": [
+      "yes",
+      "yes",
+      "yes",
+      "yes",
+      "yes"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "housing",
+    "n_cells_affected": 990,
+    "n_rows_affected": 990,
+    "parameters": {
+      "fill_value": "yes",
+      "pct_missing": 0.024,
+      "strategy": "mode"
+    },
+    "reason": "Imputed 990 missing cell(s) (2.4%) in 'housing' with mode='yes' (imputed output only).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_mode",
+    "after_examples": [
+      "no",
+      "no",
+      "no",
+      "no",
+      "no"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "loan",
+    "n_cells_affected": 990,
+    "n_rows_affected": 990,
+    "parameters": {
+      "fill_value": "no",
+      "pct_missing": 0.024,
+      "strategy": "mode"
+    },
+    "reason": "Imputed 990 missing cell(s) (2.4%) in 'loan' with mode='no' (imputed output only).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "70",
+      "76",
+      "73",
+      "88",
+      "88"
+    ],
+    "before_examples": [
+      "70",
+      "76",
+      "73",
+      "88",
+      "88"
+    ],
+    "column": "age",
+    "n_cells_affected": 0,
+    "n_rows_affected": 468,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        9.5,
+        69.5
+      ],
+      "iqr_3_0_bounds": [
+        -13.0,
+        92.0
+      ],
+      "sample_indices": [
+        27705,
+        27749,
+        27772,
+        27792,
+        27794
+      ]
+    },
+    "reason": "Flagged 468 outlier(s) (1.1%) and 4 extreme outlier(s) in 'age' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "1666",
+      "787",
+      "812",
+      "1575",
+      "1042"
+    ],
+    "before_examples": [
+      "1666",
+      "787",
+      "812",
+      "1575",
+      "1042"
+    ],
+    "column": "duration",
+    "n_cells_affected": 0,
+    "n_rows_affected": 2963,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -223.5,
+        644.5
+      ],
+      "iqr_3_0_bounds": [
+        -549.0,
+        970.0
+      ],
+      "sample_indices": [
+        37,
+        57,
+        61,
+        75,
+        83
+      ]
+    },
+    "reason": "Flagged 2963 outlier(s) (7.2%) and 1043 extreme outlier(s) in 'duration' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "7",
+      "8",
+      "8",
+      "7",
+      "7"
+    ],
+    "before_examples": [
+      "7",
+      "8",
+      "8",
+      "7",
+      "7"
+    ],
+    "column": "campaign",
+    "n_cells_affected": 0,
+    "n_rows_affected": 2406,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -2.0,
+        6.0
+      ],
+      "iqr_3_0_bounds": [
+        -5.0,
+        9.0
+      ],
+      "sample_indices": [
+        887,
+        1043,
+        1094,
+        1097,
+        1230
+      ]
+    },
+    "reason": "Flagged 2406 outlier(s) (5.8%) and 1094 extreme outlier(s) in 'campaign' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "6",
+      "4",
+      "4",
+      "3",
+      "4"
+    ],
+    "before_examples": [
+      "6",
+      "4",
+      "4",
+      "3",
+      "4"
+    ],
+    "column": "pdays",
+    "n_cells_affected": 0,
+    "n_rows_affected": 1515,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        null,
+        null
+      ],
+      "iqr_3_0_bounds": [
+        null,
+        null
+      ],
+      "sample_indices": [
+        24101,
+        24257,
+        24272,
+        24390,
+        24475
+      ]
+    },
+    "reason": "Flagged 1515 outlier(s) (3.7%) and 0 extreme outlier(s) in 'pdays' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "before_examples": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "column": "previous",
+    "n_cells_affected": 0,
+    "n_rows_affected": 5625,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        null,
+        null
+      ],
+      "iqr_3_0_bounds": [
+        null,
+        null
+      ],
+      "sample_indices": [
+        24006,
+        24012,
+        24069,
+        24095,
+        24101
+      ]
+    },
+    "reason": "Flagged 5625 outlier(s) (13.7%) and 0 extreme outlier(s) in 'previous' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "-1.8",
+      "-1.8",
+      "-1.8",
+      "-1.8",
+      "-1.8"
+    ],
+    "before_examples": [
+      "-1.8",
+      "-1.8",
+      "-1.8",
+      "-1.8",
+      "-1.8"
+    ],
+    "column": "emp.var.rate",
+    "n_cells_affected": 0,
+    "n_rows_affected": 13494,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -6.6,
+        6.2
+      ],
+      "iqr_3_0_bounds": [
+        -11.4,
+        11.0
+      ],
+      "sample_indices": [
+        27682,
+        27683,
+        27684,
+        27685,
+        27686
+      ]
+    },
+    "reason": "Flagged 13494 outlier(s) (32.8%) and 0 extreme outlier(s) in 'emp.var.rate' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "-26.9",
+      "-26.9",
+      "-26.9",
+      "-26.9",
+      "-26.9"
+    ],
+    "before_examples": [
+      "-26.9",
+      "-26.9",
+      "-26.9",
+      "-26.9",
+      "-26.9"
+    ],
+    "column": "cons.conf.idx",
+    "n_cells_affected": 0,
+    "n_rows_affected": 446,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -52.15,
+        -26.95
+      ],
+      "iqr_3_0_bounds": [
+        -61.6,
+        -17.5
+      ],
+      "sample_indices": [
+        38143,
+        38144,
+        38145,
+        38146,
+        38147
+      ]
+    },
+    "reason": "Flagged 446 outlier(s) (1.1%) and 0 extreme outlier(s) in 'cons.conf.idx' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "4.286",
+      "4.286",
+      "4.286",
+      "4.286",
+      "4.286"
+    ],
+    "before_examples": [
+      "4.286",
+      "4.286",
+      "4.286",
+      "4.286",
+      "4.286"
+    ],
+    "column": "euribor3m",
+    "n_cells_affected": 0,
+    "n_rows_affected": 17081,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -4.0815,
+        10.3865
+      ],
+      "iqr_3_0_bounds": [
+        -9.507,
+        15.812
+      ],
+      "sample_indices": [
+        24095,
+        24096,
+        24097,
+        24098,
+        24099
+      ]
+    },
+    "reason": "Flagged 17081 outlier(s) (41.5%) and 0 extreme outlier(s) in 'euribor3m' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "4991.6",
+      "4991.6",
+      "4991.6",
+      "4991.6",
+      "4991.6"
+    ],
+    "before_examples": [
+      "4991.6",
+      "4991.6",
+      "4991.6",
+      "4991.6",
+      "4991.6"
+    ],
+    "column": "nr.employed",
+    "n_cells_affected": 0,
+    "n_rows_affected": 1408,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        4905.6,
+        5421.6
+      ],
+      "iqr_3_0_bounds": [
+        4712.1,
+        5615.1
+      ],
+      "sample_indices": [
+        39768,
+        39769,
+        39770,
+        39771,
+        39772
+      ]
+    },
+    "reason": "Flagged 1408 outlier(s) (3.4%) and 0 extreme outlier(s) in 'nr.employed' (action=flag; values untouched).",
+    "rows_after": 41176,
+    "rows_before": 41176,
+    "severity": "info",
+    "step": "handle_outliers"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "completed_at_utc": "2026-11-14T12:45:30.083395+00:00",
+  "dataset_name": "insurance",
+  "elapsed_seconds": 19.2619,
+  "n_cols_cleaned_conservative": 7,
+  "n_cols_cleaned_imputed": 7,
+  "n_cols_raw": 7,
+  "n_rows_cleaned_conservative": 1337,
+  "n_rows_cleaned_imputed": 1337,
+  "n_rows_raw": 1338,
+  "sha256": "505c1cbc2e63d0363bac59501563df2530aadf4cdb9cfee226f4ef32f5468281",
+  "source_file": "data\\raw\\insurance\\insurance.csv"
+}

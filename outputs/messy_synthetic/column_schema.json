@@ -1,0 +1,112 @@
+{
+  "age": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 62,
+    "pct_missing": 0.07,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "churned": {
+    "binary_labels": [
+      "No",
+      "Yes"
+    ],
+    "exclude_reason": null,
+    "n_unique": 2,
+    "pct_missing": 0.0,
+    "role": "target_candidate",
+    "semantic_type": "binary"
+  },
+  "constant_flag": {
+    "binary_labels": null,
+    "exclude_reason": "constant",
+    "n_unique": 1,
+    "pct_missing": 0.0,
+    "role": "excluded",
+    "semantic_type": "constant"
+  },
+  "customer_id": {
+    "binary_labels": null,
+    "exclude_reason": "id_like",
+    "n_unique": 2000,
+    "pct_missing": 0.0,
+    "role": "id",
+    "semantic_type": "id_like"
+  },
+  "gender": {
+    "binary_labels": [
+      "Male",
+      "Female"
+    ],
+    "exclude_reason": null,
+    "n_unique": 4,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "binary"
+  },
+  "income": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 1816,
+    "pct_missing": 0.08,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "membership": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 3,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "categorical_ordinal"
+  },
+  "monthly_spend": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 1904,
+    "pct_missing": 0.0,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  },
+  "notes": {
+    "binary_labels": null,
+    "exclude_reason": "free_text",
+    "n_unique": 594,
+    "pct_missing": 0.703,
+    "role": "excluded",
+    "semantic_type": "free_text"
+  },
+  "region": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.04,
+    "role": "feature",
+    "semantic_type": "categorical_nominal"
+  },
+  "satisfaction": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 5,
+    "pct_missing": 0.03,
+    "role": "feature",
+    "semantic_type": "numeric_discrete"
+  },
+  "signup_date": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 1223,
+    "pct_missing": 0.01,
+    "role": "feature",
+    "semantic_type": "datetime"
+  },
+  "tenure_months": {
+    "binary_labels": null,
+    "exclude_reason": null,
+    "n_unique": 121,
+    "pct_missing": 0.015,
+    "role": "feature",
+    "semantic_type": "numeric_continuous"
+  }
+}

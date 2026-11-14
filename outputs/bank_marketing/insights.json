@@ -1,0 +1,645 @@
+[
+  {
+    "category": "data_quality",
+    "evidence": {
+      "n_duplicate_rows_removed": 12
+    },
+    "figure_ref": null,
+    "id": "dq_duplicates_removed",
+    "severity": "medium",
+    "statement": "12 exact duplicate rows were removed (the first copy of each was kept)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "default",
+      "n_missing": 8596,
+      "n_rows": 41176,
+      "pct_missing": 20.88
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_default",
+    "severity": "medium",
+    "statement": "Column 'default' has 20.88% missing values (n = 8,596 of 41,176 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "default",
+      "n_cells": 8597,
+      "tokens": {
+        "unknown": 8597
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_placeholder_tokens_default",
+    "severity": "medium",
+    "statement": "Column 'default' used placeholder text for missing values: 'unknown' (8,597); 8,597 cells were turned into real missing values."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "education",
+      "n_missing": 1730,
+      "n_rows": 41176,
+      "pct_missing": 4.2
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_education",
+    "severity": "low",
+    "statement": "Column 'education' has 4.2% missing values (n = 1,730 of 41,176 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "housing",
+      "n_missing": 990,
+      "n_rows": 41176,
+      "pct_missing": 2.4
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_housing",
+    "severity": "low",
+    "statement": "Column 'housing' has 2.4% missing values (n = 990 of 41,176 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "job",
+      "n_missing": 330,
+      "n_rows": 41176,
+      "pct_missing": 0.8
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_job",
+    "severity": "low",
+    "statement": "Column 'job' has 0.8% missing values (n = 330 of 41,176 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "loan",
+      "n_missing": 990,
+      "n_rows": 41176,
+      "pct_missing": 2.4
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_loan",
+    "severity": "low",
+    "statement": "Column 'loan' has 2.4% missing values (n = 990 of 41,176 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "marital",
+      "n_missing": 80,
+      "n_rows": 41176,
+      "pct_missing": 0.19
+    },
+    "figure_ref": "figures/missing_bar.png",
+    "id": "dq_missing_marital",
+    "severity": "low",
+    "statement": "Column 'marital' has 0.19% missing values (n = 80 of 41,176 rows)."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "education",
+      "n_cells": 1731,
+      "tokens": {
+        "unknown": 1731
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_placeholder_tokens_education",
+    "severity": "low",
+    "statement": "Column 'education' used placeholder text for missing values: 'unknown' (1,731); 1,731 cells were turned into real missing values."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "housing",
+      "n_cells": 990,
+      "tokens": {
+        "unknown": 990
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_placeholder_tokens_housing",
+    "severity": "low",
+    "statement": "Column 'housing' used placeholder text for missing values: 'unknown' (990); 990 cells were turned into real missing values."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "job",
+      "n_cells": 330,
+      "tokens": {
+        "unknown": 330
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_placeholder_tokens_job",
+    "severity": "low",
+    "statement": "Column 'job' used placeholder text for missing values: 'unknown' (330); 330 cells were turned into real missing values."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "loan",
+      "n_cells": 990,
+      "tokens": {
+        "unknown": 990
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_placeholder_tokens_loan",
+    "severity": "low",
+    "statement": "Column 'loan' used placeholder text for missing values: 'unknown' (990); 990 cells were turned into real missing values."
+  },
+  {
+    "category": "data_quality",
+    "evidence": {
+      "column": "marital",
+      "n_cells": 80,
+      "tokens": {
+        "unknown": 80
+      }
+    },
+    "figure_ref": null,
+    "id": "dq_placeholder_tokens_marital",
+    "severity": "low",
+    "statement": "Column 'marital' used placeholder text for missing values: 'unknown' (80); 80 cells were turned into real missing values."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "nr.employed",
+      "mean": 5167.03,
+      "median": 5191.0,
+      "skew": -1.04
+    },
+    "figure_ref": "figures/numeric_detail_nr_employed.png",
+    "id": "dist_left_skew_nr_employed",
+    "severity": "medium",
+    "statement": "'nr.employed' is left-skewed (skew = -1.04): its median (5,191) is above its mean (5,167.03)."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "pdays",
+      "mean": 962.46,
+      "median": 999.0,
+      "skew": -4.92
+    },
+    "figure_ref": "figures/numeric_detail_pdays.png",
+    "id": "dist_left_skew_pdays",
+    "severity": "medium",
+    "statement": "'pdays' is left-skewed (skew = -4.92): its median (999) is above its mean (962.46)."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "campaign",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 2406,
+      "pct_outliers_iqr": 5.84
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_campaign",
+    "severity": "medium",
+    "statement": "'campaign' has many outliers: 5.84% of its values (n = 2,406) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "duration",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 2963,
+      "pct_outliers_iqr": 7.2
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_duration",
+    "severity": "medium",
+    "statement": "'duration' has many outliers: 7.2% of its values (n = 2,963) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "previous",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 5625,
+      "pct_outliers_iqr": 13.66
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_previous",
+    "severity": "medium",
+    "statement": "'previous' has many outliers: 13.66% of its values (n = 5,625) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "campaign",
+      "mean": 2.57,
+      "median": 2.0,
+      "skew": 4.76
+    },
+    "figure_ref": "figures/numeric_detail_campaign.png",
+    "id": "dist_right_skew_campaign",
+    "severity": "medium",
+    "statement": "'campaign' is right-skewed (skew = 4.76): its median (2) is below its mean (2.57), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "duration",
+      "mean": 258.32,
+      "median": 180.0,
+      "skew": 3.26
+    },
+    "figure_ref": "figures/numeric_detail_duration.png",
+    "id": "dist_right_skew_duration",
+    "severity": "medium",
+    "statement": "'duration' is right-skewed (skew = 3.26): its median (180) is below its mean (258.32), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "previous",
+      "mean": 0.17,
+      "median": 0.0,
+      "skew": 3.83
+    },
+    "figure_ref": "figures/numeric_detail_previous.png",
+    "id": "dist_right_skew_previous",
+    "severity": "medium",
+    "statement": "'previous' is right-skewed (skew = 3.83): its median (0) is below its mean (0.17), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "previous",
+      "n_zeros": 35551,
+      "pct_zeros": 86.34
+    },
+    "figure_ref": "figures/numeric_detail_previous.png",
+    "id": "dist_zero_inflated_previous",
+    "severity": "medium",
+    "statement": "'previous' is zero-inflated: 86.34% of its values are exactly zero."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "cons.conf.idx",
+      "n_peaks_heuristic": 3
+    },
+    "figure_ref": "figures/numeric_distributions_2.png",
+    "id": "dist_multimodal_cons_conf_idx",
+    "severity": "low",
+    "statement": "'cons.conf.idx' may have 3 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "cons.price.idx",
+      "n_peaks_heuristic": 5
+    },
+    "figure_ref": "figures/numeric_distributions_2.png",
+    "id": "dist_multimodal_cons_price_idx",
+    "severity": "low",
+    "statement": "'cons.price.idx' may have 5 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "emp.var.rate",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_distributions_1.png",
+    "id": "dist_multimodal_emp_var_rate",
+    "severity": "low",
+    "statement": "'emp.var.rate' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "euribor3m",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_distributions_2.png",
+    "id": "dist_multimodal_euribor3m",
+    "severity": "low",
+    "statement": "'euribor3m' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "nr.employed",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_detail_nr_employed.png",
+    "id": "dist_multimodal_nr_employed",
+    "severity": "low",
+    "statement": "'nr.employed' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "class_balance",
+    "evidence": {
+      "imbalance_ratio": 7.88,
+      "majority_class": "no",
+      "majority_pct": 88.73,
+      "minority_class": "yes",
+      "minority_pct": 11.27,
+      "n_classes": 2,
+      "target": "y"
+    },
+    "figure_ref": "figures/target_balance.png",
+    "id": "balance_target_y",
+    "severity": "medium",
+    "statement": "Target 'y' is mildly imbalanced: the smallest class 'yes' is 11.27% of rows and the largest 'no' is 88.73% (the largest class is 7.88 times the smallest)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "emp.var.rate",
+      "b": "euribor3m",
+      "pearson": 0.97
+    },
+    "figure_ref": "figures/correlation_heatmap.png",
+    "id": "rel_collinear_emp_var_rate_euribor3m",
+    "severity": "medium",
+    "statement": "'emp.var.rate' and 'euribor3m' are nearly collinear (Pearson r = +0.97); models should not use both as if they were separate information."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "emp.var.rate",
+      "b": "nr.employed",
+      "pearson": 0.91
+    },
+    "figure_ref": "figures/correlation_heatmap.png",
+    "id": "rel_collinear_emp_var_rate_nr_employed",
+    "severity": "medium",
+    "statement": "'emp.var.rate' and 'nr.employed' are nearly collinear (Pearson r = +0.91); models should not use both as if they were separate information."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "euribor3m",
+      "b": "nr.employed",
+      "pearson": 0.94
+    },
+    "figure_ref": "figures/correlation_heatmap.png",
+    "id": "rel_collinear_euribor3m_nr_employed",
+    "severity": "medium",
+    "statement": "'euribor3m' and 'nr.employed' are nearly collinear (Pearson r = +0.94); models should not use both as if they were separate information."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "poutcome",
+      "measure": "Cramér's V",
+      "target": "y",
+      "value": 0.32
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_categorical_poutcome",
+    "severity": "medium",
+    "statement": "The categorical feature most associated with target 'y' is 'poutcome' (Cramér's V = 0.32; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "contact",
+      "b": "month",
+      "cramers_v": 0.61
+    },
+    "figure_ref": "figures/cramers_v_heatmap.png",
+    "id": "rel_categorical_pair_contact_month",
+    "severity": "low",
+    "statement": "'contact' and 'month' are associated (bias-corrected Cramér's V = 0.61; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "job",
+      "b": "education",
+      "cramers_v": 0.39
+    },
+    "figure_ref": "figures/cramers_v_heatmap.png",
+    "id": "rel_categorical_pair_job_education",
+    "severity": "low",
+    "statement": "'job' and 'education' are associated (bias-corrected Cramér's V = 0.39; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "categorical": "poutcome",
+      "eta_squared": 0.91,
+      "numeric": "pdays",
+      "pct_variance_explained": 91.0
+    },
+    "figure_ref": "figures/numeric_by_category.png",
+    "id": "rel_numeric_by_group_pdays_poutcome",
+    "severity": "low",
+    "statement": "Groups of 'poutcome' differ in 'pdays': the groups explain 91% of its variance (eta² = 0.91; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "categorical": "poutcome",
+      "eta_squared": 0.79,
+      "numeric": "previous",
+      "pct_variance_explained": 79.0
+    },
+    "figure_ref": "figures/numeric_by_category.png",
+    "id": "rel_numeric_by_group_previous_poutcome",
+    "severity": "low",
+    "statement": "Groups of 'poutcome' differ in 'previous': the groups explain 79% of its variance (eta² = 0.79; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "emp.var.rate",
+      "b": "euribor3m",
+      "n": 41176,
+      "pearson": 0.97,
+      "spearman": 0.94
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_emp_var_rate_euribor3m",
+    "severity": "low",
+    "statement": "'emp.var.rate' and 'euribor3m' rise together (Spearman rho = +0.94, Pearson r = +0.97; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "emp.var.rate",
+      "b": "nr.employed",
+      "n": 41176,
+      "pearson": 0.91,
+      "spearman": 0.94
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_emp_var_rate_nr_employed",
+    "severity": "low",
+    "statement": "'emp.var.rate' and 'nr.employed' rise together (Spearman rho = +0.94, Pearson r = +0.91; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "euribor3m",
+      "b": "nr.employed",
+      "n": 41176,
+      "pearson": 0.94,
+      "spearman": 0.93
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_euribor3m_nr_employed",
+    "severity": "low",
+    "statement": "'euribor3m' and 'nr.employed' rise together (Spearman rho = +0.93, Pearson r = +0.94; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "duration",
+      "measure": "eta²",
+      "target": "y",
+      "value": 0.16
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_numeric_duration",
+    "severity": "low",
+    "statement": "The numeric feature most associated with target 'y' is 'duration' (eta² = 0.16; descriptive)."
+  },
+  {
+    "category": "cardinality_structure",
+    "evidence": {
+      "column": "default",
+      "example_count": 3,
+      "example_level": "yes",
+      "n_rare_levels": 1,
+      "threshold_pct": 1.0
+    },
+    "figure_ref": "figures/categorical_distributions_1.png",
+    "id": "struct_rare_levels_default",
+    "severity": "low",
+    "statement": "'default' has 1 level(s) under 1% of rows (e.g. 'yes', n = 3); these will give sparse cells in later chi-square tests (Phase 3)."
+  },
+  {
+    "category": "cardinality_structure",
+    "evidence": {
+      "column": "education",
+      "example_count": 18,
+      "example_level": "illiterate",
+      "n_rare_levels": 1,
+      "threshold_pct": 1.0
+    },
+    "figure_ref": "figures/categorical_distributions_1.png",
+    "id": "struct_rare_levels_education",
+    "severity": "low",
+    "statement": "'education' has 1 level(s) under 1% of rows (e.g. 'illiterate', n = 18); these will give sparse cells in later chi-square tests (Phase 3)."
+  },
+  {
+    "category": "cardinality_structure",
+    "evidence": {
+      "column": "month",
+      "example_count": 182,
+      "example_level": "dec",
+      "n_rare_levels": 1,
+      "threshold_pct": 1.0
+    },
+    "figure_ref": "figures/categorical_distributions_2.png",
+    "id": "struct_rare_levels_month",
+    "severity": "low",
+    "statement": "'month' has 1 level(s) under 1% of rows (e.g. 'dec', n = 182); these will give sparse cells in later chi-square tests (Phase 3)."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "scale_disparity_ratio": 523.89
+    },
+    "figure_ref": null,
+    "id": "scale_disparity",
+    "severity": "info",
+    "statement": "Numeric columns differ a lot in spread (largest std is 523.89 times the smallest); z-scores are advised only for scale-sensitive methods such as regularized regression, distance-based methods or PCA."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "campaign",
+      "skew": 4.76,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_campaign",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'campaign' (skew = 4.76) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "duration",
+      "skew": 3.26,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_duration",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'duration' (skew = 3.26) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "previous",
+      "skew": 3.83,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_previous",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'previous' (skew = 3.83) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "columns": [
+        "campaign",
+        "duration",
+        "nr.employed",
+        "pdays",
+        "previous"
+      ],
+      "n_columns": 5
+    },
+    "figure_ref": null,
+    "id": "impl_rank_based",
+    "severity": "medium",
+    "statement": "Rank-based methods (Spearman, Mann-Whitney, Kruskal-Wallis) are recommended for 5 skewed or outlier-heavy column(s): 'campaign', 'duration', 'nr.employed', 'pdays', 'previous'."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "balance_label": "mildly imbalanced",
+      "target": "y"
+    },
+    "figure_ref": "figures/target_balance.png",
+    "id": "impl_target_imbalance_y",
+    "severity": "medium",
+    "statement": "Because target 'y' is mildly imbalanced, compare groups using rates (% per class) rather than raw counts, and use stratified splits for any later modeling."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "column": "default",
+      "mode": "no",
+      "mode_pct": 99.99,
+      "rarest_count": 3,
+      "rarest_level": "yes"
+    },
+    "figure_ref": "figures/categorical_distributions_1.png",
+    "id": "impl_unbalanced_groups_default",
+    "severity": "low",
+    "statement": "Group sizes are very unbalanced for 'default': 'no' covers 99.99% of rows and 'yes' only 3 rows, so comparisons across its levels will rest on few cases."
+  }
+]

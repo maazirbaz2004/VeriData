@@ -1,0 +1,42 @@
+{
+  "n_cols": 13,
+  "n_rows": 2000,
+  "planted_relationships": [
+    {
+      "description": "monthly_spend is linearly generated from income plus Gaussian noise.",
+      "pair": [
+        "income",
+        "monthly_spend"
+      ],
+      "pearson_r": 0.9545,
+      "type": "numeric_numeric_positive"
+    },
+    {
+      "description": "Shorter tenure increases probability of churn.",
+      "pair": [
+        "tenure_months",
+        "churned"
+      ],
+      "point_biserial_r": -0.3384,
+      "type": "numeric_binary_negative"
+    },
+    {
+      "description": "Lower satisfaction score increases probability of churn.",
+      "pair": [
+        "satisfaction",
+        "churned"
+      ],
+      "point_biserial_r": -0.2754,
+      "type": "ordinal_binary_negative"
+    },
+    {
+      "description": "Higher income brackets have higher probability of Silver and Gold membership.",
+      "pair": [
+        "income",
+        "membership"
+      ],
+      "type": "numeric_categorical"
+    }
+  ],
+  "seed": 44
+}

@@ -1,0 +1,297 @@
+[
+  {
+    "category": "data_quality",
+    "evidence": {
+      "n_duplicate_rows_removed": 1
+    },
+    "figure_ref": null,
+    "id": "dq_duplicates_removed",
+    "severity": "medium",
+    "statement": "1 exact duplicate rows were removed (the first copy of each was kept)."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "ca",
+      "iqr_multiplier": 1.5,
+      "n_outliers_iqr": 24,
+      "pct_outliers_iqr": 7.95
+    },
+    "figure_ref": "figures/outlier_summary.png",
+    "id": "dist_outliers_ca",
+    "severity": "medium",
+    "statement": "'ca' has many outliers: 7.95% of its values (n = 24) are beyond 1.5×IQR. They are flagged, not removed."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "ca",
+      "mean": 0.72,
+      "median": 0.0,
+      "skew": 1.3
+    },
+    "figure_ref": "figures/numeric_detail_ca.png",
+    "id": "dist_right_skew_ca",
+    "severity": "medium",
+    "statement": "'ca' is right-skewed (skew = 1.3): its median (0) is below its mean (0.72), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "chol",
+      "mean": 246.5,
+      "median": 240.5,
+      "skew": 1.15
+    },
+    "figure_ref": "figures/numeric_detail_chol.png",
+    "id": "dist_right_skew_chol",
+    "severity": "medium",
+    "statement": "'chol' is right-skewed (skew = 1.15): its median (240.5) is below its mean (246.5), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "oldpeak",
+      "mean": 1.04,
+      "median": 0.8,
+      "skew": 1.27
+    },
+    "figure_ref": "figures/numeric_detail_oldpeak.png",
+    "id": "dist_right_skew_oldpeak",
+    "severity": "medium",
+    "statement": "'oldpeak' is right-skewed (skew = 1.27): its median (0.8) is below its mean (1.04), so a log transform is advisable for plots and parametric models."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "ca",
+      "n_zeros": 175,
+      "pct_zeros": 57.95
+    },
+    "figure_ref": "figures/numeric_detail_ca.png",
+    "id": "dist_zero_inflated_ca",
+    "severity": "medium",
+    "statement": "'ca' is zero-inflated: 57.95% of its values are exactly zero."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "oldpeak",
+      "n_zeros": 98,
+      "pct_zeros": 32.45
+    },
+    "figure_ref": "figures/numeric_detail_oldpeak.png",
+    "id": "dist_zero_inflated_oldpeak",
+    "severity": "medium",
+    "statement": "'oldpeak' is zero-inflated: 32.45% of its values are exactly zero."
+  },
+  {
+    "category": "distributions",
+    "evidence": {
+      "column": "age",
+      "n_peaks_heuristic": 2
+    },
+    "figure_ref": "figures/numeric_distributions_1.png",
+    "id": "dist_multimodal_age",
+    "severity": "low",
+    "statement": "'age' may have 2 peaks (simple histogram heuristic), which can mean mixed sub-groups; check the plot."
+  },
+  {
+    "category": "class_balance",
+    "evidence": {
+      "imbalance_ratio": 1.19,
+      "majority_class": "1",
+      "majority_pct": 54.3,
+      "minority_class": "0",
+      "minority_pct": 45.7,
+      "n_classes": 2,
+      "target": "target"
+    },
+    "figure_ref": "figures/target_balance.png",
+    "id": "balance_target_target",
+    "severity": "info",
+    "statement": "Target 'target' is balanced: the smallest class '0' is 45.7% of rows and the largest '1' is 54.3% (the largest class is 1.19 times the smallest)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "thal",
+      "measure": "Cramér's V",
+      "target": "target",
+      "value": 0.52
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_categorical_thal",
+    "severity": "medium",
+    "statement": "The categorical feature most associated with target 'target' is 'thal' (Cramér's V = 0.52; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "categorical": "slope",
+      "eta_squared": 0.33,
+      "numeric": "oldpeak",
+      "pct_variance_explained": 33.0
+    },
+    "figure_ref": "figures/numeric_by_category.png",
+    "id": "rel_numeric_by_group_oldpeak_slope",
+    "severity": "low",
+    "statement": "Groups of 'slope' differ in 'oldpeak': the groups explain 33% of its variance (eta² = 0.33; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "categorical": "slope",
+      "eta_squared": 0.2,
+      "numeric": "thalach",
+      "pct_variance_explained": 20.0
+    },
+    "figure_ref": "figures/numeric_by_category.png",
+    "id": "rel_numeric_by_group_thalach_slope",
+    "severity": "low",
+    "statement": "Groups of 'slope' differ in 'thalach': the groups explain 20% of its variance (eta² = 0.2; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "age",
+      "b": "ca",
+      "n": 302,
+      "pearson": 0.3,
+      "spearman": 0.35
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_age_ca",
+    "severity": "low",
+    "statement": "'age' and 'ca' rise together (Spearman rho = +0.35, Pearson r = +0.3; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "age",
+      "b": "thalach",
+      "n": 302,
+      "pearson": -0.4,
+      "spearman": -0.39
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_age_thalach",
+    "severity": "low",
+    "statement": "'age' and 'thalach' move in opposite directions (Spearman rho = -0.39, Pearson r = -0.4; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "a": "thalach",
+      "b": "oldpeak",
+      "n": 302,
+      "pearson": -0.34,
+      "spearman": -0.43
+    },
+    "figure_ref": "figures/top_scatter_pairs.png",
+    "id": "rel_numeric_pair_thalach_oldpeak",
+    "severity": "low",
+    "statement": "'thalach' and 'oldpeak' move in opposite directions (Spearman rho = -0.43, Pearson r = -0.34; descriptive)."
+  },
+  {
+    "category": "relationships",
+    "evidence": {
+      "feature": "oldpeak",
+      "measure": "eta²",
+      "target": "target",
+      "value": 0.18
+    },
+    "figure_ref": "figures/target_relationships.png",
+    "id": "rel_target_numeric_oldpeak",
+    "severity": "low",
+    "statement": "The numeric feature most associated with target 'target' is 'oldpeak' (eta² = 0.18; descriptive)."
+  },
+  {
+    "category": "cardinality_structure",
+    "evidence": {
+      "column": "thal",
+      "example_count": 2,
+      "example_level": "0",
+      "n_rare_levels": 1,
+      "threshold_pct": 1.0
+    },
+    "figure_ref": "figures/categorical_distributions_2.png",
+    "id": "struct_rare_levels_thal",
+    "severity": "low",
+    "statement": "'thal' has 1 level(s) under 1% of rows (e.g. '0', n = 2); these will give sparse cells in later chi-square tests (Phase 3)."
+  },
+  {
+    "category": "cardinality_structure",
+    "evidence": {
+      "column": "restecg",
+      "level": "2",
+      "smallest_group_n": 4,
+      "threshold": 20
+    },
+    "figure_ref": "figures/categorical_distributions_1.png",
+    "id": "struct_small_group_restecg",
+    "severity": "low",
+    "statement": "'restecg' has a level with only 4 rows ('2'), under the 20-row guide for group comparisons."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "scale_disparity_ratio": 51.41
+    },
+    "figure_ref": null,
+    "id": "scale_disparity",
+    "severity": "info",
+    "statement": "Numeric columns differ a lot in spread (largest std is 51.41 times the smallest); z-scores are advised only for scale-sensitive methods such as regularized regression, distance-based methods or PCA."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "ca",
+      "skew": 1.3,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_ca",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'ca' (skew = 1.3) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "chol",
+      "skew": 1.15,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_chol",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'chol' (skew = 1.15) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "scaling",
+    "evidence": {
+      "column": "oldpeak",
+      "skew": 1.27,
+      "transform": "log1p"
+    },
+    "figure_ref": null,
+    "id": "scale_transform_oldpeak",
+    "severity": "info",
+    "statement": "Scaling note: log1p is recommended for 'oldpeak' (skew = 1.27) for plots and parametric models only; the main cleaned file is not transformed."
+  },
+  {
+    "category": "modeling_testing_implications",
+    "evidence": {
+      "columns": [
+        "ca",
+        "chol",
+        "oldpeak"
+      ],
+      "n_columns": 3
+    },
+    "figure_ref": null,
+    "id": "impl_rank_based",
+    "severity": "medium",
+    "statement": "Rank-based methods (Spearman, Mann-Whitney, Kruskal-Wallis) are recommended for 3 skewed or outlier-heavy column(s): 'ca', 'chol', 'oldpeak'."
+  }
+]

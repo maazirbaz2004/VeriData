@@ -1,0 +1,218 @@
+[
+  {
+    "action": "dropped_duplicate_rows",
+    "after_examples": [],
+    "before_examples": [],
+    "column": null,
+    "n_cells_affected": 14,
+    "n_rows_affected": 1,
+    "parameters": {
+      "dropped_row_indices_sample": [
+        164
+      ]
+    },
+    "reason": "Dropped 1 exact duplicate row(s) (kept first occurrence).",
+    "rows_after": 302,
+    "rows_before": 303,
+    "severity": "info",
+    "step": "handle_duplicates"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "172",
+      "178",
+      "180",
+      "180",
+      "200"
+    ],
+    "before_examples": [
+      "172",
+      "178",
+      "180",
+      "180",
+      "200"
+    ],
+    "column": "trestbps",
+    "n_cells_affected": 0,
+    "n_rows_affected": 9,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        90.0,
+        170.0
+      ],
+      "iqr_3_0_bounds": [
+        60.0,
+        200.0
+      ],
+      "sample_indices": [
+        8,
+        101,
+        110,
+        202,
+        222
+      ]
+    },
+    "reason": "Flagged 9 outlier(s) (3.0%) and 0 extreme outlier(s) in 'trestbps' (action=flag; values untouched).",
+    "rows_after": 302,
+    "rows_before": 302,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "417",
+      "564",
+      "394",
+      "407",
+      "409"
+    ],
+    "before_examples": [
+      "417",
+      "564",
+      "394",
+      "407",
+      "409"
+    ],
+    "column": "chol",
+    "n_cells_affected": 0,
+    "n_rows_affected": 5,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        115.375,
+        370.375
+      ],
+      "iqr_3_0_bounds": [
+        19.75,
+        466.0
+      ],
+      "sample_indices": [
+        28,
+        85,
+        96,
+        219,
+        245
+      ]
+    },
+    "reason": "Flagged 5 outlier(s) (1.7%) and 1 extreme outlier(s) in 'chol' (action=flag; values untouched).",
+    "rows_after": 302,
+    "rows_before": 302,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "71"
+    ],
+    "before_examples": [
+      "71"
+    ],
+    "column": "thalach",
+    "n_cells_affected": 0,
+    "n_rows_affected": 1,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        84.125,
+        215.125
+      ],
+      "iqr_3_0_bounds": [
+        35.0,
+        264.25
+      ],
+      "sample_indices": [
+        271
+      ]
+    },
+    "reason": "Flagged 1 outlier(s) (0.3%) and 0 extreme outlier(s) in 'thalach' (action=flag; values untouched).",
+    "rows_after": 302,
+    "rows_before": 302,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "4.2",
+      "6.2",
+      "5.6",
+      "4.2",
+      "4.4"
+    ],
+    "before_examples": [
+      "4.2",
+      "6.2",
+      "5.6",
+      "4.2",
+      "4.4"
+    ],
+    "column": "oldpeak",
+    "n_cells_affected": 0,
+    "n_rows_affected": 5,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -2.4,
+        4.0
+      ],
+      "iqr_3_0_bounds": [
+        -4.8,
+        6.4
+      ],
+      "sample_indices": [
+        101,
+        203,
+        220,
+        249,
+        290
+      ]
+    },
+    "reason": "Flagged 5 outlier(s) (1.7%) and 0 extreme outlier(s) in 'oldpeak' (action=flag; values untouched).",
+    "rows_after": 302,
+    "rows_before": 302,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "3",
+      "4",
+      "3",
+      "3",
+      "4"
+    ],
+    "before_examples": [
+      "3",
+      "4",
+      "3",
+      "3",
+      "4"
+    ],
+    "column": "ca",
+    "n_cells_affected": 0,
+    "n_rows_affected": 24,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -1.5,
+        2.5
+      ],
+      "iqr_3_0_bounds": [
+        -3.0,
+        4.0
+      ],
+      "sample_indices": [
+        52,
+        92,
+        97,
+        99,
+        158
+      ]
+    },
+    "reason": "Flagged 24 outlier(s) (7.9%) and 0 extreme outlier(s) in 'ca' (action=flag; values untouched).",
+    "rows_after": 302,
+    "rows_before": 302,
+    "severity": "info",
+    "step": "handle_outliers"
+  }
+]

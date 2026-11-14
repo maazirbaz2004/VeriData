@@ -1,0 +1,13 @@
+{
+  "completed_at_utc": "2026-11-14T12:47:21.287214+00:00",
+  "dataset_name": "telco_churn",
+  "elapsed_seconds": 41.2444,
+  "n_cols_cleaned_conservative": 21,
+  "n_cols_cleaned_imputed": 21,
+  "n_cols_raw": 21,
+  "n_rows_cleaned_conservative": 7043,
+  "n_rows_cleaned_imputed": 7043,
+  "n_rows_raw": 7043,
+  "sha256": "16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91",
+  "source_file": "data\\raw\\telco_churn\\WA_Fn-UseC_-Telco-Customer-Churn.csv"
+}

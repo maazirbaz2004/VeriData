@@ -7,7 +7,6 @@ from typing import Any
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
 
 from .plots import (
     ACCENT,
@@ -24,6 +23,7 @@ from .plots import (
     grid_shape,
     short_label,
     slugify,
+    sns,
     wrap_title,
 )
 from .stats import (

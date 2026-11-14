@@ -1,0 +1,1359 @@
+{
+  "categorical": {
+    "batches": [
+      "figures/categorical_distributions_1.png",
+      "figures/categorical_distributions_2.png",
+      "figures/categorical_distributions_3.png"
+    ],
+    "columns": {
+      "Fjob": {
+        "count": 395,
+        "entropy_norm": 0.727,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "other",
+        "mode_count": 217,
+        "mode_pct": 54.94,
+        "n_rare_levels": 0,
+        "n_unique": 5,
+        "rare_levels": [],
+        "rarest_count": 18,
+        "rarest_level": "health",
+        "rarest_pct": 4.56,
+        "smallest_group_n": 18
+      },
+      "Mjob": {
+        "count": 395,
+        "entropy_norm": 0.929,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "other",
+        "mode_count": 141,
+        "mode_pct": 35.7,
+        "n_rare_levels": 0,
+        "n_unique": 5,
+        "rare_levels": [],
+        "rarest_count": 34,
+        "rarest_level": "health",
+        "rarest_pct": 8.61,
+        "smallest_group_n": 34
+      },
+      "Pstatus": {
+        "count": 395,
+        "entropy_norm": 0.481,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "T",
+        "mode_count": 354,
+        "mode_pct": 89.62,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 41,
+        "rarest_level": "A",
+        "rarest_pct": 10.38,
+        "smallest_group_n": 41
+      },
+      "activities": {
+        "count": 395,
+        "entropy_norm": 1.0,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "yes",
+        "mode_count": 201,
+        "mode_pct": 50.89,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 194,
+        "rarest_level": "no",
+        "rarest_pct": 49.11,
+        "smallest_group_n": 194
+      },
+      "address": {
+        "count": 395,
+        "entropy_norm": 0.765,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "U",
+        "mode_count": 307,
+        "mode_pct": 77.72,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 88,
+        "rarest_level": "R",
+        "rarest_pct": 22.28,
+        "smallest_group_n": 88
+      },
+      "famsize": {
+        "count": 395,
+        "entropy_norm": 0.867,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "GT3",
+        "mode_count": 281,
+        "mode_pct": 71.14,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 114,
+        "rarest_level": "LE3",
+        "rarest_pct": 28.86,
+        "smallest_group_n": 114
+      },
+      "famsup": {
+        "count": 395,
+        "entropy_norm": 0.963,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "yes",
+        "mode_count": 242,
+        "mode_pct": 61.27,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 153,
+        "rarest_level": "no",
+        "rarest_pct": 38.73,
+        "smallest_group_n": 153
+      },
+      "guardian": {
+        "count": 395,
+        "entropy_norm": 0.724,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "mother",
+        "mode_count": 273,
+        "mode_pct": 69.11,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 32,
+        "rarest_level": "other",
+        "rarest_pct": 8.1,
+        "smallest_group_n": 32
+      },
+      "higher": {
+        "count": 395,
+        "entropy_norm": 0.289,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "yes",
+        "mode_count": 375,
+        "mode_pct": 94.94,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 20,
+        "rarest_level": "no",
+        "rarest_pct": 5.06,
+        "smallest_group_n": 20
+      },
+      "internet": {
+        "count": 395,
+        "entropy_norm": 0.651,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "yes",
+        "mode_count": 329,
+        "mode_pct": 83.29,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 66,
+        "rarest_level": "no",
+        "rarest_pct": 16.71,
+        "smallest_group_n": 66
+      },
+      "nursery": {
+        "count": 395,
+        "entropy_norm": 0.732,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "yes",
+        "mode_count": 314,
+        "mode_pct": 79.49,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 81,
+        "rarest_level": "no",
+        "rarest_pct": 20.51,
+        "smallest_group_n": 81
+      },
+      "paid": {
+        "count": 395,
+        "entropy_norm": 0.995,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "no",
+        "mode_count": 214,
+        "mode_pct": 54.18,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 181,
+        "rarest_level": "yes",
+        "rarest_pct": 45.82,
+        "smallest_group_n": 181
+      },
+      "reason": {
+        "count": 395,
+        "entropy_norm": 0.933,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "course",
+        "mode_count": 145,
+        "mode_pct": 36.71,
+        "n_rare_levels": 0,
+        "n_unique": 4,
+        "rare_levels": [],
+        "rarest_count": 36,
+        "rarest_level": "other",
+        "rarest_pct": 9.11,
+        "smallest_group_n": 36
+      },
+      "romantic": {
+        "count": 395,
+        "entropy_norm": 0.919,
+        "figure": "figures/categorical_distributions_3.png",
+        "mode": "no",
+        "mode_count": 263,
+        "mode_pct": 66.58,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 132,
+        "rarest_level": "yes",
+        "rarest_pct": 33.42,
+        "smallest_group_n": 132
+      },
+      "school": {
+        "count": 395,
+        "entropy_norm": 0.519,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "GP",
+        "mode_count": 349,
+        "mode_pct": 88.35,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 46,
+        "rarest_level": "MS",
+        "rarest_pct": 11.65,
+        "smallest_group_n": 46
+      },
+      "schoolsup": {
+        "count": 395,
+        "entropy_norm": 0.555,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "no",
+        "mode_count": 344,
+        "mode_pct": 87.09,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 51,
+        "rarest_level": "yes",
+        "rarest_pct": 12.91,
+        "smallest_group_n": 51
+      },
+      "sex": {
+        "count": 395,
+        "entropy_norm": 0.998,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "F",
+        "mode_count": 208,
+        "mode_pct": 52.66,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 187,
+        "rarest_level": "M",
+        "rarest_pct": 47.34,
+        "smallest_group_n": 187
+      }
+    },
+    "figures": {
+      "cardinality_bar": "figures/cardinality_bar.png"
+    }
+  },
+  "categorical_categorical": {
+    "figures": {
+      "categorical_pairs": "figures/categorical_pairs.png",
+      "cramers_v_heatmap": "figures/cramers_v_heatmap.png"
+    },
+    "top_pairs": [
+      {
+        "a": "famsup",
+        "b": "paid",
+        "cramers_v": 0.289
+      },
+      {
+        "a": "school",
+        "b": "address",
+        "cramers_v": 0.276
+      },
+      {
+        "a": "Mjob",
+        "b": "internet",
+        "cramers_v": 0.251
+      },
+      {
+        "a": "address",
+        "b": "internet",
+        "cramers_v": 0.211
+      },
+      {
+        "a": "Mjob",
+        "b": "Fjob",
+        "cramers_v": 0.191
+      },
+      {
+        "a": "sex",
+        "b": "Mjob",
+        "cramers_v": 0.185
+      },
+      {
+        "a": "paid",
+        "b": "higher",
+        "cramers_v": 0.183
+      },
+      {
+        "a": "guardian",
+        "b": "nursery",
+        "cramers_v": 0.16
+      },
+      {
+        "a": "school",
+        "b": "famsup",
+        "cramers_v": 0.157
+      },
+      {
+        "a": "school",
+        "b": "reason",
+        "cramers_v": 0.155
+      }
+    ]
+  },
+  "column_groups": {
+    "categorical": [
+      "school",
+      "sex",
+      "address",
+      "famsize",
+      "Pstatus",
+      "Mjob",
+      "Fjob",
+      "reason",
+      "guardian",
+      "schoolsup",
+      "famsup",
+      "paid",
+      "activities",
+      "nursery",
+      "higher",
+      "internet",
+      "romantic"
+    ],
+    "datetime": [],
+    "numeric": [
+      "age",
+      "Medu",
+      "Fedu",
+      "traveltime",
+      "studytime",
+      "failures",
+      "famrel",
+      "freetime",
+      "goout",
+      "Dalc",
+      "Walc",
+      "health",
+      "absences",
+      "G1",
+      "G2",
+      "G3"
+    ],
+    "skipped": []
+  },
+  "column_roles": {
+    "Dalc": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "Fedu": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "Fjob": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "G1": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "G2": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "G3": {
+      "role": "target_candidate",
+      "semantic_type": "numeric_discrete"
+    },
+    "Medu": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "Mjob": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "Pstatus": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "Walc": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "absences": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "activities": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "address": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "age": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "failures": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "famrel": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "famsize": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "famsup": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "freetime": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "goout": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "guardian": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "health": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "higher": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "internet": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "nursery": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "paid": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "reason": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "romantic": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "school": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "schoolsup": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "sex": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "studytime": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "traveltime": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    }
+  },
+  "eda_errors": [],
+  "missingness": {
+    "columns": {
+      "Dalc": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Fedu": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Fjob": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "G1": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "G2": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "G3": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Medu": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Mjob": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Pstatus": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "Walc": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "absences": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "activities": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "address": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "age": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "failures": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "famrel": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "famsize": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "famsup": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "freetime": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "goout": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "guardian": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "health": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "higher": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "internet": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "nursery": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "paid": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "reason": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "romantic": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "school": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "schoolsup": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "sex": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "studytime": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "traveltime": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      }
+    },
+    "concentration": "none",
+    "concentration_note": "No missing values remain in the cleaned data.",
+    "figures": {},
+    "missing_cells": 0,
+    "n_columns_with_missing": 0,
+    "pct_missing_cells": 0.0,
+    "pct_rows_with_any_missing": 0.0,
+    "rows_with_any_missing": 0,
+    "total_cells": 13035
+  },
+  "notes": [],
+  "numeric": {
+    "batches": [
+      "figures/numeric_distributions_1.png",
+      "figures/numeric_distributions_2.png",
+      "figures/numeric_distributions_3.png"
+    ],
+    "columns": {
+      "Dalc": {
+        "count": 395,
+        "detail_figure": "figures/numeric_detail_dalc.png",
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": 4.759,
+        "log1p_skew": 1.59,
+        "max": 5.0,
+        "mean": 1.481,
+        "median": 1.0,
+        "min": 1.0,
+        "n_outliers_iqr": 18,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 4.56,
+        "pct_zeros": 0.0,
+        "q1": 1.0,
+        "q3": 2.0,
+        "skew": 2.191,
+        "std": 0.8907
+      },
+      "Fedu": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -1.199,
+        "max": 4.0,
+        "mean": 2.5215,
+        "median": 2.0,
+        "min": 0.0,
+        "n_outliers_iqr": 2,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 2,
+        "pct_outliers_iqr": 0.51,
+        "pct_zeros": 0.51,
+        "q1": 2.0,
+        "q3": 3.0,
+        "skew": -0.032,
+        "std": 1.0882
+      },
+      "G1": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_3.png",
+        "kurtosis": -0.694,
+        "max": 19.0,
+        "mean": 10.9089,
+        "median": 11.0,
+        "min": 3.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": null,
+        "n_unique": 17,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 8.0,
+        "q3": 13.0,
+        "skew": 0.241,
+        "std": 3.3192
+      },
+      "G2": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_3.png",
+        "kurtosis": 0.628,
+        "max": 19.0,
+        "mean": 10.7139,
+        "median": 11.0,
+        "min": 0.0,
+        "n_outliers_iqr": 13,
+        "n_peaks_heuristic": null,
+        "n_unique": 17,
+        "n_zeros": 13,
+        "pct_outliers_iqr": 3.29,
+        "pct_zeros": 3.29,
+        "q1": 9.0,
+        "q3": 13.0,
+        "skew": -0.432,
+        "std": 3.7615
+      },
+      "G3": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_3.png",
+        "kurtosis": 0.403,
+        "max": 20.0,
+        "mean": 10.4152,
+        "median": 11.0,
+        "min": 0.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": null,
+        "n_unique": 18,
+        "n_zeros": 38,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 9.62,
+        "q1": 8.0,
+        "q3": 14.0,
+        "skew": -0.733,
+        "std": 4.5814
+      },
+      "Medu": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -1.09,
+        "max": 4.0,
+        "mean": 2.7494,
+        "median": 3.0,
+        "min": 0.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 3,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.76,
+        "q1": 2.0,
+        "q3": 4.0,
+        "skew": -0.318,
+        "std": 1.0947
+      },
+      "Walc": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": -0.791,
+        "max": 5.0,
+        "mean": 2.2911,
+        "median": 2.0,
+        "min": 1.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 1.0,
+        "q3": 3.0,
+        "skew": 0.612,
+        "std": 1.2879
+      },
+      "absences": {
+        "count": 395,
+        "detail_figure": "figures/numeric_detail_absences.png",
+        "figure": "figures/numeric_distributions_3.png",
+        "kurtosis": 21.719,
+        "log1p_skew": 0.07,
+        "max": 75.0,
+        "mean": 5.7089,
+        "median": 4.0,
+        "min": 0.0,
+        "n_outliers_iqr": 15,
+        "n_peaks_heuristic": 1,
+        "n_unique": 34,
+        "n_zeros": 115,
+        "pct_outliers_iqr": 3.8,
+        "pct_zeros": 29.11,
+        "q1": 0.0,
+        "q3": 8.0,
+        "skew": 3.672,
+        "std": 8.0031
+      },
+      "age": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -0.001,
+        "max": 22.0,
+        "mean": 16.6962,
+        "median": 17.0,
+        "min": 15.0,
+        "n_outliers_iqr": 1,
+        "n_peaks_heuristic": null,
+        "n_unique": 8,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.25,
+        "pct_zeros": 0.0,
+        "q1": 16.0,
+        "q3": 18.0,
+        "skew": 0.466,
+        "std": 1.276
+      },
+      "failures": {
+        "count": 395,
+        "detail_figure": "figures/numeric_detail_failures.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 5.005,
+        "log1p_skew": 1.86,
+        "max": 3.0,
+        "mean": 0.3342,
+        "median": 0.0,
+        "min": 0.0,
+        "n_outliers_iqr": 83,
+        "n_peaks_heuristic": null,
+        "n_unique": 4,
+        "n_zeros": 312,
+        "pct_outliers_iqr": 21.01,
+        "pct_zeros": 78.99,
+        "q1": 0.0,
+        "q3": 0.0,
+        "skew": 2.387,
+        "std": 0.7437
+      },
+      "famrel": {
+        "count": 395,
+        "detail_figure": "figures/numeric_detail_famrel.png",
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": 1.14,
+        "max": 5.0,
+        "mean": 3.9443,
+        "median": 4.0,
+        "min": 1.0,
+        "n_outliers_iqr": 26,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 6.58,
+        "pct_zeros": 0.0,
+        "q1": 4.0,
+        "q3": 5.0,
+        "skew": -0.952,
+        "std": 0.8967
+      },
+      "freetime": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": -0.302,
+        "max": 5.0,
+        "mean": 3.2354,
+        "median": 3.0,
+        "min": 1.0,
+        "n_outliers_iqr": 19,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 4.81,
+        "pct_zeros": 0.0,
+        "q1": 3.0,
+        "q3": 4.0,
+        "skew": -0.163,
+        "std": 0.9989
+      },
+      "goout": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": -0.77,
+        "max": 5.0,
+        "mean": 3.1089,
+        "median": 3.0,
+        "min": 1.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 2.0,
+        "q3": 4.0,
+        "skew": 0.117,
+        "std": 1.1133
+      },
+      "health": {
+        "count": 395,
+        "figure": "figures/numeric_distributions_2.png",
+        "kurtosis": -1.014,
+        "max": 5.0,
+        "mean": 3.5544,
+        "median": 4.0,
+        "min": 1.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 3.0,
+        "q3": 5.0,
+        "skew": -0.495,
+        "std": 1.3903
+      },
+      "studytime": {
+        "count": 395,
+        "detail_figure": "figures/numeric_detail_studytime.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -0.014,
+        "max": 4.0,
+        "mean": 2.0354,
+        "median": 2.0,
+        "min": 1.0,
+        "n_outliers_iqr": 27,
+        "n_peaks_heuristic": null,
+        "n_unique": 4,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 6.84,
+        "pct_zeros": 0.0,
+        "q1": 1.0,
+        "q3": 2.0,
+        "skew": 0.632,
+        "std": 0.8392
+      },
+      "traveltime": {
+        "count": 395,
+        "detail_figure": "figures/numeric_detail_traveltime.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 2.344,
+        "log1p_skew": 1.15,
+        "max": 4.0,
+        "mean": 1.4481,
+        "median": 1.0,
+        "min": 1.0,
+        "n_outliers_iqr": 8,
+        "n_peaks_heuristic": null,
+        "n_unique": 4,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 2.03,
+        "pct_zeros": 0.0,
+        "q1": 1.0,
+        "q3": 2.0,
+        "skew": 1.607,
+        "std": 0.6975
+      }
+    },
+    "figures": {
+      "outlier_summary": "figures/outlier_summary.png"
+    },
+    "n_detail_flagged": 6
+  },
+  "numeric_categorical": {
+    "figures": {
+      "numeric_by_category": "figures/numeric_by_category.png"
+    },
+    "top_pairs": [
+      {
+        "categorical": "Mjob",
+        "eta_squared": 0.407,
+        "numeric": "Medu"
+      },
+      {
+        "categorical": "Fjob",
+        "eta_squared": 0.168,
+        "numeric": "Fedu"
+      },
+      {
+        "categorical": "guardian",
+        "eta_squared": 0.161,
+        "numeric": "age"
+      },
+      {
+        "categorical": "school",
+        "eta_squared": 0.143,
+        "numeric": "age"
+      },
+      {
+        "categorical": "Mjob",
+        "eta_squared": 0.133,
+        "numeric": "Fedu"
+      },
+      {
+        "categorical": "address",
+        "eta_squared": 0.108,
+        "numeric": "traveltime"
+      },
+      {
+        "categorical": "sex",
+        "eta_squared": 0.094,
+        "numeric": "studytime"
+      },
+      {
+        "categorical": "higher",
+        "eta_squared": 0.09,
+        "numeric": "failures"
+      },
+      {
+        "categorical": "guardian",
+        "eta_squared": 0.085,
+        "numeric": "failures"
+      },
+      {
+        "categorical": "Fjob",
+        "eta_squared": 0.081,
+        "numeric": "Medu"
+      }
+    ]
+  },
+  "numeric_numeric": {
+    "collinear_pairs": [
+      {
+        "a": "G2",
+        "b": "G3",
+        "n": 395,
+        "pearson": 0.905,
+        "spearman": 0.957
+      }
+    ],
+    "figures": {
+      "correlation_heatmap": "figures/correlation_heatmap.png",
+      "top_scatter_pairs": "figures/top_scatter_pairs.png"
+    },
+    "n_pairs": 120,
+    "top_pairs": [
+      {
+        "a": "G2",
+        "b": "G3",
+        "n": 395,
+        "pearson": 0.905,
+        "spearman": 0.957
+      },
+      {
+        "a": "G1",
+        "b": "G2",
+        "n": 395,
+        "pearson": 0.852,
+        "spearman": 0.895
+      },
+      {
+        "a": "G1",
+        "b": "G3",
+        "n": 395,
+        "pearson": 0.801,
+        "spearman": 0.878
+      },
+      {
+        "a": "Dalc",
+        "b": "Walc",
+        "n": 395,
+        "pearson": 0.648,
+        "spearman": 0.64
+      },
+      {
+        "a": "Medu",
+        "b": "Fedu",
+        "n": 395,
+        "pearson": 0.623,
+        "spearman": 0.632
+      },
+      {
+        "a": "goout",
+        "b": "Walc",
+        "n": 395,
+        "pearson": 0.42,
+        "spearman": 0.393
+      },
+      {
+        "a": "failures",
+        "b": "G2",
+        "n": 395,
+        "pearson": -0.356,
+        "spearman": -0.362
+      },
+      {
+        "a": "failures",
+        "b": "G3",
+        "n": 395,
+        "pearson": -0.36,
+        "spearman": -0.361
+      },
+      {
+        "a": "failures",
+        "b": "G1",
+        "n": 395,
+        "pearson": -0.355,
+        "spearman": -0.346
+      },
+      {
+        "a": "freetime",
+        "b": "goout",
+        "n": 395,
+        "pearson": 0.285,
+        "spearman": 0.285
+      }
+    ]
+  },
+  "overview": {
+    "dataset_name": "student_performance",
+    "excluded_columns": [],
+    "figures": {
+      "dtype_breakdown": "figures/dtype_breakdown.png"
+    },
+    "memory_mb": 0.347,
+    "missing_cells": 0,
+    "n_cols": 33,
+    "n_cols_raw": 33,
+    "n_duplicate_rows_detected": 0,
+    "n_rows": 395,
+    "n_rows_raw": 395,
+    "pct_missing_cells": 0.0,
+    "semantic_type_counts": {
+      "binary": 13,
+      "categorical_nominal": 4,
+      "numeric_continuous": 1,
+      "numeric_discrete": 15
+    }
+  },
+  "target": {
+    "count": 395,
+    "figures": {
+      "target": "figures/target_distribution.png"
+    },
+    "kind": "numeric",
+    "max": 20.0,
+    "mean": 10.4152,
+    "median": 11.0,
+    "min": 0.0,
+    "n_missing": 0,
+    "n_zeros": 38,
+    "name": "G3",
+    "pct_zeros": 9.62,
+    "skew": -0.733,
+    "std": 4.5814
+  },
+  "target_relationships": {
+    "features": [
+      {
+        "feature": "G2",
+        "measure": "Spearman rho",
+        "strength": 0.957,
+        "value": 0.957
+      },
+      {
+        "feature": "G1",
+        "measure": "Spearman rho",
+        "strength": 0.878,
+        "value": 0.878
+      },
+      {
+        "feature": "failures",
+        "measure": "Spearman rho",
+        "strength": 0.361,
+        "value": -0.361
+      },
+      {
+        "feature": "Medu",
+        "measure": "Spearman rho",
+        "strength": 0.225,
+        "value": 0.225
+      },
+      {
+        "feature": "age",
+        "measure": "Spearman rho",
+        "strength": 0.173,
+        "value": -0.173
+      },
+      {
+        "feature": "Fedu",
+        "measure": "Spearman rho",
+        "strength": 0.17,
+        "value": 0.17
+      },
+      {
+        "feature": "goout",
+        "measure": "Spearman rho",
+        "strength": 0.166,
+        "value": -0.166
+      },
+      {
+        "feature": "Dalc",
+        "measure": "Spearman rho",
+        "strength": 0.121,
+        "value": -0.121
+      },
+      {
+        "feature": "traveltime",
+        "measure": "Spearman rho",
+        "strength": 0.121,
+        "value": -0.121
+      },
+      {
+        "feature": "studytime",
+        "measure": "Spearman rho",
+        "strength": 0.105,
+        "value": 0.105
+      },
+      {
+        "feature": "Walc",
+        "measure": "Spearman rho",
+        "strength": 0.104,
+        "value": -0.104
+      },
+      {
+        "feature": "famrel",
+        "measure": "Spearman rho",
+        "strength": 0.055,
+        "value": 0.055
+      },
+      {
+        "feature": "health",
+        "measure": "Spearman rho",
+        "strength": 0.048,
+        "value": -0.048
+      },
+      {
+        "feature": "Mjob",
+        "measure": "eta²",
+        "strength": 0.037,
+        "value": 0.037
+      },
+      {
+        "feature": "higher",
+        "measure": "eta²",
+        "strength": 0.033,
+        "value": 0.033
+      },
+      {
+        "feature": "absences",
+        "measure": "Spearman rho",
+        "strength": 0.018,
+        "value": 0.018
+      },
+      {
+        "feature": "romantic",
+        "measure": "eta²",
+        "strength": 0.017,
+        "value": 0.017
+      },
+      {
+        "feature": "reason",
+        "measure": "eta²",
+        "strength": 0.016,
+        "value": 0.016
+      },
+      {
+        "feature": "Fjob",
+        "measure": "eta²",
+        "strength": 0.013,
+        "value": 0.013
+      },
+      {
+        "feature": "address",
+        "measure": "eta²",
+        "strength": 0.011,
+        "value": 0.011
+      },
+      {
+        "feature": "sex",
+        "measure": "eta²",
+        "strength": 0.011,
+        "value": 0.011
+      },
+      {
+        "feature": "internet",
+        "measure": "eta²",
+        "strength": 0.01,
+        "value": 0.01
+      },
+      {
+        "feature": "paid",
+        "measure": "eta²",
+        "strength": 0.01,
+        "value": 0.01
+      },
+      {
+        "feature": "guardian",
+        "measure": "eta²",
+        "strength": 0.008,
+        "value": 0.008
+      },
+      {
+        "feature": "famsize",
+        "measure": "eta²",
+        "strength": 0.007,
+        "value": 0.007
+      },
+      {
+        "feature": "schoolsup",
+        "measure": "eta²",
+        "strength": 0.007,
+        "value": 0.007
+      },
+      {
+        "feature": "freetime",
+        "measure": "Spearman rho",
+        "strength": 0.005,
+        "value": -0.005
+      },
+      {
+        "feature": "Pstatus",
+        "measure": "eta²",
+        "strength": 0.003,
+        "value": 0.003
+      },
+      {
+        "feature": "nursery",
+        "measure": "eta²",
+        "strength": 0.003,
+        "value": 0.003
+      },
+      {
+        "feature": "famsup",
+        "measure": "eta²",
+        "strength": 0.002,
+        "value": 0.002
+      },
+      {
+        "feature": "school",
+        "measure": "eta²",
+        "strength": 0.002,
+        "value": 0.002
+      },
+      {
+        "feature": "activities",
+        "measure": "eta²",
+        "strength": 0.0,
+        "value": 0.0
+      }
+    ],
+    "figures": {
+      "target_relationships": "figures/target_relationships.png"
+    },
+    "target": "G3"
+  }
+}

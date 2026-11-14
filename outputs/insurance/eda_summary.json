@@ -1,0 +1,448 @@
+{
+  "categorical": {
+    "batches": [
+      "figures/categorical_distributions_1.png"
+    ],
+    "columns": {
+      "region": {
+        "count": 1337,
+        "entropy_norm": 0.999,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "southeast",
+        "mode_count": 364,
+        "mode_pct": 27.23,
+        "n_rare_levels": 0,
+        "n_unique": 4,
+        "rare_levels": [],
+        "rarest_count": 324,
+        "rarest_level": "northwest",
+        "rarest_pct": 24.23,
+        "smallest_group_n": 324
+      },
+      "sex": {
+        "count": 1337,
+        "entropy_norm": 1.0,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "male",
+        "mode_count": 675,
+        "mode_pct": 50.49,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 662,
+        "rarest_level": "female",
+        "rarest_pct": 49.51,
+        "smallest_group_n": 662
+      },
+      "smoker": {
+        "count": 1337,
+        "entropy_norm": 0.732,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "no",
+        "mode_count": 1063,
+        "mode_pct": 79.51,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 274,
+        "rarest_level": "yes",
+        "rarest_pct": 20.49,
+        "smallest_group_n": 274
+      }
+    },
+    "figures": {
+      "cardinality_bar": "figures/cardinality_bar.png"
+    }
+  },
+  "categorical_categorical": {
+    "figures": {
+      "categorical_pairs": "figures/categorical_pairs.png",
+      "cramers_v_heatmap": "figures/cramers_v_heatmap.png"
+    },
+    "top_pairs": [
+      {
+        "a": "sex",
+        "b": "smoker",
+        "cramers_v": 0.072
+      },
+      {
+        "a": "smoker",
+        "b": "region",
+        "cramers_v": 0.057
+      },
+      {
+        "a": "sex",
+        "b": "region",
+        "cramers_v": 0.0
+      }
+    ]
+  },
+  "column_groups": {
+    "categorical": [
+      "sex",
+      "smoker",
+      "region"
+    ],
+    "datetime": [],
+    "numeric": [
+      "age",
+      "bmi",
+      "children",
+      "charges"
+    ],
+    "skipped": []
+  },
+  "column_roles": {
+    "age": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "bmi": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "charges": {
+      "role": "target_candidate",
+      "semantic_type": "numeric_continuous"
+    },
+    "children": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "region": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "sex": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "smoker": {
+      "role": "feature",
+      "semantic_type": "binary"
+    }
+  },
+  "eda_errors": [],
+  "missingness": {
+    "columns": {
+      "age": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "bmi": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "charges": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "children": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "region": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "sex": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "smoker": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      }
+    },
+    "concentration": "none",
+    "concentration_note": "No missing values remain in the cleaned data.",
+    "figures": {},
+    "missing_cells": 0,
+    "n_columns_with_missing": 0,
+    "pct_missing_cells": 0.0,
+    "pct_rows_with_any_missing": 0.0,
+    "rows_with_any_missing": 0,
+    "total_cells": 9359
+  },
+  "notes": [],
+  "numeric": {
+    "batches": [
+      "figures/numeric_distributions_1.png"
+    ],
+    "columns": {
+      "age": {
+        "count": 1337,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -1.244,
+        "max": 64.0,
+        "mean": 39.2221,
+        "median": 39.0,
+        "min": 18.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 2,
+        "n_unique": 47,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 27.0,
+        "q3": 51.0,
+        "skew": 0.055,
+        "std": 14.0443
+      },
+      "bmi": {
+        "count": 1337,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -0.053,
+        "max": 53.13,
+        "mean": 30.6635,
+        "median": 30.4,
+        "min": 15.96,
+        "n_outliers_iqr": 9,
+        "n_peaks_heuristic": 1,
+        "n_unique": 548,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.67,
+        "pct_zeros": 0.0,
+        "q1": 26.29,
+        "q3": 34.7,
+        "skew": 0.284,
+        "std": 6.1005
+      },
+      "charges": {
+        "count": 1337,
+        "detail_figure": "figures/numeric_detail_charges.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 1.604,
+        "log1p_skew": -0.09,
+        "max": 63770.428,
+        "mean": 13279.1215,
+        "median": 9386.1613,
+        "min": 1121.8739,
+        "n_outliers_iqr": 139,
+        "n_peaks_heuristic": 2,
+        "n_unique": 1337,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 10.4,
+        "pct_zeros": 0.0,
+        "q1": 4746.344,
+        "q3": 16657.7175,
+        "skew": 1.515,
+        "std": 12110.3597
+      },
+      "children": {
+        "count": 1337,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 0.201,
+        "max": 5.0,
+        "mean": 1.0957,
+        "median": 1.0,
+        "min": 0.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": null,
+        "n_unique": 6,
+        "n_zeros": 573,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 42.86,
+        "q1": 0.0,
+        "q3": 2.0,
+        "skew": 0.937,
+        "std": 1.2056
+      }
+    },
+    "figures": {
+      "outlier_summary": "figures/outlier_summary.png"
+    },
+    "n_detail_flagged": 1
+  },
+  "numeric_categorical": {
+    "figures": {
+      "numeric_by_category": "figures/numeric_by_category.png"
+    },
+    "top_pairs": [
+      {
+        "categorical": "smoker",
+        "eta_squared": 0.62,
+        "numeric": "charges"
+      },
+      {
+        "categorical": "region",
+        "eta_squared": 0.082,
+        "numeric": "bmi"
+      },
+      {
+        "categorical": "region",
+        "eta_squared": 0.007,
+        "numeric": "charges"
+      },
+      {
+        "categorical": "sex",
+        "eta_squared": 0.003,
+        "numeric": "charges"
+      },
+      {
+        "categorical": "sex",
+        "eta_squared": 0.002,
+        "numeric": "bmi"
+      },
+      {
+        "categorical": "region",
+        "eta_squared": 0.002,
+        "numeric": "children"
+      },
+      {
+        "categorical": "smoker",
+        "eta_squared": 0.001,
+        "numeric": "age"
+      },
+      {
+        "categorical": "region",
+        "eta_squared": 0.0,
+        "numeric": "age"
+      },
+      {
+        "categorical": "sex",
+        "eta_squared": 0.0,
+        "numeric": "age"
+      },
+      {
+        "categorical": "smoker",
+        "eta_squared": 0.0,
+        "numeric": "bmi"
+      }
+    ]
+  },
+  "numeric_numeric": {
+    "collinear_pairs": [],
+    "figures": {
+      "correlation_heatmap": "figures/correlation_heatmap.png",
+      "top_scatter_pairs": "figures/top_scatter_pairs.png"
+    },
+    "n_pairs": 6,
+    "top_pairs": [
+      {
+        "a": "age",
+        "b": "charges",
+        "n": 1337,
+        "pearson": 0.298,
+        "spearman": 0.534
+      },
+      {
+        "a": "children",
+        "b": "charges",
+        "n": 1337,
+        "pearson": 0.067,
+        "spearman": 0.132
+      },
+      {
+        "a": "bmi",
+        "b": "charges",
+        "n": 1337,
+        "pearson": 0.198,
+        "spearman": 0.12
+      },
+      {
+        "a": "age",
+        "b": "bmi",
+        "n": 1337,
+        "pearson": 0.109,
+        "spearman": 0.108
+      },
+      {
+        "a": "age",
+        "b": "children",
+        "n": 1337,
+        "pearson": 0.042,
+        "spearman": 0.056
+      },
+      {
+        "a": "bmi",
+        "b": "children",
+        "n": 1337,
+        "pearson": 0.013,
+        "spearman": 0.016
+      }
+    ]
+  },
+  "overview": {
+    "dataset_name": "insurance",
+    "excluded_columns": [],
+    "figures": {
+      "dtype_breakdown": "figures/dtype_breakdown.png"
+    },
+    "memory_mb": 0.198,
+    "missing_cells": 0,
+    "n_cols": 7,
+    "n_cols_raw": 7,
+    "n_duplicate_rows_detected": 1,
+    "n_rows": 1337,
+    "n_rows_raw": 1338,
+    "pct_missing_cells": 0.0,
+    "semantic_type_counts": {
+      "binary": 2,
+      "categorical_nominal": 1,
+      "numeric_continuous": 3,
+      "numeric_discrete": 1
+    }
+  },
+  "target": {
+    "count": 1337,
+    "figures": {
+      "target": "figures/target_distribution.png"
+    },
+    "kind": "numeric",
+    "max": 63770.428,
+    "mean": 13279.1215,
+    "median": 9386.1613,
+    "min": 1121.8739,
+    "n_missing": 0,
+    "n_zeros": 0,
+    "name": "charges",
+    "pct_zeros": 0.0,
+    "skew": 1.515,
+    "std": 12110.3597
+  },
+  "target_relationships": {
+    "features": [
+      {
+        "feature": "smoker",
+        "measure": "eta²",
+        "strength": 0.62,
+        "value": 0.62
+      },
+      {
+        "feature": "age",
+        "measure": "Spearman rho",
+        "strength": 0.534,
+        "value": 0.534
+      },
+      {
+        "feature": "children",
+        "measure": "Spearman rho",
+        "strength": 0.132,
+        "value": 0.132
+      },
+      {
+        "feature": "bmi",
+        "measure": "Spearman rho",
+        "strength": 0.12,
+        "value": 0.12
+      },
+      {
+        "feature": "region",
+        "measure": "eta²",
+        "strength": 0.007,
+        "value": 0.007
+      },
+      {
+        "feature": "sex",
+        "measure": "eta²",
+        "strength": 0.003,
+        "value": 0.003
+      }
+    ],
+    "figures": {
+      "target_relationships": "figures/target_relationships.png"
+    },
+    "target": "charges"
+  }
+}

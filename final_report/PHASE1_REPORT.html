@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VeriData — Phase 1 Deliverable Report & TA Guide</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #1f2933; margin: 0; background: #f5f7fa; line-height: 1.5; }
+  main { max-width: 1120px; margin: 0 auto; padding: 36px 32px 64px; background: #fff; }
+  h1 { font-size: 1.75rem; color: #102a43; border-bottom: 3px solid #3B6EA8; padding-bottom: 8px; }
+  h2 { font-size: 1.32rem; margin-top: 1.8em; color: #243b53; border-bottom: 1px solid #d9e2ec; padding-bottom: 4px; }
+  h3 { font-size: 1.08rem; margin-top: 1.3em; color: #334e68; }
+  hr { border: 0; border-top: 1px solid #d9e2ec; margin: 20px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0 18px; font-size: 0.85rem; }
+  th, td { border: 1px solid #cbd2d9; padding: 6px 9px; vertical-align: top; text-align: left; }
+  th { background: #e6eff8; color: #102a43; font-weight: 600; }
+  tr:nth-child(even) td { background: #f8fafc; }
+  code { background: #eef2f7; padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+  blockquote { border-left: 4px solid #3B6EA8; margin: 12px 0; padding: 8px 14px; background: #f0f4f8; color: #243b53; }
+  ul { padding-left: 1.4em; }
+  li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>VeriData — Agentic Data Scientist (Phase 1 Deliverable &amp; Guide)</h1>
+<p><strong>Course Deliverable:</strong> Phase 1 — Data Ingestion, Semantic Profiling, Deterministic Data Cleaning, Exploratory Data Analysis (EDA), Visualization, and Insights <strong>Authors:</strong> Maaz Mahmood (Partner 1: Core Data Engine, Profiling, 12-Step Cleaner, Scaling, Synthetic Benchmark) &amp; Tahreem Zameer (Partner 2: Automated EDA Suite, Statistical Visualizations, Rule-Based Insights, Report Rendering)</p>
+<hr>
+<h2>1. Executive Summary: What This Project Is</h2>
+<p><strong>VeriData</strong> is an <strong>Agentic Data Scientist</strong> system designed to automate rigorous data science workflows from raw CSV upload to statistically validated findings. Across its 5-phase roadmap (Phase 1: Ingestion, Cleaning &amp; EDA; Phase 2: Hypothesis Generation; Phase 3: Statistical Testing &amp; Benjamini-Hochberg Validation; Phase 4: LangGraph Agent &amp; Chat; Phase 5: Benchmark Evaluation), the foundational rule of the system is:</p>
+<blockquote><strong>Every statistic, cleaning action, chart, and numeric claim is computed by deterministic, unit-tested Python code — never guessed or hallucinated by an LLM.</strong></blockquote>
+<p><strong>Phase 1</strong> serves two roles simultaneously:</p>
+<ul>
+<li><strong>Role 1 — A Reusable, Deterministic Python Library &amp; CLI (<code>src/ads/</code>):</strong> Accepts <em>any</em> arbitrary CSV file, repairs encoding and delimiter quirks, infers semantic column types, profiles distributions and data quality defects, executes a conservative 12-step cleaning pipeline with cell-level audit logs, evaluates normalization/scaling transformations, generates 150-DPI visualizations, and writes versioned JSON/Markdown/HTML artifacts (<code>schema_version = "1.0"</code>) for Phase 2.</li>
+<li><strong>Role 2 — A Comprehensive Multi-Dataset Benchmark Study:</strong> Evaluates the pipeline across <strong>5 real-world public datasets</strong> (<code>insurance</code>, <code>telco_churn</code>, <code>heart_disease</code>, <code>student_performance</code>, <code>bank_marketing</code>) plus <strong>1 contamination-free synthetic messy benchmark</strong> (<code>messy_synthetic</code>) injected with 18 categories of ground-truth data defects.</li>
+</ul>
+<hr>
+<h2>2. TA Submission Map: Exact Location of Every Required Deliverable</h2>
+<p>To make grading fast and transparent, the table below maps every requirement from the TA submission rubric to its exact file paths in this repository:</p>
+<table>
+<thead><tr><th>#</th><th>TA Rubric Requirement</th><th>Exact Location in Repository</th><th>Notes for the Reviewer</th></tr></thead>
+<tbody>
+<tr><td><strong>1</strong></td><td><strong><code>README.md</code></strong> (title, description, problem statement, dataset details, cleaning summary, key findings, how to run notebooks)</td><td><code>README.md</code> (repository root)</td><td>Contains dedicated sections for Problem Statement, Dataset Details, 12 Cleaning Steps, Key Findings per dataset, and Notebook instructions.</td></tr>
+<tr><td><strong>2</strong></td><td><strong>Dataset Download Links &amp; Cards</strong></td><td><code>README.md</code> (Section 2), <code>docs/datasets.md</code>, <code>scripts/download_datasets.py</code></td><td>Direct URLs (Kaggle, UCI, GitHub mirrors) are listed in <code>README.md</code> and <code>docs/datasets.md</code>. Running <code>python scripts/download_datasets.py --datasets all</code> downloads all 5 real datasets automatically.</td></tr>
+<tr><td><strong>3</strong></td><td><strong>Jupyter Notebooks (<code>.ipynb</code>)</strong> for cleaning, EDA &amp; preprocessing with Markdown explanations and <strong>visible outputs</strong></td><td><code>notebooks/00_overview.ipynb</code> and <code>notebooks/&lt;dataset&gt;_phase1.ipynb</code> (7 notebooks total)</td><td><strong>All 7 notebooks have been pre-executed</strong> so all tables, cleaning logs, scaling reports, and embedded PNG charts are immediately visible on GitHub or in VS Code / Jupyter without re-running cells.</td></tr>
+<tr><td><strong>4</strong></td><td><strong>Graphs &amp; Visualizations</strong> (histograms, boxplots, correlation heatmaps, Cramér's V, missingness, target breakdowns) + <strong>notes</strong></td><td><strong>1) Standalone PNGs:</strong> <code>outputs/&lt;dataset&gt;/figures/*.png</code> <strong>2) Inside Notebooks:</strong> Section 4 of <code>notebooks/&lt;dataset&gt;_phase1.ipynb</code> <strong>3) Reports:</strong> <code>outputs/&lt;dataset&gt;/report.html</code> &amp; <code>report.md</code></td><td>Every chart is saved at 150 DPI in <code>outputs/&lt;dataset&gt;/figures/</code> and paired with a caption note explaining what the visualization reveals about the data.</td></tr>
+<tr><td><strong>5</strong></td><td><strong>Cleaned / Processed Datasets</strong> + scripts that generate them</td><td><strong>Cleaned CSVs (18 files):</strong> <code>data/cleaned/&lt;dataset&gt;_cleaned.csv</code>, <code>&lt;dataset&gt;_cleaned_imputed.csv</code>, <code>&lt;dataset&gt;_scaled.csv</code> <strong>Scripts:</strong> <code>scripts/run_all.py</code>, <code>src/ads/pipeline.py</code></td><td>Both conservative (<code>NaN</code> preserved) and imputed (median/mode filled with <code>__was_missing</code> flags) cleaned CSVs are committed in <code>data/cleaned/</code> for all 6 datasets.</td></tr>
+<tr><td><strong>6</strong></td><td><strong><code>requirements.txt</code></strong> listing all libraries</td><td><code>requirements.txt</code> and <code>pyproject.toml</code></td><td>Lists all pinned/compatible libraries grouped by subsystem (<code>pandas</code>, <code>numpy</code>, <code>scipy</code>, <code>scikit-learn</code>, <code>pydantic</code>, <code>pyyaml</code>, <code>matplotlib</code>, <code>seaborn</code>, <code>jinja2</code>, <code>jupyter</code>, <code>pytest</code>, etc.).</td></tr>
+</tbody></table>
+<hr>
+<h2>3. End-to-End Pipeline Architecture</h2>
+<p>When <code>ads run --input &lt;csv&gt; --name &lt;dataset&gt;</code> (or <code>python scripts/run_all.py</code>) is executed, <code>ads.pipeline.run_phase1()</code> runs the following <strong>8 deterministic stages</strong> in strict sequence:</p>
+<h3>Stage 1: Fault-Tolerant Two-Pass CSV Ingestion (<code>src/ads/ingestion.py</code>)</h3>
+<ul>
+<li><strong>Problem Solved:</strong> Calling <code>pd.read_csv()</code> with default arguments silently corrupts data (e.g., coercing Telco's <code>TotalCharges</code> to <code>object</code> because of 11 <code>" "</code> cells, failing on <code>;</code>-delimited European CSVs like <code>student_performance</code> and <code>bank_marketing</code>, or crashing on Latin-1 encodings and ragged rows).</li>
+<li><strong>How It Works:</strong></li>
+<li>Computes the raw file's <strong>SHA-256 checksum</strong> (<code>compute_sha256</code>) to guarantee raw data immutability.</li>
+<li>Probes file encoding in order (<code>utf-8</code> → <code>utf-8-sig</code> BOM → <code>latin-1</code>) and sniffs the delimiter (<code>,</code>, <code>;</code>, <code>tab</code>, <code>|</code>) over the first 64 KB.</li>
+<li>Normalizes header names (stripping whitespace/BOM, deduplicating repeated headers as <code>col.1</code>, renaming empty headers to <code>unnamed_&lt;idx&gt;</code>, and warning on exported index columns like <code>Unnamed: 0</code>).</li>
+<li>Loads <strong>two aligned DataFrames</strong>: <code>df_raw_str</code> (every cell preserved as an exact raw string with <code>dtype=str, keep_default_na=False</code>) and <code>df_naive</code> (for diagnostic comparison).</li>
+</ul>
+<h3>Stage 2: 10-Class Semantic Type Inference (<code>src/ads/type_inference.py</code>)</h3>
+<ul>
+<li><strong>Problem Solved:</strong> Pandas physical dtypes (<code>object</code>, <code>int64</code>, <code>float64</code>) do not tell an analyst whether a column is a unique identifier (<code>customerID</code>), a binary flag (<code>Yes/No</code>, <code>0/1</code>), an integer-coded medical category (<code>cp</code> in Heart Disease), a currency-formatted number (<code>"$1,234.50"</code>), or a date.</li>
+<li><strong>Priority Cascade on Non-Missing Values:</strong></li>
+<li><strong>1. Config Override (<code>forced_types</code>):</strong> Honors explicit domain overrides in <code>configs/datasets/&lt;name&gt;.yaml</code>.</li>
+<li><strong>2. <code>constant</code>:</strong> ≤ 1 distinct non-missing value.</li>
+<li><strong>3. <code>id_like</code>:</strong> 100% unique values (N &gt; 50) matching ID/UUID/key naming patterns, uniform alphanumeric codes, or contiguous 0/1-based step-1 row indices.</li>
+<li><strong>4. <code>binary</code>:</strong> Exactly 2 distinct non-null values (<code>0/1</code>, <code>Yes/No</code>, <code>True/False</code>, <code>M/F</code>).</li>
+<li><strong>5. <code>numeric_continuous</code> / <code>numeric_discrete</code>:</strong> ≥ 95% of non-null tokens parse as numbers after stripping <code>$</code>, <code>,</code>, <code>%</code>, and accounting parentheses <code>(123)</code>. Integer columns with ≤ 15 unique values are classified as <code>numeric_discrete</code>; all others as <code>numeric_continuous</code>.</li>
+<li><strong>6. <code>datetime</code>:</strong> ≥ 90% of non-null tokens parse as valid dates; mixed slash formats (<code>DD/MM</code> vs <code>MM/DD</code>) are automatically flagged with a warning.</li>
+<li><strong>7. <code>categorical_ordinal</code> / <code>categorical_nominal</code>:</strong> Low-to-moderate cardinality string columns (matching known ordinal scales like <code>low/medium/high</code> or nominal categories).</li>
+<li><strong>8. <code>free_text</code> / <code>unknown</code>:</strong> High-uniqueness long strings (median length &gt; 30 chars) are marked <code>free_text</code> and excluded from statistical group comparisons.</li>
+</ul>
+<h3>Stage 3: Dataset Profiling &amp; Phase 2 Schema (<code>src/ads/profiling.py</code>)</h3>
+<ul>
+<li>Computes <code>DataProfile</code> (<code>outputs/&lt;dataset&gt;/profile.json</code>): row/column counts, memory footprint, normalized duplicate row count, missingness matrix summary, and per-column statistics (<code>mean</code>, <code>std</code>, <code>median</code>, <code>q1</code>, <code>q3</code>, <code>iqr</code>, <code>skewness</code>, <code>kurtosis</code>, <code>n_zeros</code>, <code>n_negative</code>, 1.5×IQR / 3.0×IQR / Modified Z-score outlier counts, top 10 values, and string-quality flags).</li>
+<li>Writes <code>outputs/&lt;dataset&gt;/column_schema.json</code>, mapping each surviving column to its <code>semantic_type</code> and <code>role</code> (<code>feature</code>, <code>target_candidate</code>, <code>id</code>, <code>excluded</code>) for Phase 2.</li>
+</ul>
+<h3>Stage 4: 12-Step Deterministic Cleaning Engine (<code>src/ads/cleaning/</code>)</h3>
+<p>Executes 12 ordered steps (<code>steps.py</code>, <code>categories.py</code>, <code>missing.py</code>, <code>outliers.py</code>, <code>log.py</code>):</p>
+<ul>
+<li><strong>Step 1 — Header Normalization:</strong> Strips header whitespace/BOM and deduplicates column names.</li>
+<li><strong>Step 2 — Cell Whitespace &amp; Unicode Cleanup:</strong> Strips outer spaces, collapses internal multi-spaces, and removes zero-width Unicode characters (<code>\u200b</code>, <code>\ufeff</code>).</li>
+<li><strong>Step 3 — Missing Token Normalization:</strong> Converts <code>""</code>, <code>"na"</code>, <code>"n/a"</code>, <code>"null"</code>, <code>"none"</code>, <code>"?"</code>, <code>"--"</code>, <code>"-999"</code>, <code>"missing"</code> (and <code>"unknown"</code> when configured) to <code>np.nan</code>.</li>
+<li><strong>Step 4 — Category Standardization:</strong> Merges case/punctuation variants (<code>"North"</code> / <code>"north"</code> → majority form) and logs near-duplicate fuzzy typos (similarity ≥ 0.88, e.g., <code>"Nroth"</code>) for human review without destructive over-merging.</li>
+<li><strong>Step 5 — Type Conversion:</strong> Converts formatted numeric strings (<code>"$1,234.50"</code>, <code>"15%"</code>, <code>"(45.00)"</code>) to <code>float64</code> / nullable <code>Int64</code>, and dates to ISO <code>YYYY-MM-DD</code>. Unparseable residual tokens become <code>NaN</code> (logged).</li>
+<li><strong>Step 6 — Domain Validity Enforcement:</strong> Applies per-column <code>min</code>/<code>max</code>/allowed-set rules from <code>configs/datasets/&lt;name&gt;.yaml</code> (e.g., <code>age in [0, 120]</code>), setting impossible values to <code>NaN</code> (logged).</li>
+<li><strong>Step 7 — Duplicate Row Removal:</strong> Drops exact duplicate rows under <code>drop_duplicates: auto</code> while keeping the first occurrence (<code>1</code> removed in <code>insurance</code>, <code>1</code> in <code>heart_disease</code>, <code>12</code> in <code>bank_marketing</code>, <code>40</code> in <code>messy_synthetic</code>).</li>
+<li><strong>Step 8 — Structural Drops:</strong> Drops 100% empty rows, 100% <code>NaN</code> columns (<code>all_null_col</code>), and exported index columns (<code>Unnamed: 0</code>).</li>
+<li><strong>Step 9 — Dual Missing-Value Output Policy:</strong></li>
+<li><strong>Primary Conservative Output (<code>data/cleaned/&lt;name&gt;_cleaned.csv</code>):</strong> Keeps true <code>NaN</code> intact so Phase 3 hypothesis tests are never biased by synthetic imputed values.</li>
+<li><strong>Secondary Imputed Output (<code>data/cleaned/&lt;name&gt;_cleaned_imputed.csv</code>):</strong> Drops columns with &gt; 80% missingness, imputes numeric columns with the <strong>median</strong> and categorical/binary columns with the <strong>mode</strong>, and appends <code>&lt;col&gt;__was_missing</code> (<code>0</code>/<code>1</code>) indicator columns.</li>
+<li><strong>Step 10 — Outlier Detection &amp; Flagging:</strong> Computes 1.5×IQR, 3.0×IQR, and Modified Z-scores (MAD = 0 guarded). Under the default <code>flag</code> policy, outliers are logged in <code>cleaning_log.json</code> and plotted in <code>outlier_summary.png</code> without deleting valid extreme records.</li>
+<li><strong>Step 11 — Scaling &amp; Transformation Analysis (<code>src/ads/scaling.py</code>):</strong> Evaluates skewness and scale disparity (max std / min std), recommending <code>log1p</code>, <code>yeo_johnson</code>, or <code>zscore</code> and writing <code>data/cleaned/&lt;name&gt;_scaled.csv</code>, <code>scaling_report.md</code>, and <code>scaling_params.json</code>.</li>
+<li><strong>Step 12 — Post-Condition &amp; Idempotence Verification:</strong> Verifies exact row accounting, zero remaining placeholder tokens, and idempotence (re-cleaning the conservative output produces zero further modifications).</li>
+</ul>
+<h3>Stages 5–8: Automated EDA (<code>src/ads/eda/</code>), Insights (<code>src/ads/insights.py</code>), and Reports (<code>src/ads/reporting.py</code>)</h3>
+<ul>
+<li>Generates <strong>13–19 static PNG charts</strong> per dataset (<code>outputs/&lt;name&gt;/figures/*.png</code>), markdown summary tables (<code>outputs/&lt;name&gt;/tables/*.md</code>), and <code>eda_summary.json</code>.</li>
+<li>Evaluates deterministic insight rules across 7 categories (<code>insights.json</code> and <code>insights.md</code>), preserving the analyst's manual domain notes (<code>&lt;!-- MANUAL:START --&gt; ... &lt;!-- MANUAL:END --&gt;</code>).</li>
+<li>Renders self-contained <code>outputs/&lt;name&gt;/report.md</code> and <code>outputs/&lt;name&gt;/report.html</code>.</li>
+</ul>
+<hr>
+<h2>4. Cross-Dataset Execution Summary</h2>
+<table>
+<thead><tr><th>Dataset</th><th>Raw Shape</th><th>Cleaned Shape</th><th>Imputed Cols</th><th>Raw Missing Cells</th><th>Duplicates</th><th>Logged Actions (Cells)</th><th>Figures</th><th>Insights</th></tr></thead>
+<tbody>
+<tr><td><code>insurance</code></td><td>1,338 × 7</td><td>1,337 × 7</td><td>7</td><td>0 (0.00%)</td><td>1</td><td>3 (7)</td><td>13</td><td>13</td></tr>
+<tr><td><code>telco_churn</code></td><td>7,043 × 21</td><td>7,043 × 21</td><td>21</td><td>11 (0.01%)</td><td>0</td><td>4 (22)</td><td>16</td><td>17</td></tr>
+<tr><td><code>heart_disease</code></td><td>303 × 14</td><td>302 × 14</td><td>14</td><td>0 (0.00%)</td><td>1</td><td>6 (14)</td><td>17</td><td>23</td></tr>
+<tr><td><code>student_performance</code></td><td>395 × 33</td><td>395 × 33</td><td>33</td><td>0 (0.00%)</td><td>0</td><td>11 (0)</td><td>22</td><td>26</td></tr>
+<tr><td><code>bank_marketing</code></td><td>41,188 × 21</td><td>41,176 × 21</td><td>22</td><td>12,718 (1.47%)</td><td>12</td><td>22 (25,686)</td><td>23</td><td>50</td></tr>
+<tr><td><code>messy_synthetic</code></td><td>2,090 × 15</td><td>2,000 × 13</td><td>16</td><td>4,136 (13.19%)</td><td>80</td><td>34 (12,214)</td><td>19</td><td>37</td></tr>
+</tbody></table>
+<p><strong>Semantic Type Inference Accuracy:</strong> Across all <strong>96 columns</strong> of the 5 real datasets (<code>7</code> in <code>insurance</code> + <code>21</code> in <code>telco_churn</code> + <code>14</code> in <code>heart_disease</code> + <code>33</code> in <code>student_performance</code> + <code>21</code> in <code>bank_marketing</code>), our pipeline achieves <strong>100.0% coarse semantic type accuracy</strong> against the human-verified <code>truth_types</code> in <code>configs/datasets/*.yaml</code> (exceeding the ≥ 95% target in Section 18).</p>
+<hr>
+<h2>5. Dataset-by-Dataset Summary: Cleaning, Key Findings &amp; File Locations</h2>
+<h3>5.1 Medical Cost / Insurance (<code>insurance</code>)</h3>
+<ul>
+<li><strong>Dataset Details:</strong> <code>1,338</code> raw rows × <code>7</code> columns (<code>age</code>, <code>sex</code>, <code>bmi</code>, <code>children</code>, <code>smoker</code>, <code>region</code>, target <code>charges</code> in USD). Direct download: <code>https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/insurance.csv</code></li>
+<li><strong>Cleaning Performed:</strong> Removed <code>1</code> exact duplicate row (<code>1,338 → 1,337</code> rows); <code>0</code> missing values; flagged <code>139</code> rows (<code>10.40%</code>) in <code>charges</code> above the 1.5×IQR fence (<code>$34,524.78</code>).</li>
+<li><strong>Key Findings:</strong></li>
+<li><strong>Smoking status (<code>smoker</code>) dominates medical charges (eta² = 0.620):</strong> Smokers average <code>$32,050</code> vs. <code>$8,441</code> for non-smokers.</li>
+<li><strong>Strong <code>smoker × bmi</code> interaction:</strong> Obese smokers (BMI ≥ 30) form a distinct high-charge cluster (<code>$35,000–$63,770</code>), whereas BMI has only a mild slope among non-smokers.</li>
+<li><strong>Monotonic age effect:</strong> <code>charges</code> rises consistently with <code>age</code> (Spearman rho = +0.534) across three parallel baseline tiers.</li>
+<li><strong>Scaling Decision:</strong> <code>charges</code> is right-skewed (<code>skew = +1.52</code>); <code>log1p</code> transform is applied in <code>insurance_scaled.csv</code>.</li>
+<li><strong>Deliverable Locations:</strong></li>
+<li><strong>Notebook:</strong> <code>notebooks/insurance_phase1.ipynb</code></li>
+<li><strong>Cleaned CSVs:</strong> <code>data/cleaned/insurance_cleaned.csv</code>, <code>insurance_cleaned_imputed.csv</code>, <code>insurance_scaled.csv</code></li>
+<li><strong>Report &amp; Graphs:</strong> <code>outputs/insurance/report.html</code> (<code>report.md</code>) · <code>outputs/insurance/figures/</code> (13 PNGs)</li>
+</ul>
+<h3>5.2 Telco Customer Churn (<code>telco_churn</code>)</h3>
+<ul>
+<li><strong>Dataset Details:</strong> <code>7,043</code> rows × <code>21</code> columns (<code>customerID</code>, demographics, <code>tenure</code>, <code>Contract</code>, internet/phone services, <code>MonthlyCharges</code>, <code>TotalCharges</code>, binary target <code>Churn</code>). Direct download: <code>https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv</code></li>
+<li><strong>Cleaning Performed:</strong> Detected <code>11</code> whitespace-only strings (<code>" "</code>) in <code>TotalCharges</code>, normalized them to <code>NaN</code> in conservative output, converted the remaining <code>7,032</code> values from <code>object</code> to <code>float64</code>, and median-imputed <code>TotalCharges</code> with <code>TotalCharges__was_missing</code> (<code>0</code>/<code>1</code>) in <code>telco_churn_cleaned_imputed.csv</code>. Configured <code>SeniorCitizen</code> (<code>0</code>/<code>1</code>) as categorical.</li>
+<li><strong>Key Findings:</strong></li>
+<li><strong>Structural Missingness (MAR):</strong> All 11 missing <code>TotalCharges</code> cells occur where <code>tenure == 0</code> (new customers prior to first billing cycle).</li>
+<li><strong>Contract Term &amp; Early-Tenure Churn:</strong> <code>Contract</code> is the top categorical predictor of <code>Churn</code> (Cramér's V = 0.410; Month-to-month churn is <code>42.7%</code> vs. <code>2.8%</code> for Two-year contracts). <code>tenure</code> is strongly protective (Spearman rho = -0.353).</li>
+<li><strong>Collinearity &amp; Shared Service Levels:</strong> <code>TotalCharges</code> is strongly collinear with <code>tenure</code> (Pearson r = +0.826, Spearman rho = +0.890). Six internet add-on columns share the <code>"No internet service"</code> level (<code>21.7%</code> of rows).</li>
+<li><strong>Deliverable Locations:</strong></li>
+<li><strong>Notebook:</strong> <code>notebooks/telco_churn_phase1.ipynb</code></li>
+<li><strong>Cleaned CSVs:</strong> <code>data/cleaned/telco_churn_cleaned.csv</code>, <code>telco_churn_cleaned_imputed.csv</code>, <code>telco_churn_scaled.csv</code></li>
+<li><strong>Report &amp; Graphs:</strong> <code>outputs/telco_churn/report.html</code> (<code>report.md</code>) · <code>outputs/telco_churn/figures/</code> (16 PNGs)</li>
+</ul>
+<h3>5.3 Heart Disease (<code>heart_disease</code>)</h3>
+<ul>
+<li><strong>Dataset Details:</strong> <code>303</code> raw rows × <code>14</code> columns (<code>age</code>, <code>sex</code>, <code>cp</code>, <code>trestbps</code>, <code>chol</code>, <code>fbs</code>, <code>restecg</code>, <code>thalach</code>, <code>exang</code>, <code>oldpeak</code>, <code>slope</code>, <code>ca</code>, <code>thal</code>, binary target <code>target</code>). Direct download: <code>https://raw.githubusercontent.com/sharmaroshan/Heart-UCI-Dataset/master/heart.csv</code></li>
+<li><strong>Cleaning Performed:</strong> Removed <code>1</code> exact duplicate row (<code>303 → 302</code> rows); mapped integer-coded clinical categories (<code>cp</code>, <code>restecg</code>, <code>slope</code>, <code>thal</code>) to <code>categorical_nominal</code>; flagged <code>oldpeak</code> (<code>skew = +1.27</code>, <code>32.8%</code> zeros) and <code>chol</code> (<code>max = 564 mg/dL</code> outlier).</li>
+<li><strong>Key Findings:</strong></li>
+<li><strong>Top Categorical Predictors:</strong> Thalassemia (<code>thal</code>, Cramér's V = 0.522), chest pain type (<code>cp</code>, Cramér's V = 0.508), and exercise-induced angina (<code>exang</code>, Cramér's V = 0.429).</li>
+<li><strong>Top Numeric Predictors:</strong> Major vessels (<code>ca</code>, Spearman rho = -0.464), ST depression (<code>oldpeak</code>, Spearman rho = -0.434), and maximum heart rate (<code>thalach</code>, Spearman rho = +0.429).</li>
+<li><strong>Scaling Decision:</strong> <code>oldpeak</code> (<code>skew = +1.27</code>) is transformed via <code>log1p</code> in <code>heart_disease_scaled.csv</code>.</li>
+<li><strong>Deliverable Locations:</strong></li>
+<li><strong>Notebook:</strong> <code>notebooks/heart_disease_phase1.ipynb</code></li>
+<li><strong>Cleaned CSVs:</strong> <code>data/cleaned/heart_disease_cleaned.csv</code>, <code>heart_disease_cleaned_imputed.csv</code>, <code>heart_disease_scaled.csv</code></li>
+<li><strong>Report &amp; Graphs:</strong> <code>outputs/heart_disease/report.html</code> (<code>report.md</code>) · <code>outputs/heart_disease/figures/</code> (17 PNGs)</li>
+</ul>
+<h3>5.4 Student Performance — Math (<code>student_performance</code>)</h3>
+<ul>
+<li><strong>Dataset Details:</strong> <code>395</code> rows × <code>33</code> columns (<code>;</code>-delimited; demographics, family education, study time, <code>failures</code>, alcohol consumption, <code>absences</code>, period grades <code>G1</code>/<code>G2</code>, target final grade <code>G3</code> [<code>0–20</code>]). Direct download: <code>https://archive.ics.uci.edu/static/public/320/student+performance.zip</code></li>
+<li><strong>Cleaning Performed:</strong> Parsed <code>;</code>-delimited file, stripped quotes from string-quoted integer grades (<code>G1</code>, <code>G2</code>), verified <code>16</code> domain range rules; <code>0</code> missing cells and <code>0</code> duplicates.</li>
+<li><strong>Key Findings:</strong></li>
+<li><strong>Longitudinal Collinearity (<code>G1</code>, <code>G2</code> → <code>G3</code>):</strong> <code>G2</code> (Spearman rho = +0.957, Pearson r = +0.905) and <code>G1</code> (rho = +0.879) almost completely determine <code>G3</code>.</li>
+<li><strong>Dropout Zero-Inflation (<code>G3 == 0</code>):</strong> <code>38</code> students (<code>9.62%</code>) have <code>G3 = 0</code> with <code>0</code> recorded absences despite positive <code>G1</code>/<code>G2</code> grades, indicating exam non-attendance rather than continuous score variation.</li>
+<li><strong>Behavioral Predictors (Excluding <code>G1</code>/<code>G2</code>):</strong> Past class <code>failures</code> (Spearman rho = -0.360, <code>78.7%</code> zeros) and mother's education (<code>Medu</code>, rho = +0.225) are the strongest non-grade predictors.</li>
+<li><strong>Deliverable Locations:</strong></li>
+<li><strong>Notebook:</strong> <code>notebooks/student_performance_phase1.ipynb</code></li>
+<li><strong>Cleaned CSVs:</strong> <code>data/cleaned/student_performance_cleaned.csv</code>, <code>student_performance_cleaned_imputed.csv</code>, <code>student_performance_scaled.csv</code></li>
+<li><strong>Report &amp; Graphs:</strong> <code>outputs/student_performance/report.html</code> (<code>report.md</code>) · <code>outputs/student_performance/figures/</code> (22 PNGs)</li>
+</ul>
+<h3>5.5 Bank Marketing (<code>bank_marketing</code>)</h3>
+<ul>
+<li><strong>Dataset Details:</strong> <code>41,188</code> raw rows × <code>21</code> columns (<code>;</code>-delimited; client profile, campaign contact attributes, 5 macroeconomic indicators, binary target <code>y</code> [<code>yes</code>/<code>no</code>]). Direct download: <code>https://archive.ics.uci.edu/static/public/222/bank+marketing.zip</code></li>
+<li><strong>Cleaning Performed:</strong> Normalized <strong><code>12,718</code> <code>"unknown"</code> placeholder tokens</strong> across 6 columns (<code>default</code>: <code>8,597</code>, <code>education</code>: <code>1,731</code>, <code>housing</code>: <code>990</code>, <code>loan</code>: <code>990</code>, <code>job</code>: <code>330</code>, <code>marital</code>: <code>80</code>) to <code>NaN</code> in conservative output (and mode-imputed with <code>6</code> <code>&lt;col&gt;__was_missing</code> indicator columns in <code>bank_marketing_cleaned_imputed.csv</code>). Removed <strong><code>12</code> exact duplicate rows</strong> (<code>41,188 → 41,176</code> rows).</li>
+<li><strong>Key Findings:</strong></li>
+<li><strong>Class Imbalance &amp; Call Duration Leakage:</strong> Target <code>y</code> has <code>11.27%</code> <code>yes</code> responses (<code>7.87 : 1</code> imbalance). Call <code>duration</code> has the strongest association with <code>y</code> (Spearman rho = +0.349), but is post-call target leakage for predictive modeling.</li>
+<li><strong>Macroeconomic Collinearity:</strong> <code>euribor3m</code>, <code>emp.var.rate</code>, and <code>nr.employed</code> are nearly collinear (Pearson r = +0.94 to +0.97).</li>
+<li><strong>Sentinel Value &amp; Block Missingness:</strong> <code>pdays = 999</code> (<code>96.32%</code> of rows) denotes clients never previously contacted (eta² = 0.90 with <code>poutcome = nonexistent</code>), while missingness in <code>housing</code> and <code>loan</code> is 100% co-occurring (r = 1.00, same 990 rows).</li>
+<li><strong>Deliverable Locations:</strong></li>
+<li><strong>Notebook:</strong> <code>notebooks/bank_marketing_phase1.ipynb</code></li>
+<li><strong>Cleaned CSVs:</strong> <code>data/cleaned/bank_marketing_cleaned.csv</code>, <code>bank_marketing_cleaned_imputed.csv</code>, <code>bank_marketing_scaled.csv</code></li>
+<li><strong>Report &amp; Graphs:</strong> <code>outputs/bank_marketing/report.html</code> (<code>report.md</code>) · <code>outputs/bank_marketing/figures/</code> (23 PNGs)</li>
+</ul>
+<h3>5.6 Messy Synthetic Benchmark (<code>messy_synthetic</code>)</h3>
+<ul>
+<li><strong>Dataset Details:</strong> Generated via <code>ads make-messy --seed 42</code> (<code>2,090</code> raw rows × <code>15</code> columns → <code>2,000</code> cleaned rows × <code>13</code> columns; binary target <code>churned</code>) with ground-truth answer key in <code>data/synthetic/messy_manifest.json</code>.</li>
+<li><strong>Cleaning Performed:</strong> Dropped exported index (<code>Unnamed: 0</code>) and 100% null column (<code>all_null_col</code>); excluded <code>constant_col</code>; removed all injected duplicate rows (<code>2,090 → 2,000</code> rows); stripped whitespace/Unicode noise; normalized placeholder tokens; merged case variants in <code>region</code>; flagged fuzzy typo cells; parsed currency strings, percent strings, and mixed dates; and coerced out-of-range domain violations to <code>NaN</code> with <strong>zero cell damage</strong> on clean reference values.</li>
+<li><strong>Deliverable Locations:</strong></li>
+<li><strong>Notebook:</strong> <code>notebooks/messy_synthetic_phase1.ipynb</code></li>
+<li><strong>Cleaned CSVs:</strong> <code>data/cleaned/messy_synthetic_cleaned.csv</code>, <code>messy_synthetic_cleaned_imputed.csv</code>, <code>messy_synthetic_scaled.csv</code></li>
+<li><strong>Report &amp; Graphs:</strong> <code>outputs/messy_synthetic/report.html</code> (<code>report.md</code>) · <code>outputs/messy_synthetic/figures/</code> (19 PNGs)</li>
+</ul>
+<hr>
+<h2>6. How to Reproduce &amp; Run Everything</h2>
+<ul>
+<li><strong>Step 1 — Install dependencies and package:</strong> <code>python -m pip install -r requirements.txt</code> followed by <code>python -m pip install -e .</code></li>
+<li><strong>Step 2 — Download raw datasets &amp; generate synthetic benchmark:</strong> <code>python scripts/download_datasets.py --datasets all</code> and <code>python scripts/make_messy_dataset.py --seed 42 --variants</code></li>
+<li><strong>Step 3 — Run Phase 1 pipeline on all 6 datasets:</strong> <code>python scripts/run_all.py</code> (or single dataset via <code>python -m ads.cli run --input data/raw/insurance/insurance.csv --name insurance</code>)</li>
+<li><strong>Step 4 — Rebuild this master report (MD, HTML, and PDF):</strong> <code>python scripts/build_report.py</code></li>
+<li><strong>Step 5 — Open the pre-executed Jupyter notebooks:</strong> <code>jupyter notebook notebooks/</code> (or open any <code>notebooks/&lt;dataset&gt;_phase1.ipynb</code> in VS Code / Cursor)</li>
+</ul>
+</main>
+</body>
+</html>

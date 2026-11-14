@@ -1,0 +1,777 @@
+{
+  "categorical": {
+    "batches": [
+      "figures/categorical_distributions_1.png",
+      "figures/categorical_distributions_2.png"
+    ],
+    "columns": {
+      "cp": {
+        "count": 302,
+        "entropy_norm": 0.87,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "0",
+        "mode_count": 143,
+        "mode_pct": 47.35,
+        "n_rare_levels": 0,
+        "n_unique": 4,
+        "rare_levels": [],
+        "rarest_count": 23,
+        "rarest_level": "3",
+        "rarest_pct": 7.62,
+        "smallest_group_n": 23
+      },
+      "exang": {
+        "count": 302,
+        "entropy_norm": 0.913,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "0",
+        "mode_count": 203,
+        "mode_pct": 67.22,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 99,
+        "rarest_level": "1",
+        "rarest_pct": 32.78,
+        "smallest_group_n": 99
+      },
+      "fbs": {
+        "count": 302,
+        "entropy_norm": 0.607,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "0",
+        "mode_count": 257,
+        "mode_pct": 85.1,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 45,
+        "rarest_level": "1",
+        "rarest_pct": 14.9,
+        "smallest_group_n": 45
+      },
+      "restecg": {
+        "count": 302,
+        "entropy_norm": 0.687,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "1",
+        "mode_count": 151,
+        "mode_pct": 50.0,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 4,
+        "rarest_level": "2",
+        "rarest_pct": 1.32,
+        "smallest_group_n": 4
+      },
+      "sex": {
+        "count": 302,
+        "entropy_norm": 0.902,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "1",
+        "mode_count": 206,
+        "mode_pct": 68.21,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 96,
+        "rarest_level": "0",
+        "rarest_pct": 31.79,
+        "smallest_group_n": 96
+      },
+      "slope": {
+        "count": 302,
+        "entropy_norm": 0.817,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "2",
+        "mode_count": 141,
+        "mode_pct": 46.69,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 21,
+        "rarest_level": "0",
+        "rarest_pct": 6.95,
+        "smallest_group_n": 21
+      },
+      "target": {
+        "count": 302,
+        "entropy_norm": 0.995,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "1",
+        "mode_count": 164,
+        "mode_pct": 54.3,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 138,
+        "rarest_level": "0",
+        "rarest_pct": 45.7,
+        "smallest_group_n": 138
+      },
+      "thal": {
+        "count": 302,
+        "entropy_norm": 0.648,
+        "figure": "figures/categorical_distributions_2.png",
+        "mode": "2",
+        "mode_count": 165,
+        "mode_pct": 54.64,
+        "n_rare_levels": 1,
+        "n_unique": 4,
+        "rare_levels": [
+          {
+            "count": 2,
+            "level": "0",
+            "pct_of_rows": 0.66
+          }
+        ],
+        "rarest_count": 2,
+        "rarest_level": "0",
+        "rarest_pct": 0.66,
+        "smallest_group_n": 2
+      }
+    },
+    "figures": {
+      "cardinality_bar": "figures/cardinality_bar.png"
+    }
+  },
+  "categorical_categorical": {
+    "figures": {
+      "categorical_pairs": "figures/categorical_pairs.png",
+      "cramers_v_heatmap": "figures/cramers_v_heatmap.png"
+    },
+    "top_pairs": [
+      {
+        "a": "thal",
+        "b": "target",
+        "cramers_v": 0.521
+      },
+      {
+        "a": "cp",
+        "b": "target",
+        "cramers_v": 0.509
+      },
+      {
+        "a": "cp",
+        "b": "exang",
+        "cramers_v": 0.46
+      },
+      {
+        "a": "exang",
+        "b": "target",
+        "cramers_v": 0.432
+      },
+      {
+        "a": "slope",
+        "b": "target",
+        "cramers_v": 0.386
+      },
+      {
+        "a": "sex",
+        "b": "thal",
+        "cramers_v": 0.374
+      },
+      {
+        "a": "exang",
+        "b": "thal",
+        "cramers_v": 0.313
+      },
+      {
+        "a": "sex",
+        "b": "target",
+        "cramers_v": 0.278
+      },
+      {
+        "a": "exang",
+        "b": "slope",
+        "cramers_v": 0.275
+      },
+      {
+        "a": "slope",
+        "b": "thal",
+        "cramers_v": 0.219
+      }
+    ]
+  },
+  "column_groups": {
+    "categorical": [
+      "sex",
+      "cp",
+      "fbs",
+      "restecg",
+      "exang",
+      "slope",
+      "thal",
+      "target"
+    ],
+    "datetime": [],
+    "numeric": [
+      "age",
+      "trestbps",
+      "chol",
+      "thalach",
+      "oldpeak",
+      "ca"
+    ],
+    "skipped": []
+  },
+  "column_roles": {
+    "age": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "ca": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "chol": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "cp": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "exang": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "fbs": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "oldpeak": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "restecg": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "sex": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "slope": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "target": {
+      "role": "target_candidate",
+      "semantic_type": "binary"
+    },
+    "thal": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "thalach": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "trestbps": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    }
+  },
+  "eda_errors": [],
+  "missingness": {
+    "columns": {
+      "age": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "ca": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "chol": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "cp": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "exang": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "fbs": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "oldpeak": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "restecg": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "sex": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "slope": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "target": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "thal": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "thalach": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "trestbps": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      }
+    },
+    "concentration": "none",
+    "concentration_note": "No missing values remain in the cleaned data.",
+    "figures": {},
+    "missing_cells": 0,
+    "n_columns_with_missing": 0,
+    "pct_missing_cells": 0.0,
+    "pct_rows_with_any_missing": 0.0,
+    "rows_with_any_missing": 0,
+    "total_cells": 4228
+  },
+  "notes": [],
+  "numeric": {
+    "batches": [
+      "figures/numeric_distributions_1.png"
+    ],
+    "columns": {
+      "age": {
+        "count": 302,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -0.528,
+        "max": 77.0,
+        "mean": 54.4205,
+        "median": 55.5,
+        "min": 29.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 2,
+        "n_unique": 41,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 48.0,
+        "q3": 61.0,
+        "skew": -0.204,
+        "std": 9.048
+      },
+      "ca": {
+        "count": 302,
+        "detail_figure": "figures/numeric_detail_ca.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 0.781,
+        "log1p_skew": 0.76,
+        "max": 4.0,
+        "mean": 0.7185,
+        "median": 0.0,
+        "min": 0.0,
+        "n_outliers_iqr": 24,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 175,
+        "pct_outliers_iqr": 7.95,
+        "pct_zeros": 57.95,
+        "q1": 0.0,
+        "q3": 1.0,
+        "skew": 1.296,
+        "std": 1.0067
+      },
+      "chol": {
+        "count": 302,
+        "detail_figure": "figures/numeric_detail_chol.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 4.543,
+        "log1p_skew": 0.09,
+        "max": 564.0,
+        "mean": 246.5,
+        "median": 240.5,
+        "min": 126.0,
+        "n_outliers_iqr": 5,
+        "n_peaks_heuristic": 1,
+        "n_unique": 152,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 1.66,
+        "pct_zeros": 0.0,
+        "q1": 211.0,
+        "q3": 274.75,
+        "skew": 1.147,
+        "std": 51.7535
+      },
+      "oldpeak": {
+        "count": 302,
+        "detail_figure": "figures/numeric_detail_oldpeak.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 1.568,
+        "log1p_skew": 0.39,
+        "max": 6.2,
+        "mean": 1.043,
+        "median": 0.8,
+        "min": 0.0,
+        "n_outliers_iqr": 5,
+        "n_peaks_heuristic": 1,
+        "n_unique": 40,
+        "n_zeros": 98,
+        "pct_outliers_iqr": 1.66,
+        "pct_zeros": 32.45,
+        "q1": 0.0,
+        "q3": 1.6,
+        "skew": 1.266,
+        "std": 1.1615
+      },
+      "thalach": {
+        "count": 302,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -0.062,
+        "max": 202.0,
+        "mean": 149.5695,
+        "median": 152.5,
+        "min": 71.0,
+        "n_outliers_iqr": 1,
+        "n_peaks_heuristic": 1,
+        "n_unique": 91,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.33,
+        "pct_zeros": 0.0,
+        "q1": 133.25,
+        "q3": 166.0,
+        "skew": -0.533,
+        "std": 22.9035
+      },
+      "trestbps": {
+        "count": 302,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 0.923,
+        "max": 200.0,
+        "mean": 131.6026,
+        "median": 130.0,
+        "min": 94.0,
+        "n_outliers_iqr": 9,
+        "n_peaks_heuristic": 1,
+        "n_unique": 49,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 2.98,
+        "pct_zeros": 0.0,
+        "q1": 120.0,
+        "q3": 140.0,
+        "skew": 0.717,
+        "std": 17.5634
+      }
+    },
+    "figures": {
+      "outlier_summary": "figures/outlier_summary.png"
+    },
+    "n_detail_flagged": 3
+  },
+  "numeric_categorical": {
+    "figures": {
+      "numeric_by_category": "figures/numeric_by_category.png"
+    },
+    "top_pairs": [
+      {
+        "categorical": "slope",
+        "eta_squared": 0.334,
+        "numeric": "oldpeak"
+      },
+      {
+        "categorical": "slope",
+        "eta_squared": 0.203,
+        "numeric": "thalach"
+      },
+      {
+        "categorical": "target",
+        "eta_squared": 0.184,
+        "numeric": "oldpeak"
+      },
+      {
+        "categorical": "target",
+        "eta_squared": 0.176,
+        "numeric": "thalach"
+      },
+      {
+        "categorical": "target",
+        "eta_squared": 0.167,
+        "numeric": "ca"
+      },
+      {
+        "categorical": "cp",
+        "eta_squared": 0.151,
+        "numeric": "thalach"
+      },
+      {
+        "categorical": "exang",
+        "eta_squared": 0.142,
+        "numeric": "thalach"
+      },
+      {
+        "categorical": "cp",
+        "eta_squared": 0.125,
+        "numeric": "oldpeak"
+      },
+      {
+        "categorical": "thal",
+        "eta_squared": 0.119,
+        "numeric": "oldpeak"
+      },
+      {
+        "categorical": "thal",
+        "eta_squared": 0.093,
+        "numeric": "thalach"
+      }
+    ]
+  },
+  "numeric_numeric": {
+    "collinear_pairs": [],
+    "figures": {
+      "correlation_heatmap": "figures/correlation_heatmap.png",
+      "top_scatter_pairs": "figures/top_scatter_pairs.png"
+    },
+    "n_pairs": 15,
+    "top_pairs": [
+      {
+        "a": "thalach",
+        "b": "oldpeak",
+        "n": 302,
+        "pearson": -0.342,
+        "spearman": -0.43
+      },
+      {
+        "a": "age",
+        "b": "thalach",
+        "n": 302,
+        "pearson": -0.395,
+        "spearman": -0.393
+      },
+      {
+        "a": "age",
+        "b": "ca",
+        "n": 302,
+        "pearson": 0.302,
+        "spearman": 0.355
+      },
+      {
+        "a": "age",
+        "b": "trestbps",
+        "n": 302,
+        "pearson": 0.283,
+        "spearman": 0.29
+      },
+      {
+        "a": "thalach",
+        "b": "ca",
+        "n": 302,
+        "pearson": -0.228,
+        "spearman": -0.268
+      },
+      {
+        "a": "age",
+        "b": "oldpeak",
+        "n": 302,
+        "pearson": 0.206,
+        "spearman": 0.264
+      },
+      {
+        "a": "oldpeak",
+        "b": "ca",
+        "n": 302,
+        "pearson": 0.237,
+        "spearman": 0.235
+      },
+      {
+        "a": "age",
+        "b": "chol",
+        "n": 302,
+        "pearson": 0.207,
+        "spearman": 0.189
+      },
+      {
+        "a": "trestbps",
+        "b": "oldpeak",
+        "n": 302,
+        "pearson": 0.195,
+        "spearman": 0.157
+      },
+      {
+        "a": "trestbps",
+        "b": "chol",
+        "n": 302,
+        "pearson": 0.125,
+        "spearman": 0.13
+      }
+    ]
+  },
+  "overview": {
+    "dataset_name": "heart_disease",
+    "excluded_columns": [],
+    "figures": {
+      "dtype_breakdown": "figures/dtype_breakdown.png"
+    },
+    "memory_mb": 0.027,
+    "missing_cells": 0,
+    "n_cols": 14,
+    "n_cols_raw": 14,
+    "n_duplicate_rows_detected": 1,
+    "n_rows": 302,
+    "n_rows_raw": 303,
+    "pct_missing_cells": 0.0,
+    "semantic_type_counts": {
+      "binary": 4,
+      "categorical_nominal": 4,
+      "numeric_continuous": 5,
+      "numeric_discrete": 1
+    }
+  },
+  "target": {
+    "balance_label": "balanced",
+    "classes": [
+      {
+        "count": 164,
+        "label": "1",
+        "pct": 54.3
+      },
+      {
+        "count": 138,
+        "label": "0",
+        "pct": 45.7
+      }
+    ],
+    "figures": {
+      "target": "figures/target_balance.png",
+      "target_by_categorical": "figures/target_by_categorical.png"
+    },
+    "imbalance_ratio": 1.19,
+    "kind": "categorical",
+    "majority_class": "1",
+    "majority_pct": 54.3,
+    "minority_class": "0",
+    "minority_pct": 45.7,
+    "n_classes": 2,
+    "n_missing": 0,
+    "name": "target",
+    "top_categorical_by_cramers_v": [
+      {
+        "cramers_v": 0.521,
+        "feature": "thal"
+      },
+      {
+        "cramers_v": 0.509,
+        "feature": "cp"
+      },
+      {
+        "cramers_v": 0.432,
+        "feature": "exang"
+      },
+      {
+        "cramers_v": 0.386,
+        "feature": "slope"
+      },
+      {
+        "cramers_v": 0.278,
+        "feature": "sex"
+      },
+      {
+        "cramers_v": 0.16,
+        "feature": "restecg"
+      }
+    ]
+  },
+  "target_relationships": {
+    "features": [
+      {
+        "feature": "thal",
+        "measure": "Cramér's V",
+        "strength": 0.521,
+        "value": 0.521
+      },
+      {
+        "feature": "cp",
+        "measure": "Cramér's V",
+        "strength": 0.509,
+        "value": 0.509
+      },
+      {
+        "feature": "exang",
+        "measure": "Cramér's V",
+        "strength": 0.432,
+        "value": 0.432
+      },
+      {
+        "feature": "slope",
+        "measure": "Cramér's V",
+        "strength": 0.386,
+        "value": 0.386
+      },
+      {
+        "feature": "sex",
+        "measure": "Cramér's V",
+        "strength": 0.278,
+        "value": 0.278
+      },
+      {
+        "feature": "oldpeak",
+        "measure": "eta²",
+        "strength": 0.184,
+        "value": 0.184
+      },
+      {
+        "feature": "thalach",
+        "measure": "eta²",
+        "strength": 0.176,
+        "value": 0.176
+      },
+      {
+        "feature": "ca",
+        "measure": "eta²",
+        "strength": 0.167,
+        "value": 0.167
+      },
+      {
+        "feature": "restecg",
+        "measure": "Cramér's V",
+        "strength": 0.16,
+        "value": 0.16
+      },
+      {
+        "feature": "age",
+        "measure": "eta²",
+        "strength": 0.049,
+        "value": 0.049
+      },
+      {
+        "feature": "trestbps",
+        "measure": "eta²",
+        "strength": 0.021,
+        "value": 0.021
+      },
+      {
+        "feature": "chol",
+        "measure": "eta²",
+        "strength": 0.007,
+        "value": 0.007
+      },
+      {
+        "feature": "fbs",
+        "measure": "Cramér's V",
+        "strength": 0.0,
+        "value": 0.0
+      }
+    ],
+    "figures": {
+      "target_relationships": "figures/target_relationships.png"
+    },
+    "target": "target"
+  }
+}

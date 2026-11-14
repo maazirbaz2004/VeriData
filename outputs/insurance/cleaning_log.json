@@ -1,0 +1,104 @@
+[
+  {
+    "action": "dropped_duplicate_rows",
+    "after_examples": [],
+    "before_examples": [],
+    "column": null,
+    "n_cells_affected": 7,
+    "n_rows_affected": 1,
+    "parameters": {
+      "dropped_row_indices_sample": [
+        581
+      ]
+    },
+    "reason": "Dropped 1 exact duplicate row(s) (kept first occurrence).",
+    "rows_after": 1337,
+    "rows_before": 1338,
+    "severity": "info",
+    "step": "handle_duplicates"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "49.06",
+      "48.07",
+      "47.52",
+      "47.41",
+      "50.38"
+    ],
+    "before_examples": [
+      "49.06",
+      "48.07",
+      "47.52",
+      "47.41",
+      "50.38"
+    ],
+    "column": "bmi",
+    "n_cells_affected": 0,
+    "n_rows_affected": 9,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        13.675,
+        47.315
+      ],
+      "iqr_3_0_bounds": [
+        1.06,
+        59.93
+      ],
+      "sample_indices": [
+        116,
+        286,
+        401,
+        543,
+        846
+      ]
+    },
+    "reason": "Flagged 9 outlier(s) (0.7%) and 0 extreme outlier(s) in 'bmi' (action=flag; values untouched).",
+    "rows_after": 1337,
+    "rows_before": 1337,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "39611.8",
+      "36837.5",
+      "37701.9",
+      "38711",
+      "35585.6"
+    ],
+    "before_examples": [
+      "39611.8",
+      "36837.5",
+      "37701.9",
+      "38711",
+      "35585.6"
+    ],
+    "column": "charges",
+    "n_cells_affected": 0,
+    "n_rows_affected": 139,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -13120.716175,
+        34524.777625
+      ],
+      "iqr_3_0_bounds": [
+        -30987.77635,
+        52391.8378
+      ],
+      "sample_indices": [
+        14,
+        19,
+        23,
+        29,
+        30
+      ]
+    },
+    "reason": "Flagged 139 outlier(s) (10.4%) and 6 extreme outlier(s) in 'charges' (action=flag; values untouched).",
+    "rows_after": 1337,
+    "rows_before": 1337,
+    "severity": "info",
+    "step": "handle_outliers"
+  }
+]

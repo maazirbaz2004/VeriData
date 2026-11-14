@@ -1,0 +1,654 @@
+{
+  "categorical": {
+    "batches": [
+      "figures/categorical_distributions_1.png"
+    ],
+    "columns": {
+      "churned": {
+        "count": 2000,
+        "entropy_norm": 0.926,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "No",
+        "mode_count": 1317,
+        "mode_pct": 65.85,
+        "n_rare_levels": 0,
+        "n_unique": 2,
+        "rare_levels": [],
+        "rarest_count": 683,
+        "rarest_level": "Yes",
+        "rarest_pct": 34.15,
+        "smallest_group_n": 683
+      },
+      "gender": {
+        "count": 2000,
+        "entropy_norm": 0.597,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "Male",
+        "mode_count": 987,
+        "mode_pct": 49.35,
+        "n_rare_levels": 0,
+        "n_unique": 4,
+        "rare_levels": [],
+        "rarest_count": 27,
+        "rarest_level": "M",
+        "rarest_pct": 1.35,
+        "smallest_group_n": 27
+      },
+      "membership": {
+        "count": 2000,
+        "entropy_norm": 0.93,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "Basic",
+        "mode_count": 988,
+        "mode_pct": 49.4,
+        "n_rare_levels": 0,
+        "n_unique": 3,
+        "rare_levels": [],
+        "rarest_count": 358,
+        "rarest_level": "Gold",
+        "rarest_pct": 17.9,
+        "smallest_group_n": 358
+      },
+      "region": {
+        "count": 1920,
+        "entropy_norm": 0.945,
+        "figure": "figures/categorical_distributions_1.png",
+        "mode": "North Area",
+        "mode_count": 599,
+        "mode_pct": 31.2,
+        "n_rare_levels": 0,
+        "n_unique": 5,
+        "rare_levels": [],
+        "rarest_count": 154,
+        "rarest_level": "Central Hub",
+        "rarest_pct": 8.02,
+        "smallest_group_n": 154
+      }
+    },
+    "figures": {
+      "cardinality_bar": "figures/cardinality_bar.png"
+    }
+  },
+  "categorical_categorical": {
+    "figures": {
+      "categorical_pairs": "figures/categorical_pairs.png",
+      "cramers_v_heatmap": "figures/cramers_v_heatmap.png"
+    },
+    "top_pairs": [
+      {
+        "a": "membership",
+        "b": "churned",
+        "cramers_v": 0.015
+      },
+      {
+        "a": "gender",
+        "b": "region",
+        "cramers_v": 0.014
+      },
+      {
+        "a": "region",
+        "b": "membership",
+        "cramers_v": 0.006
+      },
+      {
+        "a": "gender",
+        "b": "churned",
+        "cramers_v": 0.0
+      },
+      {
+        "a": "gender",
+        "b": "membership",
+        "cramers_v": 0.0
+      },
+      {
+        "a": "region",
+        "b": "churned",
+        "cramers_v": 0.0
+      }
+    ]
+  },
+  "column_groups": {
+    "categorical": [
+      "gender",
+      "region",
+      "membership",
+      "churned"
+    ],
+    "datetime": [
+      "signup_date"
+    ],
+    "numeric": [
+      "age",
+      "income",
+      "tenure_months",
+      "monthly_spend",
+      "satisfaction"
+    ],
+    "skipped": [
+      "customer_id",
+      "notes",
+      "constant_flag"
+    ]
+  },
+  "column_roles": {
+    "age": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "churned": {
+      "role": "target_candidate",
+      "semantic_type": "binary"
+    },
+    "constant_flag": {
+      "role": "excluded",
+      "semantic_type": "constant"
+    },
+    "customer_id": {
+      "role": "id",
+      "semantic_type": "id_like"
+    },
+    "gender": {
+      "role": "feature",
+      "semantic_type": "binary"
+    },
+    "income": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "membership": {
+      "role": "feature",
+      "semantic_type": "categorical_ordinal"
+    },
+    "monthly_spend": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    },
+    "notes": {
+      "role": "excluded",
+      "semantic_type": "free_text"
+    },
+    "region": {
+      "role": "feature",
+      "semantic_type": "categorical_nominal"
+    },
+    "satisfaction": {
+      "role": "feature",
+      "semantic_type": "numeric_discrete"
+    },
+    "signup_date": {
+      "role": "feature",
+      "semantic_type": "datetime"
+    },
+    "tenure_months": {
+      "role": "feature",
+      "semantic_type": "numeric_continuous"
+    }
+  },
+  "datetime": {
+    "columns": {
+      "signup_date": {
+        "busiest_period": "2021-12-01T00:00:00",
+        "count": 1980,
+        "figure": "figures/datetime_signup_date.png",
+        "largest_gap_days": 8,
+        "max_date": "2024-12-29T00:00:00",
+        "min_date": "2020-01-01T00:00:00",
+        "resample_unit": "month",
+        "span_days": 1824
+      }
+    },
+    "figures": {}
+  },
+  "eda_errors": [],
+  "missingness": {
+    "columns": {
+      "age": {
+        "n_missing": 140,
+        "pct_missing": 7.0
+      },
+      "churned": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "constant_flag": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "customer_id": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "gender": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "income": {
+        "n_missing": 160,
+        "pct_missing": 8.0
+      },
+      "membership": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "monthly_spend": {
+        "n_missing": 0,
+        "pct_missing": 0.0
+      },
+      "notes": {
+        "n_missing": 1406,
+        "pct_missing": 70.3
+      },
+      "region": {
+        "n_missing": 80,
+        "pct_missing": 4.0
+      },
+      "satisfaction": {
+        "n_missing": 60,
+        "pct_missing": 3.0
+      },
+      "signup_date": {
+        "n_missing": 20,
+        "pct_missing": 1.0
+      },
+      "tenure_months": {
+        "n_missing": 30,
+        "pct_missing": 1.5
+      }
+    },
+    "concentration": "spread",
+    "concentration_note": "Missing values are spread out: the 10% of rows with the most gaps hold 22.84% of all missing cells.",
+    "figures": {
+      "missing_bar": "figures/missing_bar.png",
+      "missing_correlation": "figures/missing_correlation.png",
+      "missing_heatmap": "figures/missing_heatmap.png"
+    },
+    "missing_cells": 1896,
+    "n_columns_with_missing": 7,
+    "pct_missing_cells": 7.29,
+    "pct_rows_with_any_missing": 76.3,
+    "rows_with_any_missing": 1526,
+    "top10pct_rows_share_of_missing": 22.84,
+    "top_missing_correlation": {
+      "a": "income",
+      "b": "region",
+      "r": 0.034
+    },
+    "total_cells": 26000
+  },
+  "notes": [],
+  "numeric": {
+    "batches": [
+      "figures/numeric_distributions_1.png"
+    ],
+    "columns": {
+      "age": {
+        "count": 1860,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -0.42,
+        "max": 80.0,
+        "mean": 41.5532,
+        "median": 42.0,
+        "min": 18.0,
+        "n_outliers_iqr": 7,
+        "n_peaks_heuristic": 2,
+        "n_unique": 62,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.38,
+        "pct_zeros": 0.0,
+        "q1": 32.0,
+        "q3": 50.0,
+        "skew": 0.158,
+        "std": 13.3849
+      },
+      "income": {
+        "count": 1840,
+        "detail_figure": "figures/numeric_detail_income.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 214.622,
+        "log1p_skew": 0.75,
+        "max": 2059223.0,
+        "mean": 66086.8198,
+        "median": 52125.75,
+        "min": 15000.0,
+        "n_outliers_iqr": 97,
+        "n_peaks_heuristic": 1,
+        "n_unique": 1816,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 5.27,
+        "pct_zeros": 0.0,
+        "q1": 35681.29,
+        "q3": 73892.7675,
+        "skew": 13.04,
+        "std": 93652.5419
+      },
+      "monthly_spend": {
+        "count": 2000,
+        "detail_figure": "figures/numeric_detail_monthly_spend.png",
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": 387.119,
+        "log1p_skew": 0.31,
+        "max": 8468.39,
+        "mean": 170.7966,
+        "median": 137.18,
+        "min": 5.0,
+        "n_outliers_iqr": 90,
+        "n_peaks_heuristic": 1,
+        "n_unique": 1904,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 4.5,
+        "pct_zeros": 0.0,
+        "q1": 95.7425,
+        "q3": 188.715,
+        "skew": 17.986,
+        "std": 313.0203
+      },
+      "satisfaction": {
+        "count": 1940,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -0.806,
+        "max": 5.0,
+        "mean": 3.2093,
+        "median": 3.0,
+        "min": 1.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": null,
+        "n_unique": 5,
+        "n_zeros": 0,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 0.0,
+        "q1": 2.0,
+        "q3": 4.0,
+        "skew": -0.221,
+        "std": 1.1998
+      },
+      "tenure_months": {
+        "count": 1970,
+        "figure": "figures/numeric_distributions_1.png",
+        "kurtosis": -1.173,
+        "max": 120.0,
+        "mean": 60.8081,
+        "median": 61.0,
+        "min": 0.0,
+        "n_outliers_iqr": 0,
+        "n_peaks_heuristic": 1,
+        "n_unique": 121,
+        "n_zeros": 20,
+        "pct_outliers_iqr": 0.0,
+        "pct_zeros": 1.02,
+        "q1": 31.0,
+        "q3": 91.0,
+        "skew": -0.03,
+        "std": 34.6009
+      }
+    },
+    "figures": {
+      "outlier_summary": "figures/outlier_summary.png"
+    },
+    "n_detail_flagged": 2
+  },
+  "numeric_categorical": {
+    "figures": {
+      "numeric_by_category": "figures/numeric_by_category.png"
+    },
+    "top_pairs": [
+      {
+        "categorical": "churned",
+        "eta_squared": 0.103,
+        "numeric": "tenure_months"
+      },
+      {
+        "categorical": "churned",
+        "eta_squared": 0.078,
+        "numeric": "satisfaction"
+      },
+      {
+        "categorical": "membership",
+        "eta_squared": 0.049,
+        "numeric": "income"
+      },
+      {
+        "categorical": "membership",
+        "eta_squared": 0.018,
+        "numeric": "monthly_spend"
+      },
+      {
+        "categorical": "gender",
+        "eta_squared": 0.002,
+        "numeric": "age"
+      },
+      {
+        "categorical": "region",
+        "eta_squared": 0.002,
+        "numeric": "monthly_spend"
+      },
+      {
+        "categorical": "region",
+        "eta_squared": 0.002,
+        "numeric": "tenure_months"
+      },
+      {
+        "categorical": "churned",
+        "eta_squared": 0.001,
+        "numeric": "income"
+      },
+      {
+        "categorical": "gender",
+        "eta_squared": 0.001,
+        "numeric": "income"
+      },
+      {
+        "categorical": "region",
+        "eta_squared": 0.001,
+        "numeric": "income"
+      }
+    ]
+  },
+  "numeric_numeric": {
+    "collinear_pairs": [],
+    "figures": {
+      "correlation_heatmap": "figures/correlation_heatmap.png",
+      "top_scatter_pairs": "figures/top_scatter_pairs.png"
+    },
+    "n_pairs": 10,
+    "top_pairs": [
+      {
+        "a": "income",
+        "b": "monthly_spend",
+        "n": 1840,
+        "pearson": 0.086,
+        "spearman": 0.894
+      },
+      {
+        "a": "tenure_months",
+        "b": "satisfaction",
+        "n": 1910,
+        "pearson": -0.029,
+        "spearman": -0.026
+      },
+      {
+        "a": "tenure_months",
+        "b": "monthly_spend",
+        "n": 1970,
+        "pearson": -0.024,
+        "spearman": -0.024
+      },
+      {
+        "a": "income",
+        "b": "tenure_months",
+        "n": 1811,
+        "pearson": 0.006,
+        "spearman": -0.018
+      },
+      {
+        "a": "age",
+        "b": "satisfaction",
+        "n": 1806,
+        "pearson": 0.012,
+        "spearman": 0.017
+      },
+      {
+        "a": "income",
+        "b": "satisfaction",
+        "n": 1787,
+        "pearson": -0.004,
+        "spearman": -0.014
+      },
+      {
+        "a": "monthly_spend",
+        "b": "satisfaction",
+        "n": 1940,
+        "pearson": -0.045,
+        "spearman": -0.011
+      },
+      {
+        "a": "age",
+        "b": "tenure_months",
+        "n": 1831,
+        "pearson": -0.019,
+        "spearman": -0.004
+      },
+      {
+        "a": "age",
+        "b": "income",
+        "n": 1711,
+        "pearson": -0.016,
+        "spearman": -0.003
+      },
+      {
+        "a": "age",
+        "b": "monthly_spend",
+        "n": 1860,
+        "pearson": -0.009,
+        "spearman": 0.002
+      }
+    ]
+  },
+  "overview": {
+    "dataset_name": "messy_synthetic",
+    "excluded_columns": [
+      "constant_flag",
+      "customer_id",
+      "notes"
+    ],
+    "figures": {
+      "dtype_breakdown": "figures/dtype_breakdown.png"
+    },
+    "memory_mb": 0.806,
+    "missing_cells": 1896,
+    "n_cols": 13,
+    "n_cols_raw": 15,
+    "n_duplicate_rows_detected": 80,
+    "n_rows": 2000,
+    "n_rows_raw": 2090,
+    "pct_missing_cells": 7.29,
+    "semantic_type_counts": {
+      "binary": 2,
+      "categorical_nominal": 1,
+      "categorical_ordinal": 1,
+      "constant": 1,
+      "datetime": 1,
+      "free_text": 1,
+      "id_like": 1,
+      "numeric_continuous": 4,
+      "numeric_discrete": 1
+    }
+  },
+  "target": {
+    "balance_label": "mildly imbalanced",
+    "classes": [
+      {
+        "count": 1317,
+        "label": "No",
+        "pct": 65.85
+      },
+      {
+        "count": 683,
+        "label": "Yes",
+        "pct": 34.15
+      }
+    ],
+    "figures": {
+      "target": "figures/target_balance.png",
+      "target_by_categorical": "figures/target_by_categorical.png"
+    },
+    "imbalance_ratio": 1.93,
+    "kind": "categorical",
+    "majority_class": "No",
+    "majority_pct": 65.85,
+    "minority_class": "Yes",
+    "minority_pct": 34.15,
+    "n_classes": 2,
+    "n_missing": 0,
+    "name": "churned",
+    "top_categorical_by_cramers_v": [
+      {
+        "cramers_v": 0.015,
+        "feature": "membership"
+      },
+      {
+        "cramers_v": 0.0,
+        "feature": "gender"
+      },
+      {
+        "cramers_v": 0.0,
+        "feature": "region"
+      }
+    ]
+  },
+  "target_relationships": {
+    "features": [
+      {
+        "feature": "tenure_months",
+        "measure": "eta²",
+        "strength": 0.103,
+        "value": 0.103
+      },
+      {
+        "feature": "satisfaction",
+        "measure": "eta²",
+        "strength": 0.078,
+        "value": 0.078
+      },
+      {
+        "feature": "membership",
+        "measure": "Cramér's V",
+        "strength": 0.015,
+        "value": 0.015
+      },
+      {
+        "feature": "income",
+        "measure": "eta²",
+        "strength": 0.001,
+        "value": 0.001
+      },
+      {
+        "feature": "monthly_spend",
+        "measure": "eta²",
+        "strength": 0.001,
+        "value": 0.001
+      },
+      {
+        "feature": "age",
+        "measure": "eta²",
+        "strength": 0.0,
+        "value": 0.0
+      },
+      {
+        "feature": "gender",
+        "measure": "Cramér's V",
+        "strength": 0.0,
+        "value": 0.0
+      },
+      {
+        "feature": "region",
+        "measure": "Cramér's V",
+        "strength": 0.0,
+        "value": 0.0
+      }
+    ],
+    "figures": {
+      "target_relationships": "figures/target_relationships.png"
+    },
+    "target": "churned"
+  }
+}

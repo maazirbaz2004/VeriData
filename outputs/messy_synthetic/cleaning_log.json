@@ -1,0 +1,955 @@
+[
+  {
+    "action": "normalized_headers",
+    "after_examples": [
+      "membership"
+    ],
+    "before_examples": [
+      "membership "
+    ],
+    "column": null,
+    "n_cells_affected": 1,
+    "n_rows_affected": 0,
+    "parameters": {
+      "name_map": {
+        "membership ": "membership"
+      },
+      "snake_case": false
+    },
+    "reason": "Normalized 1 column name(s) (stripped whitespace/BOM).",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "normalize_column_names"
+  },
+  {
+    "action": "stripped_and_normalized_ws",
+    "after_examples": [
+      "'MALE'",
+      "'Female'",
+      "'female'",
+      "'Male'",
+      "'Male'"
+    ],
+    "before_examples": [
+      "' MALE '",
+      "' Female '",
+      "' female '",
+      "' Male '",
+      "' Male '"
+    ],
+    "column": "gender",
+    "n_cells_affected": 122,
+    "n_rows_affected": 122,
+    "parameters": {},
+    "reason": "Stripped leading/trailing whitespace, collapsed internal spaces, and cleaned unicode chars.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "clean_whitespace_unicode"
+  },
+  {
+    "action": "stripped_and_normalized_ws",
+    "after_examples": [
+      "'North Area'",
+      "'East Coast'",
+      "'Central Hub'",
+      "'South Bay'",
+      "'West Valley'"
+    ],
+    "before_examples": [
+      "'North  Area'",
+      "'East Coast  '",
+      "'Central Hub  '",
+      "'South Bay  '",
+      "'West  Valley'"
+    ],
+    "column": "region",
+    "n_cells_affected": 146,
+    "n_rows_affected": 146,
+    "parameters": {},
+    "reason": "Stripped leading/trailing whitespace, collapsed internal spaces, and cleaned unicode chars.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "clean_whitespace_unicode"
+  },
+  {
+    "action": "stripped_and_normalized_ws",
+    "after_examples": [
+      "'Basic'",
+      "'Gold'",
+      "'Silver'",
+      "'Silver'",
+      "'Basic'"
+    ],
+    "before_examples": [
+      "'  Basic'",
+      "'  Gold'",
+      "'  Silver'",
+      "'  Silver'",
+      "'  Basic'"
+    ],
+    "column": "membership",
+    "n_cells_affected": 123,
+    "n_rows_affected": 123,
+    "parameters": {},
+    "reason": "Stripped leading/trailing whitespace, collapsed internal spaces, and cleaned unicode chars.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "clean_whitespace_unicode"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "N/A",
+      "N/A",
+      "-",
+      "null",
+      "N/A"
+    ],
+    "column": "income",
+    "n_cells_affected": 126,
+    "n_rows_affected": 126,
+    "parameters": {
+      "ratio": 0.0603,
+      "token_counts": {
+        "-": 39,
+        "?": 36,
+        "N/A": 26,
+        "null": 25
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('-': 39, '?': 36, 'N/A': 26, 'null': 25) with NaN.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "converted_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown",
+      "Unknown"
+    ],
+    "column": "region",
+    "n_cells_affected": 83,
+    "n_rows_affected": 83,
+    "parameters": {
+      "ratio": 0.0397,
+      "token_counts": {
+        "Unknown": 83
+      }
+    },
+    "reason": "Replaced placeholder missing token(s) ('Unknown': 83) with NaN.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "normalize_missing_tokens"
+  },
+  {
+    "action": "merged_case_variants",
+    "after_examples": [
+      "Female",
+      "Male",
+      "Male",
+      "Male",
+      "Male"
+    ],
+    "before_examples": [
+      "female",
+      "MALE",
+      "male",
+      "MALE",
+      "male"
+    ],
+    "column": "gender",
+    "n_cells_affected": 226,
+    "n_rows_affected": 226,
+    "parameters": {
+      "mapping": {
+        "FEMALE": "Female",
+        "MALE": "Male",
+        "f": "F",
+        "female": "Female",
+        "male": "Male"
+      }
+    },
+    "reason": "Merged 5 case-only variant spelling(s) into dominant form.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "flagged_fuzzy_variants",
+    "after_examples": [
+      "M",
+      "F"
+    ],
+    "before_examples": [
+      "M",
+      "F"
+    ],
+    "column": "gender",
+    "n_cells_affected": 0,
+    "n_rows_affected": 63,
+    "parameters": {
+      "candidates": [
+        {
+          "kind": "abbreviation",
+          "similarity": 0.85,
+          "target": "Male",
+          "target_count": 1019,
+          "variant": "M",
+          "variant_count": 28
+        },
+        {
+          "kind": "abbreviation",
+          "similarity": 0.85,
+          "target": "Female",
+          "target_count": 998,
+          "variant": "F",
+          "variant_count": 35
+        }
+      ]
+    },
+    "reason": "Flagged near-duplicate/abbreviation label candidate(s) for human review (not auto-merged): 'M' (28) -> 'Male' (1019) [abbreviation, sim=0.85]; 'F' (35) -> 'Female' (998) [abbreviation, sim=0.85].",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "warning",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "merged_case_variants",
+    "after_examples": [
+      "Silver",
+      "Basic",
+      "Silver",
+      "Gold",
+      "Basic"
+    ],
+    "before_examples": [
+      "SILVER",
+      "BASIC",
+      "SILVER",
+      "GOLD",
+      "BASIC"
+    ],
+    "column": "membership",
+    "n_cells_affected": 20,
+    "n_rows_affected": 20,
+    "parameters": {
+      "mapping": {
+        "BASIC": "Basic",
+        "GOLD": "Gold",
+        "SILVER": "Silver"
+      }
+    },
+    "reason": "Merged 3 case-only variant spelling(s) into dominant form.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "merged_case_variants",
+    "after_examples": [
+      "No",
+      "No",
+      "Yes",
+      "No",
+      "Yes"
+    ],
+    "before_examples": [
+      "no",
+      "no",
+      "yes",
+      "no",
+      "yes"
+    ],
+    "column": "churned",
+    "n_cells_affected": 47,
+    "n_rows_affected": 47,
+    "parameters": {
+      "mapping": {
+        "no": "No",
+        "yes": "Yes"
+      }
+    },
+    "reason": "Merged 2 case-only variant spelling(s) into dominant form.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "standardized_binary_tokens",
+    "after_examples": [
+      "No",
+      "Yes",
+      "Yes",
+      "No",
+      "Yes"
+    ],
+    "before_examples": [
+      "0",
+      "1",
+      "Y",
+      "0",
+      "Y"
+    ],
+    "column": "churned",
+    "n_cells_affected": 59,
+    "n_rows_affected": 59,
+    "parameters": {
+      "mapping": {
+        "0": "No",
+        "1": "Yes",
+        "Y": "Yes"
+      }
+    },
+    "reason": "Standardized mixed boolean tokens in 'churned' into dominant labels ('Yes' / 'No').",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "warning",
+    "step": "standardize_categories"
+  },
+  {
+    "action": "cast_dtype",
+    "after_examples": [
+      "49691.7",
+      "41181.7",
+      "52275.3",
+      "17127.7",
+      "33930.6"
+    ],
+    "before_examples": [
+      "$49,691.74",
+      "$41,181.65",
+      "$52,275.29",
+      "$17,127.70",
+      "$33,930.60"
+    ],
+    "column": "income",
+    "n_cells_affected": 1914,
+    "n_rows_affected": 1914,
+    "parameters": {
+      "has_percent": false,
+      "target_dtype": "float64"
+    },
+    "reason": "Converted 'income' to float64, stripping numeric formatting on 1914 cell(s).",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "convert_types"
+  },
+  {
+    "action": "coerced_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "twelve",
+      "twenty",
+      "twelve",
+      "twenty",
+      "twelve"
+    ],
+    "column": "tenure_months",
+    "n_cells_affected": 20,
+    "n_rows_affected": 20,
+    "parameters": {},
+    "reason": "Coerced 20 unparseable numeric token(s) in 'tenure_months' to NaN.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "warning",
+    "step": "convert_types"
+  },
+  {
+    "action": "cast_dtype",
+    "after_examples": [
+      "149.07",
+      "121.17",
+      "117.31",
+      "46.22",
+      "88.78"
+    ],
+    "before_examples": [
+      "$149.07",
+      "$121.17",
+      "$117.31",
+      "$46.22",
+      "$88.78"
+    ],
+    "column": "monthly_spend",
+    "n_cells_affected": 2080,
+    "n_rows_affected": 2080,
+    "parameters": {
+      "has_percent": false,
+      "target_dtype": "float64"
+    },
+    "reason": "Converted 'monthly_spend' to float64, stripping numeric formatting on 2080 cell(s).",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "convert_types"
+  },
+  {
+    "action": "coerced_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "not_a_valid_date",
+      "not_a_valid_date",
+      "not_a_valid_date",
+      "not_a_valid_date",
+      "not_a_valid_date"
+    ],
+    "column": "signup_date",
+    "n_cells_affected": 21,
+    "n_rows_affected": 21,
+    "parameters": {},
+    "reason": "Coerced 21 unparseable datetime string(s) in 'signup_date' to NaN.",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "warning",
+    "step": "convert_types"
+  },
+  {
+    "action": "standardized_datetime",
+    "after_examples": [
+      "2023-10-01",
+      "2024-03-22",
+      "2023-04-18",
+      "2020-02-17",
+      "2024-10-25"
+    ],
+    "before_examples": [
+      "01/10/2023",
+      "Mar 22, 2024",
+      "18/04/2023",
+      "Feb 17, 2020",
+      "25/10/2024"
+    ],
+    "column": "signup_date",
+    "n_cells_affected": 1374,
+    "n_rows_affected": 1374,
+    "parameters": {
+      "iso_format": "%Y-%m-%d"
+    },
+    "reason": "Standardized 1374 date cell(s) in 'signup_date' to ISO format (%Y-%m-%d).",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "convert_types"
+  },
+  {
+    "action": "invalid_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "-7.0",
+      "-5.0",
+      "-17.0",
+      "144.0",
+      "164.0"
+    ],
+    "column": "age",
+    "n_cells_affected": 21,
+    "n_rows_affected": 21,
+    "parameters": {
+      "max": 120.0,
+      "min": 0.0
+    },
+    "reason": "Set 21 out-of-range cell(s) in 'age' to NaN (rule: min=0.0, max=120.0, allowed=None).",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "warning",
+    "step": "apply_validity_rules"
+  },
+  {
+    "action": "invalid_to_NaN",
+    "after_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "before_examples": [
+      "-1.0",
+      "-7.0",
+      "-2.0",
+      "-16.0",
+      "-12.0"
+    ],
+    "column": "tenure_months",
+    "n_cells_affected": 11,
+    "n_rows_affected": 11,
+    "parameters": {
+      "min": 0.0
+    },
+    "reason": "Set 11 out-of-range cell(s) in 'tenure_months' to NaN (rule: min=0.0, max=None, allowed=None).",
+    "rows_after": 2090,
+    "rows_before": 2090,
+    "severity": "warning",
+    "step": "apply_validity_rules"
+  },
+  {
+    "action": "dropped_duplicate_rows",
+    "after_examples": [],
+    "before_examples": [],
+    "column": null,
+    "n_cells_affected": 1200,
+    "n_rows_affected": 80,
+    "parameters": {
+      "dropped_row_indices_sample": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019
+      ]
+    },
+    "reason": "Dropped 80 exact duplicate row(s) (kept first occurrence).",
+    "rows_after": 2010,
+    "rows_before": 2090,
+    "severity": "info",
+    "step": "handle_duplicates"
+  },
+  {
+    "action": "dropped_index_column",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "Unnamed: 0",
+    "n_cells_affected": 2010,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Dropped redundant exported index column 'Unnamed: 0'.",
+    "rows_after": 2010,
+    "rows_before": 2010,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "dropped_empty_column",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "unused",
+    "n_cells_affected": 2010,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Dropped fully empty column 'unused'.",
+    "rows_after": 2010,
+    "rows_before": 2010,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "dropped_empty_rows",
+    "after_examples": [],
+    "before_examples": [],
+    "column": null,
+    "n_cells_affected": 130,
+    "n_rows_affected": 10,
+    "parameters": {
+      "dropped_row_indices_sample": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009
+      ]
+    },
+    "reason": "Dropped 10 fully empty row(s).",
+    "rows_after": 2000,
+    "rows_before": 2010,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "marked_excluded",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "customer_id",
+    "n_cells_affected": 0,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Kept column 'customer_id' in data but marked role as id (id_like).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "marked_excluded",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "notes",
+    "n_cells_affected": 0,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Kept column 'notes' in data but marked role as excluded (free_text).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "marked_excluded",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "constant_flag",
+    "n_cells_affected": 0,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Kept column 'constant_flag' in data but marked role as excluded (constant).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "structural_drops"
+  },
+  {
+    "action": "imputed_median",
+    "after_examples": [
+      "42.0",
+      "42.0",
+      "42.0",
+      "42.0",
+      "42.0"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "age",
+    "n_cells_affected": 140,
+    "n_rows_affected": 140,
+    "parameters": {
+      "fill_value": 42.0,
+      "pct_missing": 0.07,
+      "strategy": "median"
+    },
+    "reason": "Imputed 140 missing cell(s) (7.0%) in 'age' with median=42.0 (imputed output only).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_median",
+    "after_examples": [
+      "52125.75",
+      "52125.75",
+      "52125.75",
+      "52125.75",
+      "52125.75"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "income",
+    "n_cells_affected": 160,
+    "n_rows_affected": 160,
+    "parameters": {
+      "fill_value": 52125.75,
+      "pct_missing": 0.08,
+      "strategy": "median"
+    },
+    "reason": "Imputed 160 missing cell(s) (8.0%) in 'income' with median=52125.75 (imputed output only).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_mode",
+    "after_examples": [
+      "North Area",
+      "North Area",
+      "North Area",
+      "North Area",
+      "North Area"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "region",
+    "n_cells_affected": 80,
+    "n_rows_affected": 80,
+    "parameters": {
+      "fill_value": "North Area",
+      "pct_missing": 0.04,
+      "strategy": "mode"
+    },
+    "reason": "Imputed 80 missing cell(s) (4.0%) in 'region' with mode='North Area' (imputed output only).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_median",
+    "after_examples": [
+      "61.0",
+      "61.0",
+      "61.0",
+      "61.0",
+      "61.0"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "tenure_months",
+    "n_cells_affected": 30,
+    "n_rows_affected": 30,
+    "parameters": {
+      "fill_value": 61.0,
+      "pct_missing": 0.015,
+      "strategy": "median"
+    },
+    "reason": "Imputed 30 missing cell(s) (1.5%) in 'tenure_months' with median=61.0 (imputed output only).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "left_datetime_missing",
+    "after_examples": [],
+    "before_examples": [],
+    "column": "signup_date",
+    "n_cells_affected": 0,
+    "n_rows_affected": 0,
+    "parameters": {},
+    "reason": "Datetime column 'signup_date' has 20 missing value(s); left un-imputed per policy.",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "imputed_median",
+    "after_examples": [
+      "3",
+      "3",
+      "3",
+      "3",
+      "3"
+    ],
+    "before_examples": [
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN",
+      "NaN"
+    ],
+    "column": "satisfaction",
+    "n_cells_affected": 60,
+    "n_rows_affected": 60,
+    "parameters": {
+      "fill_value": 3,
+      "pct_missing": 0.03,
+      "strategy": "median"
+    },
+    "reason": "Imputed 60 missing cell(s) (3.0%) in 'satisfaction' with median=3 (imputed output only).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_missing_values"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "80",
+      "78",
+      "78",
+      "80",
+      "80"
+    ],
+    "before_examples": [
+      "80",
+      "78",
+      "78",
+      "80",
+      "80"
+    ],
+    "column": "age",
+    "n_cells_affected": 0,
+    "n_rows_affected": 7,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        5.0,
+        77.0
+      ],
+      "iqr_3_0_bounds": [
+        -22.0,
+        104.0
+      ],
+      "sample_indices": [
+        248,
+        479,
+        631,
+        846,
+        1338
+      ]
+    },
+    "reason": "Flagged 7 outlier(s) (0.4%) and 0 extreme outlier(s) in 'age' (action=flag; values untouched).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "131326",
+      "176550",
+      "132927",
+      "172710",
+      "180249"
+    ],
+    "before_examples": [
+      "131326",
+      "176550",
+      "132927",
+      "172710",
+      "180249"
+    ],
+    "column": "income",
+    "n_cells_affected": 0,
+    "n_rows_affected": 97,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -21635.92625,
+        131209.98375
+      ],
+      "iqr_3_0_bounds": [
+        -78953.1425,
+        188527.2
+      ],
+      "sample_indices": [
+        21,
+        51,
+        61,
+        84,
+        138
+      ]
+    },
+    "reason": "Flagged 97 outlier(s) (5.3%) and 27 extreme outlier(s) in 'income' (action=flag; values untouched).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_outliers"
+  },
+  {
+    "action": "flagged_outliers",
+    "after_examples": [
+      "391.47",
+      "406.83",
+      "442.51",
+      "340.74",
+      "813.4"
+    ],
+    "before_examples": [
+      "391.47",
+      "406.83",
+      "442.51",
+      "340.74",
+      "813.4"
+    ],
+    "column": "monthly_spend",
+    "n_cells_affected": 0,
+    "n_rows_affected": 90,
+    "parameters": {
+      "iqr_1_5_bounds": [
+        -43.71625,
+        328.17375
+      ],
+      "iqr_3_0_bounds": [
+        -183.175,
+        467.6325
+      ],
+      "sample_indices": [
+        51,
+        84,
+        138,
+        151,
+        189
+      ]
+    },
+    "reason": "Flagged 90 outlier(s) (4.5%) and 28 extreme outlier(s) in 'monthly_spend' (action=flag; values untouched).",
+    "rows_after": 2000,
+    "rows_before": 2000,
+    "severity": "info",
+    "step": "handle_outliers"
+  }
+]
