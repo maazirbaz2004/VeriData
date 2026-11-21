@@ -1,0 +1,35 @@
+{
+  "config_hash": "3a94527dfcc5",
+  "dataset": "messy_synthetic",
+  "llm": {
+    "model": null,
+    "prompt_version": null,
+    "token_cost_usd": 0.0
+  },
+  "n_figures": 9,
+  "n_findings": 36,
+  "n_validated": 5,
+  "narration": {
+    "09075bbdee06b590": "template",
+    "11e591d0b39e52cd": "template",
+    "20835424e3d80610": "template",
+    "2d06e23f3fba4c46": "template",
+    "440d399dbca57ad0": "template",
+    "45a586a2365b5b50": "template",
+    "57d2185da42c904a": "template",
+    "67435025f39bfab0": "template",
+    "6eb5c2437729d7b0": "template",
+    "8cb228d4db25a4a1": "template",
+    "966e9b46398be99d": "template",
+    "9c277bf52ea9d362": "template",
+    "a3ae6c5e3e862743": "template",
+    "cd4756fdb74795e4": "template",
+    "eaf7928cec2923a9": "template"
+  },
+  "veridata_version": "0.1.0",
+  "verifier_stats": {
+    "n_retries": 0,
+    "n_texts": 95,
+    "n_violations": 0
+  }
+}
