@@ -1,0 +1,363 @@
+[
+  {
+    "accepted": true,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "03088ab28e083960",
+    "p_raw": 2.1957270957731766e-05,
+    "q_value": 9.222053802247342e-05,
+    "rank_in_family": 5,
+    "reason_text": "Accepted: q=9.22e-05 <= 0.05 (m=21), epsilon_squared=0.0218.",
+    "reasons": [],
+    "schema_version": "1.0",
+    "would_pass_without_correction": true,
+    "would_pass_without_effect_floor": true
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "04e49dc5789ba544",
+    "p_raw": 0.9788432991456454,
+    "q_value": 0.9788432991456454,
+    "rank_in_family": 21,
+    "reason_text": "Adjusted q=0.9788 exceeds alpha=0.05 (raw p=0.9788, family m=21). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "0688a4be09061aef",
+    "p_raw": 0.97070544457512,
+    "q_value": 0.9788432991456454,
+    "rank_in_family": 20,
+    "reason_text": "Adjusted q=0.9788 exceeds alpha=0.05 (raw p=0.9707, family m=21). Standardized effect |eta_squared|=0.0002 is below the practical floor (0.01).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "093844d87e3c6328",
+    "p_raw": 0.9239341965125791,
+    "q_value": 0.9788432991456454,
+    "rank_in_family": 19,
+    "reason_text": "Adjusted q=0.9788 exceeds alpha=0.05 (raw p=0.9239, family m=21). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "14b21894518babf6",
+    "p_raw": 0.8939737045473393,
+    "q_value": 0.9788432991456454,
+    "rank_in_family": 18,
+    "reason_text": "Adjusted q=0.9788 exceeds alpha=0.05 (raw p=0.8940, family m=21). Standardized effect |hedges_g|=0.0093 is below the practical floor (0.20).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "15d74a366b0a3bca",
+    "p_raw": 0.4691462319205679,
+    "q_value": 0.656804724688795,
+    "rank_in_family": 15,
+    "reason_text": "Adjusted q=0.6568 exceeds alpha=0.05 (raw p=0.4691, family m=21). Standardized effect |hedges_g|=0.0396 is below the practical floor (0.20).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "16934eaf6eb36cff",
+    "p_raw": 0.23024973344770525,
+    "q_value": 0.37194187710783155,
+    "rank_in_family": 13,
+    "reason_text": "Adjusted q=0.3719 exceeds alpha=0.05 (raw p=0.2302, family m=21). Standardized effect |cramers_v_bc|=0.0374 is below the practical floor (0.10).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "2cb47aca909f72e8",
+    "p_raw": 0.005098746217145681,
+    "q_value": 0.015296238651437043,
+    "rank_in_family": 7,
+    "reason_text": "Standardized effect |cramers_v_bc|=0.0716 is below the practical floor (0.10).",
+    "reasons": [
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": true,
+    "would_pass_without_effect_floor": true
+  },
+  {
+    "accepted": true,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "4c3d52697add8a19",
+    "p_raw": 7.714446033533976e-05,
+    "q_value": 0.00027000561117368916,
+    "rank_in_family": 6,
+    "reason_text": "Accepted: q=2.70e-04 <= 0.05 (m=21), spearman_rho=0.1079.",
+    "reasons": [],
+    "schema_version": "1.0",
+    "would_pass_without_correction": true,
+    "would_pass_without_effect_floor": true
+  },
+  {
+    "accepted": true,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "5da20203ad979461",
+    "p_raw": 1.2434430714640227e-21,
+    "q_value": 8.704101500248159e-21,
+    "rank_in_family": 3,
+    "reason_text": "Accepted: q=8.70e-21 <= 0.05 (m=21), eta_squared=0.0816.",
+    "reasons": [],
+    "schema_version": "1.0",
+    "would_pass_without_correction": true,
+    "would_pass_without_effect_floor": true
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "6cebb444aca418b8",
+    "p_raw": 0.34710612620687176,
+    "q_value": 0.5206591893103076,
+    "rank_in_family": 14,
+    "reason_text": "Adjusted q=0.5207 exceeds alpha=0.05 (raw p=0.3471, family m=21). Standardized effect |hedges_g|=0.0633 is below the practical floor (0.20).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": true,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "7879d2e98b9f3fc3",
+    "p_raw": 1.1637179203181515e-05,
+    "q_value": 6.109519081670296e-05,
+    "rank_in_family": 4,
+    "reason_text": "Accepted: q=6.11e-05 <= 0.05 (m=21), spearman_rho=0.1196.",
+    "reasons": [],
+    "schema_version": "1.0",
+    "would_pass_without_correction": true,
+    "would_pass_without_effect_floor": true
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "8c16745ee5780c67",
+    "p_raw": 0.06354826573182334,
+    "q_value": 0.13345135803682903,
+    "rank_in_family": 10,
+    "reason_text": "Adjusted q=0.1335 exceeds alpha=0.05 (raw p=0.0635, family m=21). Standardized effect |cramers_v_bc|=0.0566 is below the practical floor (0.10).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": true,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "9ceff6678f472d3a",
+    "p_raw": 3.1877556503224748e-99,
+    "q_value": 3.347143432838598e-98,
+    "rank_in_family": 2,
+    "reason_text": "Accepted: q=3.35e-98 <= 0.05 (m=21), spearman_rho=0.5335.",
+    "reasons": [],
+    "schema_version": "1.0",
+    "would_pass_without_correction": true,
+    "would_pass_without_effect_floor": true
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "b6b08a817c661487",
+    "p_raw": 0.0898663673852335,
+    "q_value": 0.17156306500817306,
+    "rank_in_family": 11,
+    "reason_text": "Adjusted q=0.1716 exceeds alpha=0.05 (raw p=0.0899, family m=21). Standardized effect |hedges_g|=0.0928 is below the practical floor (0.20).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "c1347eda564dedc3",
+    "p_raw": 0.5337164986734864,
+    "q_value": 0.7005029045089508,
+    "rank_in_family": 16,
+    "reason_text": "Adjusted q=0.7005 exceeds alpha=0.05 (raw p=0.5337, family m=21). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "cb56fc08a3e6f85a",
+    "p_raw": 0.8815591876131736,
+    "q_value": 0.9788432991456454,
+    "rank_in_family": 17,
+    "reason_text": "Adjusted q=0.9788 exceeds alpha=0.05 (raw p=0.8816, family m=21). Standardized effect |eta_squared|=0.0013 is below the practical floor (0.01).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "cbc355b43e0dd6f9",
+    "p_raw": 0.05348899434656482,
+    "q_value": 0.12480765347531791,
+    "rank_in_family": 9,
+    "reason_text": "Adjusted q=0.1248 exceeds alpha=0.05 (raw p=0.0535, family m=21). Standardized effect |eta_squared|=0.0065 is below the practical floor (0.01).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "d428bc651c8a9989",
+    "p_raw": 0.11527113732177792,
+    "q_value": 0.20172449031311135,
+    "rank_in_family": 12,
+    "reason_text": "Adjusted q=0.2017 exceeds alpha=0.05 (raw p=0.1153, family m=21). Standardized effect |eta_squared|=0.0055 is below the practical floor (0.01).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": false,
+    "would_pass_without_effect_floor": false
+  },
+  {
+    "accepted": true,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [],
+    "hypothesis_id": "dbbefcba4507014b",
+    "p_raw": 6.261720774727631e-103,
+    "q_value": 1.3149613626928025e-101,
+    "rank_in_family": 1,
+    "reason_text": "Accepted: q=1.31e-101 <= 0.05 (m=21), hedges_g=-3.1585.",
+    "reasons": [],
+    "schema_version": "1.0",
+    "would_pass_without_correction": true,
+    "would_pass_without_effect_floor": true
+  },
+  {
+    "accepted": false,
+    "family_id": "session",
+    "family_size": 21,
+    "flags": [
+      "test_sensitive"
+    ],
+    "hypothesis_id": "fc87f82acb437423",
+    "p_raw": 0.03356154763676579,
+    "q_value": 0.0880990625465102,
+    "rank_in_family": 8,
+    "reason_text": "Adjusted q=0.0881 exceeds alpha=0.05 (raw p=0.0336, family m=21). Standardized effect |hedges_g|=0.1161 is below the practical floor (0.20).",
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "schema_version": "1.0",
+    "would_pass_without_correction": true,
+    "would_pass_without_effect_floor": false
+  }
+]

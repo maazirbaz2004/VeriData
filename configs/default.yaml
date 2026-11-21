@@ -125,6 +125,13 @@ stats:
   bootstrap_resamples_benchmark: 500
   permutation_resamples: 9999
   seed: 20260101
+  ci_candidate_p: 0.10
+  yates: false
+  strict_ci: false
+  test_timeout_s: 20.0
+  assumption_aware_selection: true
+  enable_assumption_gate: true
+  benchmark_fast_mode: false
 
 effect_floor:
   cohens_d: 0.20

@@ -1,0 +1,27 @@
+{
+  "alpha": 0.05,
+  "correction": "bh",
+  "counts_by_rejection_reason": {
+    "effect_below_threshold": 38,
+    "not_significant_after_correction": 33,
+    "trivial_relationship": 1
+  },
+  "counts_by_test": {
+    "chi_square": 136,
+    "kruskal_wallis": 1,
+    "spearman": 3,
+    "welch_anova": 29,
+    "welch_t": 21
+  },
+  "dataset_name": "telco_churn",
+  "effect_floor_enabled": true,
+  "fallback_rate": 0.0211,
+  "m_tested": 190,
+  "n_accepted": 151,
+  "n_bh_sig": 157,
+  "n_errors": 0,
+  "n_planned": 190,
+  "n_raw_sig": 157,
+  "n_skipped": 0,
+  "runtime_seconds": 60.216
+}

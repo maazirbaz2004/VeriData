@@ -1,0 +1,26 @@
+{
+  "alpha": 0.05,
+  "correction": "bh",
+  "counts_by_rejection_reason": {
+    "effect_below_threshold": 15,
+    "not_significant_after_correction": 14
+  },
+  "counts_by_test": {
+    "chi_square": 6,
+    "kruskal_wallis": 1,
+    "spearman": 3,
+    "welch_anova": 5,
+    "welch_t": 6
+  },
+  "dataset_name": "insurance",
+  "effect_floor_enabled": true,
+  "fallback_rate": 0.1905,
+  "m_tested": 21,
+  "n_accepted": 6,
+  "n_bh_sig": 7,
+  "n_errors": 0,
+  "n_planned": 21,
+  "n_raw_sig": 8,
+  "n_skipped": 0,
+  "runtime_seconds": 12.798
+}

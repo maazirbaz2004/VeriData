@@ -27,6 +27,9 @@ run-one:
 hypotheses:
 	$(PYTHON) -m veridata.cli hypotheses --dataset $(DATASET) --no-llm
 
+test-dataset:
+	$(PYTHON) -m veridata.cli test --dataset $(DATASET)
+
 eval-nl:
 	$(PYTHON) scripts/eval_nl_parser.py
 

@@ -1,0 +1,2848 @@
+[
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=573, skew=1.54, excess_kurtosis=1.99, 3xIQR_outlier_rate=0.007, shapiro_p=5.449e-25",
+        "method": "shapiro",
+        "name": "normality_0",
+        "p_value": 5.448651955110425e-25,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.8172767927664188
+      },
+      {
+        "detail": "n=324, skew=1.68, excess_kurtosis=2.05, 3xIQR_outlier_rate=0.015, shapiro_p=8.852e-21",
+        "method": "shapiro",
+        "name": "normality_1",
+        "p_value": 8.852445660276425e-21,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.7752905393115472
+      },
+      {
+        "detail": "n=240, skew=1.29, excess_kurtosis=0.41, 3xIQR_outlier_rate=0.000, shapiro_p=4.783e-17",
+        "method": "shapiro",
+        "name": "normality_2",
+        "p_value": 4.7828959216018546e-17,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.7951903369770232
+      },
+      {
+        "detail": "n=157, skew=1.47, excess_kurtosis=1.35, 3xIQR_outlier_rate=0.006, shapiro_p=3.635e-13",
+        "method": "shapiro",
+        "name": "normality_3",
+        "p_value": 3.6351483710182497e-13,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.8057757247823183
+      },
+      {
+        "detail": "n=25, skew=1.65, excess_kurtosis=2.73, 3xIQR_outlier_rate=0.000, shapiro_p=0.0007349",
+        "method": "shapiro",
+        "name": "normality_4",
+        "p_value": 0.0007348773668481197,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.8294428996291984
+      },
+      {
+        "detail": "n=18, skew=1.24, excess_kurtosis=1.73, 3xIQR_outlier_rate=0.000, shapiro_p=0.04008",
+        "method": "shapiro",
+        "name": "normality_5",
+        "p_value": 0.04008353911233903,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.8909596409938499
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.0651.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.06510205444610023,
+        "passed": true,
+        "severity": "info",
+        "statistic": 2.0822089246066033
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "groups": {
+        "0": {
+          "iqr": 11707.9064,
+          "mean": 12384.69534422164,
+          "median": 9863.4718,
+          "n": 573,
+          "sd": 12025.424151550085
+        },
+        "1": {
+          "iqr": 10840.408875000001,
+          "mean": 12731.171831635802,
+          "median": 8483.870149999999,
+          "n": 324,
+          "sd": 11823.631451451862
+        },
+        "2": {
+          "iqr": 14094.337309999999,
+          "mean": 15073.563733958332,
+          "median": 9264.97915,
+          "n": 240,
+          "sd": 12891.368346559486
+        },
+        "3": {
+          "iqr": 12547.4152,
+          "mean": 15355.318366815285,
+          "median": 10600.5483,
+          "n": 157,
+          "sd": 12330.869483978391
+        },
+        "4": {
+          "iqr": 9616.159080000001,
+          "mean": 13850.6563112,
+          "median": 11033.6617,
+          "n": 25,
+          "sd": 9139.223321389973
+        },
+        "5": {
+          "iqr": 4144.970075,
+          "mean": 8786.035247222222,
+          "median": 8589.56505,
+          "n": 18,
+          "sd": 3808.4355245084053
+        }
+      },
+      "highest_group": "4",
+      "lowest_group": "1"
+    },
+    "df": 5.0,
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": 0.04152516168716892,
+      "ci_low": 0.010831160963332677,
+      "ci_method": "bootstrap_percentile",
+      "comparable_value": 0.021796907886958438,
+      "magnitude": "small",
+      "name": "epsilon_squared",
+      "value": 0.021796907886958438
+    },
+    "error": null,
+    "fallback_used": true,
+    "group_sizes": {
+      "0": 573,
+      "1": 324,
+      "2": 240,
+      "3": 157,
+      "4": 25,
+      "5": 18
+    },
+    "hypothesis_id": "03088ab28e083960",
+    "n_used": 1337,
+    "p_value": 2.1957270957731766e-05,
+    "runtime_ms": 25.23,
+    "schema_version": "1.0",
+    "seed": 1803683943,
+    "selection_trace": [
+      {
+        "input": {
+          "all_large_clt": false,
+          "all_normal": false,
+          "k_groups": 6,
+          "max_abs_skew": 1.677,
+          "min_group_n": 18
+        },
+        "outcome": "kruskal_wallis",
+        "rule": "multi_group_normality_and_clt"
+      }
+    ],
+    "statistic": 29.12066893697647,
+    "status": "ok",
+    "test_name": "kruskal_wallis",
+    "test_selection_reason": "Multi-group normality/CLT criteria not met; fell back to Kruskal-Wallis.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "Table 6x2 (n=1337): min_expected=8.91, cells>=5=100.0%; chi2_eligible=True.",
+        "method": "cochran_rule",
+        "name": "expected_counts",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 8.912490650710547
+      }
+    ],
+    "descriptives": {
+      "col_labels": [
+        "female",
+        "male"
+      ],
+      "df_star": 1,
+      "dropped_levels": [],
+      "min_expected_count": 8.9125,
+      "observed": [
+        [
+          289,
+          284
+        ],
+        [
+          158,
+          166
+        ],
+        [
+          119,
+          121
+        ],
+        [
+          77,
+          80
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "row_labels": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "row_percentages": [
+        [
+          50.44,
+          49.56
+        ],
+        [
+          48.77,
+          51.23
+        ],
+        [
+          49.58,
+          50.42
+        ],
+        [
+          49.04,
+          50.96
+        ],
+        [
+          44.0,
+          56.0
+        ],
+        [
+          44.44,
+          55.56
+        ]
+      ],
+      "top_residual_cells": [
+        {
+          "adj_residual": 0.584,
+          "col": "female",
+          "expected": 283.71,
+          "observed": 289,
+          "row": "0",
+          "row_pct": 50.44
+        },
+        {
+          "adj_residual": -0.584,
+          "col": "male",
+          "expected": 289.29,
+          "observed": 284,
+          "row": "0",
+          "row_pct": 49.56
+        },
+        {
+          "adj_residual": -0.557,
+          "col": "female",
+          "expected": 12.38,
+          "observed": 11,
+          "row": "4",
+          "row_pct": 44.0
+        }
+      ]
+    },
+    "df": 5.0,
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": null,
+      "ci_low": null,
+      "ci_method": null,
+      "comparable_value": 0.0,
+      "magnitude": "negligible",
+      "name": "cramers_v_bc",
+      "value": 0.0
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": null,
+    "hypothesis_id": "04e49dc5789ba544",
+    "n_used": 1337,
+    "p_value": 0.9788432991456454,
+    "runtime_ms": 19.978,
+    "schema_version": "1.0",
+    "seed": 715669758,
+    "selection_trace": [
+      {
+        "input": {
+          "chi2_eligible": true,
+          "is_2x2": false,
+          "min_expected": 8.912490650710547,
+          "n_cells": 12,
+          "n_total": 1337,
+          "pct_ge_5": 1.0
+        },
+        "outcome": "chi_square",
+        "rule": "rxc_cochran_rule"
+      }
+    ],
+    "statistic": 0.7710451138815364,
+    "status": "ok",
+    "test_name": "chi_square",
+    "test_selection_reason": "r x c table satisfies Cochran expected-count rule (>=80% >= 5, min >= 1); selected Pearson chi-square.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=324, skew=0.02, excess_kurtosis=-1.25, 3xIQR_outlier_rate=0.000, shapiro_p=1.134e-09",
+        "method": "shapiro",
+        "name": "normality_northeast",
+        "p_value": 1.1338469171741007e-09,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9445770331293468
+      },
+      {
+        "detail": "n=324, skew=0.07, excess_kurtosis=-1.26, 3xIQR_outlier_rate=0.000, shapiro_p=2.964e-10",
+        "method": "shapiro",
+        "name": "normality_northwest",
+        "p_value": 2.963811860340977e-10,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9392820705823965
+      },
+      {
+        "detail": "n=364, skew=0.07, excess_kurtosis=-1.22, 3xIQR_outlier_rate=0.000, shapiro_p=2.291e-10",
+        "method": "shapiro",
+        "name": "normality_southeast",
+        "p_value": 2.2908993953737797e-10,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.945118004805583
+      },
+      {
+        "detail": "n=325, skew=0.05, excess_kurtosis=-1.26, 3xIQR_outlier_rate=0.000, shapiro_p=4.063e-10",
+        "method": "shapiro",
+        "name": "normality_southwest",
+        "p_value": 4.0630093838276087e-10,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9407397962599602
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.9973.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.9973068587187531,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.015744019519310988
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "northeast",
+        "northwest",
+        "southeast",
+        "southwest"
+      ],
+      "groups": {
+        "northeast": {
+          "iqr": 24.0,
+          "mean": 39.26851851851852,
+          "median": 39.5,
+          "n": 324,
+          "sd": 14.069007161285404
+        },
+        "northwest": {
+          "iqr": 25.25,
+          "mean": 39.25925925925926,
+          "median": 39.0,
+          "n": 324,
+          "sd": 14.028302023193639
+        },
+        "southeast": {
+          "iqr": 24.25,
+          "mean": 38.93956043956044,
+          "median": 39.0,
+          "n": 364,
+          "sd": 14.164584549277725
+        },
+        "southwest": {
+          "iqr": 24.0,
+          "mean": 39.45538461538462,
+          "median": 39.0,
+          "n": 325,
+          "sd": 13.959885549616965
+        }
+      },
+      "highest_group": "southwest",
+      "lowest_group": "southeast",
+      "omega_squared": 0.0
+    },
+    "df": [
+      3.0,
+      737.54988257547
+    ],
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": null,
+      "ci_low": null,
+      "ci_method": null,
+      "comparable_value": 0.0001817346126968853,
+      "magnitude": "negligible",
+      "name": "eta_squared",
+      "value": 0.0001817346126968853
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "northeast": 324,
+      "northwest": 324,
+      "southeast": 364,
+      "southwest": 325
+    },
+    "hypothesis_id": "0688a4be09061aef",
+    "n_used": 1337,
+    "p_value": 0.97070544457512,
+    "runtime_ms": 15.206,
+    "schema_version": "1.0",
+    "seed": 2520975466,
+    "selection_trace": [
+      {
+        "input": {
+          "all_large_clt": true,
+          "all_normal": true,
+          "k_groups": 4,
+          "max_abs_skew": 0.074,
+          "min_group_n": 324
+        },
+        "outcome": "welch_anova",
+        "rule": "multi_group_normality_and_clt"
+      }
+    ],
+    "statistic": 0.08030824003419242,
+    "status": "ok",
+    "test_name": "welch_anova",
+    "test_selection_reason": "All groups pass approximate normality; selected Welch's ANOVA.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "Table 4x2 (n=1337): min_expected=160.42, cells>=5=100.0%; chi2_eligible=True.",
+        "method": "cochran_rule",
+        "name": "expected_counts",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 160.42483171278982
+      }
+    ],
+    "descriptives": {
+      "col_labels": [
+        "female",
+        "male"
+      ],
+      "df_star": 1,
+      "dropped_levels": [],
+      "min_expected_count": 160.4248,
+      "observed": [
+        [
+          161,
+          163
+        ],
+        [
+          164,
+          160
+        ],
+        [
+          175,
+          189
+        ],
+        [
+          162,
+          163
+        ]
+      ],
+      "row_labels": [
+        "northeast",
+        "northwest",
+        "southeast",
+        "southwest"
+      ],
+      "row_percentages": [
+        [
+          49.69,
+          50.31
+        ],
+        [
+          50.62,
+          49.38
+        ],
+        [
+          48.08,
+          51.92
+        ],
+        [
+          49.85,
+          50.15
+        ]
+      ],
+      "top_residual_cells": [
+        {
+          "adj_residual": -0.643,
+          "col": "female",
+          "expected": 180.23,
+          "observed": 175,
+          "row": "southeast",
+          "row_pct": 48.08
+        },
+        {
+          "adj_residual": 0.643,
+          "col": "male",
+          "expected": 183.77,
+          "observed": 189,
+          "row": "southeast",
+          "row_pct": 51.92
+        },
+        {
+          "adj_residual": 0.456,
+          "col": "female",
+          "expected": 160.42,
+          "observed": 164,
+          "row": "northwest",
+          "row_pct": 50.62
+        }
+      ]
+    },
+    "df": 3.0,
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": null,
+      "ci_low": null,
+      "ci_method": null,
+      "comparable_value": 0.0,
+      "magnitude": "negligible",
+      "name": "cramers_v_bc",
+      "value": 0.0
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": null,
+    "hypothesis_id": "093844d87e3c6328",
+    "n_used": 1337,
+    "p_value": 0.9239341965125791,
+    "runtime_ms": 16.015,
+    "schema_version": "1.0",
+    "seed": 4115714354,
+    "selection_trace": [
+      {
+        "input": {
+          "chi2_eligible": true,
+          "is_2x2": false,
+          "min_expected": 160.42483171278982,
+          "n_cells": 8,
+          "n_total": 1337,
+          "pct_ge_5": 1.0
+        },
+        "outcome": "chi_square",
+        "rule": "rxc_cochran_rule"
+      }
+    ],
+    "statistic": 0.476909551071918,
+    "status": "ok",
+    "test_name": "chi_square",
+    "test_selection_reason": "r x c table satisfies Cochran expected-count rule (>=80% >= 5, min >= 1); selected Pearson chi-square.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=1063, skew=0.28, excess_kurtosis=-0.06, 3xIQR_outlier_rate=0.000, shapiro_p=0.0004185",
+        "method": "shapiro",
+        "name": "normality_no",
+        "p_value": 0.0004185208400100435,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9942410076562921
+      },
+      {
+        "detail": "n=274, skew=0.31, excess_kurtosis=-0.02, 3xIQR_outlier_rate=0.000, shapiro_p=0.08519",
+        "method": "shapiro",
+        "name": "normality_yes",
+        "p_value": 0.08519235291332598,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9908562673055837
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.2821.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.2821060403150816,
+        "passed": true,
+        "severity": "info",
+        "statistic": 1.1578512335125992
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "no",
+        "yes"
+      ],
+      "groups": {
+        "no": {
+          "iqr": 8.114999999999998,
+          "max": 53.13,
+          "mean": 30.651853245531512,
+          "median": 30.305,
+          "min": 15.96,
+          "n": 1063,
+          "sd": 6.0459555787153105
+        },
+        "yes": {
+          "iqr": 9.11625,
+          "max": 52.58,
+          "mean": 30.70844890510949,
+          "median": 30.447499999999998,
+          "min": 17.195,
+          "n": 274,
+          "sd": 6.3186439826462
+        }
+      },
+      "higher_group": "yes",
+      "mean_diff": -0.056595659577975965,
+      "mean_diff_ci_high": 0.7776327704967073,
+      "mean_diff_ci_low": -0.8908240896526592
+    },
+    "df": 411.1698818193379,
+    "direction_observed": "b_greater",
+    "effect": {
+      "ci_high": 0.12352380994463814,
+      "ci_low": -0.14206110190601162,
+      "ci_method": "analytic_hedges_olkin",
+      "comparable_value": 0.009268645980686732,
+      "magnitude": "negligible",
+      "name": "hedges_g",
+      "value": -0.009268645980686732
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "no": 1063,
+      "yes": 274
+    },
+    "hypothesis_id": "14b21894518babf6",
+    "n_used": 1337,
+    "p_value": 0.8939737045473393,
+    "runtime_ms": 14.115,
+    "schema_version": "1.0",
+    "seed": 1415518363,
+    "selection_trace": [
+      {
+        "input": {
+          "both_large_clt": true,
+          "both_normal": true,
+          "max_abs_skew": 0.309,
+          "max_outlier_rate_3iqr": 0.0,
+          "n1": 1063,
+          "n2": 274
+        },
+        "outcome": "welch_t",
+        "rule": "normality_and_clt"
+      }
+    ],
+    "statistic": -0.13336027606006048,
+    "status": "ok",
+    "test_name": "welch_t",
+    "test_selection_reason": "Both groups pass approximate normality; selected Welch's t-test.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=662, skew=0.03, excess_kurtosis=-1.24, 3xIQR_outlier_rate=0.000, shapiro_p=6.548e-15",
+        "method": "shapiro",
+        "name": "normality_female",
+        "p_value": 6.547986119859862e-15,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9453147056826089
+      },
+      {
+        "detail": "n=675, skew=0.08, excess_kurtosis=-1.24, 3xIQR_outlier_rate=0.000, shapiro_p=3.01e-15",
+        "method": "shapiro",
+        "name": "normality_male",
+        "p_value": 3.0098475722338287e-15,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9441983183318626
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.9997.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.999739456149141,
+        "passed": true,
+        "severity": "info",
+        "statistic": 1.0667055921918542e-07
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "female",
+        "male"
+      ],
+      "groups": {
+        "female": {
+          "iqr": 24.75,
+          "max": 64.0,
+          "mean": 39.503021148036254,
+          "median": 40.0,
+          "min": 18.0,
+          "n": 662,
+          "sd": 14.054222528802983
+        },
+        "male": {
+          "iqr": 25.0,
+          "max": 64.0,
+          "mean": 38.946666666666665,
+          "median": 39.0,
+          "min": 18.0,
+          "n": 675,
+          "sd": 14.03958371816018
+        }
+      },
+      "higher_group": "female",
+      "mean_diff": 0.5563544813695884,
+      "mean_diff_ci_high": 2.0636897019767773,
+      "mean_diff_ci_low": -0.9509807392376004
+    },
+    "df": 1334.4389782527212,
+    "direction_observed": "a_greater",
+    "effect": {
+      "ci_high": 0.14680477969120503,
+      "ci_low": -0.06763507158166242,
+      "ci_method": "analytic_hedges_olkin",
+      "comparable_value": 0.0395848540547713,
+      "magnitude": "negligible",
+      "name": "hedges_g",
+      "value": 0.0395848540547713
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "female": 662,
+      "male": 675
+    },
+    "hypothesis_id": "15d74a366b0a3bca",
+    "n_used": 1337,
+    "p_value": 0.4691462319205679,
+    "runtime_ms": 10.844,
+    "schema_version": "1.0",
+    "seed": 1190906482,
+    "selection_trace": [
+      {
+        "input": {
+          "both_large_clt": true,
+          "both_normal": true,
+          "max_abs_skew": 0.08,
+          "max_outlier_rate_3iqr": 0.0,
+          "n1": 662,
+          "n2": 675
+        },
+        "outcome": "welch_t",
+        "rule": "normality_and_clt"
+      }
+    ],
+    "statistic": 0.7240756145556568,
+    "status": "ok",
+    "test_name": "welch_t",
+    "test_selection_reason": "Both groups pass approximate normality; selected Welch's t-test.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "Table 6x2 (n=1337): min_expected=3.69, cells>=5=91.7%; chi2_eligible=True.",
+        "method": "cochran_rule",
+        "name": "expected_counts",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 3.68885564697083
+      }
+    ],
+    "descriptives": {
+      "col_labels": [
+        "no",
+        "yes"
+      ],
+      "df_star": 1,
+      "dropped_levels": [],
+      "min_expected_count": 3.6889,
+      "observed": [
+        [
+          458,
+          115
+        ],
+        [
+          263,
+          61
+        ],
+        [
+          185,
+          55
+        ],
+        [
+          118,
+          39
+        ],
+        [
+          22,
+          3
+        ],
+        [
+          17,
+          1
+        ]
+      ],
+      "row_labels": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "row_percentages": [
+        [
+          79.93,
+          20.07
+        ],
+        [
+          81.17,
+          18.83
+        ],
+        [
+          77.08,
+          22.92
+        ],
+        [
+          75.16,
+          24.84
+        ],
+        [
+          88.0,
+          12.0
+        ],
+        [
+          94.44,
+          5.56
+        ]
+      ],
+      "top_residual_cells": [
+        {
+          "adj_residual": 1.581,
+          "col": "no",
+          "expected": 14.31,
+          "observed": 17,
+          "row": "5",
+          "row_pct": 94.44
+        },
+        {
+          "adj_residual": -1.581,
+          "col": "yes",
+          "expected": 3.69,
+          "observed": 1,
+          "row": "5",
+          "row_pct": 5.56
+        },
+        {
+          "adj_residual": -1.436,
+          "col": "no",
+          "expected": 124.82,
+          "observed": 118,
+          "row": "3",
+          "row_pct": 75.16
+        }
+      ]
+    },
+    "df": 5.0,
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": null,
+      "ci_low": null,
+      "ci_method": null,
+      "comparable_value": 0.03740624142048854,
+      "magnitude": "negligible",
+      "name": "cramers_v_bc",
+      "value": 0.03740624142048854
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": null,
+    "hypothesis_id": "16934eaf6eb36cff",
+    "n_used": 1337,
+    "p_value": 0.23024973344770525,
+    "runtime_ms": 13.605,
+    "schema_version": "1.0",
+    "seed": 3277290765,
+    "selection_trace": [
+      {
+        "input": {
+          "chi2_eligible": true,
+          "is_2x2": false,
+          "min_expected": 3.68885564697083,
+          "n_cells": 12,
+          "n_total": 1337,
+          "pct_ge_5": 0.9166666666666666
+        },
+        "outcome": "chi_square",
+        "rule": "rxc_cochran_rule"
+      }
+    ],
+    "statistic": 6.873108602314256,
+    "status": "ok",
+    "test_name": "chi_square",
+    "test_selection_reason": "r x c table satisfies Cochran expected-count rule (>=80% >= 5, min >= 1); selected Pearson chi-square.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "Table 2x2 (n=1337): min_expected=135.67, cells>=5=100.0%; chi2_eligible=True.",
+        "method": "cochran_rule",
+        "name": "expected_counts",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 135.66791323859385
+      }
+    ],
+    "descriptives": {
+      "col_labels": [
+        "no",
+        "yes"
+      ],
+      "df_star": 1,
+      "dropped_levels": [],
+      "min_expected_count": 135.6679,
+      "observed": [
+        [
+          547,
+          115
+        ],
+        [
+          516,
+          159
+        ]
+      ],
+      "odds_ratio": 1.465672,
+      "odds_ratio_ci_high": 1.916884,
+      "odds_ratio_ci_low": 1.12067,
+      "odds_ratio_continuity_correction": false,
+      "phi": 0.076596,
+      "risk_difference": 0.06184,
+      "risk_difference_ci_high": 0.104941,
+      "risk_difference_ci_low": 0.018738,
+      "row_labels": [
+        "female",
+        "male"
+      ],
+      "row_percentages": [
+        [
+          82.63,
+          17.37
+        ],
+        [
+          76.44,
+          23.56
+        ]
+      ],
+      "top_residual_cells": [
+        {
+          "adj_residual": 2.801,
+          "col": "no",
+          "expected": 526.33,
+          "observed": 547,
+          "row": "female",
+          "row_pct": 82.63
+        },
+        {
+          "adj_residual": -2.801,
+          "col": "yes",
+          "expected": 135.67,
+          "observed": 115,
+          "row": "female",
+          "row_pct": 17.37
+        },
+        {
+          "adj_residual": -2.801,
+          "col": "no",
+          "expected": 536.67,
+          "observed": 516,
+          "row": "male",
+          "row_pct": 76.44
+        }
+      ]
+    },
+    "df": 1.0,
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": 0.1304668008204995,
+      "ci_low": 0.0,
+      "ci_method": "bootstrap_percentile",
+      "comparable_value": 0.07156993312081597,
+      "magnitude": "negligible",
+      "name": "cramers_v_bc",
+      "value": 0.07156993312081597
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": null,
+    "hypothesis_id": "2cb47aca909f72e8",
+    "n_used": 1337,
+    "p_value": 0.005098746217145681,
+    "runtime_ms": 13.297,
+    "schema_version": "1.0",
+    "seed": 2124317329,
+    "selection_trace": [
+      {
+        "input": {
+          "chi2_eligible": true,
+          "is_2x2": true,
+          "min_expected": 135.66791323859385,
+          "n_cells": 4,
+          "n_total": 1337,
+          "pct_ge_5": 1.0
+        },
+        "outcome": "chi_square",
+        "rule": "2x2_expected_counts"
+      }
+    ],
+    "statistic": 7.844077785733106,
+    "status": "ok",
+    "test_name": "chi_square",
+    "test_selection_reason": "2x2 table satisfies expected count >= 5 and n >= 40; selected Pearson chi-square.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "High tie rate (96.5% > 50%); Spearman rank correlation preferred.",
+        "method": "tie_rate",
+        "name": "ties",
+        "p_value": null,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.9648
+      },
+      {
+        "detail": "Trimming top/bottom 0.5% changed effect from 0.108 to 0.104 (rel_change=3.8%, sign_flip=False).",
+        "method": "trim_1pct_sensitivity",
+        "name": "outlier_influence",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.0383
+      }
+    ],
+    "descriptives": {
+      "median_a": 39.0,
+      "median_b": 30.4,
+      "n": 1337,
+      "ols_intercept": 28.80056370269898,
+      "ols_slope": 0.04749583008183569,
+      "sensitivity_alt_test": {
+        "agrees": true,
+        "effect_value": 0.10934361041896885,
+        "p_value": 6.164372237148543e-05,
+        "test_name": "pearson"
+      },
+      "spearman_rho": 0.10789678479765061,
+      "ties_rate_a": 0.9648,
+      "ties_rate_b": 0.5901
+    },
+    "df": 1335.0,
+    "direction_observed": "positive",
+    "effect": {
+      "ci_high": 0.1609534676747809,
+      "ci_low": 0.050915526649630456,
+      "ci_method": "bootstrap_percentile",
+      "comparable_value": 0.10789678479765061,
+      "magnitude": "small",
+      "name": "spearman_rho",
+      "value": 0.10789678479765061
+    },
+    "error": null,
+    "fallback_used": true,
+    "group_sizes": null,
+    "hypothesis_id": "4c3d52697add8a19",
+    "n_used": 1337,
+    "p_value": 7.714446033533976e-05,
+    "runtime_ms": 3.631,
+    "schema_version": "1.0",
+    "seed": 427795692,
+    "selection_trace": [
+      {
+        "input": {
+          "max_ties_rate": 0.9648
+        },
+        "outcome": "spearman",
+        "rule": "high_ties"
+      }
+    ],
+    "statistic": 0.10789678479765061,
+    "status": "ok",
+    "test_name": "spearman",
+    "test_selection_reason": "Variables have >50% tied values; selected Spearman rank correlation.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=324, skew=0.23, excess_kurtosis=-0.29, 3xIQR_outlier_rate=0.000, shapiro_p=0.07964",
+        "method": "shapiro",
+        "name": "normality_northeast",
+        "p_value": 0.07963933401541393,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9920328389225471
+      },
+      {
+        "detail": "n=324, skew=0.05, excess_kurtosis=-0.30, 3xIQR_outlier_rate=0.000, shapiro_p=0.4564",
+        "method": "shapiro",
+        "name": "normality_northwest",
+        "p_value": 0.45644773127954164,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.995407853256035
+      },
+      {
+        "detail": "n=364, skew=0.22, excess_kurtosis=-0.30, 3xIQR_outlier_rate=0.000, shapiro_p=0.02704",
+        "method": "shapiro",
+        "name": "normality_southeast",
+        "p_value": 0.027044741334095224,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9910891915833157
+      },
+      {
+        "detail": "n=325, skew=0.16, excess_kurtosis=-0.12, 3xIQR_outlier_rate=0.000, shapiro_p=0.363",
+        "method": "shapiro",
+        "name": "normality_southwest",
+        "p_value": 0.36296471144790743,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9949269360950754
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.0003962.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.00039621339987129067,
+        "passed": false,
+        "severity": "info",
+        "statistic": 6.112705911854986
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "northeast",
+        "northwest",
+        "southeast",
+        "southwest"
+      ],
+      "groups": {
+        "northeast": {
+          "iqr": 8.027499999999996,
+          "mean": 29.173503086419753,
+          "median": 28.88,
+          "n": 324,
+          "sd": 5.93751330426977
+        },
+        "northwest": {
+          "iqr": 7.029999999999998,
+          "mean": 29.195493827160494,
+          "median": 28.88,
+          "n": 324,
+          "sd": 5.144127109454823
+        },
+        "southeast": {
+          "iqr": 9.239999999999998,
+          "mean": 33.35598901098901,
+          "median": 33.33,
+          "n": 364,
+          "sd": 6.47764793043144
+        },
+        "southwest": {
+          "iqr": 7.700000000000003,
+          "mean": 30.59661538461538,
+          "median": 30.3,
+          "n": 325,
+          "sd": 5.69183579189187
+        }
+      },
+      "highest_group": "southeast",
+      "lowest_group": "northeast",
+      "omega_squared": 0.07949133852147634
+    },
+    "df": [
+      3.0,
+      739.0726157866778
+    ],
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": 0.11549333132491284,
+      "ci_low": 0.056799390452590436,
+      "ci_method": "bootstrap_percentile",
+      "comparable_value": 0.08161299256110031,
+      "magnitude": "medium",
+      "name": "eta_squared",
+      "value": 0.08161299256110031
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "northeast": 324,
+      "northwest": 324,
+      "southeast": 364,
+      "southwest": 325
+    },
+    "hypothesis_id": "5da20203ad979461",
+    "n_used": 1337,
+    "p_value": 1.2434430714640227e-21,
+    "runtime_ms": 13.863,
+    "schema_version": "1.0",
+    "seed": 9333550,
+    "selection_trace": [
+      {
+        "input": {
+          "all_large_clt": true,
+          "all_normal": true,
+          "k_groups": 4,
+          "max_abs_skew": 0.229,
+          "min_group_n": 324
+        },
+        "outcome": "welch_anova",
+        "rule": "multi_group_normality_and_clt"
+      }
+    ],
+    "statistic": 35.840010823204764,
+    "status": "ok",
+    "test_name": "welch_anova",
+    "test_selection_reason": "All groups pass approximate normality; selected Welch's ANOVA.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=1063, skew=0.03, excess_kurtosis=-1.27, 3xIQR_outlier_rate=0.000, shapiro_p=8.879e-20",
+        "method": "shapiro",
+        "name": "normality_no",
+        "p_value": 8.879078173073161e-20,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9431083606015009
+      },
+      {
+        "detail": "n=274, skew=0.16, excess_kurtosis=-1.12, 3xIQR_outlier_rate=0.000, shapiro_p=2.889e-08",
+        "method": "shapiro",
+        "name": "normality_yes",
+        "p_value": 2.8892107532066055e-08,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9481705791599788
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.4813.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.4812518995441343,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.49630310389615656
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "no",
+        "yes"
+      ],
+      "groups": {
+        "no": {
+          "iqr": 25.0,
+          "max": 64.0,
+          "mean": 39.404515522107246,
+          "median": 40.0,
+          "min": 18.0,
+          "n": 1063,
+          "sd": 14.076133395927226
+        },
+        "yes": {
+          "iqr": 22.0,
+          "max": 64.0,
+          "mean": 38.51459854014598,
+          "median": 38.0,
+          "min": 18.0,
+          "n": 274,
+          "sd": 13.923185607370435
+        }
+      },
+      "higher_group": "no",
+      "mean_diff": 0.8899169819612638,
+      "mean_diff_ci_high": 2.748238030691202,
+      "mean_diff_ci_low": -0.9684040667686746
+    },
+    "df": 428.15581675282743,
+    "direction_observed": "a_greater",
+    "effect": {
+      "ci_high": 0.19613998226229304,
+      "ci_low": -0.06948744436518775,
+      "ci_method": "analytic_hedges_olkin",
+      "comparable_value": 0.06332626894855264,
+      "magnitude": "negligible",
+      "name": "hedges_g",
+      "value": 0.06332626894855264
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "no": 1063,
+      "yes": 274
+    },
+    "hypothesis_id": "6cebb444aca418b8",
+    "n_used": 1337,
+    "p_value": 0.34710612620687176,
+    "runtime_ms": 12.498,
+    "schema_version": "1.0",
+    "seed": 104171993,
+    "selection_trace": [
+      {
+        "input": {
+          "both_large_clt": true,
+          "both_normal": true,
+          "max_abs_skew": 0.157,
+          "max_outlier_rate_3iqr": 0.0,
+          "n1": 1063,
+          "n2": 274
+        },
+        "outcome": "welch_t",
+        "rule": "normality_and_clt"
+      }
+    ],
+    "statistic": 0.9412526993908815,
+    "status": "ok",
+    "test_name": "welch_t",
+    "test_selection_reason": "Both groups pass approximate normality; selected Welch's t-test.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "High tie rate (59.0% > 50%); Spearman rank correlation preferred.",
+        "method": "tie_rate",
+        "name": "ties",
+        "p_value": null,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.5901
+      },
+      {
+        "detail": "Trimming top/bottom 0.5% changed effect from 0.120 to 0.115 (rel_change=4.2%, sign_flip=False).",
+        "method": "trim_1pct_sensitivity",
+        "name": "outlier_influence",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.0421
+      }
+    ],
+    "descriptives": {
+      "median_a": 30.4,
+      "median_b": 9386.1613,
+      "n": 1337,
+      "ols_intercept": 1202.1403670662148,
+      "ols_slope": 393.8558912099734,
+      "sensitivity_alt_test": {
+        "agrees": true,
+        "effect_value": 0.19840083122624935,
+        "p_value": 2.4680404264514255e-13,
+        "test_name": "pearson"
+      },
+      "spearman_rho": 0.11958495819244366,
+      "ties_rate_a": 0.5901,
+      "ties_rate_b": 0.0
+    },
+    "df": 1335.0,
+    "direction_observed": "positive",
+    "effect": {
+      "ci_high": 0.17226049320454542,
+      "ci_low": 0.06303225256991027,
+      "ci_method": "bootstrap_percentile",
+      "comparable_value": 0.11958495819244366,
+      "magnitude": "small",
+      "name": "spearman_rho",
+      "value": 0.11958495819244366
+    },
+    "error": null,
+    "fallback_used": true,
+    "group_sizes": null,
+    "hypothesis_id": "7879d2e98b9f3fc3",
+    "n_used": 1337,
+    "p_value": 1.1637179203181515e-05,
+    "runtime_ms": 3.448,
+    "schema_version": "1.0",
+    "seed": 1339632298,
+    "selection_trace": [
+      {
+        "input": {
+          "max_ties_rate": 0.5901
+        },
+        "outcome": "spearman",
+        "rule": "high_ties"
+      }
+    ],
+    "statistic": 0.11958495819244366,
+    "status": "ok",
+    "test_name": "spearman",
+    "test_selection_reason": "Variables have >50% tied values; selected Spearman rank correlation.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "Table 4x2 (n=1337): min_expected=66.40, cells>=5=100.0%; chi2_eligible=True.",
+        "method": "cochran_rule",
+        "name": "expected_counts",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 66.39940164547494
+      }
+    ],
+    "descriptives": {
+      "col_labels": [
+        "no",
+        "yes"
+      ],
+      "df_star": 1,
+      "dropped_levels": [],
+      "min_expected_count": 66.3994,
+      "observed": [
+        [
+          257,
+          67
+        ],
+        [
+          266,
+          58
+        ],
+        [
+          273,
+          91
+        ],
+        [
+          267,
+          58
+        ]
+      ],
+      "row_labels": [
+        "northeast",
+        "northwest",
+        "southeast",
+        "southwest"
+      ],
+      "row_percentages": [
+        [
+          79.32,
+          20.68
+        ],
+        [
+          82.1,
+          17.9
+        ],
+        [
+          75.0,
+          25.0
+        ],
+        [
+          82.15,
+          17.85
+        ]
+      ],
+      "top_residual_cells": [
+        {
+          "adj_residual": -2.497,
+          "col": "no",
+          "expected": 289.4,
+          "observed": 273,
+          "row": "southeast",
+          "row_pct": 75.0
+        },
+        {
+          "adj_residual": 2.497,
+          "col": "yes",
+          "expected": 74.6,
+          "observed": 91,
+          "row": "southeast",
+          "row_pct": 25.0
+        },
+        {
+          "adj_residual": 1.359,
+          "col": "no",
+          "expected": 258.4,
+          "observed": 267,
+          "row": "southwest",
+          "row_pct": 82.15
+        }
+      ]
+    },
+    "df": 3.0,
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": 0.13008378748163907,
+      "ci_low": 0.0,
+      "ci_method": "bootstrap_percentile",
+      "comparable_value": 0.05657158193907044,
+      "magnitude": "negligible",
+      "name": "cramers_v_bc",
+      "value": 0.05657158193907044
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": null,
+    "hypothesis_id": "8c16745ee5780c67",
+    "n_used": 1337,
+    "p_value": 0.06354826573182334,
+    "runtime_ms": 12.776,
+    "schema_version": "1.0",
+    "seed": 1376797471,
+    "selection_trace": [
+      {
+        "input": {
+          "chi2_eligible": true,
+          "is_2x2": false,
+          "min_expected": 66.39940164547494,
+          "n_cells": 8,
+          "n_total": 1337,
+          "pct_ge_5": 1.0
+        },
+        "outcome": "chi_square",
+        "rule": "rxc_cochran_rule"
+      }
+    ],
+    "statistic": 7.27790254132191,
+    "status": "ok",
+    "test_name": "chi_square",
+    "test_selection_reason": "r x c table satisfies Cochran expected-count rule (>=80% >= 5, min >= 1); selected Pearson chi-square.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "High tie rate (96.5% > 50%); Spearman rank correlation preferred.",
+        "method": "tie_rate",
+        "name": "ties",
+        "p_value": null,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.9648
+      },
+      {
+        "detail": "Trimming top/bottom 0.5% changed effect from 0.534 to 0.529 (rel_change=0.8%, sign_flip=False).",
+        "method": "trim_1pct_sensitivity",
+        "name": "outlier_influence",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.0085
+      }
+    ],
+    "descriptives": {
+      "median_a": 39.0,
+      "median_b": 9386.1613,
+      "n": 1337,
+      "ols_intercept": 3190.0217210318224,
+      "ols_slope": 257.2297175179149,
+      "sensitivity_alt_test": {
+        "agrees": true,
+        "effect_value": 0.2983082125097864,
+        "p_value": 6.975748762691935e-29,
+        "test_name": "pearson"
+      },
+      "spearman_rho": 0.5335232787189862,
+      "ties_rate_a": 0.9648,
+      "ties_rate_b": 0.0
+    },
+    "df": 1335.0,
+    "direction_observed": "positive",
+    "effect": {
+      "ci_high": 0.5824891025769287,
+      "ci_low": 0.48247763124887566,
+      "ci_method": "bootstrap_percentile",
+      "comparable_value": 0.5335232787189862,
+      "magnitude": "large",
+      "name": "spearman_rho",
+      "value": 0.5335232787189862
+    },
+    "error": null,
+    "fallback_used": true,
+    "group_sizes": null,
+    "hypothesis_id": "9ceff6678f472d3a",
+    "n_used": 1337,
+    "p_value": 3.1877556503224748e-99,
+    "runtime_ms": 3.022,
+    "schema_version": "1.0",
+    "seed": 1517439508,
+    "selection_trace": [
+      {
+        "input": {
+          "max_ties_rate": 0.9648
+        },
+        "outcome": "spearman",
+        "rule": "high_ties"
+      }
+    ],
+    "statistic": 0.5335232787189862,
+    "status": "ok",
+    "test_name": "spearman",
+    "test_selection_reason": "Variables have >50% tied values; selected Spearman rank correlation.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=662, skew=0.25, excess_kurtosis=-0.25, 3xIQR_outlier_rate=0.000, shapiro_p=0.003543",
+        "method": "shapiro",
+        "name": "normality_female",
+        "p_value": 0.0035431014795204324,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9930256913620045
+      },
+      {
+        "detail": "n=675, skew=0.32, excess_kurtosis=0.12, 3xIQR_outlier_rate=0.000, shapiro_p=0.003159",
+        "method": "shapiro",
+        "name": "normality_male",
+        "p_value": 0.003159176943991796,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9930462285644363
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.9217.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.9216570820140155,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.009675710485918285
+      },
+      {
+        "detail": "Trimming top/bottom 0.5% changed effect from -0.093 to -0.094 (rel_change=1.5%, sign_flip=False).",
+        "method": "trim_1pct_sensitivity",
+        "name": "outlier_influence",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.0147
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "female",
+        "male"
+      ],
+      "groups": {
+        "female": {
+          "iqr": 8.188749999999999,
+          "max": 48.07,
+          "mean": 30.37774924471299,
+          "median": 30.1075,
+          "min": 16.815,
+          "n": 662,
+          "sd": 6.046023085745335
+        },
+        "male": {
+          "iqr": 8.615000000000006,
+          "max": 53.13,
+          "mean": 30.94365185185185,
+          "median": 30.69,
+          "min": 15.96,
+          "n": 675,
+          "sd": 6.1449730695502085
+        }
+      },
+      "higher_group": "male",
+      "mean_diff": -0.5659026071388595,
+      "mean_diff_ci_high": 0.08815510013127725,
+      "mean_diff_ci_low": -1.2199603144089963,
+      "sensitivity_alt_test": {
+        "agrees": true,
+        "effect_value": -0.0517063891686248,
+        "p_value": 0.10171533248741511,
+        "test_name": "mann_whitney_u"
+      }
+    },
+    "df": 1334.9860895146508,
+    "direction_observed": "b_greater",
+    "effect": {
+      "ci_high": 0.01449027151601065,
+      "ci_low": -0.2000440342840109,
+      "ci_method": "analytic_hedges_olkin",
+      "comparable_value": 0.09277688138400013,
+      "magnitude": "negligible",
+      "name": "hedges_g",
+      "value": -0.09277688138400013
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "female": 662,
+      "male": 675
+    },
+    "hypothesis_id": "b6b08a817c661487",
+    "n_used": 1337,
+    "p_value": 0.0898663673852335,
+    "runtime_ms": 11.899,
+    "schema_version": "1.0",
+    "seed": 2957877302,
+    "selection_trace": [
+      {
+        "input": {
+          "both_large_clt": true,
+          "both_normal": true,
+          "max_abs_skew": 0.317,
+          "max_outlier_rate_3iqr": 0.0,
+          "n1": 662,
+          "n2": 675
+        },
+        "outcome": "welch_t",
+        "rule": "normality_and_clt"
+      }
+    ],
+    "statistic": -1.697335300216174,
+    "status": "ok",
+    "test_name": "welch_t",
+    "test_selection_reason": "Both groups pass approximate normality; selected Welch's t-test.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "Table 6x4 (n=1337): min_expected=4.36, cells>=5=83.3%; chi2_eligible=True.",
+        "method": "cochran_rule",
+        "name": "expected_counts",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 4.362004487658938
+      }
+    ],
+    "descriptives": {
+      "col_labels": [
+        "northeast",
+        "northwest",
+        "southeast",
+        "southwest"
+      ],
+      "df_star": 3,
+      "dropped_levels": [],
+      "min_expected_count": 4.362,
+      "observed": [
+        [
+          147,
+          131,
+          157,
+          138
+        ],
+        [
+          77,
+          74,
+          95,
+          78
+        ],
+        [
+          51,
+          66,
+          66,
+          57
+        ],
+        [
+          39,
+          46,
+          35,
+          37
+        ],
+        [
+          7,
+          6,
+          5,
+          7
+        ],
+        [
+          3,
+          1,
+          6,
+          8
+        ]
+      ],
+      "row_labels": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "row_percentages": [
+        [
+          25.65,
+          22.86,
+          27.4,
+          24.08
+        ],
+        [
+          23.77,
+          22.84,
+          29.32,
+          24.07
+        ],
+        [
+          21.25,
+          27.5,
+          27.5,
+          23.75
+        ],
+        [
+          24.84,
+          29.3,
+          22.29,
+          23.57
+        ],
+        [
+          28.0,
+          24.0,
+          20.0,
+          28.0
+        ],
+        [
+          16.67,
+          5.56,
+          33.33,
+          44.44
+        ]
+      ],
+      "top_residual_cells": [
+        {
+          "adj_residual": 2.005,
+          "col": "southwest",
+          "expected": 4.38,
+          "observed": 8,
+          "row": "5",
+          "row_pct": 44.44
+        },
+        {
+          "adj_residual": -1.862,
+          "col": "northwest",
+          "expected": 4.36,
+          "observed": 1,
+          "row": "5",
+          "row_pct": 5.56
+        },
+        {
+          "adj_residual": 1.577,
+          "col": "northwest",
+          "expected": 38.05,
+          "observed": 46,
+          "row": "3",
+          "row_pct": 29.3
+        }
+      ]
+    },
+    "df": 15.0,
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": null,
+      "ci_low": null,
+      "ci_method": null,
+      "comparable_value": 0.0,
+      "magnitude": "negligible",
+      "name": "cramers_v_bc",
+      "value": 0.0
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": null,
+    "hypothesis_id": "c1347eda564dedc3",
+    "n_used": 1337,
+    "p_value": 0.5337164986734864,
+    "runtime_ms": 13.432,
+    "schema_version": "1.0",
+    "seed": 1152848283,
+    "selection_trace": [
+      {
+        "input": {
+          "chi2_eligible": true,
+          "is_2x2": false,
+          "min_expected": 4.362004487658938,
+          "n_cells": 24,
+          "n_total": 1337,
+          "pct_ge_5": 0.8333333333333334
+        },
+        "outcome": "chi_square",
+        "rule": "rxc_cochran_rule"
+      }
+    ],
+    "statistic": 13.892248487209807,
+    "status": "ok",
+    "test_name": "chi_square",
+    "test_selection_reason": "r x c table satisfies Cochran expected-count rule (>=80% >= 5, min >= 1); selected Pearson chi-square.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=573, skew=0.23, excess_kurtosis=-0.21, 3xIQR_outlier_rate=0.000, shapiro_p=0.01165",
+        "method": "shapiro",
+        "name": "normality_0",
+        "p_value": 0.011648810580613693,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9932839838623487
+      },
+      {
+        "detail": "n=324, skew=0.47, excess_kurtosis=0.43, 3xIQR_outlier_rate=0.000, shapiro_p=0.003532",
+        "method": "shapiro",
+        "name": "normality_1",
+        "p_value": 0.003532390072153717,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9862466435588191
+      },
+      {
+        "detail": "n=240, skew=0.16, excess_kurtosis=-0.25, 3xIQR_outlier_rate=0.000, shapiro_p=0.08951",
+        "method": "shapiro",
+        "name": "normality_2",
+        "p_value": 0.08951436789469633,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9898054043657563
+      },
+      {
+        "detail": "n=157, skew=0.19, excess_kurtosis=-0.26, 3xIQR_outlier_rate=0.000, shapiro_p=0.4428",
+        "method": "shapiro",
+        "name": "normality_3",
+        "p_value": 0.4427825753028101,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9911952002769108
+      },
+      {
+        "detail": "n=25, skew=0.78, excess_kurtosis=0.15, 3xIQR_outlier_rate=0.000, shapiro_p=0.06786",
+        "method": "shapiro",
+        "name": "normality_4",
+        "p_value": 0.06785557797873631,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9253339549038097
+      },
+      {
+        "detail": "n=18, skew=0.97, excess_kurtosis=0.85, 3xIQR_outlier_rate=0.000, shapiro_p=0.1359",
+        "method": "shapiro",
+        "name": "normality_5",
+        "p_value": 0.1359318541951438,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9212316951019603
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.2282.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.22824090234470334,
+        "passed": true,
+        "severity": "info",
+        "statistic": 1.3818744990382013
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "groups": {
+        "0": {
+          "iqr": 8.645000000000003,
+          "mean": 30.550226876090747,
+          "median": 30.3,
+          "n": 573,
+          "sd": 6.0443825667120805
+        },
+        "1": {
+          "iqr": 7.622499999999995,
+          "mean": 30.623148148148147,
+          "median": 30.015,
+          "n": 324,
+          "sd": 6.101434609988507
+        },
+        "2": {
+          "iqr": 9.57125,
+          "mean": 30.978104166666665,
+          "median": 31.64,
+          "n": 240,
+          "sd": 6.509644393939459
+        },
+        "3": {
+          "iqr": 7.055,
+          "mean": 30.684331210191086,
+          "median": 30.495,
+          "n": 157,
+          "sd": 5.787173070334673
+        },
+        "4": {
+          "iqr": 5.444999999999997,
+          "mean": 31.391199999999998,
+          "median": 29.64,
+          "n": 25,
+          "sd": 4.627210795933118
+        },
+        "5": {
+          "iqr": 8.752499999999998,
+          "mean": 29.605,
+          "median": 28.55,
+          "n": 18,
+          "sd": 7.1396856908904525
+        }
+      },
+      "highest_group": "4",
+      "lowest_group": "5",
+      "omega_squared": 0.0
+    },
+    "df": [
+      5.0,
+      109.13648509763877
+    ],
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": null,
+      "ci_low": null,
+      "ci_method": null,
+      "comparable_value": 0.0013094921405041825,
+      "magnitude": "negligible",
+      "name": "eta_squared",
+      "value": 0.0013094921405041825
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "0": 573,
+      "1": 324,
+      "2": 240,
+      "3": 157,
+      "4": 25,
+      "5": 18
+    },
+    "hypothesis_id": "cb56fc08a3e6f85a",
+    "n_used": 1337,
+    "p_value": 0.8815591876131736,
+    "runtime_ms": 19.3,
+    "schema_version": "1.0",
+    "seed": 2770935860,
+    "selection_trace": [
+      {
+        "input": {
+          "all_large_clt": false,
+          "all_normal": true,
+          "k_groups": 6,
+          "max_abs_skew": 0.966,
+          "min_group_n": 18
+        },
+        "outcome": "welch_anova",
+        "rule": "multi_group_normality_and_clt"
+      }
+    ],
+    "statistic": 0.34956321502958465,
+    "status": "ok",
+    "test_name": "welch_anova",
+    "test_selection_reason": "All groups pass approximate normality; selected Welch's ANOVA.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=324, skew=1.49, excess_kurtosis=1.76, 3xIQR_outlier_rate=0.003, shapiro_p=6.552e-18",
+        "method": "shapiro",
+        "name": "normality_northeast",
+        "p_value": 6.552444566263893e-18,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.8353424991835889
+      },
+      {
+        "detail": "n=324, skew=1.68, excess_kurtosis=2.62, 3xIQR_outlier_rate=0.022, shapiro_p=4.661e-19",
+        "method": "shapiro",
+        "name": "normality_northwest",
+        "p_value": 4.660739797809046e-19,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.8129669718253165
+      },
+      {
+        "detail": "n=364, skew=1.25, excess_kurtosis=0.52, 3xIQR_outlier_rate=0.000, shapiro_p=1.233e-19",
+        "method": "shapiro",
+        "name": "normality_southeast",
+        "p_value": 1.2326308134593296e-19,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.8242295286826982
+      },
+      {
+        "detail": "n=325, skew=1.68, excess_kurtosis=2.11, 3xIQR_outlier_rate=0.049, shapiro_p=2.024e-20",
+        "method": "shapiro",
+        "name": "normality_southwest",
+        "p_value": 2.0237675743700212e-20,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.78429565807721
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.000869.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.0008689544824002284,
+        "passed": false,
+        "severity": "info",
+        "statistic": 5.5534798606999125
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "northeast",
+        "northwest",
+        "southeast",
+        "southwest"
+      ],
+      "groups": {
+        "northeast": {
+          "iqr": 11493.0418125,
+          "mean": 13406.384516385804,
+          "median": 10057.652025,
+          "n": 324,
+          "sd": 11255.803065578462
+        },
+        "northwest": {
+          "iqr": 10055.112575,
+          "mean": 12450.840843950617,
+          "median": 8976.97725,
+          "n": 324,
+          "sd": 11073.125698977345
+        },
+        "southeast": {
+          "iqr": 15085.400699999998,
+          "mean": 14735.411437609888,
+          "median": 9294.131949999999,
+          "n": 364,
+          "sd": 13971.098588991747
+        },
+        "southwest": {
+          "iqr": 8711.45,
+          "mean": 12346.937377292308,
+          "median": 8798.593,
+          "n": 325,
+          "sd": 11557.179100748781
+        }
+      },
+      "highest_group": "southeast",
+      "lowest_group": "southwest",
+      "omega_squared": 0.0043033307850092115
+    },
+    "df": [
+      3.0,
+      740.4157504811701
+    ],
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": 0.02095754541921798,
+      "ci_low": 0.0012836875085071424,
+      "ci_method": "bootstrap_percentile",
+      "comparable_value": 0.006542376581730342,
+      "magnitude": "negligible",
+      "name": "eta_squared",
+      "value": 0.006542376581730342
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "northeast": 324,
+      "northwest": 324,
+      "southeast": 364,
+      "southwest": 325
+    },
+    "hypothesis_id": "cbc355b43e0dd6f9",
+    "n_used": 1337,
+    "p_value": 0.05348899434656482,
+    "runtime_ms": 12.132,
+    "schema_version": "1.0",
+    "seed": 695510840,
+    "selection_trace": [
+      {
+        "input": {
+          "all_large_clt": true,
+          "all_normal": false,
+          "k_groups": 4,
+          "max_abs_skew": 1.682,
+          "min_group_n": 324
+        },
+        "outcome": "welch_anova",
+        "rule": "multi_group_normality_and_clt"
+      }
+    ],
+    "statistic": 2.566222713601441,
+    "status": "ok",
+    "test_name": "welch_anova",
+    "test_selection_reason": "All groups have n >= 50 with |skew| <= 2.0 (CLT); selected Welch's ANOVA.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=573, skew=0.15, excess_kurtosis=-1.58, 3xIQR_outlier_rate=0.000, shapiro_p=7.306e-21",
+        "method": "shapiro",
+        "name": "normality_0",
+        "p_value": 7.306243683786842e-21,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.8772526813041063
+      },
+      {
+        "detail": "n=324, skew=-0.03, excess_kurtosis=-0.93, 3xIQR_outlier_rate=0.000, shapiro_p=1.23e-05",
+        "method": "shapiro",
+        "name": "normality_1",
+        "p_value": 1.2297108198776247e-05,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9737295714562743
+      },
+      {
+        "detail": "n=240, skew=0.01, excess_kurtosis=-0.77, 3xIQR_outlier_rate=0.000, shapiro_p=0.002425",
+        "method": "shapiro",
+        "name": "normality_2",
+        "p_value": 0.002424621817397023,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9807732954806674
+      },
+      {
+        "detail": "n=157, skew=-0.03, excess_kurtosis=-1.06, 3xIQR_outlier_rate=0.000, shapiro_p=0.000927",
+        "method": "shapiro",
+        "name": "normality_3",
+        "p_value": 0.0009270243768984421,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9674849670491007
+      },
+      {
+        "detail": "n=25, skew=0.01, excess_kurtosis=-1.04, 3xIQR_outlier_rate=0.000, shapiro_p=0.4704",
+        "method": "shapiro",
+        "name": "normality_4",
+        "p_value": 0.4703817397733217,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9626794458296156
+      },
+      {
+        "detail": "n=18, skew=-0.29, excess_kurtosis=-0.90, 3xIQR_outlier_rate=0.000, shapiro_p=0.3812",
+        "method": "shapiro",
+        "name": "normality_5",
+        "p_value": 0.38123590191605783,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9470918232198723
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=4.014e-36.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 4.0135958678862855e-36,
+        "passed": false,
+        "severity": "info",
+        "statistic": 37.56622552467216
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "groups": {
+        "0": {
+          "iqr": 33.0,
+          "mean": 38.478184991274,
+          "median": 36.0,
+          "n": 573,
+          "sd": 16.430451927629317
+        },
+        "1": {
+          "iqr": 19.0,
+          "mean": 39.4537037037037,
+          "median": 40.0,
+          "n": 324,
+          "sd": 12.067445339180281
+        },
+        "2": {
+          "iqr": 18.0,
+          "mean": 39.44583333333333,
+          "median": 40.0,
+          "n": 240,
+          "sd": 11.588714722784442
+        },
+        "3": {
+          "iqr": 21.0,
+          "mean": 41.56687898089172,
+          "median": 41.0,
+          "n": 157,
+          "sd": 12.206174291637186
+        },
+        "4": {
+          "iqr": 19.0,
+          "mean": 39.0,
+          "median": 39.0,
+          "n": 25,
+          "sd": 12.138094304022083
+        },
+        "5": {
+          "iqr": 13.75,
+          "mean": 35.611111111111114,
+          "median": 39.0,
+          "n": 18,
+          "sd": 10.123582770174558
+        }
+      },
+      "highest_group": "3",
+      "lowest_group": "5",
+      "omega_squared": 0.0017485986440459445
+    },
+    "df": [
+      5.0,
+      110.54286200595843
+    ],
+    "direction_observed": "any",
+    "effect": {
+      "ci_high": null,
+      "ci_low": null,
+      "ci_method": null,
+      "comparable_value": 0.005485871108744323,
+      "magnitude": "negligible",
+      "name": "eta_squared",
+      "value": 0.005485871108744323
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "0": 573,
+      "1": 324,
+      "2": 240,
+      "3": 157,
+      "4": 25,
+      "5": 18
+    },
+    "hypothesis_id": "d428bc651c8a9989",
+    "n_used": 1337,
+    "p_value": 0.11527113732177792,
+    "runtime_ms": 22.116,
+    "schema_version": "1.0",
+    "seed": 123013431,
+    "selection_trace": [
+      {
+        "input": {
+          "all_large_clt": false,
+          "all_normal": true,
+          "k_groups": 6,
+          "max_abs_skew": 0.287,
+          "min_group_n": 18
+        },
+        "outcome": "welch_anova",
+        "rule": "multi_group_normality_and_clt"
+      }
+    ],
+    "statistic": 1.817054178138682,
+    "status": "ok",
+    "test_name": "welch_anova",
+    "test_selection_reason": "All groups pass approximate normality; selected Welch's ANOVA.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=1063, skew=1.54, excess_kurtosis=3.15, 3xIQR_outlier_rate=0.003, shapiro_p=1.504e-28",
+        "method": "shapiro",
+        "name": "normality_no",
+        "p_value": 1.5035032808411558e-28,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.872913393508985
+      },
+      {
+        "detail": "n=274, skew=0.13, excess_kurtosis=-1.04, 3xIQR_outlier_rate=0.000, shapiro_p=3.625e-09",
+        "method": "shapiro",
+        "name": "normality_yes",
+        "p_value": 3.6249900590074145e-09,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.9395519386965634
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=1.67e-66.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 1.670117565125241e-66,
+        "passed": false,
+        "severity": "info",
+        "statistic": 332.47137394800666
+      },
+      {
+        "detail": "Trimming top/bottom 0.5% changed effect from -3.159 to -3.301 (rel_change=4.5%, sign_flip=False).",
+        "method": "trim_1pct_sensitivity",
+        "name": "outlier_influence",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.045
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "no",
+        "yes"
+      ],
+      "groups": {
+        "no": {
+          "iqr": 7374.1356,
+          "max": 36910.60803,
+          "mean": 8440.660306508937,
+          "median": 7345.7266,
+          "min": 1121.8739,
+          "n": 1063,
+          "sd": 5992.973800106525
+        },
+        "yes": {
+          "iqr": 20192.9630625,
+          "max": 63770.42801,
+          "mean": 32050.23183153284,
+          "median": 34456.348450000005,
+          "min": 12829.4551,
+          "n": 274,
+          "sd": 11541.547175589121
+        }
+      },
+      "higher_group": "yes",
+      "mean_diff": -23609.571525023905,
+      "mean_diff_ci_high": -22190.79008570521,
+      "mean_diff_ci_low": -25028.3529643426,
+      "sensitivity_alt_test": {
+        "agrees": true,
+        "effect_value": -0.9491660429441534,
+        "p_value": 5.74701188239214e-130,
+        "test_name": "mann_whitney_u"
+      }
+    },
+    "df": 311.87741711542276,
+    "direction_observed": "b_greater",
+    "effect": {
+      "ci_high": -2.979665466939462,
+      "ci_low": -3.3373635333406435,
+      "ci_method": "analytic_hedges_olkin",
+      "comparable_value": 3.1585145001400527,
+      "magnitude": "large",
+      "name": "hedges_g",
+      "value": -3.1585145001400527
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "no": 1063,
+      "yes": 274
+    },
+    "hypothesis_id": "dbbefcba4507014b",
+    "n_used": 1337,
+    "p_value": 6.261720774727631e-103,
+    "runtime_ms": 11.007,
+    "schema_version": "1.0",
+    "seed": 2954755599,
+    "selection_trace": [
+      {
+        "input": {
+          "both_large_clt": true,
+          "both_normal": false,
+          "max_abs_skew": 1.538,
+          "max_outlier_rate_3iqr": 0.0028,
+          "n1": 1063,
+          "n2": 274
+        },
+        "outcome": "welch_t",
+        "rule": "normality_and_clt"
+      }
+    ],
+    "statistic": -32.7423097372529,
+    "status": "ok",
+    "test_name": "welch_t",
+    "test_selection_reason": "Both groups have n >= 50 with |skew| <= 2.0 (CLT); selected Welch's t-test.",
+    "warnings": []
+  },
+  {
+    "assumptions": [
+      {
+        "detail": "Rows are assumed independent; clustered or repeated-measures data may inflate false positives.",
+        "method": "design_assumption",
+        "name": "independence_note",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": null
+      },
+      {
+        "detail": "n=662, skew=1.73, excess_kurtosis=2.75, 3xIQR_outlier_rate=0.033, shapiro_p=1.83e-27",
+        "method": "shapiro",
+        "name": "normality_female",
+        "p_value": 1.8303726201913448e-27,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.8053936070521869
+      },
+      {
+        "detail": "n=675, skew=1.33, excess_kurtosis=0.81, 3xIQR_outlier_rate=0.001, shapiro_p=1.271e-26",
+        "method": "shapiro",
+        "name": "normality_male",
+        "p_value": 1.270698716763824e-26,
+        "passed": false,
+        "severity": "info",
+        "statistic": 0.8230361988228667
+      },
+      {
+        "detail": "Brown-Forsythe Levene p=0.001667.",
+        "method": "levene_median",
+        "name": "equal_variance",
+        "p_value": 0.0016672604848662713,
+        "passed": false,
+        "severity": "info",
+        "statistic": 9.924363781581253
+      },
+      {
+        "detail": "Trimming top/bottom 0.5% changed effect from -0.116 to -0.123 (rel_change=5.6%, sign_flip=False).",
+        "method": "trim_1pct_sensitivity",
+        "name": "outlier_influence",
+        "p_value": null,
+        "passed": true,
+        "severity": "info",
+        "statistic": 0.0561
+      }
+    ],
+    "descriptives": {
+      "dropped_levels": [],
+      "group_order": [
+        "female",
+        "male"
+      ],
+      "groups": {
+        "female": {
+          "iqr": 9569.533125000002,
+          "max": 63770.42801,
+          "mean": 12569.578843835347,
+          "median": 9412.9625,
+          "min": 1607.5101,
+          "n": 662,
+          "sd": 11128.703800915438
+        },
+        "male": {
+          "iqr": 14352.662825,
+          "max": 62592.87309,
+          "mean": 13974.998863762965,
+          "median": 9377.9047,
+          "min": 1121.8739,
+          "n": 675,
+          "sd": 12971.958662967088
+        }
+      },
+      "higher_group": "male",
+      "mean_diff": -1405.4200199276183,
+      "mean_diff_ci_high": -109.50078688180997,
+      "mean_diff_ci_low": -2701.3392529734265,
+      "sensitivity_alt_test": {
+        "agrees": false,
+        "effect_value": -0.012411323710417421,
+        "p_value": 0.6944793894954917,
+        "test_name": "mann_whitney_u"
+      }
+    },
+    "df": 1311.854082239577,
+    "direction_observed": "b_greater",
+    "effect": {
+      "ci_high": -0.008838360762979044,
+      "ci_low": -0.22343811810511144,
+      "ci_method": "analytic_hedges_olkin",
+      "comparable_value": 0.11613823943404523,
+      "magnitude": "negligible",
+      "name": "hedges_g",
+      "value": -0.11613823943404523
+    },
+    "error": null,
+    "fallback_used": false,
+    "group_sizes": {
+      "female": 662,
+      "male": 675
+    },
+    "hypothesis_id": "fc87f82acb437423",
+    "n_used": 1337,
+    "p_value": 0.03356154763676579,
+    "runtime_ms": 14.334,
+    "schema_version": "1.0",
+    "seed": 2538139689,
+    "selection_trace": [
+      {
+        "input": {
+          "both_large_clt": true,
+          "both_normal": false,
+          "max_abs_skew": 1.729,
+          "max_outlier_rate_3iqr": 0.0332,
+          "n1": 662,
+          "n2": 675
+        },
+        "outcome": "welch_t",
+        "rule": "normality_and_clt"
+      }
+    ],
+    "statistic": -2.1275372170149476,
+    "status": "ok",
+    "test_name": "welch_t",
+    "test_selection_reason": "Both groups have n >= 50 with |skew| <= 2.0 (CLT); selected Welch's t-test.",
+    "warnings": [
+      "test_sensitive: alternative test 'mann_whitney_u' disagreed (alt p=0.6945, alt effect=-0.012)."
+    ]
+  }
+]

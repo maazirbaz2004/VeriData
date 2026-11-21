@@ -1,0 +1,28 @@
+{
+  "alpha": 0.05,
+  "correction": "bh",
+  "counts_by_rejection_reason": {
+    "effect_below_threshold": 28,
+    "not_significant_after_correction": 44
+  },
+  "counts_by_test": {
+    "chi_square": 34,
+    "kruskal_wallis": 9,
+    "mann_whitney_u": 2,
+    "monte_carlo_chi_square": 2,
+    "spearman": 10,
+    "welch_anova": 11,
+    "welch_t": 23
+  },
+  "dataset_name": "heart_disease",
+  "effect_floor_enabled": true,
+  "fallback_rate": 0.2527,
+  "m_tested": 91,
+  "n_accepted": 47,
+  "n_bh_sig": 47,
+  "n_errors": 0,
+  "n_planned": 91,
+  "n_raw_sig": 50,
+  "n_skipped": 0,
+  "runtime_seconds": 39.263
+}

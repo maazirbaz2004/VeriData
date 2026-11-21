@@ -66,3 +66,16 @@ This document records every **DECISION** and **OPEN** item from `plans/PHASE1_PL
 | **P2-H5** | Sec 5.3 | Causal-language and digit validation on LLM rationales before Phase 5 shared linter exists. | **Chosen:** Implemented local regex validators in `contracts/hypothesis.py` (digit rejection) and `hypotheses/llm_proposer.py` (causal verb rejection); will unify with Phase 5 `reporting/language_lint.py` once built. |
 | **P2-H6** | Sec 7 | Offline natural-language hypothesis parsing fallback when no LLM API key is configured. | **Chosen:** Deterministic normalized token + light stemming + `difflib` fuzzy matching against column names and non-generic categorical levels, plus deterministic regex detection for unsupported causal/ML/time-series questions. Achieves $\ge 85\%$ accuracy on `tests/gold/nl_hypotheses.jsonl` completely offline. |
 
+---
+
+## 5. Phase 3 Decisions (Statistical Tool Library & Validation Layer)
+
+| ID | Section | Plan Requirement / Open Question | Chosen Default & Rationale |
+| :--- | :---: | :--- | :--- |
+| **P3-S1** | Sec 2 | Two-stage execution for bootstrap CIs and sensitivity checks. | **Followed.** Stage A computes all p-values and point effect sizes; Stage B runs bootstrap CIs, paired sensitivity checks (Welch↔MWU, Pearson↔Spearman), and leave-1%-out outlier influence checks only for candidates ($q \le \alpha$ or $p_{\text{raw}} < 0.10$). |
+| **P3-S2** | Sec 4.4 | Yates continuity correction for $2 \times 2$ chi-square (`yates`). | **Chosen:** `stats.yates: false` by default because sparse/small $2 \times 2$ tables (expected $< 5$ or $n < 40$) are routed directly to Fisher's exact test, where Yates's overly conservative correction is unnecessary. |
+| **P3-S3** | Sec 7.6 | Batch vs. chat multiple-testing family accounting. | **Chosen:** Unified session ledger (`ledger.jsonl`). Batch tests form the initial family; chat follow-ups append to the same ledger and recompute BH over `batch ∪ chat`, surfacing any status flips via `Ledger.revalidate()` diffs. |
+| **P3-S4** | Sec 6 | Confidence intervals for selected findings. | **Chosen:** Nominal 95% CIs (unadjusted for post-selection multiplicity), documented in `docs/stats_methods.md` Section 4. `strict_ci` (rejecting CIs that cross 0) defaults to `false`. |
+| **P3-S5** | Sec 9 | Parallelism threshold in `runner.run_all`. | **Chosen:** Use `joblib.Parallel(backend="loky")` when `n_jobs != 1` and there are $\ge 40$ hypotheses; run sequentially for smaller sets to avoid Windows process-spawn overhead while keeping deterministic per-hypothesis RNG seeds (`sha256(seed:hypothesis_id)`). |
+
+

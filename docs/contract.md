@@ -114,4 +114,26 @@ from veridata.contracts.hypothesis import Hypothesis, HypothesisManifest, Hypoth
 from veridata.hypotheses import generate_hypotheses, parse_nl_hypothesis, save_hypothesis_outputs
 ```
 
+---
+
+## 4. Phase 3 -> Phases 4 / 5 / 6 Handoff Contract (`TestResult`, `ValidationDecision`, `Finding`, `SessionLedger`)
+
+> **Schema Version:** `1.0` (`src/veridata/contracts/{results,validation,findings,ledger}.py`)
+> **CLI:** `veridata test --dataset <name> [--alpha 0.05] [--correction bh|by|holm|bonferroni|none] [--no-effect-floor] [--n-jobs N]`
+> **Revalidate:** `veridata validate --dataset <name> [--alpha ...] [--correction ...]`
+
+Running Phase 3 produces deterministic artifacts under `outputs/<dataset>/`:
+1. **`outputs/<dataset>/results.json`**: Ordered list of `TestResult` records (sorted by `hypothesis_id`), each carrying `test_name`, `selection_trace`, `p_value`, `effect` (with Stage B 95% CIs on candidates), `descriptives`, and `assumptions`.
+2. **`outputs/<dataset>/decisions.json`**: Ordered list of `ValidationDecision` records with `p_raw`, `q_value`, `family_size`, `accepted`, machine-readable `reasons` (`RejectionReason`), `reason_text`, `flags`, `would_pass_without_correction`, and `would_pass_without_effect_floor`.
+3. **`outputs/<dataset>/findings.json`**: Joined `Finding` records (accepted findings ordered first by `q_value` asc, then comparable effect desc).
+4. **`outputs/<dataset>/ledger.jsonl`**: Append-only session ledger with dataset SHA-256 header and `LedgerEntry` records for Phase 6 chat revalidation.
+5. **`outputs/<dataset>/validation_summary.json` & `validation_summary.md`**: Summary counts, fallback rate, and Markdown tables of accepted and rejected hypotheses.
+
+### Python API Contract
+```python
+from veridata.stats import REGISTRY, prepare_inputs, run_all, run_hypothesis, select_test
+from veridata.validation import SessionLedger, apply_correction, build_findings, validate
+```
+
+
 

@@ -151,6 +151,13 @@ class StatsConfig(BaseModel):
     bootstrap_resamples_benchmark: int = 500
     permutation_resamples: int = 9999
     seed: int = 20260101
+    ci_candidate_p: float = 0.10
+    yates: bool = False
+    strict_ci: bool = False
+    test_timeout_s: float = 20.0
+    assumption_aware_selection: bool = True
+    enable_assumption_gate: bool = True
+    benchmark_fast_mode: bool = False
 
 
 class EffectFloorConfig(BaseModel):

@@ -129,6 +129,54 @@ def build_parser() -> argparse.ArgumentParser:
         "--no-llm", action="store_true", help="Use offline fuzzy fallback only"
     )
 
+    # veridata test (Phase 3)
+    test_parser = subparsers.add_parser(
+        "test", help="Run Phase 3 statistical testing and validation on Phase 2 hypotheses"
+    )
+    test_parser.add_argument("--dataset", required=True, help="Dataset identifier name")
+    test_parser.add_argument("--alpha", type=float, default=None, help="FDR/FWER alpha level")
+    test_parser.add_argument(
+        "--correction",
+        choices=["bh", "by", "holm", "bonferroni", "none"],
+        default=None,
+        help="Multiple-testing correction method",
+    )
+    test_parser.add_argument(
+        "--no-effect-floor",
+        action="store_true",
+        help="Disable standardized effect-size floor (ablation)",
+    )
+    test_parser.add_argument(
+        "--no-assumption-selection",
+        action="store_true",
+        help="Disable assumption-aware test selection (ablation)",
+    )
+    test_parser.add_argument(
+        "--no-stage-b", action="store_true", help="Skip Stage B bootstrap CIs and sensitivity checks"
+    )
+    test_parser.add_argument(
+        "--n-jobs", type=int, default=-1, help="Parallel worker count (-1 = all cores, 1 = serial)"
+    )
+    test_parser.add_argument(
+        "--out", default=None, help="Output directory (default: outputs/<dataset>)"
+    )
+
+    # veridata validate (Phase 3)
+    val_parser = subparsers.add_parser(
+        "validate", help="Re-run Phase 3 validation over an existing ledger.jsonl"
+    )
+    val_parser.add_argument("--dataset", required=True, help="Dataset identifier name")
+    val_parser.add_argument("--alpha", type=float, default=None, help="Override alpha level")
+    val_parser.add_argument(
+        "--correction",
+        choices=["bh", "by", "holm", "bonferroni", "none"],
+        default=None,
+        help="Override correction method",
+    )
+    val_parser.add_argument(
+        "--no-effect-floor", action="store_true", help="Disable effect-size floor"
+    )
+
     return parser
 
 
@@ -310,6 +358,132 @@ def main(argv: Sequence[str] | None = None) -> int:
                 profile=profile,
             )
             sys.stdout.write(json.dumps(outcome.model_dump(mode="json"), indent=2) + "\n")
+            return 0
+        finally:
+            close_logging(logger)
+
+    if args.command == "test":
+        from veridata.contracts.hypothesis import Hypothesis, HypothesisManifest, HypothesisSet
+        from veridata.stats.runner import run_all
+
+        ds = args.dataset
+        out_dir = Path(args.out) if args.out else Path("outputs") / ds
+        logger = setup_logging(out_dir)
+        try:
+            auto_cfg = Path("configs/datasets") / f"{ds}.yaml"
+            cfg = load_config(dataset_config_path=auto_cfg if auto_cfg.exists() else None)
+            if args.alpha is not None:
+                cfg.stats.alpha = args.alpha
+            if args.correction is not None:
+                cfg.stats.correction = args.correction
+            if args.no_effect_floor:
+                cfg.effect_floor.enabled = False
+            if args.no_assumption_selection:
+                cfg.stats.assumption_aware_selection = False
+
+            cleaned_csv = Path("data/cleaned") / f"{ds}_cleaned.csv"
+            hyps_path = Path("outputs") / ds / "hypotheses.json"
+            manifest_path = Path("outputs") / ds / "hypothesis_manifest.json"
+            profile_path = Path("outputs") / ds / "profile.json"
+
+            if not cleaned_csv.exists() or not hyps_path.exists() or not manifest_path.exists():
+                logger.error(
+                    "Missing Phase 1/2 artifacts for '%s'. Run `veridata hypotheses --dataset %s` first.",
+                    ds,
+                    ds,
+                )
+                return 1
+
+            df = pd.read_csv(cleaned_csv)
+            hyps = [
+                Hypothesis.model_validate(item)
+                for item in json.loads(hyps_path.read_text(encoding="utf-8"))
+            ]
+            manifest = HypothesisManifest.model_validate(
+                json.loads(manifest_path.read_text(encoding="utf-8"))
+            )
+            sha256 = ""
+            if profile_path.exists():
+                sha256 = str(json.loads(profile_path.read_text(encoding="utf-8")).get("sha256", ""))
+
+            hset = HypothesisSet(hypotheses=hyps, manifest=manifest)
+            run_out = run_all(
+                hset,
+                df,
+                cfg,
+                n_jobs=args.n_jobs,
+                stage_b=not args.no_stage_b,
+                out_dir=out_dir,
+                dataset_sha256=sha256,
+            )
+            logger.info(
+                "Tested m=%d hypotheses for '%s': %d raw sig -> %d BH sig -> %d accepted (%.2fs)",
+                run_out.summary["m_tested"],
+                ds,
+                run_out.summary["n_raw_sig"],
+                run_out.summary["n_bh_sig"],
+                run_out.summary["n_accepted"],
+                run_out.summary["runtime_seconds"],
+            )
+            return 0
+        finally:
+            close_logging(logger)
+
+    if args.command == "validate":
+        from veridata.contracts.hypothesis import Hypothesis
+        from veridata.validation.ledger import SessionLedger
+        from veridata.validation.validator import build_findings
+
+        ds = args.dataset
+        out_dir = Path("outputs") / ds
+        logger = setup_logging(out_dir)
+        try:
+            auto_cfg = Path("configs/datasets") / f"{ds}.yaml"
+            cfg = load_config(dataset_config_path=auto_cfg if auto_cfg.exists() else None)
+            if args.alpha is not None:
+                cfg.stats.alpha = args.alpha
+            if args.correction is not None:
+                cfg.stats.correction = args.correction
+            if args.no_effect_floor:
+                cfg.effect_floor.enabled = False
+
+            ledger_path = out_dir / "ledger.jsonl"
+            hyps_path = out_dir / "hypotheses.json"
+            if not ledger_path.exists() or not hyps_path.exists():
+                logger.error("Ledger or hypotheses not found for '%s'. Run `veridata test` first.", ds)
+                return 1
+
+            hyps = {
+                h.id: h
+                for h in (
+                    Hypothesis.model_validate(x)
+                    for x in json.loads(hyps_path.read_text(encoding="utf-8"))
+                )
+            }
+            ledger = SessionLedger.load_jsonl(ledger_path)
+            decisions, _ = ledger.revalidate(hyps, cfg, family_id="session")
+            results = [e.test for e in ledger.entries]
+            findings = build_findings(hyps, results, decisions)
+
+            (out_dir / "decisions.json").write_text(
+                json.dumps([d.model_dump(mode="json") for d in decisions], indent=2, sort_keys=True)
+                + "\n",
+                encoding="utf-8",
+            )
+            (out_dir / "findings.json").write_text(
+                json.dumps([f.model_dump(mode="json") for f in findings], indent=2, sort_keys=True)
+                + "\n",
+                encoding="utf-8",
+            )
+            n_acc = sum(1 for d in decisions if d.accepted)
+            logger.info(
+                "Revalidated %d ledger entries for '%s' (%s, alpha=%.3f): %d accepted.",
+                len(decisions),
+                ds,
+                cfg.stats.correction,
+                cfg.stats.alpha,
+                n_acc,
+            )
             return 0
         finally:
             close_logging(logger)
