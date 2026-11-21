@@ -6,8 +6,8 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from ads.config import load_config
-from ads.ingestion import compute_sha256, load_csv
+from veridata.config import load_config
+from veridata.ingestion import compute_sha256, load_csv
 
 
 class TestIngestion(unittest.TestCase):

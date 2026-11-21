@@ -1,0 +1,665 @@
+[
+  {
+    "column_a": "charges",
+    "column_b": "smoker",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 1063,
+        "yes": 274
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "dbbefcba4507014b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "charges",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "female": 662,
+        "male": 675
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "fc87f82acb437423",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "bmi",
+    "column_b": "charges",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "7879d2e98b9f3fc3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.855,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "charges",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "9ceff6678f472d3a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.855,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "charges",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "northeast": 324,
+        "northwest": 324,
+        "southeast": 364,
+        "southwest": 325
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "cbc355b43e0dd6f9",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.851,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "charges",
+    "column_b": "children",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 573,
+        "1": 324,
+        "2": 240,
+        "3": 157,
+        "4": 25,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "03088ab28e083960",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.68,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.843,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "bmi",
+    "column_b": "smoker",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 1063,
+        "yes": 274
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "14b21894518babf6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "female": 662,
+        "male": 675
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "15d74a366b0a3bca",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "sex",
+    "column_b": "smoker",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 135.6679,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "2cb47aca909f72e8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "smoker",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 1063,
+        "yes": 274
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "6cebb444aca418b8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "bmi",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "female": 662,
+        "male": 675
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "b6b08a817c661487",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "bmi",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "4c3d52697add8a19",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "northeast": 324,
+        "northwest": 324,
+        "southeast": 364,
+        "southwest": 325
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "0688a4be09061aef",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.551,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "bmi",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "northeast": 324,
+        "northwest": 324,
+        "southeast": 364,
+        "southwest": 325
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "5da20203ad979461",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.551,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "region",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 160.4248,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "093844d87e3c6328",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "region",
+    "column_b": "smoker",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 66.3994,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "8c16745ee5780c67",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "bmi",
+    "column_b": "children",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 573,
+        "1": 324,
+        "2": 240,
+        "3": 157,
+        "4": 25,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "cb56fc08a3e6f85a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.68,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.543,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "children",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 573,
+        "1": 324,
+        "2": 240,
+        "3": 157,
+        "4": 25,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "d428bc651c8a9989",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.68,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.543,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "children",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 8.9125,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "04e49dc5789ba544",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.66,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.541,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "children",
+    "column_b": "smoker",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 3.6889,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "16934eaf6eb36cff",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.66,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.541,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "children",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 4.362,
+      "n_pairwise_complete": 1337,
+      "reasons": []
+    },
+    "id": "c1347eda564dedc3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.66,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.541,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  }
+]

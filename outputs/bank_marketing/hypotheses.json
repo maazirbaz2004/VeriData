@@ -1,0 +1,6865 @@
+[
+  {
+    "column_a": "contact",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1694.5599,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "1de11b538a568fbb",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "22ca60c3298e2fca",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "25e4a4b5c900ba52",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "2d2ffd8e429c7a71",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "383409f8a6f00350",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "72957be8edc6e172",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "7ef75d210ec74993",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "9d8db73ad4f37a95",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "a02eadb08393ec4b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 36537,
+        "yes": 4639
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "c0bfef47e9475026",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "housing",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2099.3177,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "6d8644f105c5d376",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8738,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "loan",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 704.6219,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "7b8836c7ae6c3bd3",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8738,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "poutcome",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 154.6859,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "379f441494c0ea3e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "marital",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 519.1526,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "d2155c5cccd19e7d",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8499,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 881.6984,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "bbe80c5a0cd39b86",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.844,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "education",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.0023,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "aed69aad2e9268ec",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.63,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8359,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "previous",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.0269,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "b495776abaf7016e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.835,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "month",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 20.5046,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "32355cb111e489bd",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.829,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "job",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 98.5837,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "5df43f3dd0ec9f1f",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8256,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "default",
+    "column_b": "y",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 32577,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "01bfd13fe7946d93",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.61456,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "29a66ad52ddf6209",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "783fac50a18154d5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "8d049cb2c8296235",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "90f2230f715254c0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "a299d5a55f3461ad",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "c505f1a5244a3875",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "d32c96ace032a713",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "d9eda995163402d0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "contact",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "cellular": 26135,
+        "telephone": 15041
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "da79bd9e61ee8f7a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "00d43c29f6de4bd6",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2271.8304,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "0a06877c850e0d5b",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "115d47cfc3ca23ae",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "1c48f44dc7005116",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "2f7dc9d966d94a64",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "3137f24fe0c7ba70",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "388095fb1203059b",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "5b2164c3d80ebddf",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "66966e60da2d5db6",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "79e7a9af0143dc19",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "92fd4e0256c2d49d",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "9c1c3f00109083bd",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "a61970bef637c077",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "be223b5d36d57432",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 18615,
+        "yes": 21571
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "c326f3ea5a9a7fea",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "cccdf3228104977e",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 6768.5856,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "dba09cbc62731904",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "e1023a4032448d76",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "f6a3958fdf8e177f",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "no": 33938,
+        "yes": 6248
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "f9eb7c54573c17f7",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5738,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "housing",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2894.2049,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "1a40f8075628fc13",
+    "priority_components": {
+      "data_quality": 0.976,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5726,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "euribor3m",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "00d05cc952dbead8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "emp.var.rate",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "0371bb242191333d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "pdays",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "03a10a947322ffa7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "pdays",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "05b3edf395b073ad",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "pdays",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "0afa643aec945a47",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "0d88d801b4f751ec",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "pdays",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "0f31f0230c932d2f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "nr.employed",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "0f81f453f9be7979",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "euribor3m",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "14f93e7e9fd73c1b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "nr.employed",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "23be291621ad228f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "cons.price.idx",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "26310703c78d0319",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "euribor3m",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "2a940be9d00b3d10",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "nr.employed",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "3a64c0db38607ec2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "nr.employed",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "3aa64d1058f9f17d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "duration",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "3e80480d785b75e2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "cons.conf.idx",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "43c944b0d8d72de3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "4aa12a921577265d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "pdays",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "4b7ba9ae49f108a7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "609efa2c17122ce6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "6532bdffe978ead0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "cons.price.idx",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "6828f8be154b37c7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "emp.var.rate",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "6e5b5f07213b1d6c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "euribor3m",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "720e30cd035b92c0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "emp.var.rate",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "7f3346de20de7b37",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "nr.employed",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "88cd03ef597a6fce",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "euribor3m",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "8978404729c3cbba",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "pdays",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "8a32717db7a03a8b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "nr.employed",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "8c2ff454e97180fc",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "campaign",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "8ca5eb6c1c1c0a53",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "cons.conf.idx",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "8e5a9055241eba6c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "92400293d19c0ea4",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "euribor3m",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "9af8369e7583bc62",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "9b03b08ea1e08f98",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "9ed080c23bcbf639",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "cons.price.idx",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "aa0df79478b18ab4",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "duration",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "ab4d386785e603a9",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "emp.var.rate",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "adf89904750fad46",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "nr.employed",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "b25c6e2f769ee88c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "b2b778ad0f708e6c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "duration",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "c115fcde900e28a6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "pdays",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "cea0db59fe4e87f5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "duration",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "d74c8aa9f5053c9c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "emp.var.rate",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "d8f7e0cd40ee1686",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "failure": 4252,
+        "nonexistent": 35551,
+        "success": 1373
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "e6af230108830142",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "pdays",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "e71d1ac36b93e62c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "00c21f38eec4a475",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "137d740d7de20885",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "13d3d4d73cf9e918",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "31a85b65406b8c1c",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "71c08797beac3d74",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "86aa6cf898d0289e",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "dff2c120e459b972",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "ead48c293f719454",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "divorced": 4611,
+        "married": 24921,
+        "single": 11564
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "f1d6defb42cf91a5",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5549,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 501.5371,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "965b662ca7dfa48e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1684.5813,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "c563a0a91129f80c",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5499,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "marital",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 153.4906,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "e8b6c62a9891a465",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5499,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "housing",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 623.0323,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "e552a7da344bb940",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5488,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "loan",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 209.1166,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "ebed9ead0662c118",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5488,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "loan",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 698.1235,
+      "n_pairwise_complete": 40107,
+      "reasons": []
+    },
+    "id": "353b2e9f287dd721",
+    "priority_components": {
+      "data_quality": 0.987,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5487,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "housing",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2079.0333,
+      "n_pairwise_complete": 40107,
+      "reasons": []
+    },
+    "id": "c88d61a2c5955d33",
+    "priority_components": {
+      "data_quality": 0.987,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5487,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "409ab7817b0c6db7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "6a630598b761c10d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "71bc8df28b32d363",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "77e70944095a008d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "a2383303729b7a7f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "afb86d677358a4ef",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "db3c1739b91f2f60",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "dc551b906691ac34",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "fri": 7826,
+        "mon": 8512,
+        "thu": 8618,
+        "tue": 8086,
+        "wed": 8134
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "e52ed4d971a2ea76",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 260.9554,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "3bfbd260d6928f38",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.544,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "day_of_week",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2858.7251,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "fa8c825993965e2d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.544,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 876.7363,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "cada0c33c85b8b61",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5439,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1185.2014,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "bf1b71d43718c9d0",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5428,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 3531.1339,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "cbb117308c57252d",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5428,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "0a615c2640c1e2fc",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "189afbb338590588",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "1ba9a402ba9097b7",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "294cac73c9c97551",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "2f0aa9cc55af2a9e",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "5bac40d23ac5fc7b",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "63de87c2cd24fe30",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "a5a4c902ecf77fe2",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "basic.4y": 4176,
+        "basic.6y": 2291,
+        "basic.9y": 6045,
+        "high.school": 9512,
+        "illiterate": 18,
+        "professional.course": 5240,
+        "university.degree": 12164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "bf279cb99c8731d4",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.64,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5369,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "education",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 0.5877,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "0e92528e1a3209c3",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.63,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5359,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 6.5382,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "1259d1da05c23c7b",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.63,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5359,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 3.3968,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "7de697da4483343d",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.63,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5359,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "education",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.0224,
+      "n_pairwise_complete": 39375,
+      "reasons": []
+    },
+    "id": "10e27787a85cd137",
+    "priority_components": {
+      "data_quality": 0.978,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.63,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5358,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "03799c0b8e3ef37a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "1d9436fb083e6790",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "2d19099fbd35c1d4",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "49fce66427cef291",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "679054c38376538c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "7813af83a054ef99",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 6.5761,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "79548be60b7c0bde",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "poutcome",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 0.5981,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "936c006d67ab5994",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "a4b8a78870076bb3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 3.4212,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "bd46177f054c3856",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "e016447999c2afe2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "6",
+        "7"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 35551,
+        "1": 4561,
+        "2": 754,
+        "3": 216,
+        "4": 70,
+        "5": 18
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '6' (n=5), '7' (n=1)"
+      ]
+    },
+    "id": "eb8bf73c00aac1d1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.535,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "marital",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.019,
+      "n_pairwise_complete": 41090,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "3730b358d15471d2",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5349,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "education",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.8083,
+      "n_pairwise_complete": 38496,
+      "reasons": []
+    },
+    "id": "86ea8c922d3e46ef",
+    "priority_components": {
+      "data_quality": 0.967,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.63,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5347,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "education",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 8.3229,
+      "n_pairwise_complete": 38496,
+      "reasons": []
+    },
+    "id": "ffe560021bec8ec5",
+    "priority_components": {
+      "data_quality": 0.967,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.63,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5347,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "housing",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 8.3383,
+      "n_pairwise_complete": 40180,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "70cfcb6c3fdb5058",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5338,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "loan",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.7986,
+      "n_pairwise_complete": 40180,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "fd771ec7628c035e",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5338,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "education",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 0.0073,
+      "n_pairwise_complete": 39441,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "36a7191f419e541f",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5329,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 66.482,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "1f38c26082bda1b8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.529,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "month",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 6.0687,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "67fa464bc2ddd155",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.529,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 34.5913,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "6aadae54566d6447",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.529,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "month",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 0.0796,
+      "n_pairwise_complete": 41170,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "8aaa50fd39099b32",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.529,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "marital",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 20.4205,
+      "n_pairwise_complete": 41096,
+      "reasons": []
+    },
+    "id": "2b89316f6d400d0a",
+    "priority_components": {
+      "data_quality": 0.999,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5289,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "loan",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 27.364,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "20868ea7f8494135",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5278,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "housing",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 81.5269,
+      "n_pairwise_complete": 40186,
+      "reasons": []
+    },
+    "id": "526b6ea3dd2e6dd7",
+    "priority_components": {
+      "data_quality": 0.988,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5278,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "083625b2e93cd578",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "25149c67820a0cf1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "32b9754570bfa655",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "386e1ab9e5f789fa",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "3d0a3958008d94bc",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "3d75d94aae15416d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "450bef51e8fd0e15",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "46923f2bbb97f069",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "apr": 2631,
+        "aug": 6176,
+        "dec": 182,
+        "jul": 7169,
+        "jun": 5318,
+        "mar": 546,
+        "may": 13767,
+        "nov": 4100,
+        "oct": 717,
+        "sep": 570
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 41176,
+      "reasons": []
+    },
+    "id": "c300a260bb7cbb8e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.52,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.527,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "education",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 0.0767,
+      "n_pairwise_complete": 39446,
+      "reasons": []
+    },
+    "id": "80a00baa5ae05ea5",
+    "priority_components": {
+      "data_quality": 0.979,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5269,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 166.8554,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "265a013e12e302bc",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5256,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 318.7368,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "afb084da75a53dfd",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5256,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "job",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 29.0053,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "b63f0668d21bbddd",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5256,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "job",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 0.3857,
+      "n_pairwise_complete": 40840,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): previous:6, previous:7"
+      ]
+    },
+    "id": "b7909149343315d1",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5256,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "job",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 3.8559,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "ecfc5ba2c8cdfa30",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5256,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "job",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 98.5568,
+      "n_pairwise_complete": 40775,
+      "reasons": []
+    },
+    "id": "7bcd5e9120668796",
+    "priority_components": {
+      "data_quality": 0.995,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "housing",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 394.6119,
+      "n_pairwise_complete": 39861,
+      "reasons": []
+    },
+    "id": "68030ffaf67a8690",
+    "priority_components": {
+      "data_quality": 0.984,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5244,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "job",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 132.3281,
+      "n_pairwise_complete": 39861,
+      "reasons": []
+    },
+    "id": "cc26040ef6788afb",
+    "priority_components": {
+      "data_quality": 0.984,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5244,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "education",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 0.3247,
+      "n_pairwise_complete": 39247,
+      "reasons": []
+    },
+    "id": "2706a4c4eca05d39",
+    "priority_components": {
+      "data_quality": 0.975,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5235,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "2ce57d825ba948fb",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "345e2cda7ce30fe8",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "35a00753f1ad04b2",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "3ee0668d2a45e99d",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "609ac5084c3c5476",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "7b00cb4016584fcf",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "c2f7ecbd8caa3e78",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "eee76f7cc13a265e",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "admin.": 10419,
+        "blue-collar": 9253,
+        "entrepreneur": 1456,
+        "housemaid": 1060,
+        "management": 2924,
+        "retired": 1718,
+        "self-employed": 1421,
+        "services": 3967,
+        "student": 875,
+        "technician": 6739,
+        "unemployed": 1014
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 40846,
+      "reasons": []
+    },
+    "id": "efeaa3698c4a834b",
+    "priority_components": {
+      "data_quality": 0.996,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.48,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5226,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "campaign",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "0a8fe408e9b57751",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "cons.price.idx",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "1d407919c0fb4765",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "contact",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 32577,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "435b42745e2f24e9",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "emp.var.rate",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "5e148875e9f4ad41",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "cons.conf.idx",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "77e7e7206e5cac02",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "nr.employed",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "8149a28d23c35224",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "euribor3m",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "b3e6681ba88bcd3e",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "duration",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "c8268ab78edfcd40",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "pdays",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "e0f0e54eac9cd6ef",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "age",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": false,
+      "group_sizes": {
+        "no": 32577,
+        "yes": 3
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 32580,
+      "reasons": [
+        "group 'yes' has n=3 < min_group_n (8)"
+      ]
+    },
+    "id": "eb1c9e23e604bfe8",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31456,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "default",
+    "column_b": "loan",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 31814,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "9a4622a1fa495678",
+    "priority_components": {
+      "data_quality": 0.8836,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31336,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "default",
+    "column_b": "housing",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 31814,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "adceae9002a7af64",
+    "priority_components": {
+      "data_quality": 0.8836,
+      "feasibility_strength": 0.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.31336,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "default",
+    "column_b": "poutcome",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 32577,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "787a7b799de8f837",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.28956,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "default",
+    "column_b": "marital",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 32508,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "6d92e194498a7e2e",
+    "priority_components": {
+      "data_quality": 0.8946,
+      "feasibility_strength": 0.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.28946,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "day_of_week",
+    "column_b": "default",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 32577,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "5d7fcacea1b08a40",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.28356,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "default",
+    "column_b": "education",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 31395,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "719dedb942904b08",
+    "priority_components": {
+      "data_quality": 0.8746,
+      "feasibility_strength": 0.0,
+      "interpretability": 0.63,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.27546,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "default",
+    "column_b": "previous",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes",
+        "previous:6",
+        "previous:7"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 32571,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes, previous:6, previous:7",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "47249ebba807a569",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 0.6,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.27456,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "default",
+    "column_b": "month",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 32577,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "092d29082d9684f8",
+    "priority_components": {
+      "data_quality": 0.8956,
+      "feasibility_strength": 0.0,
+      "interpretability": 0.54,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.26856,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  },
+  {
+    "column_a": "default",
+    "column_b": "job",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "default:yes"
+      ],
+      "feasible": false,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 32399,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): default:yes",
+        "degenerate: contingency table has < 2 rows or < 2 columns after filter"
+      ]
+    },
+    "id": "9565928d2d082a9a",
+    "priority_components": {
+      "data_quality": 0.8916,
+      "feasibility_strength": 0.0,
+      "interpretability": 0.51,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.26516,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "skipped_infeasible"
+  }
+]

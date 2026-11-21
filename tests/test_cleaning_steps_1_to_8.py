@@ -7,7 +7,7 @@ import unittest
 import numpy as np
 import pandas as pd
 
-from ads.cleaning import (
+from veridata.cleaning import (
     CleaningLog,
     step1_normalize_column_names,
     step2_clean_whitespace_and_unicode,
@@ -18,8 +18,8 @@ from ads.cleaning import (
     step7_handle_duplicates,
     step8_structural_drops,
 )
-from ads.config import load_config
-from ads.schemas import DroppedColumnRecord, SemanticType
+from veridata.config import load_config
+from veridata.schemas import DroppedColumnRecord, SemanticType
 
 
 class TestCleaningSteps1To8(unittest.TestCase):

@@ -1,0 +1,32 @@
+{
+  "counts_by_relationship": {
+    "categorical_vs_categorical": 36,
+    "numeric_vs_binary": 20,
+    "numeric_vs_categorical": 25,
+    "numeric_vs_numeric": 10
+  },
+  "dataset_name": "heart_disease",
+  "effective_mode": "exhaustive",
+  "excluded_columns": [],
+  "llm_invalid_rationales_dropped": 0,
+  "llm_model": null,
+  "llm_prompt_version": null,
+  "llm_topped_up_count": 0,
+  "llm_unknown_aliases_dropped": 0,
+  "llm_used": false,
+  "lump_rare_levels": false,
+  "mode": "exhaustive",
+  "n_candidate_hypotheses": 91,
+  "n_columns_eligible": 14,
+  "n_columns_total": 14,
+  "n_in_family_planned": 91,
+  "n_infeasible": 0,
+  "n_pruned": 0,
+  "n_total_eligible_before_selection": 91,
+  "notes": [],
+  "pruning_steps": [],
+  "schema_version": "1.0",
+  "selection_inputs_hash": "c94ee598b315d725",
+  "target": "target",
+  "treat_small_discrete_as_numeric": false
+}

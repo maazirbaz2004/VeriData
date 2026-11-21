@@ -89,7 +89,7 @@ def build_report_markdown() -> str:
 > **Every statistic, cleaning action, chart, and numeric claim is computed by deterministic, unit-tested Python code — never guessed or hallucinated by an LLM.**
 
 **Phase 1** serves two roles simultaneously:
-- **Role 1 — A Reusable, Deterministic Python Library & CLI (`src/ads/`):** Accepts *any* arbitrary CSV file, repairs encoding and delimiter quirks, infers semantic column types, profiles distributions and data quality defects, executes a conservative 12-step cleaning pipeline with cell-level audit logs, evaluates normalization/scaling transformations, generates 150-DPI visualizations, and writes versioned JSON/Markdown/HTML artifacts (`schema_version = "1.0"`) for Phase 2.
+- **Role 1 — A Reusable, Deterministic Python Library & CLI (`src/veridata/`):** Accepts *any* arbitrary CSV file, repairs encoding and delimiter quirks, infers semantic column types, profiles distributions and data quality defects, executes a conservative 12-step cleaning pipeline with cell-level audit logs, evaluates normalization/scaling transformations, generates 150-DPI visualizations, and writes versioned JSON/Markdown/HTML artifacts (`schema_version = "1.0"`) for Phase 2.
 - **Role 2 — A Comprehensive Multi-Dataset Benchmark Study:** Evaluates the pipeline across **5 real-world public datasets** (`insurance`, `telco_churn`, `heart_disease`, `student_performance`, `bank_marketing`) plus **1 contamination-free synthetic messy benchmark** (`messy_synthetic`) injected with 18 categories of ground-truth data defects.
 
 ---
@@ -104,16 +104,16 @@ To make grading fast and transparent, the table below maps every requirement fro
 | **2** | **Dataset Download Links & Cards** | `README.md` (Section 2), `docs/datasets.md`, `scripts/download_datasets.py` | Direct URLs (Kaggle, UCI, GitHub mirrors) are listed in `README.md` and `docs/datasets.md`. Running `python scripts/download_datasets.py --datasets all` downloads all 5 real datasets automatically. |
 | **3** | **Jupyter Notebooks (`.ipynb`)** for cleaning, EDA & preprocessing with Markdown explanations and **visible outputs** | `notebooks/00_overview.ipynb` and `notebooks/<dataset>_phase1.ipynb` (7 notebooks total) | **All 7 notebooks have been pre-executed** so all tables, cleaning logs, scaling reports, and embedded PNG charts are immediately visible on GitHub or in VS Code / Jupyter without re-running cells. |
 | **4** | **Graphs & Visualizations** (histograms, boxplots, correlation heatmaps, Cramér's V, missingness, target breakdowns) + **notes** | **1) Standalone PNGs:** `outputs/<dataset>/figures/*.png` **2) Inside Notebooks:** Section 4 of `notebooks/<dataset>_phase1.ipynb` **3) Reports:** `outputs/<dataset>/report.html` & `report.md` | Every chart is saved at 150 DPI in `outputs/<dataset>/figures/` and paired with a caption note explaining what the visualization reveals about the data. |
-| **5** | **Cleaned / Processed Datasets** + scripts that generate them | **Cleaned CSVs (18 files):** `data/cleaned/<dataset>_cleaned.csv`, `<dataset>_cleaned_imputed.csv`, `<dataset>_scaled.csv` **Scripts:** `scripts/run_all.py`, `src/ads/pipeline.py` | Both conservative (`NaN` preserved) and imputed (median/mode filled with `__was_missing` flags) cleaned CSVs are committed in `data/cleaned/` for all 6 datasets. |
+| **5** | **Cleaned / Processed Datasets** + scripts that generate them | **Cleaned CSVs (18 files):** `data/cleaned/<dataset>_cleaned.csv`, `<dataset>_cleaned_imputed.csv`, `<dataset>_scaled.csv` **Scripts:** `scripts/run_all.py`, `src/veridata/pipeline.py` | Both conservative (`NaN` preserved) and imputed (median/mode filled with `__was_missing` flags) cleaned CSVs are committed in `data/cleaned/` for all 6 datasets. |
 | **6** | **`requirements.txt`** listing all libraries | `requirements.txt` and `pyproject.toml` | Lists all pinned/compatible libraries grouped by subsystem (`pandas`, `numpy`, `scipy`, `scikit-learn`, `pydantic`, `pyyaml`, `matplotlib`, `seaborn`, `jinja2`, `jupyter`, `pytest`, etc.). |
 
 ---
 
 ## 3. End-to-End Pipeline Architecture
 
-When `ads run --input <csv> --name <dataset>` (or `python scripts/run_all.py`) is executed, `ads.pipeline.run_phase1()` runs the following **8 deterministic stages** in strict sequence:
+When `veridata run --input <csv> --name <dataset>` (or `python scripts/run_all.py`) is executed, `veridata.pipeline.run_phase1()` runs the following **8 deterministic stages** in strict sequence:
 
-### Stage 1: Fault-Tolerant Two-Pass CSV Ingestion (`src/ads/ingestion.py`)
+### Stage 1: Fault-Tolerant Two-Pass CSV Ingestion (`src/veridata/ingestion.py`)
 - **Problem Solved:** Calling `pd.read_csv()` with default arguments silently corrupts data (e.g., coercing Telco's `TotalCharges` to `object` because of 11 `" "` cells, failing on `;`-delimited European CSVs like `student_performance` and `bank_marketing`, or crashing on Latin-1 encodings and ragged rows).
 - **How It Works:**
   - Computes the raw file's **SHA-256 checksum** (`compute_sha256`) to guarantee raw data immutability.
@@ -121,7 +121,7 @@ When `ads run --input <csv> --name <dataset>` (or `python scripts/run_all.py`) i
   - Normalizes header names (stripping whitespace/BOM, deduplicating repeated headers as `col.1`, renaming empty headers to `unnamed_<idx>`, and warning on exported index columns like `Unnamed: 0`).
   - Loads **two aligned DataFrames**: `df_raw_str` (every cell preserved as an exact raw string with `dtype=str, keep_default_na=False`) and `df_naive` (for diagnostic comparison).
 
-### Stage 2: 10-Class Semantic Type Inference (`src/ads/type_inference.py`)
+### Stage 2: 10-Class Semantic Type Inference (`src/veridata/type_inference.py`)
 - **Problem Solved:** Pandas physical dtypes (`object`, `int64`, `float64`) do not tell an analyst whether a column is a unique identifier (`customerID`), a binary flag (`Yes/No`, `0/1`), an integer-coded medical category (`cp` in Heart Disease), a currency-formatted number (`"$1,234.50"`), or a date.
 - **Priority Cascade on Non-Missing Values:**
   - **1. Config Override (`forced_types`):** Honors explicit domain overrides in `configs/datasets/<name>.yaml`.
@@ -133,11 +133,11 @@ When `ads run --input <csv> --name <dataset>` (or `python scripts/run_all.py`) i
   - **7. `categorical_ordinal` / `categorical_nominal`:** Low-to-moderate cardinality string columns (matching known ordinal scales like `low/medium/high` or nominal categories).
   - **8. `free_text` / `unknown`:** High-uniqueness long strings (median length > 30 chars) are marked `free_text` and excluded from statistical group comparisons.
 
-### Stage 3: Dataset Profiling & Phase 2 Schema (`src/ads/profiling.py`)
+### Stage 3: Dataset Profiling & Phase 2 Schema (`src/veridata/profiling.py`)
 - Computes `DataProfile` (`outputs/<dataset>/profile.json`): row/column counts, memory footprint, normalized duplicate row count, missingness matrix summary, and per-column statistics (`mean`, `std`, `median`, `q1`, `q3`, `iqr`, `skewness`, `kurtosis`, `n_zeros`, `n_negative`, 1.5×IQR / 3.0×IQR / Modified Z-score outlier counts, top 10 values, and string-quality flags).
 - Writes `outputs/<dataset>/column_schema.json`, mapping each surviving column to its `semantic_type` and `role` (`feature`, `target_candidate`, `id`, `excluded`) for Phase 2.
 
-### Stage 4: 12-Step Deterministic Cleaning Engine (`src/ads/cleaning/`)
+### Stage 4: 12-Step Deterministic Cleaning Engine (`src/veridata/cleaning/`)
 Executes 12 ordered steps (`steps.py`, `categories.py`, `missing.py`, `outliers.py`, `log.py`):
 - **Step 1 — Header Normalization:** Strips header whitespace/BOM and deduplicates column names.
 - **Step 2 — Cell Whitespace & Unicode Cleanup:** Strips outer spaces, collapses internal multi-spaces, and removes zero-width Unicode characters (`\\u200b`, `\\ufeff`).
@@ -151,10 +151,10 @@ Executes 12 ordered steps (`steps.py`, `categories.py`, `missing.py`, `outliers.
   - **Primary Conservative Output (`data/cleaned/<name>_cleaned.csv`):** Keeps true `NaN` intact so Phase 3 hypothesis tests are never biased by synthetic imputed values.
   - **Secondary Imputed Output (`data/cleaned/<name>_cleaned_imputed.csv`):** Drops columns with > 80% missingness, imputes numeric columns with the **median** and categorical/binary columns with the **mode**, and appends `<col>__was_missing` (`0`/`1`) indicator columns.
 - **Step 10 — Outlier Detection & Flagging:** Computes 1.5×IQR, 3.0×IQR, and Modified Z-scores (MAD = 0 guarded). Under the default `flag` policy, outliers are logged in `cleaning_log.json` and plotted in `outlier_summary.png` without deleting valid extreme records.
-- **Step 11 — Scaling & Transformation Analysis (`src/ads/scaling.py`):** Evaluates skewness and scale disparity (max std / min std), recommending `log1p`, `yeo_johnson`, or `zscore` and writing `data/cleaned/<name>_scaled.csv`, `scaling_report.md`, and `scaling_params.json`.
+- **Step 11 — Scaling & Transformation Analysis (`src/veridata/scaling.py`):** Evaluates skewness and scale disparity (max std / min std), recommending `log1p`, `yeo_johnson`, or `zscore` and writing `data/cleaned/<name>_scaled.csv`, `scaling_report.md`, and `scaling_params.json`.
 - **Step 12 — Post-Condition & Idempotence Verification:** Verifies exact row accounting, zero remaining placeholder tokens, and idempotence (re-cleaning the conservative output produces zero further modifications).
 
-### Stages 5–8: Automated EDA (`src/ads/eda/`), Insights (`src/ads/insights.py`), and Reports (`src/ads/reporting.py`)
+### Stages 5–8: Automated EDA (`src/veridata/eda/`), Insights (`src/veridata/insights.py`), and Reports (`src/veridata/reporting.py`)
 - Generates **13–19 static PNG charts** per dataset (`outputs/<name>/figures/*.png`), markdown summary tables (`outputs/<name>/tables/*.md`), and `eda_summary.json`.
 - Evaluates deterministic insight rules across 7 categories (`insights.json` and `insights.md`), preserving the analyst's manual domain notes (`<!-- MANUAL:START --> ... <!-- MANUAL:END -->`).
 - Renders self-contained `outputs/<name>/report.md` and `outputs/<name>/report.html`.
@@ -233,7 +233,7 @@ Executes 12 ordered steps (`steps.py`, `categories.py`, `missing.py`, `outliers.
   - **Report & Graphs:** `outputs/bank_marketing/report.html` (`report.md`) · `outputs/bank_marketing/figures/` (23 PNGs)
 
 ### 5.6 Messy Synthetic Benchmark (`messy_synthetic`)
-- **Dataset Details:** Generated via `ads make-messy --seed 42` (`2,090` raw rows × `15` columns → `2,000` cleaned rows × `13` columns; binary target `churned`) with ground-truth answer key in `data/synthetic/messy_manifest.json`.
+- **Dataset Details:** Generated via `veridata make-messy --seed 42` (`2,090` raw rows × `15` columns → `2,000` cleaned rows × `13` columns; binary target `churned`) with ground-truth answer key in `data/synthetic/messy_manifest.json`.
 - **Cleaning Performed:** Dropped exported index (`Unnamed: 0`) and 100% null column (`all_null_col`); excluded `constant_col`; removed all injected duplicate rows (`2,090 → 2,000` rows); stripped whitespace/Unicode noise; normalized placeholder tokens; merged case variants in `region`; flagged fuzzy typo cells; parsed currency strings, percent strings, and mixed dates; and coerced out-of-range domain violations to `NaN` with **zero cell damage** on clean reference values.
 - **Deliverable Locations:**
   - **Notebook:** `notebooks/messy_synthetic_phase1.ipynb`
@@ -246,7 +246,7 @@ Executes 12 ordered steps (`steps.py`, `categories.py`, `missing.py`, `outliers.
 
 - **Step 1 — Install dependencies and package:** `python -m pip install -r requirements.txt` followed by `python -m pip install -e .`
 - **Step 2 — Download raw datasets & generate synthetic benchmark:** `python scripts/download_datasets.py --datasets all` and `python scripts/make_messy_dataset.py --seed 42 --variants`
-- **Step 3 — Run Phase 1 pipeline on all 6 datasets:** `python scripts/run_all.py` (or single dataset via `python -m ads.cli run --input data/raw/insurance/insurance.csv --name insurance`)
+- **Step 3 — Run Phase 1 pipeline on all 6 datasets:** `python scripts/run_all.py` (or single dataset via `python -m veridata.cli run --input data/raw/insurance/insurance.csv --name insurance`)
 - **Step 4 — Rebuild this master report (MD, HTML, and PDF):** `python scripts/build_report.py`
 - **Step 5 — Open the pre-executed Jupyter notebooks:** `jupyter notebook notebooks/` (or open any `notebooks/<dataset>_phase1.ipynb` in VS Code / Cursor)
 """

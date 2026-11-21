@@ -9,9 +9,9 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from ads.eda.core import classify_columns, run_eda_core
-from ads.eda.plots import EDASettings, df_to_markdown, fmt_pct, slugify
-from ads.eda.stats import (
+from veridata.eda.core import classify_columns, run_eda_core
+from veridata.eda.plots import EDASettings, df_to_markdown, fmt_pct, slugify
+from veridata.eda.stats import (
     as_float,
     as_labels,
     count_histogram_peaks,

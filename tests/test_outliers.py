@@ -9,18 +9,18 @@ from tempfile import TemporaryDirectory
 import numpy as np
 import pandas as pd
 
-from ads.cleaning import (
+from veridata.cleaning import (
     CleaningInvariantError,
     CleaningLog,
     clean_dataset,
     step11_validate_invariants,
 )
-from ads.config import load_config
-from ads.ingestion import load_csv
-from ads.profiling import profile_dataset
-from ads.schemas import SemanticType
-from ads.synthetic.base_generator import make_clean_base
-from ads.synthetic.messy_injector import inject_problems
+from veridata.config import load_config
+from veridata.ingestion import load_csv
+from veridata.profiling import profile_dataset
+from veridata.schemas import SemanticType
+from veridata.synthetic.base_generator import make_clean_base
+from veridata.synthetic.messy_injector import inject_problems
 
 
 class TestOutliersAndFullCleaning(unittest.TestCase):

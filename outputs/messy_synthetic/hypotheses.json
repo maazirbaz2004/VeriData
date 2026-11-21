@@ -1,0 +1,1142 @@
+[
+  {
+    "column_a": "monthly_spend",
+    "column_b": "churned",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 1317,
+        "Yes": 683
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 2000,
+      "reasons": []
+    },
+    "id": "eaf7928cec2923a9",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure_months",
+    "column_b": "churned",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 1294,
+        "Yes": 676
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1970,
+      "reasons": []
+    },
+    "id": "57d2185da42c904a",
+    "priority_components": {
+      "data_quality": 0.9925,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.87425,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "churned",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 1217,
+        "Yes": 643
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1860,
+      "reasons": []
+    },
+    "id": "6ff0291da26911e4",
+    "priority_components": {
+      "data_quality": 0.965,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8715,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "income",
+    "column_b": "churned",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 1204,
+        "Yes": 636
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1840,
+      "reasons": []
+    },
+    "id": "2d06e23f3fba4c46",
+    "priority_components": {
+      "data_quality": 0.96,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.871,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "churned",
+    "column_b": "membership",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 122.257,
+      "n_pairwise_complete": 2000,
+      "reasons": []
+    },
+    "id": "440d399dbca57ad0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "churned",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 9.2205,
+      "n_pairwise_complete": 2000,
+      "reasons": []
+    },
+    "id": "266a5d2ef3589025",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.847,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "churned",
+    "column_b": "satisfaction",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 68.2474,
+      "n_pairwise_complete": 1940,
+      "reasons": []
+    },
+    "id": "6eb5c2437729d7b0",
+    "priority_components": {
+      "data_quality": 0.985,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8425,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "churned",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 53.0177,
+      "n_pairwise_complete": 1920,
+      "reasons": []
+    },
+    "id": "ba4abeaba9778090",
+    "priority_components": {
+      "data_quality": 0.98,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.842,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "monthly_spend",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "F": 33,
+        "Female": 953,
+        "M": 27,
+        "Male": 987
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 2000,
+      "reasons": []
+    },
+    "id": "d9d777c2c95f4e4f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure_months",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "F": 32,
+        "Female": 939,
+        "M": 27,
+        "Male": 972
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1970,
+      "reasons": []
+    },
+    "id": "f238aa6f8c59b9cc",
+    "priority_components": {
+      "data_quality": 0.9925,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.57425,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "F": 29,
+        "Female": 890,
+        "M": 26,
+        "Male": 915
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1860,
+      "reasons": []
+    },
+    "id": "86300d32b4bc1d5a",
+    "priority_components": {
+      "data_quality": 0.965,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5715,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "income",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "F": 32,
+        "Female": 874,
+        "M": 27,
+        "Male": 907
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1840,
+      "reasons": []
+    },
+    "id": "a3e48f6562e32a4f",
+    "priority_components": {
+      "data_quality": 0.96,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.571,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "monthly_spend",
+    "column_b": "membership",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Basic": 988,
+        "Gold": 358,
+        "Silver": 654
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 2000,
+      "reasons": []
+    },
+    "id": "11e591d0b39e52cd",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure_months",
+    "column_b": "membership",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Basic": 976,
+        "Gold": 351,
+        "Silver": 643
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1970,
+      "reasons": []
+    },
+    "id": "58dafdd3fcc7e54a",
+    "priority_components": {
+      "data_quality": 0.9925,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55425,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "monthly_spend",
+    "column_b": "tenure_months",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1970,
+      "reasons": []
+    },
+    "id": "9c277bf52ea9d362",
+    "priority_components": {
+      "data_quality": 0.9925,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55425,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "membership",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Basic": 922,
+        "Gold": 342,
+        "Silver": 596
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1860,
+      "reasons": []
+    },
+    "id": "12dcc57e8536c0fd",
+    "priority_components": {
+      "data_quality": 0.965,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5515,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "monthly_spend",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1860,
+      "reasons": []
+    },
+    "id": "62c1a8cb07224989",
+    "priority_components": {
+      "data_quality": 0.965,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5515,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "income",
+    "column_b": "membership",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Basic": 922,
+        "Gold": 327,
+        "Silver": 591
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1840,
+      "reasons": []
+    },
+    "id": "67435025f39bfab0",
+    "priority_components": {
+      "data_quality": 0.96,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.551,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "income",
+    "column_b": "monthly_spend",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1840,
+      "reasons": []
+    },
+    "id": "a3ae6c5e3e862743",
+    "priority_components": {
+      "data_quality": 0.96,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.551,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "tenure_months",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1831,
+      "reasons": []
+    },
+    "id": "0e1685a9a0392d0c",
+    "priority_components": {
+      "data_quality": 0.9575,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55075,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "income",
+    "column_b": "tenure_months",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1811,
+      "reasons": []
+    },
+    "id": "8cb228d4db25a4a1",
+    "priority_components": {
+      "data_quality": 0.9525,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55025,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "income",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 1711,
+      "reasons": []
+    },
+    "id": "1999e2ace938d168",
+    "priority_components": {
+      "data_quality": 0.925,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5475,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "gender",
+    "column_b": "membership",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 4.833,
+      "n_pairwise_complete": 2000,
+      "reasons": []
+    },
+    "id": "de2188281035b45a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "monthly_spend",
+    "column_b": "satisfaction",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "1.0": 200,
+        "2.0": 331,
+        "3.0": 576,
+        "4.0": 529,
+        "5.0": 304
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1940,
+      "reasons": []
+    },
+    "id": "bc7a766d1d3cb5cf",
+    "priority_components": {
+      "data_quality": 0.985,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5455,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "monthly_spend",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Central Hub": 154,
+        "East Coast": 404,
+        "North Area": 599,
+        "South Bay": 483,
+        "West Valley": 280
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1920,
+      "reasons": []
+    },
+    "id": "cd4756fdb74795e4",
+    "priority_components": {
+      "data_quality": 0.98,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.545,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure_months",
+    "column_b": "satisfaction",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "1.0": 196,
+        "2.0": 328,
+        "3.0": 567,
+        "4.0": 521,
+        "5.0": 298
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1910,
+      "reasons": []
+    },
+    "id": "94742962070b954f",
+    "priority_components": {
+      "data_quality": 0.9775,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.54475,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure_months",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Central Hub": 151,
+        "East Coast": 395,
+        "North Area": 589,
+        "South Bay": 479,
+        "West Valley": 277
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1891,
+      "reasons": []
+    },
+    "id": "c51bb321343b3418",
+    "priority_components": {
+      "data_quality": 0.9725,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.54425,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "gender",
+    "column_b": "satisfaction",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.6804,
+      "n_pairwise_complete": 1940,
+      "reasons": []
+    },
+    "id": "09075bbdee06b590",
+    "priority_components": {
+      "data_quality": 0.985,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5425,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "membership",
+    "column_b": "satisfaction",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 35.8763,
+      "n_pairwise_complete": 1940,
+      "reasons": []
+    },
+    "id": "14de521fe33b75ca",
+    "priority_components": {
+      "data_quality": 0.985,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5425,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "gender",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.0854,
+      "n_pairwise_complete": 1920,
+      "reasons": []
+    },
+    "id": "20835424e3d80610",
+    "priority_components": {
+      "data_quality": 0.98,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.542,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "membership",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 27.8323,
+      "n_pairwise_complete": 1920,
+      "reasons": []
+    },
+    "id": "45a586a2365b5b50",
+    "priority_components": {
+      "data_quality": 0.98,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.542,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "satisfaction",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "1.0": 184,
+        "2.0": 310,
+        "3.0": 539,
+        "4.0": 493,
+        "5.0": 280
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1806,
+      "reasons": []
+    },
+    "id": "d7608ad2d2f5e161",
+    "priority_components": {
+      "data_quality": 0.95,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.542,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Central Hub": 143,
+        "East Coast": 369,
+        "North Area": 558,
+        "South Bay": 458,
+        "West Valley": 258
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1786,
+      "reasons": []
+    },
+    "id": "0688a4be09061aef",
+    "priority_components": {
+      "data_quality": 0.945,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5415,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "income",
+    "column_b": "satisfaction",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "1.0": 185,
+        "2.0": 296,
+        "3.0": 538,
+        "4.0": 480,
+        "5.0": 288
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1787,
+      "reasons": []
+    },
+    "id": "804b1d1596932157",
+    "priority_components": {
+      "data_quality": 0.945,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5415,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "income",
+    "column_b": "region",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Central Hub": 142,
+        "East Coast": 385,
+        "North Area": 545,
+        "South Bay": 449,
+        "West Valley": 249
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 1770,
+      "reasons": []
+    },
+    "id": "966e9b46398be99d",
+    "priority_components": {
+      "data_quality": 0.94,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.541,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "region",
+    "column_b": "satisfaction",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 15.3867,
+      "n_pairwise_complete": 1862,
+      "reasons": []
+    },
+    "id": "69b4b3386d0d8c6a",
+    "priority_components": {
+      "data_quality": 0.965,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5405,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  }
+]

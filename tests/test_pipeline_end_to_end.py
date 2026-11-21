@@ -6,10 +6,10 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from ads.config import load_config
-from ads.ingestion import compute_sha256
-from ads.pipeline import run_phase1
-from ads.synthetic.messy_injector import generate_and_save_messy_dataset
+from veridata.config import load_config
+from veridata.ingestion import compute_sha256
+from veridata.pipeline import run_phase1
+from veridata.synthetic.messy_injector import generate_and_save_messy_dataset
 
 
 class TestPipelineEndToEnd(unittest.TestCase):
@@ -108,9 +108,9 @@ class TestPipelineEndToEnd(unittest.TestCase):
 
     def test_no_pipeline_module_imports_llm_sdk(self) -> None:
         # Section 18 Acceptance Criteria: No pipeline module imports an LLM SDK
-        src_root = Path(__file__).resolve().parents[1] / "src" / "ads"
+        src_root = Path(__file__).resolve().parents[1] / "src" / "veridata"
         for py_file in src_root.rglob("*.py"):
-            if "baselines" in py_file.parts:
+            if "baselines" in py_file.parts or py_file.parts[-2:] == ("agent", "llm.py"):
                 continue
             code = py_file.read_text(encoding="utf-8")
             self.assertNotIn(

@@ -9,15 +9,15 @@ from tempfile import TemporaryDirectory
 
 import pandas as pd
 
-from ads.config import load_config
-from ads.profiling import (
+from veridata.config import load_config
+from veridata.profiling import (
     build_column_schema,
     compute_outlier_counts,
     profile_dataset,
     save_column_schema_json,
     save_profile_json,
 )
-from ads.schemas import ColumnRole, SemanticType
+from veridata.schemas import ColumnRole, SemanticType
 
 
 class TestProfiling(unittest.TestCase):

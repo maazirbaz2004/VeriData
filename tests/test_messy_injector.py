@@ -6,10 +6,10 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from ads.ingestion import compute_sha256, load_csv
-from ads.profiling import profile_dataset
-from ads.synthetic.base_generator import generate_base_truth_metadata, make_clean_base
-from ads.synthetic.messy_injector import (
+from veridata.ingestion import compute_sha256, load_csv
+from veridata.profiling import profile_dataset
+from veridata.synthetic.base_generator import generate_base_truth_metadata, make_clean_base
+from veridata.synthetic.messy_injector import (
     generate_and_save_messy_dataset,
     inject_problems,
 )

@@ -3,7 +3,7 @@ requires = ["setuptools>=65.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ads"
+name = "veridata"
 version = "0.1.0"
 description = "VeriData Agentic Data Scientist — Phase 1: Deterministic Ingestion, Profiling, Cleaning, EDA, and LLM Comparison"
 readme = "README.md"
@@ -42,7 +42,7 @@ dev = [
 ]
 
 [project.scripts]
-ads = "ads.cli:app"
+veridata = "veridata.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]

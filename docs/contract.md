@@ -87,9 +87,31 @@ from ads.scaling import analyze_scaling
 from ads.pipeline import run_phase1
 ```
 
-### Partner 1 <-> Partner 2 Integration Hooks in `ads.pipeline.run_phase1`
+### Partner 1 <-> Partner 2 Integration Hooks in `veridata.pipeline.run_phase1`
 `run_phase1()` automatically invokes Partner 2's modules when present:
-1. `ads.eda.run_eda(df_clean_conservative, raw_profile, schema, config, out_dir) -> EDAResult`
-2. `ads.insights.generate_insights(raw_profile, cleaning_result, eda_result, scaling_report, config, out_dir) -> InsightsReport`
-3. `ads.reporting.render_dataset_report(raw_profile, cleaning_result, eda_result, scaling_report, out_dir) -> Path`
+1. `veridata.eda.run_eda(df_clean_conservative, raw_profile, schema, config, out_dir) -> EDAResult`
+2. `veridata.insights.generate_insights(raw_profile, cleaning_result, eda_result, scaling_report, config, out_dir) -> InsightsReport`
+3. `veridata.reporting.render_dataset_report(raw_profile, cleaning_result, eda_result, scaling_report, out_dir) -> Path`
+
+---
+
+## 3. Phase 2 -> Phase 3 Handoff Contract (`HypothesisSet`)
+
+> **Schema Version:** `1.0` (`src/veridata/contracts/hypothesis.py`)
+> **CLI:** `veridata hypotheses --dataset <name> [--mode exhaustive|target_focused|llm_prioritized] [--target COL] [--no-llm]`
+
+Running Phase 2 produces three deterministic artifacts under `outputs/<dataset>/`:
+1. **`outputs/<dataset>/hypotheses.json`**: JSON list of `Hypothesis` objects ordered by outcome-independent `priority_score` descending (tie-break alphabetical `id`).
+   - Only hypotheses with `feasibility.feasible == True` enter the Phase 3 testing family.
+   - Infeasible hypotheses are emitted with `status == "skipped_infeasible"` and excluded from BH correction.
+   - Orientation invariant: for `numeric_vs_binary` and `numeric_vs_categorical`, `column_a` is ALWAYS the numeric outcome and `column_b` is ALWAYS the grouping variable.
+2. **`outputs/<dataset>/hypothesis_manifest.json`**: `HypothesisManifest` fixing `n_in_family_planned` (the expected BH family size `m`), `excluded_columns`, `pruning_steps`, `counts_by_relationship`, `llm_used`, and `selection_inputs_hash` (SHA-256 of the univariate-only `SafeProfile`).
+3. **`outputs/<dataset>/hypotheses.md`**: Human-readable summary table and manifest notes.
+
+### Python API Contract
+```python
+from veridata.contracts.hypothesis import Hypothesis, HypothesisManifest, HypothesisSet, NLParseOutcome
+from veridata.hypotheses import generate_hypotheses, parse_nl_hypothesis, save_hypothesis_outputs
+```
+
 

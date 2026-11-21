@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from ads.synthetic.messy_injector import DEFAULT_INJECTION_RATES, generate_and_save_messy_dataset
+from veridata.synthetic.messy_injector import DEFAULT_INJECTION_RATES, generate_and_save_messy_dataset
 
 
 def main() -> None:

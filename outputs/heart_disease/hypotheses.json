@@ -1,0 +1,2953 @@
+[
+  {
+    "column_a": "trestbps",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 138,
+        "1": 164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "6313494ec46b4786",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 138,
+        "1": 164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "74224aeb42b21287",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 138,
+        "1": 164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "8e2c4c80da5d26b5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 138,
+        "1": 164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "9f2a0af0e7967ea1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 138,
+        "1": 164
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "d23bbb095bbd8de7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.8255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "fbs",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 20.5629,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "1182ef04d7df7222",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.776,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "sex",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 43.8675,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "673d4317272093f8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.776,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "exang",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 45.2384,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "bf51075ec4d71b4a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.776,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "slope",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 9.596,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "54ec5790ab126039",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.751,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "restecg",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "restecg:2"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 66.594,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): restecg:2"
+      ]
+    },
+    "id": "8887e7a3b102ccbe",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.749,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cp",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 10.5099,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "496919d9895a9042",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.748,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "target",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "thal:0"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 8.22,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): thal:0"
+      ]
+    },
+    "id": "32e0d578da3a13ad",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.6,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.747,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "ca",
+    "column_b": "target",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "ca:4"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 9.1946,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): ca:4"
+      ]
+    },
+    "id": "6fa9bf323ac621ef",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.743,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 96,
+        "1": 206
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "15d74a366b0a3bca",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "fbs",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 257,
+        "1": 45
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "168a622a260b3739",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "trestbps",
+    "column_b": "exang",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 203,
+        "1": 99
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "22259d00117a9537",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 96,
+        "1": 206
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "27c11686fca6b5e7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "fbs",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 257,
+        "1": 45
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "2b36dc9e7d8f7caa",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "fbs",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 257,
+        "1": 45
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "555841e44ae8881f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "trestbps",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 96,
+        "1": 206
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "7410ef0067f7c441",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 96,
+        "1": 206
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "8875db9ac835441c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 96,
+        "1": 206
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "951aec24050e3fbe",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "exang",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 203,
+        "1": 99
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "9d70f42bf9117f60",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "exang",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 203,
+        "1": 99
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "ae66ecee8bdad5f9",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "fbs",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 257,
+        "1": 45
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "c902026cb51f3bd5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "trestbps",
+    "column_b": "fbs",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 257,
+        "1": 45
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "e3a68cabe7f75fff",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "exang",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 203,
+        "1": 99
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "f14c7f6ed6dc348f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "exang",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 203,
+        "1": 99
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "fff30a9937f773bb",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5255,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "trestbps",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 21,
+        "1": 140,
+        "2": 141
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "48efdf5591bbba2e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5055,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 21,
+        "1": 140,
+        "2": 141
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "4e26e928b25387d9",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5055,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 21,
+        "1": 140,
+        "2": 141
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "9d7aac07fff6b6a5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5055,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 21,
+        "1": 140,
+        "2": 141
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "a3e63721f1130cab",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5055,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 21,
+        "1": 140,
+        "2": 141
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "dc3a5484b07160cd",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5055,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "2"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 147,
+        "1": 151
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '2' (n=4)"
+      ]
+    },
+    "id": "00c2df6704f3e2e5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5045,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "2"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 147,
+        "1": 151
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '2' (n=4)"
+      ]
+    },
+    "id": "06cf5703d611facd",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5045,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "2"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 147,
+        "1": 151
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '2' (n=4)"
+      ]
+    },
+    "id": "6997a4dd940727ac",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5045,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "trestbps",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "2"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 147,
+        "1": 151
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '2' (n=4)"
+      ]
+    },
+    "id": "c7e15e32aec2f589",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5045,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "2"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 147,
+        "1": 151
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '2' (n=4)"
+      ]
+    },
+    "id": "e38cc940bd8b149e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5045,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "cp",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 143,
+        "1": 50,
+        "2": 86,
+        "3": 23
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "3d97ccf72ea9cf3c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5015,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "cp",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 143,
+        "1": 50,
+        "2": 86,
+        "3": 23
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "b8f0be5ecbc57b86",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5015,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "trestbps",
+    "column_b": "cp",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 143,
+        "1": 50,
+        "2": 86,
+        "3": 23
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "c405f17c640df078",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5015,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "cp",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 143,
+        "1": 50,
+        "2": 86,
+        "3": 23
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "d76e20a68929475d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5015,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "cp",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 143,
+        "1": 50,
+        "2": 86,
+        "3": 23
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "e81b584b8df4cc80",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.802,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.5015,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "trestbps",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "0"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "1": 18,
+        "2": 165,
+        "3": 117
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '0' (n=2)"
+      ]
+    },
+    "id": "1763814c12595dab",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.8,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.501,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "0"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "1": 18,
+        "2": 165,
+        "3": 117
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '0' (n=2)"
+      ]
+    },
+    "id": "48604f70b7b38fea",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.8,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.501,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "0"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "1": 18,
+        "2": 165,
+        "3": 117
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '0' (n=2)"
+      ]
+    },
+    "id": "5fc372ceb72e33da",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.8,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.501,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "0"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "1": 18,
+        "2": 165,
+        "3": 117
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '0' (n=2)"
+      ]
+    },
+    "id": "ec0e003ac7b2ddec",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.8,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.501,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "0"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "1": 18,
+        "2": 165,
+        "3": 117
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '0' (n=2)"
+      ]
+    },
+    "id": "efa43d5f98308751",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.8,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.501,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "ca",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "4"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 175,
+        "1": 65,
+        "2": 38,
+        "3": 20
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '4' (n=4)"
+      ]
+    },
+    "id": "447ea78e0ef0b75d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.4965,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "ca",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "4"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 175,
+        "1": 65,
+        "2": 38,
+        "3": 20
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '4' (n=4)"
+      ]
+    },
+    "id": "54f1511906ca004b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.4965,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "trestbps",
+    "column_b": "ca",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "4"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 175,
+        "1": 65,
+        "2": 38,
+        "3": 20
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '4' (n=4)"
+      ]
+    },
+    "id": "776d90a8a90b87b8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.4965,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "ca",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "4"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 175,
+        "1": 65,
+        "2": 38,
+        "3": 20
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '4' (n=4)"
+      ]
+    },
+    "id": "86e33f55f82beb55",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.4965,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "ca",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "4"
+      ],
+      "feasible": true,
+      "group_sizes": {
+        "0": 175,
+        "1": 65,
+        "2": 38,
+        "3": 20
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): '4' (n=4)"
+      ]
+    },
+    "id": "f8ae542b41b51ee2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.798,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.4965,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "fbs",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 14.3046,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "32bef2e96e5dd083",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.476,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "exang",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 31.4702,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "3e6bc38aedea6573",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.476,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "exang",
+    "column_b": "fbs",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 14.7517,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "49d35b07d1df3f97",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.476,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "thalach",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "169b0f3c01cbbaaf",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "thalach",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "2d3c9ec78fd0b7be",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "trestbps",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "7167152658e09d7a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "thalach",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "7cd3b40dd5161f06",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "trestbps",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "91e61c8ea1a5182f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "chol",
+    "column_b": "oldpeak",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "b970cec8f32df4d3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "oldpeak",
+    "column_b": "trestbps",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "d7c654f5a7a64364",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "oldpeak",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "d950ec63635781aa",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "age",
+    "column_b": "chol",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "e4fa2016ce124328",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "thalach",
+    "column_b": "trestbps",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "fc19cc5db1c88caa",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.456,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "fbs",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 3.1291,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "27e906e7297b4994",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.451,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "sex",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 6.6755,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "465e2549ae2a9952",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.451,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "exang",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 6.8841,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "9a96613fdb4d8d0e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.451,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "restecg",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "restecg:2"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 9.8658,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): restecg:2"
+      ]
+    },
+    "id": "17b44780ad31d11e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.449,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "restecg",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "restecg:2"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 45.8758,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): restecg:2"
+      ]
+    },
+    "id": "2c97b1c16d3a2713",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.449,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "exang",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "restecg:2"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 47.849,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): restecg:2"
+      ]
+    },
+    "id": "5f64885bc73c3639",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.449,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "fbs",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "restecg:2"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 22.198,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): restecg:2"
+      ]
+    },
+    "id": "d847b48efa012aae",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.449,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cp",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 7.3113,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "17ea714237e0f785",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.448,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cp",
+    "column_b": "fbs",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 3.4272,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "8e66e9bf4a3efeb5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.448,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cp",
+    "column_b": "exang",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 7.5397,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "d0e7a430a36f3d86",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.448,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cp",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1.5993,
+      "n_pairwise_complete": 302,
+      "reasons": []
+    },
+    "id": "e419aabddcfb283e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.604,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.448,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "sex",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "thal:0"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 5.7,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): thal:0"
+      ]
+    },
+    "id": "05dca115cd8e4a80",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.6,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.447,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "fbs",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "thal:0"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.64,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): thal:0"
+      ]
+    },
+    "id": "5520ad43aa894075",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.6,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.447,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "slope",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "thal:0"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1.26,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): thal:0"
+      ]
+    },
+    "id": "59f26cb3f5ca5579",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.6,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.447,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "exang",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "thal:0"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 5.88,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): thal:0"
+      ]
+    },
+    "id": "99c8467482ea7d6e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.6,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.447,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cp",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "thal:0"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1.38,
+      "n_pairwise_complete": 300,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): thal:0"
+      ]
+    },
+    "id": "f292f649049c298e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.6,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.447,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "cp",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "restecg:2"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 11.3456,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): restecg:2"
+      ]
+    },
+    "id": "e7bebd9538cbd035",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.446,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "restecg",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "restecg:2",
+        "thal:0"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 8.3851,
+      "n_pairwise_complete": 296,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): restecg:2, thal:0"
+      ]
+    },
+    "id": "55b87669cbce335a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.592,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.445,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "ca",
+    "column_b": "exang",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "ca:4"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 6.5772,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): ca:4"
+      ]
+    },
+    "id": "1bd2aaa3c70d911a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.443,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "ca",
+    "column_b": "sex",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "ca:4"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 6.443,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): ca:4"
+      ]
+    },
+    "id": "360848ba25210d3e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.443,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "ca",
+    "column_b": "slope",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "ca:4"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1.4094,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): ca:4"
+      ]
+    },
+    "id": "5d63cd654aaeccda",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.443,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "ca",
+    "column_b": "fbs",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "ca:4"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 2.953,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): ca:4"
+      ]
+    },
+    "id": "c4e27ab9af1f5754",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.443,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "ca",
+    "column_b": "cp",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "ca:4"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1.5436,
+      "n_pairwise_complete": 298,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): ca:4"
+      ]
+    },
+    "id": "c8d61c2eee9c0b4e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.596,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.443,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "ca",
+    "column_b": "thal",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "ca:4",
+        "thal:0"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1.2162,
+      "n_pairwise_complete": 296,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): ca:4, thal:0"
+      ]
+    },
+    "id": "1a1df41325c3c128",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.592,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.442,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "ca",
+    "column_b": "restecg",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [
+        "ca:4",
+        "restecg:2"
+      ],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 9.4354,
+      "n_pairwise_complete": 294,
+      "reasons": [
+        "dropped_levels (< min_group_n=8): ca:4, restecg:2"
+      ]
+    },
+    "id": "4411541b777b7271",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 0.588,
+      "interpretability": 0.69,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.441,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  }
+]

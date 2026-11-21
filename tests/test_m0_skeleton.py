@@ -9,9 +9,9 @@ from tempfile import TemporaryDirectory
 
 import pandas as pd
 
-from ads.cli import main
-from ads.config import dump_resolved_config, load_config
-from ads.schemas import (
+from veridata.cli import main
+from veridata.config import dump_resolved_config, load_config
+from veridata.schemas import (
     CleaningLogEntry,
     CleaningResult,
     ColumnProfile,

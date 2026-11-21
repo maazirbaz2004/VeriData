@@ -9,9 +9,9 @@ from typing import Any
 import pytest
 from test_eda import make_frame  # same constructed frame as the EDA tests
 
-from ads.eda.core import run_eda_core
-from ads.eda.plots import EDASettings
-from ads.insight_rules import (
+from veridata.eda.core import run_eda_core
+from veridata.eda.plots import EDASettings
+from veridata.insight_rules import (
     CATEGORY_ORDER,
     DEFAULT_MANUAL_BLOCK,
     SEVERITY_ORDER,

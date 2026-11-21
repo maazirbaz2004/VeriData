@@ -1,0 +1,5698 @@
+[
+  {
+    "column_a": "Churn",
+    "column_b": "Dependents",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 559.9304,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "0c79dbf2d0a2072d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 925.6101,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "10c792f41c6d0ec9",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 762.1423,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "43437db2843fdb44",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "Churn",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 5174,
+        "Yes": 1869
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "4a90acdb451d31e8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 180.9823,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "529269e3e4b3fd5c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "Churn",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 5174,
+        "Yes": 1869
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "631194137900c1a1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 902.7883,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "c091961e0b42faef",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 303.0524,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "d8aeb3c1c6542c44",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.875,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "Churn",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 5163,
+        "Yes": 1869
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "887d7cff73ac4ece",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.87492,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 404.9544,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "004071338b45c5f8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "DeviceProtection",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 404.9544,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "346155120ddb5eb0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "Contract",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 390.8898,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "70d795063cfb3eda",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 404.9544,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "9709c6528dcbeddd",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 404.9544,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "9ff772a6f9cda252",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "MultipleLines",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 180.9823,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "a8ab5aa270fefeea",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 404.9544,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b2c7e8098ed7d370",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "InternetService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 404.9544,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "cdb679793c7c215e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 404.9544,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "dccc7035db88ac5d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.85,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Churn",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 403.8929,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "dd216ddc9ff2517d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 1.0
+    },
+    "priority_score": 0.847,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaperlessBilling",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 465.6856,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "08f6ad745bad7bef",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaperlessBilling",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1387.2702,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "1843d4e0179f69e8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Female": 3488,
+        "Male": 3555
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "18bc5712b8004a98",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3641,
+        "Yes": 3402
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "23c72f48fe43e56d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "Dependents",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 4933,
+        "Yes": 2110
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "28da644fb502b33c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1044.9638,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "2c142d543cc868fe",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "Dependents",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 4933,
+        "Yes": 2110
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "361467c4ec24db34",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PhoneService",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 337.7561,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "4806be6cdeb24a26",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 860.4174,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "537a077824254cfa",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 5901,
+        "1": 1142
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "6778122c3e4fc497",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 682,
+        "Yes": 6361
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "6939a0baf585fd21",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 682,
+        "Yes": 6361
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "74ddd4374080345d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2872,
+        "Yes": 4171
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "7ad5a6ac64d676e6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 204.3192,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "7c5a74ad832ce4c1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaperlessBilling",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 278.1065,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "821a84248cb6ebb1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "SeniorCitizen",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 565.5681,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "9bf7110a8d9e370b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaperlessBilling",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1422.3393,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "9eab1a6b763c37ff",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Partner",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.4284,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "a4a82c11a90be518",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Partner",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 551.6235,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b1ea5309b1d452f1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Partner",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1684.8184,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "bb1b1acb50fb6df1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 1019.1992,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "bd2ed7b8e9c76306",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3641,
+        "Yes": 3402
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "bdf5c8ba8c568de7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Female": 3488,
+        "Male": 3555
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "cee9c2352e5e8ad1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2872,
+        "Yes": 4171
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "d9a0eee5ac2ce6a2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 342.1298,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f22a6924d91c45c2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 5901,
+        "1": 1142
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f585ae9a9539affe",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PhoneService",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 110.5841,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f931c9fdd1314ce2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.575,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3639,
+        "Yes": 3393
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "4dfc4509fa156244",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.57492,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "Dependents",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 4933,
+        "Yes": 2099
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "8ccf10a6ffa520bb",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.57492,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "0": 5890,
+        "1": 1142
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "935856fe3f3b4d53",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.57492,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2864,
+        "Yes": 4168
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "d1a0de4e5c51e51f",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.57492,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 680,
+        "Yes": 6352
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "ed911188cb8d94c5",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.57492,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Female": 3483,
+        "Male": 3549
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "fa5dca72681292b8",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 1.0,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.57492,
+    "rationale": "",
+    "relationship": "numeric_vs_binary",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3473,
+        "No internet service": 1526,
+        "Yes": 2044
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "02ba36a7b9381004",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "MultipleLines",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3390,
+        "No phone service": 682,
+        "Yes": 2971
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "02ebdafda1bd3364",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3498,
+        "No internet service": 1526,
+        "Yes": 2019
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "39ff607798f90a1f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "tenure",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "3b54e233c0128493",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "DeviceProtection",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3095,
+        "No internet service": 1526,
+        "Yes": 2422
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "596311c57edced62",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "DeviceProtection",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3095,
+        "No internet service": 1526,
+        "Yes": 2422
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "5ca49b5911beb12c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2810,
+        "No internet service": 1526,
+        "Yes": 2707
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "7d819c1e68b96d19",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3473,
+        "No internet service": 1526,
+        "Yes": 2044
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "8dc4c345daf34a1d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2785,
+        "No internet service": 1526,
+        "Yes": 2732
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "a01bd5c8ee99e9a4",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3088,
+        "No internet service": 1526,
+        "Yes": 2429
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "a03891449f04e25e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "InternetService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "DSL": 2421,
+        "Fiber optic": 3096,
+        "No": 1526
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "a3e17fa9e15818ac",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2785,
+        "No internet service": 1526,
+        "Yes": 2732
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b2f2199668be5461",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3498,
+        "No internet service": 1526,
+        "Yes": 2019
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "d7097c3aa1223380",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "Contract",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Month-to-month": 3875,
+        "One year": 1473,
+        "Two year": 1695
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "e97402e7d7545670",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2810,
+        "No internet service": 1526,
+        "Yes": 2707
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f10a664ad5ae5efd",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "InternetService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "DSL": 2421,
+        "Fiber optic": 3096,
+        "No": 1526
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f5144243f2831548",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3088,
+        "No internet service": 1526,
+        "Yes": 2429
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f52b34ac378b3d85",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "MultipleLines",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3390,
+        "No phone service": 682,
+        "Yes": 2971
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f84756eb78b8a2c0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "Contract",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Month-to-month": 3875,
+        "One year": 1473,
+        "Two year": 1695
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "feb03e3a997c5683",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.555,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3472,
+        "No internet service": 1520,
+        "Yes": 2040
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "13a009fb47e81c21",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2781,
+        "No internet service": 1520,
+        "Yes": 2731
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "2cf1f95489ceb976",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 2809,
+        "No internet service": 1520,
+        "Yes": 2703
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "3898a8f79bb14302",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "tenure",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "3ad808322aec7e11",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "Contract",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Month-to-month": 3875,
+        "One year": 1472,
+        "Two year": 1685
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "44d86c3b7a4241c2",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "DeviceProtection",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3094,
+        "No internet service": 1520,
+        "Yes": 2418
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "6c475fd23dfa72c4",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3087,
+        "No internet service": 1520,
+        "Yes": 2425
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "6ffa3476104c6ba0",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "MultipleLines",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3385,
+        "No phone service": 680,
+        "Yes": 2967
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "8228abaa14d91582",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "InternetService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "DSL": 2416,
+        "Fiber optic": 3096,
+        "No": 1520
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "8530374cc19cefc1",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "No": 3497,
+        "No internet service": 1520,
+        "Yes": 2015
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "e03ed1d4bb7a47d8",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "TotalCharges",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "e5022cb700228461",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.8,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55492,
+    "rationale": "",
+    "relationship": "numeric_vs_numeric",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "tenure",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Bank transfer (automatic)": 1544,
+        "Credit card (automatic)": 1522,
+        "Electronic check": 2365,
+        "Mailed check": 1612
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "01c5b375291cde1e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.551,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MonthlyCharges",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Bank transfer (automatic)": 1544,
+        "Credit card (automatic)": 1522,
+        "Electronic check": 2365,
+        "Mailed check": 1612
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "1999f2288847bb2b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.551,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TotalCharges",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": {
+        "Bank transfer (automatic)": 1542,
+        "Credit card (automatic)": 1521,
+        "Electronic check": 2365,
+        "Mailed check": 1604
+      },
+      "min_expected_count": null,
+      "n_pairwise_complete": 7032,
+      "reasons": []
+    },
+    "id": "416c4acccbc3aa0b",
+    "priority_components": {
+      "data_quality": 0.9992,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.76,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55092,
+    "rationale": "",
+    "relationship": "numeric_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 319.1535,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "00fce16491ccf371",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 622.2735,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "0114269a3fd5d1bf",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "033c8b8b2b003387",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 622.2735,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "08c1f44b1ce82523",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 319.1535,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "0bc6ca6971011f0c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "MultipleLines",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 142.6361,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "11fd40d580a970e3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "13a10641f027369a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Partner",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 737.1081,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "153e2caea2390573",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "19a0194e87ce14a6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 337.7561,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "1af07d4a36636b1b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "Dependents",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 441.2935,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "1b7c28e9a61f9ee0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "1da4c93b7e6d39e1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 457.1717,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "2239fb742177f8c8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "2463455b7a0388e6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "2563ab96e5b676e3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 737.1081,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "2616c37a64ebbc9b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "274a32d0fa4d7a27",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 66.0406,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "2ab0d13c6a970c95",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 457.1717,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "2cc96175d427c976",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "MultipleLines",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "324ec7360c7c9674",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "348470ac5b730fe5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "3705ab22484af512",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 142.6361,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "37912b7339e9c029",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "394ce7fb8751f8c3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 457.1717,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "3a73efa245b091cf",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "3ccf0a38f8a49cca",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 622.2735,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "3db10fc8b55a88e3",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "SeniorCitizen",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 247.436,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "3e9e33034bd0ce13",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 755.7416,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "3f926e31b9db9efb",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 247.436,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "4066c234dff6e9b7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PhoneService",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "40b4ef38fb223d82",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "StreamingTV",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 755.7416,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "4129803e79d4b3d2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 319.1535,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "41efd16bb00b01b5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "StreamingTV",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "452ac44b83732dfe",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "462dcf635331c428",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "4a31857362168276",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "5c8ab0a4c78018ee",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 755.7416,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "5fc92aff1a7ece2f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "61db1bd96e1c941d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "64f3b53675773903",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "6983aa40b3a3e005",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "InternetService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 457.1717,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "6c350284d1776c2c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 247.436,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "6d58f0dcb9d78efb",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "6ed43add85a5c304",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaperlessBilling",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 622.2735,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "714422e1d8e7ae7a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "StreamingMovies",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "7368c7a6006bb1ea",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 247.436,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "848cc416d641778f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 755.7416,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "84f9f37ddb224d3f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 319.1535,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "8e13ab70f1ba11da",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "SeniorCitizen",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 247.436,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "8fe18222df8a9429",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 238.8423,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "94987362ca8c05d7",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 600.6611,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "975b8cabeb4017b0",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 737.1081,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "979865ae778a075a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaperlessBilling",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 622.2735,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "981cff5f7a215d19",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 729.4937,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "a0998c232fd9d494",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 737.1081,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "a72cd470e6363ee8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b24e02a04a032290",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PhoneService",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b400db5b1782ac0f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b4e3227fd5609648",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "MultipleLines",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 204.3192,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b61112d60046cde6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 278.1065,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b66b0e87135f91b6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 755.7416,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b698c9a144e8988b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b959daf0d5cf8c3e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "InternetService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "b9bfbf5bfa332d73",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "c1c00d6f1586c56f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "InternetService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 319.1535,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "c70d9a30ad3a759f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 457.1717,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "c994c99c1be60bbc",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 457.1717,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "cb1b4f5249ce72cd",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaperlessBilling",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 622.2735,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "ccd56726c0186a89",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 737.1081,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "cd6a71803b968df6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "DeviceProtection",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 319.1535,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "ce555959104ae5eb",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "ceb061e38724fdc6",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Partner",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 737.1081,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "cf00b739bd43a631",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 711.5073,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "cf9593294dd2606b",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "PaperlessBilling",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 622.2735,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "d1069a4a2669a614",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "MultipleLines",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "d53613431a44d867",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "TechSupport",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 755.7416,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "d989ff8da27e3c98",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "db19e8c44cb69cf1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "dc1dbe320251d420",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "Partner",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.4284,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "e6686ce76c4e3d5a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 247.436,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "e82a99a2057375c9",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "SeniorCitizen",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 247.436,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "ef4ffd0e980ccdea",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "OnlineBackup",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 319.1535,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f5a0e5abc47bbcdb",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "StreamingMovies",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f6451ce76918451c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PhoneService",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.7683,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f6897534e4ade931",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 110.5841,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f897ab3c87e57ef2",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "DeviceProtection",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 457.1717,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f9f59d6443b0306f",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "OnlineSecurity",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 330.6369,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "faa2137efcbb922c",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "StreamingMovies",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 755.7416,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "fd17f750ea79f2f1",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Partner",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 737.1081,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "ffecdc35ac621a0a",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.75,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.55,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaperlessBilling",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 620.6423,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "061277d6cdc09e76",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Contract",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 318.3169,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "070ca34173a28625",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaymentMethod",
+    "column_b": "StreamingMovies",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.7703,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "1f91a6dd05b07726",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "DeviceProtection",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.7703,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "212641ca4942b1a9",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "MultipleLines",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.3809,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "30543f3b6b059a20",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaymentMethod",
+    "column_b": "PhoneService",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 147.3809,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "571f4016ee69f470",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaymentMethod",
+    "column_b": "SeniorCitizen",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 246.7874,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "642a218ee38ff83d",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaymentMethod",
+    "column_b": "StreamingTV",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.7703,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "6bcfe1df05379a17",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaymentMethod",
+    "column_b": "gender",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 753.7606,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "9ddf1916ee363431",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineBackup",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.7703,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "bcecd2bd8f2cfb5e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Dependents",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 455.9733,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "e702cc780a1c4f70",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "PaymentMethod",
+    "column_b": "TechSupport",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.7703,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "ea5904cd72634faa",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "OnlineSecurity",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.7703,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "ec89c380b28346d8",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "Partner",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 735.1759,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "f0c3049b524b87f5",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  },
+  {
+    "column_a": "InternetService",
+    "column_b": "PaymentMethod",
+    "covariates": [],
+    "created_stage": "batch",
+    "expected_direction": "any",
+    "feasibility": {
+      "dropped_levels": [],
+      "feasible": true,
+      "group_sizes": null,
+      "min_expected_count": 329.7703,
+      "n_pairwise_complete": 7043,
+      "reasons": []
+    },
+    "id": "fbde1fc2a222cd7e",
+    "priority_components": {
+      "data_quality": 1.0,
+      "feasibility_strength": 1.0,
+      "interpretability": 0.72,
+      "llm_relevance": 0.5,
+      "target_involvement": 0.0
+    },
+    "priority_score": 0.547,
+    "rationale": "",
+    "relationship": "categorical_vs_categorical",
+    "schema_version": "1.0",
+    "source": "enumerated",
+    "status": "proposed"
+  }
+]

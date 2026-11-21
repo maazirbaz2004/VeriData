@@ -6,9 +6,9 @@ import unittest
 
 import pandas as pd
 
-from ads.config import load_config
-from ads.schemas import SemanticType
-from ads.type_inference import infer_column_types, infer_column_types_detailed
+from veridata.config import load_config
+from veridata.schemas import SemanticType
+from veridata.type_inference import infer_column_types, infer_column_types_detailed
 
 
 class TestTypeInference(unittest.TestCase):

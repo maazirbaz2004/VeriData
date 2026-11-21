@@ -10,9 +10,9 @@ from tempfile import TemporaryDirectory
 import numpy as np
 import pandas as pd
 
-from ads.config import load_config
-from ads.scaling import analyze_scaling
-from ads.schemas import ColumnRole, ColumnSchemaEntry, SemanticType
+from veridata.config import load_config
+from veridata.scaling import analyze_scaling
+from veridata.schemas import ColumnRole, ColumnSchemaEntry, SemanticType
 
 
 class TestScaling(unittest.TestCase):

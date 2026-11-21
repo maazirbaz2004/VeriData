@@ -52,3 +52,17 @@ This document records every **DECISION** and **OPEN** item from `plans/PHASE1_PL
 | **P2-9** | Sec 10 | What happens if one EDA chart fails on an unusual CSV. | **Chosen:** each EDA section runs independently; a failure is recorded in `eda_summary.json → eda_errors` and shown as a note in the report, and the rest of the pipeline continues. Tests assert `eda_errors` is empty for the bundled datasets. |
 | **P2-10** | Sec 5.4 | Ordinal integer scales in Student Performance (`Medu`, `studytime`, `famrel`, `Dalc`, …). | **Chosen:** labelled `numeric` in `truth_types` and not forced to categorical, the same convention as `ca` in the heart-disease config. **Needs human confirmation** when the truth types are reviewed (plan Section 21). |
 | **P2-11** | Sec 5.4 | Bank Marketing `pdays = 999` ("never contacted"). | **Chosen:** left unchanged (not turned into NaN, which would empty 96% of the column); documented in `docs/datasets.md` and expected to show up as extreme skew and a strong `poutcome` link in EDA. |
+
+---
+
+## 4. Phase 2 Decisions (Hypothesis Generation)
+
+| ID | Section | Plan Requirement / Open Question | Chosen Default & Rationale |
+| :--- | :---: | :--- | :--- |
+| **P2-H1** | Master Plan | Package rename `ads` -> `veridata`. | **Followed.** Renamed `src/ads` to `src/veridata`, updated imports, `pyproject.toml`, `Makefile`, and CLI entrypoint (`veridata`), and added `CLAUDE.md`/`AGENTS.md`. |
+| **P2-H2** | Sec 3.2 | `numeric_discrete` with $\le 10$ distinct values. | **Chosen:** Treated as categorical (`NUM_CATEGORICAL` or `CAT_CAT`; `NUM_BINARY` if 2 levels) by default; configurable via `hypotheses.treat_small_discrete_as_numeric: false`. Recorded in `hypothesis_manifest.json`. |
+| **P2-H3** | Sec 4 | Rare-level policy during feasibility screening (`NUM_CATEGORICAL`, `CAT_CAT`). | **Chosen:** Levels with $n < \text{min\_group\_n}$ (default `8`) are excluded from that test and recorded in `FeasibilityReport.dropped_levels` and `reasons`. The hypothesis remains feasible iff $\ge 2$ levels remain (for `CAT_CAT`, $\ge 2$ rows and $\ge 2$ columns) and remaining $n \ge \text{min\_n\_pairwise}$ (default `20`). Optional rare-level lumping into `"Other"` is off by default (`lump_rare_levels: false`). |
+| **P2-H4** | Sec 6 | Outcome-independent pruning order when feasible $m > \text{max\_tests}$ (default `3000`). | **Chosen:** (1) If `target` is configured, switch to `target_focused`; (2) else drop `NUM_CATEGORICAL` / `CAT_CAT` pairs with highest cardinality first; (3) else keep highest outcome-independent `priority_score` (tie-break alphabetical `id`). Every step and pruned count is recorded in `hypothesis_manifest.json -> pruning_steps`. |
+| **P2-H5** | Sec 5.3 | Causal-language and digit validation on LLM rationales before Phase 5 shared linter exists. | **Chosen:** Implemented local regex validators in `contracts/hypothesis.py` (digit rejection) and `hypotheses/llm_proposer.py` (causal verb rejection); will unify with Phase 5 `reporting/language_lint.py` once built. |
+| **P2-H6** | Sec 7 | Offline natural-language hypothesis parsing fallback when no LLM API key is configured. | **Chosen:** Deterministic normalized token + light stemming + `difflib` fuzzy matching against column names and non-generic categorical levels, plus deterministic regex detection for unsupported causal/ML/time-series questions. Achieves $\ge 85\%$ accuracy on `tests/gold/nl_hypotheses.jsonl` completely offline. |
+

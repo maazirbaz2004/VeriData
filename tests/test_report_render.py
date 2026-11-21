@@ -9,10 +9,10 @@ from typing import Any
 
 from test_eda import make_frame
 
-from ads.eda.core import run_eda_core
-from ads.eda.plots import EDASettings
-from ads.insight_rules import DEFAULT_MANUAL_BLOCK, build_insights
-from ads.report_render import build_context, markdown_to_html, render_html, render_markdown
+from veridata.eda.core import run_eda_core
+from veridata.eda.plots import EDASettings
+from veridata.insight_rules import DEFAULT_MANUAL_BLOCK, build_insights
+from veridata.report_render import build_context, markdown_to_html, render_html, render_markdown
 
 
 def test_markdown_to_html_constructs() -> None:

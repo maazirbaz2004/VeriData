@@ -8,12 +8,12 @@ from tempfile import TemporaryDirectory
 
 import pandas as pd
 
-from ads.cleaning import clean_dataset, save_cleaning_log_json
-from ads.config import load_config
-from ads.ingestion import load_csv
-from ads.profiling import profile_dataset
-from ads.schemas import SemanticType
-from ads.type_inference import infer_column_types
+from veridata.cleaning import clean_dataset, save_cleaning_log_json
+from veridata.config import load_config
+from veridata.ingestion import load_csv
+from veridata.profiling import profile_dataset
+from veridata.schemas import SemanticType
+from veridata.type_inference import infer_column_types
 
 FIXTURES_DIR = Path(__file__).resolve().parent / "fixtures"
 

@@ -110,3 +110,67 @@ insights:
   small_n_dataset_threshold: 200
   small_n_group_threshold: 20
 
+# Phases 2-8 global configuration (Master Plan Section 6)
+stats:
+  alpha: 0.05
+  correction: "bh"                  # bh | by | holm | bonferroni | none
+  two_sided: true
+  min_n_pairwise: 20
+  min_group_n: 8
+  min_expected_count_chi2: 5
+  normality_n_max: 5000
+  large_n_clt: 50
+  extreme_skew: 2.0
+  bootstrap_resamples: 2000
+  bootstrap_resamples_benchmark: 500
+  permutation_resamples: 9999
+  seed: 20260101
+
+effect_floor:
+  cohens_d: 0.20
+  rank_biserial: 0.10
+  correlation: 0.10
+  eta_squared: 0.01
+  epsilon_squared: 0.01
+  cramers_v_df1: 0.10
+  enabled: true
+
+hypotheses:
+  mode: "exhaustive"                # exhaustive | target_focused | llm_prioritized
+  target: null
+  max_tests: 3000
+  max_levels_categorical: 20
+  small_discrete_max_unique: 10
+  treat_small_discrete_as_numeric: false
+  lump_rare_levels: false
+  rare_level_min_fraction: 0.01
+  enable_nonlinear: false
+  llm_proposals: true
+  max_llm_proposals: 40
+  min_llm_hypotheses: 10
+  ranking_weights:
+    feasibility_strength: 0.25
+    target_involvement: 0.30
+    llm_relevance: 0.25
+    interpretability: 0.10
+    data_quality: 0.10
+
+llm:
+  provider: "anthropic"
+  model: "claude-sonnet-4-5"
+  temperature: 0.0
+  max_tokens: 2000
+  cache_dir: ".cache/llm"
+  retries: 2
+
+reporting:
+  narration: "llm_slots"            # llm_slots | template_only
+  max_findings_in_report: 30
+  charts_dpi: 150
+
+agent:
+  checkpoint: "sqlite"              # memory | sqlite
+  max_followups: 3
+  max_tool_calls_per_turn: 4
+
+

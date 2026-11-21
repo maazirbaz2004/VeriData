@@ -8,11 +8,11 @@ from pathlib import Path
 
 import pytest
 
-from ads.config import load_config
-from ads.ingestion import compute_sha256
-from ads.pipeline import run_phase1
-from ads.schemas import InsightRecord, SemanticType
-from ads.synthetic.messy_injector import generate_and_save_messy_dataset
+from veridata.config import load_config
+from veridata.ingestion import compute_sha256
+from veridata.pipeline import run_phase1
+from veridata.schemas import InsightRecord, SemanticType
+from veridata.synthetic.messy_injector import generate_and_save_messy_dataset
 
 REPO = Path(__file__).resolve().parents[1]
 COARSE = {
