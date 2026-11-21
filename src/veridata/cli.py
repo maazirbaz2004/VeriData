@@ -97,8 +97,22 @@ def build_parser() -> argparse.ArgumentParser:
     # veridata compare
     subparsers.add_parser("compare", help="Score pipeline vs LLM baseline and generate tables/plots")
 
-    # veridata report
-    subparsers.add_parser("report", help="Assemble final_report/PHASE1_REPORT.md")
+    # veridata report  (no --dataset: Phase 1 final report; --dataset: Phase 5 findings report)
+    rep_parser = subparsers.add_parser(
+        "report", help="Phase 5 findings report for --dataset (or, without it, assemble final_report/PHASE1_REPORT.md)"
+    )
+    rep_parser.add_argument("--dataset", default=None, help="Dataset name (needs outputs/<dataset>/findings.json)")
+    rep_parser.add_argument("--narration", choices=["llm_slots", "template_only"], default="template_only")
+    rep_parser.add_argument("--max-findings", type=int, default=None)
+    rep_parser.add_argument("--format", default="md,html", help="Comma-separated: md,html")
+    rep_parser.add_argument("--date", default="", help="Date shown in the title block (YYYY-MM-DD)")
+    rep_parser.add_argument("--allow-violations", action="store_true", help="Debug: write the report even if the gate fails")
+    rep_parser.add_argument("--out", default=None, help="Output folder (default: outputs/<dataset>/report)")
+
+    # veridata verify-text (Phase 5 debugging tool)
+    vt_parser = subparsers.add_parser("verify-text", help="Check the numbers in a text against a facts.json file")
+    vt_parser.add_argument("--facts", required=True, help="JSON list of Fact objects (key, value, display, unit, source)")
+    vt_parser.add_argument("--text", required=True)
 
     # veridata hypotheses (Phase 2)
     hyp_parser = subparsers.add_parser(
@@ -177,6 +191,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--no-effect-floor", action="store_true", help="Disable effect-size floor"
     )
 
+    # veridata bench ... (Phase 4)
+    from veridata.benchmark.cli import add_bench_parser
+
+    add_bench_parser(subparsers)
+
     return parser
 
 
@@ -248,6 +267,16 @@ def main(argv: Sequence[str] | None = None) -> int:
             return 0
         finally:
             close_logging(logger)
+
+    if args.command == "report" and args.dataset:
+        from veridata.reporting.cli import run_findings_report
+
+        return run_findings_report(args)
+
+    if args.command == "verify-text":
+        from veridata.reporting.cli import run_verify_text
+
+        return run_verify_text(args)
 
     if args.command == "report":
         logger = setup_logging()
@@ -487,6 +516,11 @@ def main(argv: Sequence[str] | None = None) -> int:
             return 0
         finally:
             close_logging(logger)
+
+    if args.command == "bench":
+        from veridata.benchmark.cli import run_bench
+
+        return run_bench(args)
 
     logger = setup_logging()
     try:

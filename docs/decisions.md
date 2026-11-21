@@ -79,3 +79,37 @@ This document records every **DECISION** and **OPEN** item from `plans/PHASE1_PL
 | **P3-S5** | Sec 9 | Parallelism threshold in `runner.run_all`. | **Chosen:** Use `joblib.Parallel(backend="loky")` when `n_jobs != 1` and there are $\ge 40$ hypotheses; run sequentially for smaller sets to avoid Windows process-spawn overhead while keeping deterministic per-hypothesis RNG seeds (`sha256(seed:hypothesis_id)`). |
 
 
+
+---
+
+## 6. Phase 4 Decisions (Synthetic Benchmark & Calibration)
+
+| ID | Section | Plan Requirement / Open Question | Chosen Default & Rationale |
+| :--- | :---: | :--- | :--- |
+| **P4-01** | Sec 4.1 | Shape of the structural model. | **Chosen:** two layers — root columns and a few latent factors feed child columns, one parent edge per child. Induced dependence comes only from siblings / common ancestors, so the dependence closure is easy to compute and test; colliders (two parents of one child) stay independent. |
+| **P4-02** | Sec 4.1 | How to plant exact effect sizes in skewed / heavy-tailed data. | **Chosen:** every family (normal, lognormal σ = 0.8, t3, 30% zero-inflated, bimodal) is **standardised to population mean 0, SD 1** before the edge is applied, so r, d and η² are exact. Spearman targets are calibrated by simulation; Cramér's V targets by bisection on the analytic table. Truth is re-measured on a 20,000-row draw. |
+| **P4-03** | Sec 4.4 | Weak induced dependence. | **Chosen:** induced pairs with population dependence < 0.05 are **gray** and ignored by the matcher (neither hit nor error). They are not realistically detectable and would otherwise punish correct behaviour. |
+| **P4-04** | Sec 5 | Cost of running 9 variants. | **Chosen:** variants that share a test-selection mode share one Stage A run per dataset; only validation (correction + floor) is re-run per variant. Results are cached by (variant, data hash, seed, code hash). |
+| **P4-05** | Sec 5 | Variant list. | **Followed**, plus `naive_raw` (naive tests, no correction, no floor) as the "what an untrained analyst does" baseline. `assumption_only` is an **alias** of `veridata_nocorrection` because Phase 3's default already uses assumption-aware selection with raw p < α and no floor. |
+| **P4-06** | Sec 6 | Which directions to check. | **Chosen:** only where the truth has a clear direction — the sign for numeric–numeric pairs and the higher group for a numeric column vs a **2-level** group column. Other true pairs count when the pair is right. |
+| **P4-07** | Sec 6 | FWER definition with correlated null blocks. | **Chosen:** FWER is computed over **zero-planted** datasets (no planted edges) and counts datasets with ≥ 1 *false* discovery. Null blocks create real dependence, so a report on a block pair is a true discovery, not an error. |
+| **P4-08** | Sec 7.1 | 5,000 reps per Type I cell. | **Changed:** 1,000 reps per cell (116 cells) to fit the time budget, with ± 2 Monte Carlo SE slack in the pass band; any cell above 0.075 is re-run with ≥ 10,000 reps before counting as a failure (one cell was: 0.098 → 0.059 with 12,000 reps). |
+| **P4-09** | Sec 8 | What to tune. | **Chosen:** only a single multiplier on all effect floors (grid 0.5–1.5). `large_n_clt` and `extreme_skew` are **not tuned**: the Type I calibration already passes with the defaults, and tuning them on 60 datasets would overfit. Result: multiplier 1.0 kept. |
+| **P4-10** | Sec 7.2 | How to run the dependence experiment fast enough. | **Chosen:** vectorised Pearson p-values for all pairs of a correlated Gaussian matrix, corrected with the product's own `stats.correction.apply_correction`, 300 reps per cell. The correction code under test is the real one; only the p-value computation is vectorised. |
+| **P4-11** | Sec 4.5 | core60 design. | **Chosen:** 12 zero-effect datasets (every n × p cell, 4 with null blocks) + 48 effect datasets (every n × p × k cell with 2 of the 4 strengths, rotated). Shapes, imbalance, missingness, decoys and confounders are assigned by seeded rotation so each appears across n and p. |
+
+---
+
+## 7. Phase 5 Decisions (Reporting & Number Verification)
+
+| ID | Section | Plan Requirement / Open Question | Chosen Default & Rationale |
+| :--- | :---: | :--- | :--- |
+| **P5-01** | Cut list | LLM slot narration (P5-M5). | **Skipped for now** (deadline; the plan's cut list allows it). All explanations come from fixed templates filled from the `FactRegistry`. `--narration llm_slots` falls back to templates with a note. The verifier and linter are built so LLM slots can be added later without changes. |
+| **P5-02** | Sec 3 | Where the old Phase 1 `reporting.py` goes. | **Chosen:** moved (git mv) to `reporting/dataset_report.py`; `veridata.reporting` re-exports `render_dataset_report`, so existing imports keep working. `veridata report` without `--dataset` still builds the Phase 1 report. |
+| **P5-03** | Sec 6 | How numbers reach text. | **Chosen:** templates only contain `{.fact}` placeholders; `FactRegistry.render` fills the registered display string. Templates never format numbers (a test greps `templates.py`). |
+| **P5-04** | Sec 6.2 | Matching rules of the number verifier. | **Chosen (conservative):** a number matches a fact if it equals the display, or lies within half a unit of the last shown digit; a number shown with *more* decimals than the fact must be the correct rounding of the real value. **No fraction ↔ percent conversion** (so "0.95" can never borrow the 95% CI level) and "<0.001" only matches tokens written with "<". Number words ("twice", "three") and non-ASCII digits are always violations. |
+| **P5-05** | Sec 6.3 | Digits that are not numbers. | **Chosen:** masked before checking — numbered list markers, heading numbers, link targets, HTML tags/comments, and registered string facts (column names, level labels). **Known gap:** a level label that is itself a number (e.g. level "1") is allowed wherever that finding's facts are in scope. |
+| **P5-06** | Sec 7 | Wording for rejected tests. | **Chosen:** "not supported after correction" instead of "not significant", so the bare word "significant" never appears; the linter only allows "statistically significant after correction". |
+| **P5-07** | Sec 8 | HTML output. | **Chosen:** python-markdown (tables, fenced code, `md_in_html`) with inline CSS and charts embedded as base64 PNGs, so `report.html` is one self-contained file (insurance: 1.5 MB, limit 15 MB). |
+| **P5-08** | Sec 9 | Report gate. | **Followed:** the final markdown, every chart's text, the linter, required sections and image checks must all pass, else `ReportingError` (`--allow-violations` for debugging only). |
+| **P5-09** | Sec 6 (from Phase 4) | What adjusted p-values mean to a reader. | **Added** a Limitations line: BH controls the share of false findings in the list, so borderline q-values are more often false leads (seen in the dev q-calibration). |
