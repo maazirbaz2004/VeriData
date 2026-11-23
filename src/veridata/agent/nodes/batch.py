@@ -35,17 +35,24 @@ def ingest_profile_node(state: BatchState) -> dict[str, Any]:
     input_path = cfg_dict.get("file") or cfg_dict.get("input_csv")
     ds_name = state.get("dataset_name", "dataset")
 
-    if not input_path or not Path(input_path).exists():
+    cfg = PipelineConfig.model_validate(cfg_dict) if cfg_dict else load_config()
+    existing_dataset_id = state.get("dataset_id")
+
+    if input_path and Path(input_path).exists():
+        ing = load_csv(input_path, config=cfg)
+        df = ing.df_naive
+        dataset_id = GLOBAL_DATASTORE.put(df)
+        profile = profile_dataset(ing.df_raw_str, df_naive=ing.df_naive, config=cfg, dataset_name=ds_name)
+    elif existing_dataset_id and existing_dataset_id in GLOBAL_DATASTORE._frames:
+        df = GLOBAL_DATASTORE.get(existing_dataset_id)
+        dataset_id = existing_dataset_id
+        profile = profile_dataset(df, df_naive=df, config=cfg, dataset_name=ds_name)
+    else:
         return {
             "errors": [{"stage": "ingest_profile", "error": f"Input CSV '{input_path}' not found."}],
             "status": "failed",
         }
 
-    cfg = PipelineConfig.model_validate(cfg_dict) if cfg_dict else load_config()
-    ing = load_csv(input_path, config=cfg)
-    df = ing.df_naive
-    dataset_id = GLOBAL_DATASTORE.put(df)
-    profile = profile_dataset(ing.df_raw_str, df_naive=ing.df_naive, config=cfg, dataset_name=ds_name)
     schema = build_column_schema(profile, cfg)
 
     duration = time.perf_counter() - t0

@@ -61,15 +61,24 @@ class ArgExtraction(BaseModel):
 
 
 def find_column_mentions(text: str, columns: list[str]) -> list[str]:
-    """Identify dataset columns referenced in text, ordered by occurrence."""
+    """Identify dataset columns referenced in text, ordered by occurrence (supports simple plurals)."""
     text_lower = text.lower()
     found: list[tuple[int, str]] = []
+    seen_spans: list[tuple[int, int]] = []
 
     # Sort columns by length descending so longer column names match first (e.g. TotalCharges before charges)
     for col in sorted(columns, key=len, reverse=True):
-        pattern = rf"\b{re.escape(col.lower())}\b"
+        col_low = col.lower()
+        variants = [re.escape(col_low) + r"(?:s|es)?"]
+        if len(col_low) > 3 and col_low.endswith("s"):
+            variants.append(re.escape(col_low[:-1]) + r"(?:s|es)?")
+        pattern = rf"\b(?:{'|'.join(variants)})\b"
         match = re.search(pattern, text_lower)
         if match:
+            span = match.span()
+            if any(a <= span[0] < b or a < span[1] <= b for a, b in seen_spans):
+                continue
+            seen_spans.append(span)
             found.append((match.start(), col))
 
     found.sort(key=lambda x: x[0])
@@ -286,10 +295,18 @@ def extract_arguments(
 
     elif intent in ("compare_groups", "test_correlation", "test_association", "test_relationship"):
         if len(cols_found) >= 2:
-            args["column_a"] = cols_found[0]
-            args["column_b"] = cols_found[1]
-            args["numeric_column"] = cols_found[0]
-            args["group_column"] = cols_found[1]
+            c0, c1 = cols_found[0], cols_found[1]
+            num_col, grp_col = c0, c1
+            if intent == "compare_groups" and schema:
+                numeric_types = {"numeric_continuous", "numeric_discrete"}
+                t0 = str((schema.get(c0) or {}).get("semantic_type", ""))
+                t1 = str((schema.get(c1) or {}).get("semantic_type", ""))
+                if t0 not in numeric_types and t1 in numeric_types:
+                    num_col, grp_col = c1, c0
+            args["column_a"] = num_col
+            args["column_b"] = grp_col
+            args["numeric_column"] = num_col
+            args["group_column"] = grp_col
         elif len(cols_found) == 1 and f and f.columns:
             args["column_a"] = f.columns[0]
             args["column_b"] = cols_found[0]

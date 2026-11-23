@@ -52,9 +52,10 @@ def explain_finding(
     template_text = render_template(finding, registry)
 
     # If no LLM available, return deterministic template
+    lint_kind = "finding" if finding.decision.accepted else "rejected"
     if llm is None:
         v_res = verify_text(template_text, registry, finding_ids=[hid])
-        l_res = lint_text(template_text, finding)
+        l_res = lint_text(template_text, finding, kind=lint_kind)
         violations = [v.reason for v in v_res.violations] + l_res.violations
         return Explanation(
             text=template_text,
@@ -97,7 +98,7 @@ def explain_finding(
 
             # Run verifier and linter
             v_res = verify_text(candidate_text, registry, finding_ids=[hid])
-            l_res = lint_text(candidate_text, finding)
+            l_res = lint_text(candidate_text, finding, kind=lint_kind)
 
             if v_res.ok and l_res.ok:
                 return Explanation(

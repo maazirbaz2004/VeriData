@@ -20,33 +20,28 @@ def render_upload_and_samples(settings: dict[str, Any]) -> pd.DataFrame | None:
     st.sidebar.markdown("**Load Demo Dataset:**")
     col1, col2 = st.sidebar.columns(2)
 
-    demo_dir = Path("data/demo")
+    repo_demo_dir = Path(__file__).resolve().parents[4] / "data" / "demo"
+    demo_dir = repo_demo_dir if repo_demo_dir.exists() else Path("data/demo")
     loaded_df = None
     loaded_name = None
 
-    with col1:
-        if st.button("Insurance", key="btn_insurance", use_container_width=True):
-            p = demo_dir / "insurance.csv"
+    demo_choices = [
+        (col1, "Insurance", "btn_insurance", "insurance.csv", "insurance"),
+        (col1, "Pure Noise", "btn_noise", "pure_noise.csv", "pure_noise"),
+        (col2, "Messy Data", "btn_messy", "messy.csv", "messy_synthetic"),
+        (col2, "Telco Churn", "btn_telco", "telco_churn.csv", "telco_churn"),
+    ]
+    for col, label, key, filename, ds_name in demo_choices:
+        if col.button(label, key=key, use_container_width=True):
+            p = demo_dir / filename
             if p.exists():
-                loaded_df = pd.read_csv(p)
-                loaded_name = "insurance"
-        if st.button("Pure Noise", key="btn_noise", use_container_width=True):
-            p = demo_dir / "pure_noise.csv"
-            if p.exists():
-                loaded_df = pd.read_csv(p)
-                loaded_name = "pure_noise"
-
-    with col2:
-        if st.button("Messy Data", key="btn_messy", use_container_width=True):
-            p = demo_dir / "messy.csv"
-            if p.exists():
-                loaded_df = pd.read_csv(p)
-                loaded_name = "messy_synthetic"
-        if st.button("Telco Churn", key="btn_telco", use_container_width=True):
-            p = demo_dir / "telco_churn.csv"
-            if p.exists():
-                loaded_df = pd.read_csv(p)
-                loaded_name = "telco_churn"
+                try:
+                    loaded_df = pd.read_csv(p)
+                    loaded_name = ds_name
+                except Exception as exc:
+                    st.sidebar.error(f"Error loading demo dataset '{filename}': {exc}")
+            else:
+                st.sidebar.error(f"Demo dataset not found at: {p}")
 
     st.sidebar.divider()
     uploaded_file = st.sidebar.file_uploader("Or Upload Custom CSV", type=["csv"])
@@ -64,14 +59,19 @@ def render_upload_and_samples(settings: dict[str, Any]) -> pd.DataFrame | None:
             return None
 
     if loaded_df is not None and loaded_name is not None:
-        initialize_session(
-            df=loaded_df,
-            dataset_name=loaded_name,
-            alpha=settings.get("alpha", 0.05),
-            correction=settings.get("correction", "bh"),
-            effect_floor=settings.get("effect_floor", True),
-            offline_mode=settings.get("offline_demo", True),
-        )
-        st.sidebar.success(f"Loaded '{loaded_name}' ({len(loaded_df):,} rows x {len(loaded_df.columns)} cols)")
+        try:
+            initialize_session(
+                df=loaded_df,
+                dataset_name=loaded_name,
+                alpha=settings.get("alpha", 0.05),
+                correction=settings.get("correction", "bh"),
+                effect_floor=settings.get("effect_floor", True),
+                offline_mode=settings.get("offline_demo", True),
+            )
+            st.sidebar.success(
+                f"Loaded '{loaded_name}' ({len(loaded_df):,} rows x {len(loaded_df.columns)} cols)"
+            )
+        except Exception as exc:
+            st.sidebar.error(f"Failed to initialize session: {exc}")
 
     return st.session_state.get("df")
