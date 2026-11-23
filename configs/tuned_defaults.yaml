@@ -1,0 +1,13 @@
+# Produced by `veridata bench tune` on the dev split (Phase 4, Section 8). Do not edit by hand.
+chosen_multiplier: 1.0
+effect_floor:
+  cohens_d: 0.2
+  correlation: 0.1
+  cramers_v_df1: 0.1
+  epsilon_squared: 0.01
+  eta_squared: 0.01
+  rank_biserial: 0.1
+reason: best feasible multiplier 1.0 is within one grid step of the conventions ->
+  keep conventional values
+split: dev
+suite: core60

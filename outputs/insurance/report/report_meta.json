@@ -1,0 +1,36 @@
+{
+  "config_hash": "75ec094493ce",
+  "dataset": "insurance",
+  "llm": {
+    "model": null,
+    "prompt_version": null,
+    "token_cost_usd": 0.0
+  },
+  "n_figures": 10,
+  "n_findings": 21,
+  "n_validated": 6,
+  "narration": {
+    "03088ab28e083960": "template",
+    "15d74a366b0a3bca": "template",
+    "16934eaf6eb36cff": "template",
+    "2cb47aca909f72e8": "template",
+    "4c3d52697add8a19": "template",
+    "5da20203ad979461": "template",
+    "6cebb444aca418b8": "template",
+    "7879d2e98b9f3fc3": "template",
+    "8c16745ee5780c67": "template",
+    "9ceff6678f472d3a": "template",
+    "b6b08a817c661487": "template",
+    "c1347eda564dedc3": "template",
+    "cbc355b43e0dd6f9": "template",
+    "d428bc651c8a9989": "template",
+    "dbbefcba4507014b": "template",
+    "fc87f82acb437423": "template"
+  },
+  "veridata_version": "0.1.0",
+  "verifier_stats": {
+    "n_retries": 0,
+    "n_texts": 89,
+    "n_violations": 0
+  }
+}

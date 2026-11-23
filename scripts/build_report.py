@@ -154,7 +154,7 @@ Executes 12 ordered steps (`steps.py`, `categories.py`, `missing.py`, `outliers.
 - **Step 11 — Scaling & Transformation Analysis (`src/veridata/scaling.py`):** Evaluates skewness and scale disparity (max std / min std), recommending `log1p`, `yeo_johnson`, or `zscore` and writing `data/cleaned/<name>_scaled.csv`, `scaling_report.md`, and `scaling_params.json`.
 - **Step 12 — Post-Condition & Idempotence Verification:** Verifies exact row accounting, zero remaining placeholder tokens, and idempotence (re-cleaning the conservative output produces zero further modifications).
 
-### Stages 5–8: Automated EDA (`src/veridata/eda/`), Insights (`src/veridata/insights.py`), and Reports (`src/veridata/reporting.py`)
+### Stages 5–8: Automated EDA (`src/veridata/eda/`), Insights (`src/veridata/insights.py`), and Reports (`src/veridata/reporting/dataset_report.py`)
 - Generates **13–19 static PNG charts** per dataset (`outputs/<name>/figures/*.png`), markdown summary tables (`outputs/<name>/tables/*.md`), and `eda_summary.json`.
 - Evaluates deterministic insight rules across 7 categories (`insights.json` and `insights.md`), preserving the analyst's manual domain notes (`<!-- MANUAL:START --> ... <!-- MANUAL:END -->`).
 - Renders self-contained `outputs/<name>/report.md` and `outputs/<name>/report.html`.

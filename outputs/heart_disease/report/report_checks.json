@@ -1,0 +1,31 @@
+{
+  "chart_text": {
+    "n_texts": 373,
+    "ok": true,
+    "violations": []
+  },
+  "explanations": {
+    "failed": {},
+    "n": 57,
+    "n_failed": 0
+  },
+  "images": {
+    "missing": [],
+    "ok": true
+  },
+  "lint": {
+    "issues": [],
+    "ok": true
+  },
+  "ok": true,
+  "required_sections": {
+    "independence_note": true,
+    "limitations": true,
+    "rejected_section": true
+  },
+  "verifier": {
+    "n_numbers_checked": 2030,
+    "ok": true,
+    "violations": []
+  }
+}

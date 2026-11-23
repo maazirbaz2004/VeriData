@@ -1,0 +1,46 @@
+# Benchmark suite definitions (Phase 4, Section 4.5). Expanded deterministically by
+# src/veridata/benchmark/suites.py; the expanded scenario list is hashed and recorded in results.
+version: 1
+
+# Dev seeds (tuning, debugging) and test seeds (frozen; used once in Phase 8).
+# Seed for scenario i, replicate r:  base + 10 * i + r
+dev_seed_base: 0
+test_seed_base: 10000
+
+suites:
+  smoke:
+    description: "6 fast scenarios x 2 seeds covering every effect form, a null dataset, null blocks, decoys and missingness (CI)."
+    seeds_per_scenario: 2
+    scenarios:
+      - {scenario_id: smoke_null_n200_p12, n_rows: 200, n_cols: 12, n_effects: 0, dist: normal}
+      - {scenario_id: smoke_linear_n300_p12, n_rows: 300, n_cols: 12, n_effects: 4, effect_strength: large, dist: normal,
+         effect_mix: {linear: 0.5, monotonic: 0.5}}
+      - {scenario_id: smoke_groups_n300_p14, n_rows: 300, n_cols: 14, n_effects: 4, effect_strength: medium, dist: lognormal,
+         effect_mix: {binary_shift: 0.4, categorical_shift: 0.3, cat_cat: 0.3}, col_type_mix: {numeric: 0.5, binary: 0.25, categorical: 0.25}}
+      - {scenario_id: smoke_blocks_n400_p16, n_rows: 400, n_cols: 16, n_effects: 2, effect_strength: mixed, dist: t3,
+         null_blocks: {n_blocks: 1, block_size: 4, within_corr: 0.6}}
+      - {scenario_id: smoke_decoys_n300_p16, n_rows: 300, n_cols: 16, n_effects: 3, effect_strength: medium, dist: normal,
+         n_nonlinear_decoys: 1, n_interaction_decoys: 1, confounder: common_cause}
+      - {scenario_id: smoke_missing_n250_p12, n_rows: 250, n_cols: 12, n_effects: 3, effect_strength: large, dist: zero_inflated,
+         missing_rate: 0.2, imbalance: strong}
+
+  core60:
+    description: >-
+      Primary suite. 12 zero-effect datasets (one per n x p cell; 4 of them with correlated null blocks)
+      plus 48 datasets with 3 or 8 planted effects: every (n, p, k) cell gets 2 of the 4 strengths,
+      rotated so each strength appears 12 times. Distribution shape, imbalance, missingness, null
+      blocks and decoys are assigned by seeded rotation.
+    design_seed: 4242
+    seeds_per_scenario: 1
+    n_rows: [100, 300, 1000, 5000]
+    n_cols: [10, 30, 60]
+    n_effects: [3, 8]
+    strengths: [small, medium, large, mixed]
+    strengths_per_cell: 2
+    dists: [normal, lognormal, t3, zero_inflated, bimodal, mixed]
+    imbalance: [none, moderate, strong]
+    missing_rates: [0.0, 0.0, 0.05]
+    null_blocks_every: 3        # every 3rd scenario (p >= 30) gets 1-2 correlated null blocks
+    decoys_every: 3             # every 3rd scenario (p >= 30) gets a quadratic decoy
+    interaction_every: 4        # every 4th scenario (p >= 30) gets an interaction decoy
+    confounder_every: 4         # every 4th effect scenario forces a common cause

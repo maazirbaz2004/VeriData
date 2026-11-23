@@ -35,3 +35,8 @@ htmlcov/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Phase 4 benchmark: generated datasets and per-system results are rebuilt by `veridata bench`;
+# summaries (results/*.csv, summary.md), calibration and tuning outputs are kept.
+outputs/benchmark/*/*/*__seed*/
+outputs/benchmark/*/*/results/*/
