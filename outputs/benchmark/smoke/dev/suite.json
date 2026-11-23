@@ -1,0 +1,20 @@
+{
+  "suite": "smoke",
+  "split": "dev",
+  "suite_hash": "430c9513fe829592",
+  "datasets": [
+    "smoke_null_n200_p12__seed0",
+    "smoke_null_n200_p12__seed1",
+    "smoke_linear_n300_p12__seed10",
+    "smoke_linear_n300_p12__seed11",
+    "smoke_groups_n300_p14__seed20",
+    "smoke_groups_n300_p14__seed21",
+    "smoke_blocks_n400_p16__seed30",
+    "smoke_blocks_n400_p16__seed31",
+    "smoke_decoys_n300_p16__seed40",
+    "smoke_decoys_n300_p16__seed41",
+    "smoke_missing_n250_p12__seed50",
+    "smoke_missing_n250_p12__seed51"
+  ],
+  "generator_version": "1.0"
+}

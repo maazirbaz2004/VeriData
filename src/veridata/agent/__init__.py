@@ -2,17 +2,42 @@
 
 from __future__ import annotations
 
-from veridata.agent.checkpoint import get_checkpointer
-from veridata.agent.datastore import GLOBAL_DATASTORE, DataStore
+from typing import Any
+
 from veridata.agent.fake_llm import FakeLLM
-from veridata.agent.followups import generate_followups
-from veridata.agent.graph_batch import build_batch_graph
-from veridata.agent.graph_chat import build_chat_graph
 from veridata.agent.llm import AnthropicLLMClient, LLMClient, NullLLM
-from veridata.agent.router import RouterDecision, route_intent
-from veridata.agent.session import Answer, Session, create_session
-from veridata.agent.state import BatchState, ChatState, FocusState
-from veridata.agent.tools import ToolRegistry, ToolResult
+
+_LAZY_EXPORTS: dict[str, tuple[str, str]] = {
+    "get_checkpointer": ("veridata.agent.checkpoint", "get_checkpointer"),
+    "GLOBAL_DATASTORE": ("veridata.agent.datastore", "GLOBAL_DATASTORE"),
+    "DataStore": ("veridata.agent.datastore", "DataStore"),
+    "generate_followups": ("veridata.agent.followups", "generate_followups"),
+    "build_batch_graph": ("veridata.agent.graph_batch", "build_batch_graph"),
+    "build_chat_graph": ("veridata.agent.graph_chat", "build_chat_graph"),
+    "RouterDecision": ("veridata.agent.router", "RouterDecision"),
+    "route_intent": ("veridata.agent.router", "route_intent"),
+    "Answer": ("veridata.agent.session", "Answer"),
+    "Session": ("veridata.agent.session", "Session"),
+    "create_session": ("veridata.agent.session", "create_session"),
+    "BatchState": ("veridata.agent.state", "BatchState"),
+    "ChatState": ("veridata.agent.state", "ChatState"),
+    "FocusState": ("veridata.agent.state", "FocusState"),
+    "ToolRegistry": ("veridata.agent.tools", "ToolRegistry"),
+    "ToolResult": ("veridata.agent.tools", "ToolResult"),
+}
+
+
+def __getattr__(name: str) -> Any:
+    if name in _LAZY_EXPORTS:
+        import importlib
+
+        mod_name, attr_name = _LAZY_EXPORTS[name]
+        mod = importlib.import_module(mod_name)
+        val = getattr(mod, attr_name)
+        globals()[name] = val
+        return val
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+
 
 __all__ = [
     "Session",

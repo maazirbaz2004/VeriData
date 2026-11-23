@@ -1,0 +1,13 @@
+dataset_id,n_rows,n_cols,n_tests,prep_s,stage_a_s,error
+smoke_blocks_n400_p16__seed30,400,16,120,0.808,0.664,
+smoke_blocks_n400_p16__seed31,400,16,120,0.766,0.577,
+smoke_decoys_n300_p16__seed40,300,16,120,0.659,0.631,
+smoke_decoys_n300_p16__seed41,300,16,120,0.682,0.485,
+smoke_groups_n300_p14__seed20,300,14,91,0.512,0.426,
+smoke_groups_n300_p14__seed21,300,14,91,0.489,0.464,
+smoke_linear_n300_p12__seed10,300,12,66,0.396,0.386,
+smoke_linear_n300_p12__seed11,300,12,66,0.432,0.342,
+smoke_missing_n250_p12__seed50,250,12,66,0.363,0.446,
+smoke_missing_n250_p12__seed51,250,12,66,0.373,0.464,
+smoke_null_n200_p12__seed0,200,12,66,0.394,0.47,
+smoke_null_n200_p12__seed1,200,12,66,0.357,0.3,
