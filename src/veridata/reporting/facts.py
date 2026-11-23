@@ -48,11 +48,13 @@ def format_effect(val: float | None, decimals: int = 2) -> str:
     return f"{val:.{decimals}f}"
 
 
-def format_number(val: float | int | None) -> str:
-    """Format counts with commas, floats with adaptive precision."""
+def format_number(val: float | int | list[Any] | tuple[Any, ...] | None) -> str:
+    """Format counts with commas, floats with adaptive precision, and tuples/lists of df."""
     if val is None or (isinstance(val, float) and math.isnan(val)):
         return "N/A"
-    if isinstance(val, int):
+    if isinstance(val, (list, tuple)):
+        return "(" + ", ".join(format_number(x) for x in val) + ")"
+    if isinstance(val, int) and not isinstance(val, bool):
         return f"{val:,}"
     if isinstance(val, float) and val.is_integer():
         return f"{int(val):,}"
@@ -185,7 +187,9 @@ def build_facts(finding: Finding) -> list[Fact]:
     if res.statistic is not None:
         _f("statistic", res.statistic, format_number(res.statistic), "test.statistic")
     if res.df is not None:
-        _f("df", res.df, format_number(res.df), "test.df")
+        df_disp = format_number(res.df)
+        df_val = df_disp if isinstance(res.df, (list, tuple)) else res.df
+        _f("df", df_val, df_disp, "test.df")
     if res.p_value is not None:
         _f("p_raw", res.p_value, format_p_value(res.p_value), "test.p_value")
         _f("p_value", res.p_value, format_p_value(res.p_value), "test.p_value")

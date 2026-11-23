@@ -1,0 +1,9 @@
+{
+  "dataset_name": "pure_noise",
+  "n_rows": 200,
+  "n_cols": 25,
+  "family_size": 300,
+  "total_tests": 300,
+  "validated_count": 0,
+  "rejected_count": 300
+}

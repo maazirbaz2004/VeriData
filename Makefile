@@ -1,4 +1,4 @@
-.PHONY: setup test test-all lint run-all run-one make-messy compare report hypotheses eval-nl
+.PHONY: setup test test-all lint run-all run-one make-messy compare report hypotheses eval-nl app
 
 PYTHON ?= python
 
@@ -38,4 +38,7 @@ compare:
 
 report:
 	$(PYTHON) -m veridata.cli report
+
+app:
+	streamlit run src/veridata/app/main.py
 

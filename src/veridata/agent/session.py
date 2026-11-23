@@ -171,6 +171,17 @@ class Session:
                 if msg and progress_callback:
                     progress_callback(msg)
 
+        batch_findings = GLOBAL_DATASTORE.get_artifact(f"findings_{batch_state.get('run_id')}")
+        if batch_findings:
+            self.tools.last_findings = batch_findings
+            for f in batch_findings:
+                self.tools.known_hypotheses[f.hypothesis.id] = f.hypothesis
+
+        batch_ledger = GLOBAL_DATASTORE.get_artifact(f"ledger_{batch_state.get('run_id')}")
+        if batch_ledger:
+            self.ledger = batch_ledger
+            self.tools.ledger = batch_ledger
+
         return batch_state
 
     def get_ledger_status(self) -> dict[str, Any]:

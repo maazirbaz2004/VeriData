@@ -1,0 +1,389 @@
+[
+  {
+    "hypothesis_id": "d9d777c2c95f4e4f",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: Binary grouping requires 2 groups with n >= 8 (dropped=[]).."
+  },
+  {
+    "hypothesis_id": "eaf7928cec2923a9",
+    "p_raw": 0.04951081488124611,
+    "q_value": 0.22633515374283936,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.2263 exceeds alpha=0.05 (raw p=0.0495, family m=32). Standardized effect |rank_biserial|=0.0535 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "f238aa6f8c59b9cc",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: Binary grouping requires 2 groups with n >= 8 (dropped=[]).."
+  },
+  {
+    "hypothesis_id": "6ff0291da26911e4",
+    "p_raw": 0.8595442377420993,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.8595, family m=32). Standardized effect |rank_biserial|=0.0050 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "86300d32b4bc1d5a",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: Binary grouping requires 2 groups with n >= 8 (dropped=[]).."
+  },
+  {
+    "hypothesis_id": "2d06e23f3fba4c46",
+    "p_raw": 0.019673370956767,
+    "q_value": 0.10492464510275734,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.1049 exceeds alpha=0.05 (raw p=0.0197, family m=32). Standardized effect |rank_biserial|=0.0660 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "a3e48f6562e32a4f",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: Binary grouping requires 2 groups with n >= 8 (dropped=[]).."
+  },
+  {
+    "hypothesis_id": "9c277bf52ea9d362",
+    "p_raw": 0.3013964321844987,
+    "q_value": 0.7418989099926122,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.7419 exceeds alpha=0.05 (raw p=0.3014, family m=32). Standardized effect |spearman_rho|=0.0232 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "0e1685a9a0392d0c",
+    "p_raw": 0.6527499294756159,
+    "q_value": 0.9494544428736232,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9495 exceeds alpha=0.05 (raw p=0.6527, family m=32). Standardized effect |spearman_rho|=0.0104 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "62c1a8cb07224989",
+    "p_raw": 0.9842023025520849,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.9842, family m=32). Standardized effect |spearman_rho|=0.0005 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "8cb228d4db25a4a1",
+    "p_raw": 0.46700092843597096,
+    "q_value": 0.8214131486295304,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.8214 exceeds alpha=0.05 (raw p=0.4670, family m=32). Standardized effect |spearman_rho|=0.0171 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "1999e2ace938d168",
+    "p_raw": 0.7930671085864801,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.7931, family m=32). Standardized effect |spearman_rho|=0.0063 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "94742962070b954f",
+    "p_raw": 0.45047762941393954,
+    "q_value": 0.8214131486295304,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.8214 exceeds alpha=0.05 (raw p=0.4505, family m=32). Standardized effect |eta_squared|=0.0018 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "bc7a766d1d3cb5cf",
+    "p_raw": 0.9765460205950415,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.9765, family m=32). Standardized effect |epsilon_squared|=0.0002 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "58dafdd3fcc7e54a",
+    "p_raw": 0.49608312125133847,
+    "q_value": 0.8214131486295304,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.8214 exceeds alpha=0.05 (raw p=0.4961, family m=32). Standardized effect |eta_squared|=0.0007 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "d7608ad2d2f5e161",
+    "p_raw": 0.5390523787881294,
+    "q_value": 0.8214131486295304,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.8214 exceeds alpha=0.05 (raw p=0.5391, family m=32). Standardized effect |epsilon_squared|=0.0017 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "804b1d1596932157",
+    "p_raw": 0.9518655891292257,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.9519, family m=32). Standardized effect |epsilon_squared|=0.0004 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "12dcc57e8536c0fd",
+    "p_raw": 0.7904312172265182,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.7904, family m=32). Standardized effect |epsilon_squared|=0.0003 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "14de521fe33b75ca",
+    "p_raw": 0.8085202371571738,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.8085, family m=32). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "440d399dbca57ad0",
+    "p_raw": 0.2947081400678656,
+    "q_value": 0.7418989099926122,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.7419 exceeds alpha=0.05 (raw p=0.2947, family m=32). Standardized effect |cramers_v_bc|=0.0149 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "266a5d2ef3589025",
+    "p_raw": 0.8273437512889125,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.8273, family m=32). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "de2188281035b45a",
+    "p_raw": 0.5259461085678736,
+    "q_value": 0.8214131486295304,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.8214 exceeds alpha=0.05 (raw p=0.5259, family m=32). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "09075bbdee06b590",
+    "p_raw": 0.1585,
+    "q_value": 0.634,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.6340 exceeds alpha=0.05 (raw p=0.1585, family m=32). Standardized effect |cramers_v_bc|=0.0493 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "20835424e3d80610",
+    "p_raw": 0.4584,
+    "q_value": 0.8214131486295304,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.8214 exceeds alpha=0.05 (raw p=0.4584, family m=32). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "45a586a2365b5b50",
+    "p_raw": 0.5186643857365751,
+    "q_value": 0.8214131486295304,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.8214 exceeds alpha=0.05 (raw p=0.5187, family m=32). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "ba4abeaba9778090",
+    "p_raw": 0.39920735293857934,
+    "q_value": 0.8214131486295304,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.8214 exceeds alpha=0.05 (raw p=0.3992, family m=32). Standardized effect |cramers_v_bc|=0.0082 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "69b4b3386d0d8c6a",
+    "p_raw": 0.880831242079973,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.8808, family m=32). Standardized effect |cramers_v_bc|=0.0000 is below the practical floor (0.10)."
+  },
+  {
+    "hypothesis_id": "c51bb321343b3418",
+    "p_raw": 0.2636044345978932,
+    "q_value": 0.7418989099926122,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.7419 exceeds alpha=0.05 (raw p=0.2636, family m=32). Standardized effect |eta_squared|=0.0034 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "cd4756fdb74795e4",
+    "p_raw": 0.2967883821704729,
+    "q_value": 0.7418989099926122,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.7419 exceeds alpha=0.05 (raw p=0.2968, family m=32). Standardized effect |epsilon_squared|=0.0031 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "0688a4be09061aef",
+    "p_raw": 0.9710282929494278,
+    "q_value": 0.9842023025520849,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.9842 exceeds alpha=0.05 (raw p=0.9710, family m=32). Standardized effect |epsilon_squared|=0.0005 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "966e9b46398be99d",
+    "p_raw": 0.2606912750128343,
+    "q_value": 0.7418989099926122,
+    "reasons": [
+      "not_significant_after_correction",
+      "effect_below_threshold"
+    ],
+    "reason_text": "Adjusted q=0.7419 exceeds alpha=0.05 (raw p=0.2607, family m=32). Standardized effect |epsilon_squared|=0.0035 is below the practical floor (0.01)."
+  },
+  {
+    "hypothesis_id": "b4918fee34a6990f",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  },
+  {
+    "hypothesis_id": "f6527a70531714f4",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  },
+  {
+    "hypothesis_id": "0579e3916084d2a7",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  },
+  {
+    "hypothesis_id": "ef846b5b6f4a3dde",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  },
+  {
+    "hypothesis_id": "0669a9a926633264",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  },
+  {
+    "hypothesis_id": "e75e275365cdb9a8",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  },
+  {
+    "hypothesis_id": "8f5f05e77bd5dd3f",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  },
+  {
+    "hypothesis_id": "2e30e0817b87b212",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  },
+  {
+    "hypothesis_id": "ccd6825d8a9f5c17",
+    "p_raw": null,
+    "q_value": null,
+    "reasons": [
+      "insufficient_data"
+    ],
+    "reason_text": "Skipped before testing: missing column(s) in dataframe: Unnamed: 0."
+  }
+]

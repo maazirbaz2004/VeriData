@@ -154,9 +154,12 @@ def validate_node(state: BatchState) -> dict[str, Any]:
     cfg = PipelineConfig.model_validate(state.get("config", {}))
     hyp_set = HypothesisSet.model_validate(state["hypothesis_set"])
     results = GLOBAL_DATASTORE.get_artifact(f"results_{state.get('run_id')}")
+    ledger = GLOBAL_DATASTORE.get_artifact(f"ledger_{state.get('run_id')}")
 
     hyp_map = {h.id: h for h in hyp_set.hypotheses}
     decisions = validate(results, hyp_map, cfg, family_id="batch")
+    if ledger is not None:
+        ledger._last_decisions = {d.hypothesis_id: d for d in decisions}
     findings = build_findings(hyp_map, results, decisions)
 
     GLOBAL_DATASTORE.put_artifact(f"findings_{state.get('run_id')}", findings)

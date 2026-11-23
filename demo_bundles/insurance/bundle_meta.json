@@ -1,0 +1,9 @@
+{
+  "dataset_name": "insurance",
+  "n_rows": 1337,
+  "n_cols": 7,
+  "family_size": 21,
+  "total_tests": 21,
+  "validated_count": 6,
+  "rejected_count": 15
+}
