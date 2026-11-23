@@ -61,6 +61,10 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser = subparsers.add_parser("run", help="Run Phase 1 pipeline on a single CSV")
     run_parser.add_argument("--input", required=True, help="Path to input CSV file")
     run_parser.add_argument("--name", required=True, help="Dataset identifier name")
+    run_parser.add_argument("--target", default=None, help="Optional target column")
+    run_parser.add_argument("--no-llm", action="store_true", help="Disable LLM (fully offline/deterministic)")
+    run_parser.add_argument("--force", action="store_true", help="Force re-computation")
+    run_parser.add_argument("--use-graph", action="store_true", help="Run via LangGraph batch graph")
     run_parser.add_argument("--config", default=None, help="Optional dataset YAML config path")
     run_parser.add_argument("--out", default=None, help="Output directory (default: outputs/<name>)")
     run_parser.add_argument(
@@ -177,6 +181,14 @@ def build_parser() -> argparse.ArgumentParser:
         "--no-effect-floor", action="store_true", help="Disable effect-size floor"
     )
 
+    # veridata chat (Phase 6)
+    chat_parser = subparsers.add_parser(
+        "chat", help="Start an interactive chat session with a dataset (Phase 6)"
+    )
+    chat_parser.add_argument("--dataset", required=True, help="Dataset identifier name")
+    chat_parser.add_argument("--input", default=None, help="Optional path to input CSV file")
+    chat_parser.add_argument("--no-llm", action="store_true", help="Run offline without LLM")
+
     return parser
 
 
@@ -195,6 +207,13 @@ def main(argv: Sequence[str] | None = None) -> int:
                 dataset_config_path=cfg_path,
                 cli_overrides={"name": args.name, "file": args.input},
             )
+            if getattr(args, "use_graph", False):
+                from veridata.agent.session import create_session
+                df = pd.read_csv(args.input)
+                sess = create_session(df, cfg, out_dir=out_dir)
+                b_res = sess.run_batch(progress_callback=lambda m: logger.info(m))
+                return 0 if b_res.get("status") == "done" else 1
+
             run_phase1(
                 input_csv=args.input,
                 dataset_name=args.name,
@@ -484,6 +503,34 @@ def main(argv: Sequence[str] | None = None) -> int:
                 cfg.stats.alpha,
                 n_acc,
             )
+            return 0
+        finally:
+            close_logging(logger)
+
+    if args.command == "chat":
+        logger = setup_logging()
+        try:
+            auto_cfg_path = Path("configs/datasets") / f"{args.dataset}.yaml"
+            cfg = load_config(dataset_config_path=auto_cfg_path if auto_cfg_path.exists() else None)
+            input_file = args.input or cfg.file
+            if not input_file or not Path(input_file).exists():
+                logger.error("Dataset CSV file not found.")
+                return 1
+            df = pd.read_csv(input_file)
+            from veridata.agent.session import create_session
+            sess = create_session(df, cfg)
+            print(f"=== VeriData Chat: {args.dataset} (type 'exit' to quit) ===")
+            while True:
+                try:
+                    q = input("\nUser: ").strip()
+                    if not q or q.lower() in ("exit", "quit"):
+                        break
+                    ans = sess.ask(q)
+                    print(f"Assistant: {ans.text}")
+                    if ans.followups:
+                        print("Suggestions:", [f["label"] for f in ans.followups])
+                except (EOFError, KeyboardInterrupt):
+                    break
             return 0
         finally:
             close_logging(logger)

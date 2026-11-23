@@ -1,13 +1,4 @@
-"""Per-dataset report rendering (Jinja2): ``report.md`` and ``report.html``.
-
-Entry point used by ``veridata.pipeline.run_phase1``::
-
-    render_dataset_report(profile, cleaning_result, eda_result, scaling_report, out_dir) -> Path
-
-``cleaning_log.md`` is already written by ``veridata.cleaning.save_cleaning_log_markdown``; the
-report links to it. Insights are read from the ``insights`` argument when given, otherwise
-from ``<out_dir>/insights.json`` (written earlier in the pipeline by ``generate_insights``).
-"""
+"""Per-dataset report rendering (Jinja2): ``report.md`` and ``report.html``."""
 
 from __future__ import annotations
 
@@ -39,8 +30,6 @@ _OUTPUT_DESCRIPTIONS = [
 
 
 def _display_path(p: str | None) -> str | None:
-    """Short, machine-independent path for the report: relative to the project folder when
-    possible, otherwise just the file name (so reports never contain temp or user folders)."""
     if not p:
         return None
     path = Path(p)
@@ -69,7 +58,6 @@ def render_dataset_report(
     out_dir: Path | str,
     insights: InsightsReport | None = None,
 ) -> Path:
-    """Render report.md and report.html for one dataset; return the report.md path."""
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     name = profile.dataset_name
@@ -95,8 +83,8 @@ def render_dataset_report(
         outlier_report={k: v.model_dump(mode="json") for k, v in cleaning_result.outlier_report.items()},
         shapes={
             "raw": (int(profile.n_rows), int(profile.n_cols)),
-            "conservative": tuple(int(x) for x in cleaning_result.df_clean_conservative.shape),  # type: ignore[dict-item]
-            "imputed": tuple(int(x) for x in cleaning_result.df_clean_imputed.shape),  # type: ignore[dict-item]
+            "conservative": tuple(int(x) for x in cleaning_result.df_clean_conservative.shape),
+            "imputed": tuple(int(x) for x in cleaning_result.df_clean_imputed.shape),
         },
         figures=[{**f.model_dump(mode="json"), "rel_path": f"figures/{f.filename}"} for f in eda_result.figures],
         tables=dict(eda_result.tables_markdown),
