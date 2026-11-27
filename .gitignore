@@ -16,6 +16,7 @@ dist/
 
 # Secrets & Environment
 .env
+.cache/
 
 # Raw data is gitignored (download links & scripts/download_datasets.py provided)
 data/raw/*

@@ -133,6 +133,7 @@ def test_gemini_retries_on_429_and_raises_on_400(tmp_path: Path, monkeypatch: py
 
 def test_get_llm_client_provider_selection(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
     monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr("veridata.agent.llm.load_dotenv", lambda **_kw: False)
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)
     monkeypatch.delenv("GOOGLE_API_KEY", raising=False)
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
