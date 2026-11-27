@@ -1,4 +1,4 @@
-.PHONY: setup test test-all lint run-all run-one make-messy compare report hypotheses eval-nl app
+.PHONY: setup test test-all lint run-all run-one make-messy compare report hypotheses eval-nl app eval-all-dev eval-all final-report
 
 PYTHON ?= python
 
@@ -41,4 +41,15 @@ report:
 
 app:
 	streamlit run src/veridata/app/main.py
+
+eval-all-dev:
+	$(PYTHON) -m veridata.cli eval run --experiment all --suite core60 --split dev
+
+eval-all:
+	$(PYTHON) -m veridata.cli eval run --experiment all --suite core60 --split test --confirm-final
+
+final-report:
+	$(PYTHON) -m veridata.cli eval tables --suite core60 --split dev
+	$(PYTHON) -m veridata.cli eval figures --suite core60 --split dev
+	$(PYTHON) -m veridata.cli final-report --suite core60 --split dev
 

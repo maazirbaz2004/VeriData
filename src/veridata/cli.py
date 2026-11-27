@@ -7,8 +7,8 @@ import json
 import logging
 import subprocess
 import sys
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
 import pandas as pd
 
@@ -207,6 +207,38 @@ def build_parser() -> argparse.ArgumentParser:
     from veridata.benchmark.cli import add_bench_parser
 
     add_bench_parser(subparsers)
+
+    # veridata eval ... (Phase 8)
+    eval_parser = subparsers.add_parser(
+        "eval", help="Phase 8 evaluation: plan, run, tables, figures, freeze"
+    )
+    eval_parser.add_argument(
+        "action", choices=["plan", "run", "tables", "figures", "freeze"]
+    )
+    eval_parser.add_argument("--experiment", default="all", help="all | e1..e8 (comma-separated)")
+    eval_parser.add_argument("--suite", default="core60", help="smoke | core60")
+    eval_parser.add_argument("--split", default="dev", choices=["dev", "test"])
+    eval_parser.add_argument("--n-jobs", type=int, default=2)
+    eval_parser.add_argument("--confirm-final", action="store_true")
+    eval_parser.add_argument("--no-llm", action="store_true", help="Skip LLM baselines completely")
+    eval_parser.add_argument(
+        "--skip-unavailable-llm",
+        action="store_true",
+        default=True,
+        help="Skip LLM baselines gracefully when API key is missing",
+    )
+    eval_parser.add_argument(
+        "--require-llm",
+        action="store_true",
+        help="Fail instead of skipping if no LLM API key is configured",
+    )
+
+    # veridata final-report (Phase 8)
+    fr_parser = subparsers.add_parser(
+        "final-report", help="Assemble final_report/FINAL_REPORT.md and HTML from cached Phase 8 outputs"
+    )
+    fr_parser.add_argument("--suite", default="core60", help="smoke | core60")
+    fr_parser.add_argument("--split", default="dev", choices=["dev", "test"])
 
     return parser
 
@@ -568,6 +600,65 @@ def main(argv: Sequence[str] | None = None) -> int:
         from veridata.benchmark.cli import run_bench
 
         return run_bench(args)
+
+    if args.command == "eval":
+        from veridata.evaluation.figures import generate_all_figures
+        from veridata.evaluation.run_all import (
+            freeze_eval_protocol,
+            plan_evaluation,
+            run_evaluation,
+        )
+        from veridata.evaluation.tables import generate_all_tables
+
+        logger = setup_logging()
+        try:
+            if args.action == "plan":
+                plan = plan_evaluation(
+                    suite=args.suite,
+                    split=args.split,
+                    experiment=args.experiment,
+                    confirm_final=args.confirm_final,
+                )
+                print(json.dumps(plan, indent=2))
+                return 0
+            if args.action == "freeze":
+                changed = freeze_eval_protocol()
+                print("Protocol frozen." if changed else "Protocol already frozen.")
+                return 0
+            if args.action == "tables":
+                res = generate_all_tables(suite=args.suite, split=args.split)
+                print(json.dumps({k: str(v) for k, v in res.items()}, indent=2))
+                return 0
+            if args.action == "figures":
+                res = generate_all_figures(suite=args.suite, split=args.split)
+                print(json.dumps({k: str(v) for k, v in res.items()}, indent=2))
+                return 0
+            if args.action == "run":
+                out = run_evaluation(
+                    experiment=args.experiment,
+                    suite=args.suite,
+                    split=args.split,
+                    n_jobs=args.n_jobs,
+                    confirm_final=args.confirm_final,
+                    skip_unavailable_llm=not args.require_llm,
+                    with_llm=not args.no_llm,
+                )
+                print(json.dumps(out, indent=2))
+                return 0
+            return 2
+        finally:
+            close_logging(logger)
+
+    if args.command == "final-report":
+        from veridata.evaluation.final_report import build_final_report
+
+        logger = setup_logging()
+        try:
+            paths = build_final_report(suite=args.suite, split=args.split)
+            print(json.dumps({k: str(v) for k, v in paths.items()}, indent=2))
+            return 0
+        finally:
+            close_logging(logger)
 
     logger = setup_logging()
     try:

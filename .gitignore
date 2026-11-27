@@ -40,3 +40,9 @@ htmlcov/
 # summaries (results/*.csv, summary.md), calibration and tuning outputs are kept.
 outputs/benchmark/*/*/*__seed*/
 outputs/benchmark/*/*/results/*/
+
+# Phase 8 intermediate per-dataset caches (summaries, tables, figures & human_sheets are kept)
+outputs/eval/*/*/systems/
+outputs/eval/*/*/stage_a_cache/
+outputs/eval/e5/cache/
+outputs/eval/e7/sessions/
