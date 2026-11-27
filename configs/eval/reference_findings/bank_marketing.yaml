@@ -1,0 +1,39 @@
+# Pre-registered reference findings for Bank Marketing (Phase 8 E5)
+dataset: bank_marketing
+reference_findings:
+  - col_a: duration
+    col_b: y
+    relationship: numeric_vs_binary
+    direction:
+      kind: group_diff
+      group_col: y
+      higher_level: "yes"
+    confidence: strong
+  - col_a: poutcome
+    col_b: y
+    relationship: categorical_vs_categorical
+    direction: null
+    confidence: strong
+  - col_a: euribor3m
+    col_b: y
+    relationship: numeric_vs_binary
+    direction:
+      kind: group_diff
+      group_col: y
+      higher_level: "no"
+    confidence: strong
+  - col_a: emp.var.rate
+    col_b: euribor3m
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "+"
+    confidence: strong
+  - col_a: nr.employed
+    col_b: euribor3m
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "+"
+    confidence: strong
+known_nulls: []

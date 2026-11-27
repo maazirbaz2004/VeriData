@@ -35,9 +35,7 @@ def is_trivial_or_derived(result: TestResult) -> bool:
         return True
     if name == "rank_biserial" and abs(val) >= 1.0 - 1e-12 and result.n_used >= 20:
         return True
-    if name in {"eta_squared", "epsilon_squared"} and val >= 0.999:
-        return True
-    return False
+    return bool(name in {"eta_squared", "epsilon_squared"} and val >= 0.999)
 
 
 def _format_p(val: float | None) -> str:
@@ -153,7 +151,7 @@ def evaluate_validation_rules(
         )
 
     # 5. Trivial / derived relationship gate
-    if is_trivial_or_derived(result):
+    if config.stats.enable_trivial_gate and is_trivial_or_derived(result):
         reasons.append(RejectionReason.TRIVIAL_RELATIONSHIP)
         flags.append("possible_derived_column")
         eff_val = result.effect.value if result.effect else 0.0

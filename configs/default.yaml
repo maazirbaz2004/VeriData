@@ -131,6 +131,7 @@ stats:
   test_timeout_s: 20.0
   assumption_aware_selection: true
   enable_assumption_gate: true
+  enable_trivial_gate: true
   benchmark_fast_mode: false
 
 effect_floor:
@@ -163,8 +164,8 @@ hypotheses:
     data_quality: 0.10
 
 llm:
-  provider: "anthropic"
-  model: "claude-sonnet-4-5"
+  provider: "gemini"
+  model: "gemini-2.5-flash"
   temperature: 0.0
   max_tokens: 2000
   cache_dir: ".cache/llm"
@@ -179,5 +180,18 @@ agent:
   checkpoint: "sqlite"              # memory | sqlite
   max_followups: 3
   max_tool_calls_per_turn: 4
+
+eval:
+  max_cost_usd: 15.0
+  repeats_synthetic: 5
+  repeats_real: 3
+  repeat_temperature: 0.7
+  code_sandbox_max_turns: 6
+  code_sandbox_timeout_s: 15.0
+  permutation_seeds: 20
+  noise_columns: 10
+  split_half_repeats: 20
+  bootstrap_stability_repeats: 20
+  bootstrap_resamples: 2000
 
 

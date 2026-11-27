@@ -157,6 +157,7 @@ class StatsConfig(BaseModel):
     test_timeout_s: float = 20.0
     assumption_aware_selection: bool = True
     enable_assumption_gate: bool = True
+    enable_trivial_gate: bool = True
     benchmark_fast_mode: bool = False
 
 
@@ -195,12 +196,26 @@ class HypothesesConfig(BaseModel):
 
 
 class LLMConfig(BaseModel):
-    provider: str = "anthropic"
-    model: str = "claude-sonnet-4-5"
+    provider: str = "gemini"
+    model: str = "gemini-2.5-flash"
     temperature: float = 0.0
     max_tokens: int = 2000
     cache_dir: str = ".cache/llm"
     retries: int = 2
+
+
+class EvalConfig(BaseModel):
+    max_cost_usd: float = 15.0
+    repeats_synthetic: int = 5
+    repeats_real: int = 3
+    repeat_temperature: float = 0.7
+    code_sandbox_max_turns: int = 6
+    code_sandbox_timeout_s: float = 15.0
+    permutation_seeds: int = 20
+    noise_columns: int = 10
+    split_half_repeats: int = 20
+    bootstrap_stability_repeats: int = 20
+    bootstrap_resamples: int = 2000
 
 
 class ReportingConfig(BaseModel):
@@ -244,6 +259,7 @@ class PipelineConfig(BaseModel):
     llm: LLMConfig = Field(default_factory=LLMConfig)
     reporting: ReportingConfig = Field(default_factory=ReportingConfig)
     agent: AgentConfig = Field(default_factory=AgentConfig)
+    eval: EvalConfig = Field(default_factory=EvalConfig)
 
     def effective_missing_tokens(self) -> list[str]:
         """Return combined list of global missing tokens + dataset-specific tokens."""

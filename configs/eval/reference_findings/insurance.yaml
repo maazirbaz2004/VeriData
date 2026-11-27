@@ -1,0 +1,29 @@
+# Pre-registered reference findings for Medical Cost / Insurance (Phase 8 E5)
+# Written before running Phase 8 evaluation from Phase 1 domain documentation (docs/datasets.md).
+dataset: insurance
+reference_findings:
+  - col_a: smoker
+    col_b: charges
+    relationship: numeric_vs_binary
+    direction:
+      kind: group_diff
+      group_col: smoker
+      higher_level: "yes"
+    confidence: strong
+  - col_a: age
+    col_b: charges
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "+"
+    confidence: strong
+  - col_a: bmi
+    col_b: charges
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "+"
+    confidence: moderate
+known_nulls:
+  - col_a: region
+    col_b: sex

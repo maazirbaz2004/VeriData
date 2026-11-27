@@ -1,0 +1,34 @@
+# Pre-registered reference findings for Telco Customer Churn (Phase 8 E5)
+dataset: telco_churn
+reference_findings:
+  - col_a: Contract
+    col_b: Churn
+    relationship: categorical_vs_categorical
+    direction: null
+    confidence: strong
+  - col_a: tenure
+    col_b: Churn
+    relationship: numeric_vs_binary
+    direction:
+      kind: group_diff
+      group_col: Churn
+      higher_level: "No"
+    confidence: strong
+  - col_a: MonthlyCharges
+    col_b: Churn
+    relationship: numeric_vs_binary
+    direction:
+      kind: group_diff
+      group_col: Churn
+      higher_level: "Yes"
+    confidence: moderate
+  - col_a: tenure
+    col_b: TotalCharges
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "+"
+    confidence: strong
+known_nulls:
+  - col_a: gender
+    col_b: Churn

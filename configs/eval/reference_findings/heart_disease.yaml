@@ -1,0 +1,45 @@
+# Pre-registered reference findings for Heart Disease UCI (Phase 8 E5)
+dataset: heart_disease
+reference_findings:
+  - col_a: thal
+    col_b: target
+    relationship: categorical_vs_categorical
+    direction: null
+    confidence: strong
+  - col_a: cp
+    col_b: target
+    relationship: categorical_vs_categorical
+    direction: null
+    confidence: strong
+  - col_a: exang
+    col_b: target
+    relationship: categorical_vs_categorical
+    direction: null
+    confidence: strong
+  - col_a: thalach
+    col_b: target
+    relationship: numeric_vs_binary
+    direction:
+      kind: group_diff
+      group_col: target
+      higher_level: "1"
+    confidence: strong
+  - col_a: oldpeak
+    col_b: target
+    relationship: numeric_vs_binary
+    direction:
+      kind: group_diff
+      group_col: target
+      higher_level: "0"
+    confidence: strong
+  - col_a: ca
+    col_b: target
+    relationship: numeric_vs_binary
+    direction:
+      kind: group_diff
+      group_col: target
+      higher_level: "0"
+    confidence: moderate
+known_nulls:
+  - col_a: fbs
+    col_b: target

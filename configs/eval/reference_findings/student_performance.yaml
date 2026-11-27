@@ -1,0 +1,34 @@
+# Pre-registered reference findings for Student Performance - Math (Phase 8 E5)
+dataset: student_performance
+reference_findings:
+  - col_a: G2
+    col_b: G3
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "+"
+    confidence: strong
+  - col_a: G1
+    col_b: G3
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "+"
+    confidence: strong
+  - col_a: failures
+    col_b: G3
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "-"
+    confidence: strong
+  - col_a: Medu
+    col_b: G3
+    relationship: numeric_vs_numeric
+    direction:
+      kind: sign
+      value: "+"
+    confidence: moderate
+known_nulls:
+  - col_a: famrel
+    col_b: absences
