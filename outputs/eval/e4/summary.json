@@ -1,0 +1,8 @@
+{
+  "veridata_n_narrations_checked": 101,
+  "veridata_phase5_verified_rate": 1.0,
+  "veridata_n_findings_recomputed": 101,
+  "veridata_independent_verified_rate": 0.9405940594059405,
+  "veridata_lint_pass_rate": 1.0,
+  "llm_baselines": {}
+}

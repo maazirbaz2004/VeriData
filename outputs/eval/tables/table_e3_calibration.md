@@ -1,0 +1,10 @@
+| Relationship | Selection | Cells | Mean Size | Max Size | Inside Band |
+| --- | --- | --- | --- | --- | --- |
+| categorical_vs_categorical | assumption_aware | 13 | 0.0395 | 0.0600 | 76.9% |
+| categorical_vs_categorical | naive | 13 | 0.0426 | 0.0600 | 84.6% |
+| numeric_vs_binary | assumption_aware | 38 | 0.0448 | 0.0976 | 92.1% |
+| numeric_vs_binary | naive | 38 | 0.0479 | 0.0976 | 84.2% |
+| numeric_vs_categorical | assumption_aware | 30 | 0.0499 | 0.0710 | 100.0% |
+| numeric_vs_categorical | naive | 30 | 0.0576 | 0.1030 | 86.7% |
+| numeric_vs_numeric | assumption_aware | 20 | 0.0500 | 0.0610 | 100.0% |
+| numeric_vs_numeric | naive | 20 | 0.0503 | 0.0590 | 100.0% |

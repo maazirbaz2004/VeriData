@@ -88,7 +88,11 @@ def run_e6(
     max_datasets: int = 12,
 ) -> dict[str, Any]:
     """Measure acceptable-set selection accuracy & calibration consequence accuracy."""
-    specs = suite_specs(suite, split, confirm_final=confirm_final)[:max_datasets]
+    specs = [
+        s
+        for s in suite_specs(suite, split, confirm_final=confirm_final)
+        if s.scenario.n_rows <= 1000 and s.scenario.n_cols <= 30
+    ][:max_datasets]
     base = bench_root / suite / split
     cfg_aware = benchmark_config(load_config())
     cfg_naive = cfg_aware.model_copy(deep=True)

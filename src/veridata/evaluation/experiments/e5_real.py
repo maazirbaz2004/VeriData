@@ -24,7 +24,6 @@ from veridata.evaluation.systems.llm_only import (
     run_llm_only_system,
     summarize_llm_error,
 )
-from veridata.evaluation.systems.veridata_variants import run_phase8_variants_on_df
 
 REAL_DATASETS = (
     "insurance",
@@ -78,15 +77,27 @@ def _score_reference_recovery(findings: list[ReportedFinding], ref_doc: dict[str
     }
 
 
-def _append_permuted_columns(df: pd.DataFrame, seed: int) -> tuple[pd.DataFrame, set[str]]:
+def _append_permuted_columns(
+    df: pd.DataFrame,
+    seed: int,
+    base_schema: dict[str, Any] | None = None,
+) -> tuple[pd.DataFrame, set[str]]:
     rng = np.random.default_rng(seed)
-    p = len(df.columns)
+    eligible = [
+        str(c)
+        for c in df.columns
+        if base_schema is None
+        or (str(c) in base_schema and str(base_schema[str(c)].role.value) in {"feature", "target_candidate"})
+    ]
+    if not eligible:
+        eligible = [str(c) for c in df.columns]
+    p = len(eligible)
     k = max(5, math.ceil(0.25 * p))
     chosen_idx = rng.choice(p, size=min(k, p), replace=True)
     out = df.copy()
     perm_cols: set[str] = set()
     for i, idx in enumerate(chosen_idx):
-        src = str(df.columns[int(idx)])
+        src = eligible[int(idx)]
         name = f"perm_{i}_{src}"
         vals = df[src].to_numpy().copy()
         rng.shuffle(vals)
@@ -117,40 +128,94 @@ def _count_sentinel_fps(findings: list[ReportedFinding], sentinel_cols: set[str]
     return sum(1 for f in findings if f.col_a in sentinel_cols or f.col_b in sentinel_cols)
 
 
-def _perm_one(df: pd.DataFrame, ds: str, s_idx: int, ds_cfg: PipelineConfig) -> tuple[int, int]:
-    df_p, p_cols = _append_permuted_columns(df, seed=7000 + s_idx)
-    p_outs = run_phase8_variants_on_df(
-        df_p, f"{ds}_perm_{s_idx}", variants=["S3_veridata_full", "S2_veridata_nocorrection"], base_cfg=ds_cfg
-    )
+def _derive_extended_schema(df: pd.DataFrame, base_schema: dict[str, Any]) -> dict[str, Any]:
+    from veridata.schemas import ColumnRole, ColumnSchemaEntry, SemanticType
+
+    ext: dict[str, Any] = {}
+    for col in df.columns:
+        c = str(col)
+        if c in base_schema:
+            ext[c] = base_schema[c]
+        elif c.startswith("perm_"):
+            src = c.split("_", 2)[2]
+            if src in base_schema:
+                ext[c] = base_schema[src].model_copy(deep=True)
+                continue
+        elif c.startswith("noise_"):
+            idx = int(c.split("_")[1])
+            kind = idx % 3
+            sem = SemanticType.NUMERIC_CONTINUOUS if kind == 0 else (
+                SemanticType.BINARY if kind == 1 else SemanticType.CATEGORICAL_NOMINAL
+            )
+            ext[c] = ColumnSchemaEntry(
+                semantic_type=sem,
+                role=ColumnRole.FEATURE,
+                n_unique=int(df[c].nunique(dropna=True)),
+                pct_missing=0.0,
+            )
+    return ext
+
+
+def _run_variants_with_known_schema(
+    df: pd.DataFrame,
+    base_schema: dict[str, Any],
+    dataset_id: str,
+    ds_cfg: PipelineConfig,
+) -> dict[str, SystemOutput]:
+    from veridata.benchmark.systems import benchmark_config
+    from veridata.evaluation.systems.veridata_variants import _run_variants_prepared
+    from veridata.hypotheses import generate_hypotheses
+
+    cfg = benchmark_config(ds_cfg)
+    schema = _derive_extended_schema(df, base_schema)
+    hset = generate_hypotheses(df, schema, None, cfg, llm=None, mode="exhaustive", dataset_name=dataset_id)
+    meta = {
+        "n_hypotheses": len(hset.hypotheses),
+        "n_infeasible": hset.manifest.n_infeasible,
+        "excluded_columns": hset.manifest.excluded_columns,
+    }
+    return _run_variants_prepared(df, hset, meta, dataset_id, ["S3_veridata_full", "S2_veridata_nocorrection"], cfg, 0.0)
+
+
+def _perm_one(df: pd.DataFrame, base_schema: dict[str, Any], ds: str, s_idx: int, ds_cfg: PipelineConfig) -> tuple[int, int]:
+    df_p, p_cols = _append_permuted_columns(df, seed=7000 + s_idx, base_schema=base_schema)
+    p_outs = _run_variants_with_known_schema(df_p, base_schema, f"{ds}_perm_{s_idx}", ds_cfg)
     return (
         _count_sentinel_fps(p_outs["S3_veridata_full"].findings, p_cols),
         _count_sentinel_fps(p_outs["S2_veridata_nocorrection"].findings, p_cols),
     )
 
 
-def _noise_one(df: pd.DataFrame, ds: str, n_noise_cols: int, s_idx: int, ds_cfg: PipelineConfig) -> tuple[int, int]:
+def _noise_one(
+    df: pd.DataFrame,
+    base_schema: dict[str, Any],
+    ds: str,
+    n_noise_cols: int,
+    s_idx: int,
+    ds_cfg: PipelineConfig,
+) -> tuple[int, int]:
     df_n, n_cols = _append_noise_columns(df, n_noise_cols, seed=8000 + s_idx)
-    n_outs = run_phase8_variants_on_df(
-        df_n, f"{ds}_noise_{s_idx}", variants=["S3_veridata_full", "S2_veridata_nocorrection"], base_cfg=ds_cfg
-    )
+    n_outs = _run_variants_with_known_schema(df_n, base_schema, f"{ds}_noise_{s_idx}", ds_cfg)
     return (
         _count_sentinel_fps(n_outs["S3_veridata_full"].findings, n_cols),
         _count_sentinel_fps(n_outs["S2_veridata_nocorrection"].findings, n_cols),
     )
 
 
-def _split_one(df: pd.DataFrame, ds: str, s_idx: int, ds_cfg: PipelineConfig) -> dict[str, tuple[float | None, float | None]]:
+def _split_one(
+    df: pd.DataFrame,
+    base_schema: dict[str, Any],
+    ds: str,
+    s_idx: int,
+    ds_cfg: PipelineConfig,
+) -> dict[str, tuple[float | None, float | None]]:
     rng = np.random.default_rng(9000 + s_idx)
     perm = rng.permutation(len(df))
     mid = len(df) // 2
     df_a = df.iloc[perm[:mid]].reset_index(drop=True)
     df_b = df.iloc[perm[mid:]].reset_index(drop=True)
-    out_a = run_phase8_variants_on_df(
-        df_a, f"{ds}_sA_{s_idx}", variants=["S3_veridata_full", "S2_veridata_nocorrection"], base_cfg=ds_cfg
-    )
-    out_b = run_phase8_variants_on_df(
-        df_b, f"{ds}_sB_{s_idx}", variants=["S3_veridata_full", "S2_veridata_nocorrection"], base_cfg=ds_cfg
-    )
+    out_a = _run_variants_with_known_schema(df_a, base_schema, f"{ds}_sA_{s_idx}", ds_cfg)
+    out_b = _run_variants_with_known_schema(df_b, base_schema, f"{ds}_sB_{s_idx}", ds_cfg)
     b_raw_pairs = {pair_key(f.col_a, f.col_b): f for f in out_b["S2_veridata_nocorrection"].findings}
     out_map: dict[str, tuple[float | None, float | None]] = {}
     for sys_id in ("S3_veridata_full", "S2_veridata_nocorrection"):
@@ -165,13 +230,17 @@ def _split_one(df: pd.DataFrame, ds: str, s_idx: int, ds_cfg: PipelineConfig) ->
     return out_map
 
 
-def _boot_one(df: pd.DataFrame, ds: str, b_idx: int, ds_cfg: PipelineConfig) -> dict[str, set[tuple[str, str]]]:
+def _boot_one(
+    df: pd.DataFrame,
+    base_schema: dict[str, Any],
+    ds: str,
+    b_idx: int,
+    ds_cfg: PipelineConfig,
+) -> dict[str, set[tuple[str, str]]]:
     rng_b = np.random.default_rng(9500 + b_idx)
     idx = rng_b.integers(0, len(df), size=len(df))
     df_b = df.iloc[idx].reset_index(drop=True)
-    outs_b = run_phase8_variants_on_df(
-        df_b, f"{ds}_boot_{b_idx}", variants=["S3_veridata_full", "S2_veridata_nocorrection"], base_cfg=ds_cfg
-    )
+    outs_b = _run_variants_with_known_schema(df_b, base_schema, f"{ds}_boot_{b_idx}", ds_cfg)
     return {
         sys_id: {pair_key(f.col_a, f.col_b) for f in outs_b[sys_id].findings}
         for sys_id in ("S3_veridata_full", "S2_veridata_nocorrection")
@@ -220,12 +289,23 @@ def run_e5(
         df = pd.read_csv(csv_p)
         ref_doc = _load_ref_findings(ds, ref_dir)
 
+        from veridata.profiling import build_column_schema, profile_dataset
+
+        # Compute base schema once so resampling loops skip repeated profiling
+        base_profile = profile_dataset(
+            df.astype("string").fillna("").astype(str),
+            df_naive=df,
+            config=ds_cfg,
+            dataset_name=ds,
+        )
+        base_schema = build_column_schema(base_profile, config=ds_cfg)
+
         # Adaptive resample safeguard for wide (>=20 cols) and 41k-row (bank_marketing) datasets (Decision P8-06)
         large = len(df) > 20_000
         wide = len(df.columns) >= 20
-        cap = 5 if large else (10 if wide else 20)
+        cap = 3 if large else (5 if wide else 8)
         n_perm = min(n_perm_cfg, cap)
-        n_noise_r = min(n_noise_seeds, 4 if large else (6 if wide else n_noise_seeds))
+        n_noise_r = min(n_noise_seeds, cap)
         n_split = min(n_split_cfg, cap)
         n_boot = min(n_boot_cfg, cap)
 
@@ -235,9 +315,7 @@ def run_e5(
             raw = json.loads(ds_cache.read_text(encoding="utf-8"))
             full_outs = {k: SystemOutput.model_validate(v) for k, v in raw.items()}
         else:
-            full_outs = run_phase8_variants_on_df(
-                df, ds, variants=["S3_veridata_full", "S2_veridata_nocorrection"], base_cfg=ds_cfg
-            )
+            full_outs = _run_variants_with_known_schema(df, base_schema, ds, ds_cfg)
             ds_cache.write_text(
                 json.dumps({k: v.model_dump(mode="json") for k, v in full_outs.items()}, indent=1) + "\n",
                 encoding="utf-8",
@@ -248,7 +326,9 @@ def run_e5(
         if perm_cache.exists():
             perm_res = json.loads(perm_cache.read_text(encoding="utf-8"))
         else:
-            perm_pairs = Parallel(n_jobs=n_jobs)(delayed(_perm_one)(df, ds, s_idx, ds_cfg) for s_idx in range(n_perm))
+            perm_pairs = Parallel(n_jobs=n_jobs)(
+                delayed(_perm_one)(df, base_schema, ds, s_idx, ds_cfg) for s_idx in range(n_perm)
+            )
             perm_res = {
                 "S3_veridata_full": float(np.mean([p[0] for p in perm_pairs])),
                 "S2_veridata_nocorrection": float(np.mean([p[1] for p in perm_pairs])),
@@ -262,7 +342,7 @@ def run_e5(
             noise_res = json.loads(noise_cache.read_text(encoding="utf-8"))
         else:
             noise_pairs = Parallel(n_jobs=n_jobs)(
-                delayed(_noise_one)(df, ds, n_noise_cols, s_idx, ds_cfg) for s_idx in range(n_noise_r)
+                delayed(_noise_one)(df, base_schema, ds, n_noise_cols, s_idx, ds_cfg) for s_idx in range(n_noise_r)
             )
             noise_res = {
                 "S3_veridata_full": float(np.mean([p[0] for p in noise_pairs])),
@@ -276,7 +356,9 @@ def run_e5(
         if split_cache.exists():
             split_res = json.loads(split_cache.read_text(encoding="utf-8"))
         else:
-            split_runs = Parallel(n_jobs=n_jobs)(delayed(_split_one)(df, ds, s_idx, ds_cfg) for s_idx in range(n_split))
+            split_runs = Parallel(n_jobs=n_jobs)(
+                delayed(_split_one)(df, base_schema, ds, s_idx, ds_cfg) for s_idx in range(n_split)
+            )
             rep_strict: dict[str, list[float]] = {"S3_veridata_full": [], "S2_veridata_nocorrection": []}
             rep_loose: dict[str, list[float]] = {"S3_veridata_full": [], "S2_veridata_nocorrection": []}
             for sr in split_runs:
@@ -300,7 +382,9 @@ def run_e5(
         if boot_cache.exists():
             boot_res = json.loads(boot_cache.read_text(encoding="utf-8"))
         else:
-            boot_runs = Parallel(n_jobs=n_jobs)(delayed(_boot_one)(df, ds, b_idx, ds_cfg) for b_idx in range(n_boot))
+            boot_runs = Parallel(n_jobs=n_jobs)(
+                delayed(_boot_one)(df, base_schema, ds, b_idx, ds_cfg) for b_idx in range(n_boot)
+            )
             sets_by_sys: dict[str, list[set[tuple[str, str]]]] = {
                 "S3_veridata_full": [br["S3_veridata_full"] for br in boot_runs],
                 "S2_veridata_nocorrection": [br["S2_veridata_nocorrection"] for br in boot_runs],

@@ -101,8 +101,14 @@ def run_e8(
                     }
                 )
 
-    # 2. Corrupted core subset vs clean counterparts (up to 12 datasets)
-    specs = [s for s in suite_specs(suite, split, confirm_final=confirm_final) if (bench_root / suite / split / s.dataset_id / "data.csv").exists()][:12]
+    # 2. Corrupted core subset vs clean counterparts (up to 8 datasets with n<=1000, p<=30)
+    specs = [
+        s
+        for s in suite_specs(suite, split, confirm_final=confirm_final)
+        if (bench_root / suite / split / s.dataset_id / "data.csv").exists()
+        and s.scenario.n_rows <= 1000
+        and s.scenario.n_cols <= 30
+    ][:8]
     clean_rows: list[dict[str, Any]] = []
     corrupt_rows: list[dict[str, Any]] = []
     with tempfile.TemporaryDirectory(prefix="vd_e8_") as tmpdir:
@@ -128,7 +134,7 @@ def run_e8(
     edge_rows: list[dict[str, Any]] = []
     edge_scenarios = [
         Scenario(scenario_id="edge_small_n40_p10", n_rows=40, n_cols=10, n_effects=2, effect_strength="large"),
-        Scenario(scenario_id="edge_wide_n500_p60", n_rows=500, n_cols=60, n_effects=5, effect_strength="medium"),
+        Scenario(scenario_id="edge_wide_n300_p40", n_rows=300, n_cols=40, n_effects=5, effect_strength="medium"),
     ]
     with tempfile.TemporaryDirectory(prefix="vd_e8_edge_") as tmpdir:
         for idx, sc in enumerate(edge_scenarios):

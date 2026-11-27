@@ -1,0 +1,4 @@
+| System | Items Checked | Verified Rate | Fabricated Rate | Hallucinated Cols |
+| --- | --- | --- | --- | --- |
+| VeriData (Phase 5 Verifier) | 101 | 100.0% | 0.0% | 0 |
+| VeriData (Independent Recompute) | 101 | 94.1% | 5.9% | 0 |

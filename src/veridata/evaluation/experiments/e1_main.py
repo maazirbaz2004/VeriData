@@ -69,6 +69,42 @@ def _run_det_one(
     return outs
 
 
+def _load_stage_a_one(
+    ds_spec: Any,
+    base: Path,
+    stage_cache_dir: Path,
+    cfg_base: PipelineConfig,
+) -> tuple[str, Any, list[Any], GroundTruth, dict[str, Any]]:
+    from veridata.benchmark.systems import prepare_dataset, run_stage_a
+    from veridata.contracts.hypothesis import HypothesisSet
+    from veridata.contracts.results import TestResult
+
+    ds_dir = base / ds_spec.dataset_id
+    truth = GroundTruth.load(ds_dir / "truth.json")
+    scen = json.loads((ds_dir / "scenario.json").read_text(encoding="utf-8"))["scenario"]
+    cache_p = stage_cache_dir / f"{ds_spec.dataset_id}_aware.json"
+    if cache_p.exists():
+        raw = json.loads(cache_p.read_text(encoding="utf-8"))
+        if isinstance(raw, dict) and "hypotheses" in raw and "results" in raw:
+            hset = HypothesisSet.model_validate(raw["hypotheses"])
+            results = [TestResult.model_validate(r) for r in raw["results"]]
+            return ds_spec.dataset_id, hset, results, truth, scen
+    df, hset, _ = prepare_dataset(ds_dir / "data.csv", ds_spec.dataset_id, cfg_base)
+    results = run_stage_a(hset, df, cfg_base)
+    cache_p.write_text(
+        json.dumps(
+            {
+                "hypotheses": hset.model_dump(mode="json"),
+                "results": [r.model_dump(mode="json") for r in results],
+            },
+            indent=1,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    return ds_spec.dataset_id, hset, results, truth, scen
+
+
 def run_alpha_sweep(
     suite: str,
     split: str,
@@ -78,9 +114,10 @@ def run_alpha_sweep(
     alphas: tuple[float, ...] = (0.01, 0.02, 0.05, 0.10, 0.15, 0.20),
     confirm_final: bool = False,
     only: list[str] | None = None,
+    n_jobs: int = 2,
 ) -> list[dict[str, Any]]:
     """Compute S3 recall-FDR trade-off across alpha thresholds reusing Stage A results."""
-    from veridata.benchmark.systems import findings_to_reported, prepare_dataset, run_stage_a
+    from veridata.benchmark.systems import findings_to_reported
 
     specs = [s for s in suite_specs(suite, split, confirm_final=confirm_final) if only is None or s.dataset_id in only]
     base = bench_root / suite / split
@@ -90,34 +127,17 @@ def run_alpha_sweep(
     cfg_base = benchmark_config(load_config())
     spec_s3 = resolve_variant_spec("S3_veridata_full")
 
-    # Prepare & cache Stage A per dataset once
-    loaded: list[tuple[str, Any, Any, list[Any], GroundTruth, dict[str, Any]]] = []
-    for ds_spec in specs:
-        ds_dir = base / ds_spec.dataset_id
-        truth = GroundTruth.load(ds_dir / "truth.json")
-        scen = json.loads((ds_dir / "scenario.json").read_text(encoding="utf-8"))["scenario"]
-        cache_p = stage_cache_dir / f"{ds_spec.dataset_id}_aware.json"
-        if cache_p.exists():
-            from veridata.contracts.results import TestResult
-
-            _, hset, _ = prepare_dataset(ds_dir / "data.csv", ds_spec.dataset_id, cfg_base)
-            raw = json.loads(cache_p.read_text(encoding="utf-8"))
-            results = [TestResult.model_validate(r) for r in raw]
-        else:
-            df, hset, _ = prepare_dataset(ds_dir / "data.csv", ds_spec.dataset_id, cfg_base)
-            results = run_stage_a(hset, df, cfg_base)
-            cache_p.write_text(
-                json.dumps([r.model_dump(mode="json") for r in results], indent=1) + "\n",
-                encoding="utf-8",
-            )
-        loaded.append((ds_spec.dataset_id, hset, cfg_base, results, truth, scen))
+    loaded = Parallel(n_jobs=n_jobs)(
+        delayed(_load_stage_a_one)(ds_spec, base, stage_cache_dir, cfg_base)
+        for ds_spec in specs
+    )
 
     rows: list[dict[str, Any]] = []
     for alpha in alphas:
         cfg_a = cfg_base.model_copy(deep=True)
         cfg_a.stats.alpha = float(alpha)
         ds_rows = []
-        for ds_id, hset, _, results, truth, scen in loaded:
+        for _ds_id, hset, results, truth, scen in loaded:
             findings = _validate_spec(results, hset, cfg_a, spec_s3)
             rep = findings_to_reported(findings)
             m = match_findings(rep, truth, "if_reported")
@@ -156,6 +176,10 @@ def run_e1(
     n_resamples: int = 2000,
 ) -> dict[str, Any]:
     """Run E1 Main Benchmark: deterministic S3/S2 + cached/live S1a/S1b with CIs & Wilcoxon."""
+    e1_summary_p = eval_root / suite / split / "e1" / "summary.json"
+    if e1_summary_p.exists() and only is None and (llm is None or isinstance(llm, NullLLM)):
+        return json.loads(e1_summary_p.read_text(encoding="utf-8"))
+
     cfg = config or load_config()
     specs = [s for s in suite_specs(suite, split, confirm_final=confirm_final) if only is None or s.dataset_id in only]
     base = bench_root / suite / split
@@ -343,7 +367,7 @@ def run_e1(
             "power": ["system", "form", "n_rows", "bin"],
         }.items()
     }
-    alpha_sweep = run_alpha_sweep(suite, split, bench_root=bench_root, eval_root=eval_root, confirm_final=confirm_final, only=only)
+    alpha_sweep = run_alpha_sweep(suite, split, bench_root=bench_root, eval_root=eval_root, confirm_final=confirm_final, only=only, n_jobs=n_jobs)
     qcal = q_calibration([f for f in finding_rows if f["system"] == "S3_veridata_full"])
 
     s3_fdr = summary["S3_veridata_full"]["if_reported"]["fdr"]

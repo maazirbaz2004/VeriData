@@ -113,3 +113,18 @@ This document records every **DECISION** and **OPEN** item from `plans/PHASE1_PL
 | **P5-07** | Sec 8 | HTML output. | **Chosen:** python-markdown (tables, fenced code, `md_in_html`) with inline CSS and charts embedded as base64 PNGs, so `report.html` is one self-contained file (insurance: 1.5 MB, limit 15 MB). |
 | **P5-08** | Sec 9 | Report gate. | **Followed:** the final markdown, every chart's text, the linter, required sections and image checks must all pass, else `ReportingError` (`--allow-violations` for debugging only). |
 | **P5-09** | Sec 6 (from Phase 4) | What adjusted p-values mean to a reader. | **Added** a Limitations line: BH controls the share of false findings in the list, so borderline q-values are more often false leads (seen in the dev q-calibration). |
+
+---
+
+## 8. Phase 8 Decisions (Evaluation, Gemini Integration & Final Deliverables)
+
+| ID | Section | Plan Requirement / Open Question | Chosen Default & Rationale |
+| :--- | :---: | :--- | :--- |
+| **P8-01** | Master Plan §9.4 / P8 §3 | Supporting Google Gemini alongside Anthropic Claude without changing shared contracts. | **Chosen:** Added `GeminiLLMClient` in `src/veridata/agent/llm.py` using `httpx` against Gemini's `generateContent` REST endpoint with `responseMimeType: "application/json"` plus embedded Pydantic JSON schema instructions and automatic validation retries (avoiding Gemini's `responseSchema` rejection of `$defs`/`anyOf`). `get_llm_client()` auto-loads `.env` via `python-dotenv` and selects Gemini whenever `GEMINI_API_KEY` is set. |
+| **P8-02** | P8 §3 / §6 | Executing LLM-written pandas/scipy code safely for `S1b` and E7 baseline. | **Chosen:** AST inspection (`evaluation/sandbox.py`) restricts imports to `pandas`, `numpy`, `scipy`, `math`, `statistics`, `collections`, `itertools`, `json`, blocks file/OS/eval builtins, and runs in an isolated `python -I` subprocess with a 15s timeout. |
+| **P8-03** | P8 §4 (E1) | Aggregating `R = 5` LLM repeats without treating repeats as independent datasets. | **Chosen:** `collapse_repeats()` averages per-dataset FDP, recall, precision, and counts over repeats first, recording within-dataset repeat SD, before dataset-level bootstrap CIs (2,000 resamples) and paired Wilcoxon tests. |
+| **P8-04** | P8 §4 (E4) / §6 | Preventing circular numeric verification in E4 and E7. | **Chosen:** `src/veridata/evaluation/independent_recompute.py` uses only `numpy`, `pandas`, and `scipy.stats` and is enforced by an AST unit test (`tests/evaluation/test_independent_recompute.py`) to have zero imports from `veridata.stats`, `veridata.validation`, `veridata.reporting`, or `veridata.agent`. |
+| **P8-05** | P8 §3 (A6) | Isolating assumption & triviality validation gates in `A6_full_minus_gates`. | **Chosen:** Added `stats.enable_trivial_gate: bool = True` in `config.py` / `configs/default.yaml` / `validation/rules.py` alongside `enable_assumption_gate`. Default product behavior is unchanged (`true`). |
+| **P8-06** | P8 §4 (E5) | Laptop runtime budget for permutation, noise, split-half, and bootstrap loops on wide/large real datasets. | **Chosen:** Adaptive parallelized resample counts (`e5_real.py`): 20 repeats on `insurance` and `heart_disease`, 10 on wide datasets (`telco_churn`, `student_performance`, >=20 cols), and 5 on `bank_marketing` (41,176 rows). |
+| **P8-07** | P8 §2 / §10 | Protocol freeze and one-shot `test`-split execution discipline. | **Chosen:** Keep `docs/eval_protocol.md` at `Status: DRAFT` and `outputs/benchmark/core60/test` untouched until the user places `GEMINI_API_KEY` in `.env` and explicitly approves freezing and running the final test-split pass. |
+

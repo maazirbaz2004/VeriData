@@ -25,6 +25,52 @@ def _cache_path(eval_root: Path, suite: str, split: str, sys_id: str, ds_id: str
 
 
 def _run_ds_missing(csv_path: Path, ds_id: str, missing: list[str], eval_root: Path, suite: str, split: str) -> dict[str, SystemOutput]:
+    import time
+
+    from veridata.benchmark.systems import (
+        benchmark_config,
+        findings_to_reported,
+        prepare_dataset,
+        run_stage_a,
+    )
+    from veridata.config import load_config
+    from veridata.contracts.hypothesis import HypothesisSet
+    from veridata.contracts.results import TestResult
+    from veridata.evaluation.systems.veridata_variants import _validate_spec, resolve_variant_spec
+
+    stage_cache_p = eval_root / suite / split / "stage_a_cache" / f"{ds_id}_aware.json"
+    if stage_cache_p.exists():
+        raw = json.loads(stage_cache_p.read_text(encoding="utf-8"))
+        if isinstance(raw, dict) and "hypotheses" in raw and "results" in raw:
+            cfg = benchmark_config(load_config())
+            hset = HypothesisSet.model_validate(raw["hypotheses"])
+            aware_results = [TestResult.model_validate(r) for r in raw["results"]]
+            stage_map: dict[bool, tuple[list[TestResult], float]] = {True: (aware_results, 0.0)}
+            need_naive = any(not resolve_variant_spec(s).aware_selection for s in missing)
+            if need_naive:
+                t0 = time.perf_counter()
+                df, _, _ = prepare_dataset(csv_path, ds_id, cfg)
+                sel_cfg = cfg.model_copy(deep=True)
+                sel_cfg.stats.assumption_aware_selection = False
+                stage_map[False] = (run_stage_a(hset, df, sel_cfg), time.perf_counter() - t0)
+            outs: dict[str, SystemOutput] = {}
+            for sys_id in missing:
+                spec = resolve_variant_spec(sys_id)
+                res_list, t_st = stage_map[spec.aware_selection]
+                findings = _validate_spec(res_list, hset, cfg, spec)
+                out = SystemOutput(
+                    system_name=sys_id,
+                    dataset_id=ds_id,
+                    findings=findings_to_reported(findings),
+                    n_tests_attempted=sum(1 for r in res_list if r.status == "ok"),
+                    runtime_s=round(t_st, 3),
+                )
+                p = _cache_path(eval_root, suite, split, sys_id, ds_id)
+                p.parent.mkdir(parents=True, exist_ok=True)
+                p.write_text(out.model_dump_json(indent=1) + "\n", encoding="utf-8")
+                outs[sys_id] = out
+            return outs
+
     outs = run_phase8_variants_on_csv(csv_path, ds_id, variants=missing)
     for sys_id, out in outs.items():
         p = _cache_path(eval_root, suite, split, sys_id, ds_id)

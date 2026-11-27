@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{Type-I error calibration across relationships.}
+\label{tab:table_e3_calibration}
+\begin{tabular}{lrrrrr}
+\toprule
+Relationship & Selection & Cells & Mean Size & Max Size & Inside Band \\
+\midrule
+categorical\_vs\_categorical & assumption\_aware & 13 & 0.0395 & 0.0600 & 76.9\% \\
+categorical\_vs\_categorical & naive & 13 & 0.0426 & 0.0600 & 84.6\% \\
+numeric\_vs\_binary & assumption\_aware & 38 & 0.0448 & 0.0976 & 92.1\% \\
+numeric\_vs\_binary & naive & 38 & 0.0479 & 0.0976 & 84.2\% \\
+numeric\_vs\_categorical & assumption\_aware & 30 & 0.0499 & 0.0710 & 100.0\% \\
+numeric\_vs\_categorical & naive & 30 & 0.0576 & 0.1030 & 86.7\% \\
+numeric\_vs\_numeric & assumption\_aware & 20 & 0.0500 & 0.0610 & 100.0\% \\
+numeric\_vs\_numeric & naive & 20 & 0.0503 & 0.0590 & 100.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

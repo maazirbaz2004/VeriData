@@ -1,0 +1,9 @@
+relationship,selection,cells,mean_size,max_size,pct_inside
+categorical_vs_categorical,assumption_aware,13,0.03954437255371835,0.06,0.7692307692307693
+categorical_vs_categorical,naive,13,0.042616660288302084,0.06,0.8461538461538461
+numeric_vs_binary,assumption_aware,38,0.04477515269158938,0.0975609756097561,0.9210526315789473
+numeric_vs_binary,naive,38,0.04791641326441187,0.0975609756097561,0.8421052631578947
+numeric_vs_categorical,assumption_aware,30,0.04988690928875264,0.07098765432098765,1.0
+numeric_vs_categorical,naive,30,0.05757761286972621,0.103,0.8666666666666667
+numeric_vs_numeric,assumption_aware,20,0.05005,0.061,1.0
+numeric_vs_numeric,naive,20,0.05034999999999999,0.059,1.0
